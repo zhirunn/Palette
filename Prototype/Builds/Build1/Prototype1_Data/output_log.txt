@@ -1,0 +1,37 @@
+Initialize engine version: 5.5.0f3 (38b4efef76f0)
+GfxDevice: creating device client; threaded=1
+Direct3D:
+    Version:  Direct3D 11.0 [level 11.0]
+    Renderer: Intel(R) HD Graphics 4000 (ID=0x166)
+    Vendor:   Intel
+    VRAM:     912 MB
+    Driver:   10.18.10.4358
+Begin MonoManager ReloadAssembly
+Platform assembly: D:\Unity\Palette\Prototype\Builds\Build1\Prototype1_Data\Managed\UnityEngine.dll (this message is harmless)
+Loading D:\Unity\Palette\Prototype\Builds\Build1\Prototype1_Data\Managed\UnityEngine.dll into Unity Child Domain
+Platform assembly: D:\Unity\Palette\Prototype\Builds\Build1\Prototype1_Data\Managed\Assembly-CSharp.dll (this message is harmless)
+Loading D:\Unity\Palette\Prototype\Builds\Build1\Prototype1_Data\Managed\Assembly-CSharp.dll into Unity Child Domain
+Platform assembly: D:\Unity\Palette\Prototype\Builds\Build1\Prototype1_Data\Managed\UnityEngine.UI.dll (this message is harmless)
+Loading D:\Unity\Palette\Prototype\Builds\Build1\Prototype1_Data\Managed\UnityEngine.UI.dll into Unity Child Domain
+Platform assembly: D:\Unity\Palette\Prototype\Builds\Build1\Prototype1_Data\Managed\UnityEngine.Networking.dll (this message is harmless)
+Loading D:\Unity\Palette\Prototype\Builds\Build1\Prototype1_Data\Managed\UnityEngine.Networking.dll into Unity Child Domain
+Platform assembly: D:\Unity\Palette\Prototype\Builds\Build1\Prototype1_Data\Managed\UnityEngine.PlaymodeTestsRunner.dll (this message is harmless)
+Loading D:\Unity\Palette\Prototype\Builds\Build1\Prototype1_Data\Managed\UnityEngine.PlaymodeTestsRunner.dll into Unity Child Domain
+Platform assembly: D:\Unity\Palette\Prototype\Builds\Build1\Prototype1_Data\Managed\UnityEngine.Analytics.dll (this message is harmless)
+Loading D:\Unity\Palette\Prototype\Builds\Build1\Prototype1_Data\Managed\UnityEngine.Analytics.dll into Unity Child Domain
+- Completed reload, in  0.490 seconds
+Platform assembly: D:\Unity\Palette\Prototype\Builds\Build1\Prototype1_Data\Managed\System.Core.dll (this message is harmless)
+Platform assembly: D:\Unity\Palette\Prototype\Builds\Build1\Prototype1_Data\Managed\System.dll (this message is harmless)
+desktop: 1366x768 60Hz; virtual: 1366x768 at 0,0
+<RI> Initializing input.
+<RI> Input initialized.
+<RI> Initialized touch support.
+UnloadTime: 4.772824 ms
+Unloading 5 Unused Serialized files (Serialized files now loaded: 0)
+UnloadTime: 0.862113 ms
+
+Unloading 5 unused Assets to reduce memory usage. Loaded Objects now: 246.
+Total: 0.283265 ms (FindLiveObjects: 0.037358 ms CreateObjectMapping: 0.038589 ms MarkObjects: 0.186791 ms  DeleteObjects: 0.020115 ms)
+
+Setting up 1 worker threads for Enlighten.
+  Thread -> id: 5f4 -> priority: 1 
