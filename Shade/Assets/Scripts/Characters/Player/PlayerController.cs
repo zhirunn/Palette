@@ -32,19 +32,19 @@ public class PlayerController : MonoBehaviour
 
             if (vertical > 0)
             {
-                animator.SetInteger("Direction", Direction.UP);
+                animator.SetInteger("Direction", Direction.Up);
             }
             else if (vertical < 0)
             {
-                animator.SetInteger("Direction", Direction.DOWN);
+                animator.SetInteger("Direction", Direction.Down);
             }
             else if (horizontal > 0)
             {
-                animator.SetInteger("Direction", Direction.RIGHT);
+                animator.SetInteger("Direction", Direction.Right);
             }
             else if (horizontal < 0)
             {
-                animator.SetInteger("Direction", Direction.LEFT);
+                animator.SetInteger("Direction", Direction.Left);
             }
         }
         
