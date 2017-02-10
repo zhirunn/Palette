@@ -7,16 +7,14 @@ using UnityEngine;
 /// <summary>
 /// Handles the movement of an enemy patrolling waypoints.
 /// </summary>
-public class PatrolController : MonoBehaviour
+public class EnemyPatrol : Enemy
 {
     // The locations of the path-markers
-    public Transform[] markers; 
-    public float speed = 1.0f;
+    public Transform[] markers;
     public float rotateSpeed = 3.0f;
     public float distanceToMarker = 1.0f;
 
     private int markerIndex = 0;
-    private Rigidbody2D rb2d;
 
     /// <summary>
     /// Calculates the Euclidean distance between two vector positions.
@@ -30,24 +28,24 @@ public class PatrolController : MonoBehaviour
     }
 
     // Use this for initialization
-    void Start()
+    protected override void Start()
     {
+        base.Start();
+
         // Attempt to find the closest marker
         List<Transform> orderedMarkers = markers.OrderBy(
             x => getDistance(x, transform))
             .ToList<Transform>();
 
-        for(int i=0; i<markers.Length; ++i)
+        for (int i = 0; i < markers.Length; ++i)
         {
             Transform m = markers[i];
-            if(m == orderedMarkers[0])
+            if (m == orderedMarkers[0])
             {
                 markerIndex = i;
                 break;
             }
         }
-
-        rb2d = GetComponent<Rigidbody2D>();
     }
 
     // Update is called once per frame
@@ -75,10 +73,7 @@ public class PatrolController : MonoBehaviour
         // Debug.Log("Direction and rotation set to: " + direction + " : " + lookRotation);
 
         // Move the enemy
-        Vector2 vel = new Vector2(
-            transform.position.x + speed * Time.deltaTime * direction.x, 
-            transform.position.y + speed * Time.deltaTime * direction.y);
-        rb2d.MovePosition(vel);
+        Move(direction.x, direction.y);
 
         // Debug.Log(getDistance(target, transform) + " units to " + target.name);
         if (getDistance(target, transform) < distanceToMarker)

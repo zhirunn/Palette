@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public static class DispositionHelper {
-    private static Color ORANGE = new Color32(255, 140, 0, 255);
+    public static Color Orange = new Color32(255, 140, 0, 255);
 
     /// <summary>
     /// Get the colour from a disposition amount between 0 and 100.
@@ -20,7 +20,7 @@ public static class DispositionHelper {
             return Color.gray;
         } else
         {
-            return ORANGE;
+            return Orange;
         }
     }
 }
