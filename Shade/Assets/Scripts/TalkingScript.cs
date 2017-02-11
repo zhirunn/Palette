@@ -6,19 +6,23 @@ public class TalkingScript : MonoBehaviour {
 
 	public TwineTextPlayer textPlayer;
 
-	bool _Stext = false;
+	bool _Seetext = false;
 
 	void OnTriggerEnter2D(Collider2D other) {
    	//characterInRange = true;
 	}
 	
 	void Update(){
-		bool seeText = Input.GetButtonDown("TwineText");
-		if(seeText) {
-			_Stext = true;
+		bool BtnPressed = Input.GetButtonDown("TwineText");
+		if(BtnPressed) {
+			_Seetext = true;
 		}
-		if(_Stext) {
+		if(_Seetext == true) {
 			textPlayer.gameObject.SetActive(true);
+			//textPlayer.gameObject.GetComponent<TwineTextPlayer>().StartStory = true;
+		}
+		else{
+			textPlayer.gameObject.SetActive(false);
 		}
 	}
 		
