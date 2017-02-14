@@ -2,53 +2,57 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class TwineTalkingScript : MonoBehaviour {
+public class TwineTalkingScript : MonoBehaviour
+{
+    public TwineTextPlayer textPlayer;
 
-	public TwineTextPlayer textPlayer;
-	bool characterInRange = false;
-	bool _Seetext = false;
-	//bool _CanTalk = false;
+    private Interactable iteractable = null;
+    private GameObject iteractableGameObject = null;
 
-	void OnTriggerEnter2D(Collider2D other) {
-		if(other.name == "girl") {
-   		characterInRange = true;
-   	}
-	}
-	
-	void OnTriggerExit2D(Collider2D other) {
-		if(other.name == "girl") {
-   		characterInRange = false;
-   	}
-	}
-	
-	void Update() {
-		//This is some code that I tried to use to get characters to face each other when they talk with one another.
-		//var player = GameObject.Find("professor");
-		//var otherthing = GameObject.Find("girl");
-		//var otherthingForward = otherthing.transform.TransformDirection(Vector3.forward);		
-		//var playerForward = player.transform.TransformDirection(Vector3.forward);
-		//var dotProduct = Vector3.Dot(otherthingForward, playerForward);
-		
-		//if(dotProduct < -0.8){
-		//		_CanTalk = true;
-		//}
+    private bool _showText = false;
+    //bool _CanTalk = false;
 
+    void OnTriggerEnter2D(Collider2D other)
+    {
+        Interactable iter = other.gameObject.GetComponent<Interactable>();
+        if (iter != null)
+        {
+            iteractableGameObject = other.gameObject;
+            iteractable = iter;
+        }
+    }
 
+    void OnTriggerExit2D(Collider2D other)
+    {
+        // If we had previously encountered an interactable object
+        // AND if the other object that just exit is the same object that we found was interactable
+        // THEN disable the interaction
+        //
+        // This scenario solves the edge case of this method being called on non-interactable but collidable game objects
+        if (iteractable != null && other.gameObject == iteractableGameObject)
+        {
+            iteractable = null;
+            iteractableGameObject = null;
+            _showText = false;
+        }
+    }
 
-		bool BtnPressed = Input.GetButtonDown("TwineText");
-		if(characterInRange == false) {
-			_Seetext = false;		
-		}
-		if((BtnPressed) && (characterInRange == true)) {
-			_Seetext = true;
-		}
-		if(_Seetext == true) {
-			textPlayer.gameObject.SetActive(true);
-			//textPlayer.gameObject.GetComponent<TwineTextPlayer>().StartStory = true;
-		}
-		else if(_Seetext == false) {
-			textPlayer.gameObject.SetActive(false);
-		}
-	}
+    void Update()
+    {
+        bool iteractPressed = Input.GetButtonDown("Interact");
+
+        // TODO Change animation keyframe of the player while talking?
+        if (iteractPressed && iteractable != null)
+        {
+            _showText = true;
+            textPlayer.gameObject.SetActive(true);
+            //textPlayer.gameObject.GetComponent<TwineTextPlayer>().StartStory = true;
+        }
+
+        if (_showText == false)
+        {
+            textPlayer.gameObject.SetActive(false);
+        }
+    }
 }
 
