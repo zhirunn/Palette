@@ -5,7 +5,8 @@ using UnityEngine;
 public class SnakeMovement : MonoBehaviour {
 
     public bool SnakeMode = false;
-    public GameObject Shoulder;
+    public GameObject MainBody;
+    public Transform handPos;
     public List<Transform> BodyParts = new List<Transform>();
     public float minddistance;
     public int size;
@@ -13,6 +14,7 @@ public class SnakeMovement : MonoBehaviour {
     public float rotationspeed = 50;
     Vector2 dir = Vector2.left;
     public GameObject bodyprefab;
+    
 
     private float dis;
     private Transform cur_part;
@@ -37,17 +39,17 @@ public class SnakeMovement : MonoBehaviour {
             if (Input.GetKeyUp(KeyCode.R))
             {
                 SnakeMode = false;
-                Shoulder.GetComponent<PlayerMove>().PlayerMode = true;
+                MainBody.GetComponent<playercharacter>().PlayerMode = true;
             }
             else if (Input.GetKeyUp(KeyCode.Q)) {
                 SnakeMode = false;
                 
                 Leap(0.1f);
-                Shoulder.GetComponent<PlayerMove>().PlayerMode = true;
+                MainBody.GetComponent<playercharacter>().PlayerMode = true;
             }
         }
         else {
-            Shrink(0.02f);
+            Shrink(0.1f);
         }
     }
     public void AddBodyPart() {
@@ -56,7 +58,7 @@ public class SnakeMovement : MonoBehaviour {
         Transform newpart = (Instantiate(bodyprefab, BodyParts[length].position, BodyParts[length].rotation) as GameObject).transform;
 
         // newpart.SetParent(transform);
-        newpart.SetParent(Shoulder.transform);
+        newpart.SetParent(MainBody.transform);
         BodyParts.Add(newpart);
         // Create Line Renderer for each node
     }
@@ -108,7 +110,7 @@ public class SnakeMovement : MonoBehaviour {
         transform.rotation = rot;
 
         Vector3 pos = transform.position;
-        Vector3 velocity = new Vector3(0, Input.GetAxis("Vertical") * speed*2 * Time.deltaTime, 0);
+        Vector3 velocity = new Vector3(0, Input.GetAxis("Vertical") * speed * Time.deltaTime, 0);
 
         pos += rot * velocity;
         transform.position = pos;
@@ -118,9 +120,9 @@ public class SnakeMovement : MonoBehaviour {
 
         foreach (Transform node in BodyParts)
         {
-            node.position = Vector2.Lerp(node.position, Shoulder.transform.position, time);
+            node.position = Vector2.Lerp(node.position, handPos.position, time);
             //cur_part.LookAt(prev_part);
-            node.rotation = Quaternion.Slerp(node.rotation, Shoulder.transform.rotation, time);
+            node.rotation = Quaternion.Slerp(node.rotation, handPos.rotation, time);
 
 
         }
