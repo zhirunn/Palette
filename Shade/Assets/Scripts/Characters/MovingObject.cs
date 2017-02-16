@@ -72,8 +72,10 @@ public abstract class MovingObject : MonoBehaviour
         OnDispositionChange();
         if (psr != null)
         {
+            psr.material.EnableKeyword("_EMISSION");
             psr.material.SetColor("_Albedo", Color.black);
             psr.material.SetColor("_EmissionColor", disposition.getColor());
+            psr.material.color = disposition.getColor();
         }
     }
 
