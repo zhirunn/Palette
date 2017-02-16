@@ -18,6 +18,8 @@ public class PlayerMovement : MonoBehaviour {
     private Rigidbody2D rb2d;
     private float maxSpeed;
     public float speed;
+    private int moveHorizontal;
+    private int moveVertical;
 
     //Initialization
     void Start()
@@ -25,16 +27,40 @@ public class PlayerMovement : MonoBehaviour {
         rb2d = GetComponent<Rigidbody2D>();
         maxSpeed = 10f;
     }
+
+    /*
+        Gets key for player movment.
+        Gets input every frame.
+    */
+    void Update() {
+        if (Input.GetKey(KeyCode.W)) {
+            moveHorizontal = 0;
+            moveVertical = 1;
+        } else if (Input.GetKey(KeyCode.A)) {
+            moveHorizontal = -1;
+            moveVertical = 0;
+        } else if (Input.GetKey(KeyCode.S)) {
+            moveHorizontal = 0;
+            moveVertical = -1;
+        } else if (Input.GetKey(KeyCode.D)) {
+            moveHorizontal = 1;
+            moveVertical = 0;
+        }
+    }
+
+
     /*
         Deals with player movement
     */
     void FixedUpdate()
     {
+        /*
         //Gets input from keys
         float moveHorizontal = Input.GetAxis("Horizontal");
         float moveVetical = Input.GetAxis("Vertical");
+        */
 
-        Vector2 movement = new Vector2 (moveHorizontal, moveVetical);
+        Vector2 movement = new Vector2 (moveHorizontal, moveVertical);
 
         //Modifies and limits max speed 
         if (rb2d.velocity.magnitude > maxSpeed) {
@@ -42,5 +68,6 @@ public class PlayerMovement : MonoBehaviour {
         } else {
             rb2d.AddForce(movement * speed);
         }
+        
     }
 }
