@@ -12,10 +12,16 @@ public class GameManager : MonoBehaviour
     public float levelStartDelay = 0f; // Time to wait before starting level, in seconds.
 
     private List<Enemy> enemies;
+<<<<<<< HEAD
     private GameObject[] footprint;
     private Text levelText; // Text to display current level number.
     private GameObject levelImage; // Image to block out level as levels are being set up, background for levelText.
     private GameObject eyeOpening; // Image for eye opening
+=======
+    public Text levelText; // Text to display current level number.
+    public GameObject levelImage; // Image to block out level as levels are being set up, background for levelText.
+    private Image _levelImage;
+>>>>>>> origin/master
     public bool doingSetup = true; // Boolean to check if we're setting up, prevent Player from moving during setup.
 
     public int playerDisposition = 50;
@@ -55,17 +61,22 @@ public class GameManager : MonoBehaviour
         // While doingSetup is true the player can't move, prevent player from moving while title card is up.
         doingSetup = true;
 
+<<<<<<< HEAD
         // Get a reference to our image LevelImage by finding it by name.
         levelImage = GameObject.Find("LevelImage");
     
         // Get a reference to our text LevelText's text component by finding it by name and calling GetComponent.
         levelText = GameObject.Find("LevelText").GetComponent<Text>();
+=======
+        // Get a reference to our image
+        _levelImage = levelImage.GetComponent<Image>();
+>>>>>>> origin/master
 
         // Set the text of levelText to the string "Day" and append the current level number.
         levelText.text = "Level Loading... ";
 
         // Set levelImage to active blocking player's view of the game board during setup.
-        levelImage.SetActive(true);
+        _levelImage.enabled = true;
         levelText.enabled = true;
 
         // Call the HideLevelImage function with a delay in seconds of levelStartDelay.
@@ -85,7 +96,7 @@ public class GameManager : MonoBehaviour
     void HideLevelImage()
     {
         levelText.enabled = false;
-        levelImage.SetActive(false);
+        _levelImage.enabled = false;
 
         // Set doingSetup to false allowing player to move again.
         doingSetup = false;
@@ -112,7 +123,7 @@ public class GameManager : MonoBehaviour
         levelText.text = "You have died.";
 
         // Enable black background image gameObject.
-        levelImage.SetActive(true);
+        _levelImage.enabled = true;
 
         // Disable this GameManager.
         enabled = false;

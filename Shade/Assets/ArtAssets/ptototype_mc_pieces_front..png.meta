@@ -1,0 +1,216 @@
+fileFormatVersion: 2
+guid: cb1ab56f486d91e4a9bddeb172f94341
+timeCreated: 1486938884
+licenseType: Free
+TextureImporter:
+  fileIDToRecycleName:
+    21300000: FrontHair
+    21300002: body
+    21300004: ArmLeft
+    21300006: ArmRight
+    21300008: FootLeft
+    21300010: FootRight
+    21300012: LegLeft
+    21300014: LegRight
+    21300016: Head
+    21300018: PonyTail
+  serializedVersion: 4
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    filterMode: -1
+    aniso: -1
+    mipBias: -1
+    wrapMode: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spritePixelsToUnits: 250
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  platformSettings:
+  - buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+  - buildTarget: Standalone
+    maxTextureSize: 2048
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: FrontHair
+      rect:
+        serializedVersion: 2
+        x: 398.82138
+        y: 2378.012
+        width: 601.3574
+        height: 775.38086
+      alignment: 9
+      pivot: {x: 0.11109022, y: 0.9073307}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: body
+      rect:
+        serializedVersion: 2
+        x: 1303.194
+        y: 2361.3757
+        width: 517.56824
+        height: 636.80664
+      alignment: 9
+      pivot: {x: 0.49714416, y: 0.4987766}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: ArmLeft
+      rect:
+        serializedVersion: 2
+        x: 1827.1608
+        y: 2443.9612
+        width: 240.4198
+        height: 375.77148
+      alignment: 9
+      pivot: {x: 0.84389544, y: 0.89202034}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: ArmRight
+      rect:
+        serializedVersion: 2
+        x: 2271.881
+        y: 2443.9473
+        width: 240.41992
+        height: 375.77148
+      alignment: 9
+      pivot: {x: 0.17110361, y: 0.87824464}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: FootLeft
+      rect:
+        serializedVersion: 2
+        x: 1273.9924
+        y: 1568.3351
+        width: 196.91406
+        height: 303.26184
+      alignment: 9
+      pivot: {x: 0.53961205, y: 0.87577254}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: FootRight
+      rect:
+        serializedVersion: 2
+        x: 1661.3198
+        y: 1567.7041
+        width: 198.52539
+        height: 304.87317
+      alignment: 9
+      pivot: {x: 0.42315412, y: 0.8589005}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: LegLeft
+      rect:
+        serializedVersion: 2
+        x: 1976.5497
+        y: 1664.2471
+        width: 143.74011
+        height: 158.24219
+      alignment: 9
+      pivot: {x: 0.4892235, y: 0.6576632}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: LegRight
+      rect:
+        serializedVersion: 2
+        x: 2234.5598
+        y: 1664.2471
+        width: 143.74023
+        height: 158.24219
+      alignment: 9
+      pivot: {x: 0.47439367, y: 0.7518229}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Head
+      rect:
+        serializedVersion: 2
+        x: 127.2961
+        y: 1285.743
+        width: 980.0196
+        height: 1065.42
+      alignment: 9
+      pivot: {x: 0.48600993, y: 0.15104789}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: PonyTail
+      rect:
+        serializedVersion: 2
+        x: 442.93796
+        y: 366.2003
+        width: 354.82425
+        height: 686.7578
+      alignment: 9
+      pivot: {x: 0.28285187, y: 0.8609751}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    outline: []
+  spritePackingTag: 
+  userData: 97464822243533
+  assetBundleName: 
+  assetBundleVariant: 
