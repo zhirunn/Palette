@@ -13,6 +13,7 @@ public class EnemyPatrol : Enemy
     public Transform[] markers;
     public float rotateSpeed = 3.0f;
     public float distanceToMarker = 1.0f;
+    private GameObject footprints;
 
     private int markerIndex = 0;
 
@@ -83,5 +84,10 @@ public class EnemyPatrol : Enemy
             // Debug.Log(String.Format("New target: {0} with distance of {1}.", 
             //     target.name, getDistance(target, transform)));
         }
+    }
+
+    private void footprintGeneration()
+    {
+        
     }
 }

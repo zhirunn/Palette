@@ -1,14 +1,17 @@
 ﻿using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 
 public class Player : MovingObject
 {
     // Player variables
     public float restartLevelDelay = 1f; // Delay time in seconds to restart level.
-    public float visionTime = 3.0f; // Time in seconds
+    public float visionTime = 4.0f; // Time in seconds
+    public float eyeTime = 1.0f; 
 
-    private float currentVisionTime = 0; // Approaches the total allowed vision time
+    private float currentVisionTime = 0; // Approaches the total allowed vision ti me
     private bool _visionActivated = false;
+    private GameObject eyeOpening; // Image for eye opening
 
     // Cache variables
     private Animator animator; // Used to store a reference to the Player's animator component.
@@ -55,6 +58,12 @@ public class Player : MovingObject
 
         //Get the current disposition point total stored in GameManager between levels.
         disposition = GameManager.Instance.playerDisposition;
+
+        // Get reference for eye opening
+        eyeOpening = GameObject.Find("EyeOpening");
+
+        // Set eye opening as false to start
+        eyeOpening.GetComponent<Image>().enabled = false;
 
         // Call the Start function of the MovingObject base class.
         base.Start();
@@ -145,11 +154,12 @@ public class Player : MovingObject
         if (visionToggled)
         {
             bool currentVisionState = _visionActivated;
+
             if (currentVisionTime >= 0)
             {
                 if (currentVisionState == true) // already activated?
                     _visionActivated = false; // deactivate
-                else // not yet activated?
+                else // not yet activated? 
                     _visionActivated = true; // activate
             }
             else
@@ -158,7 +168,12 @@ public class Player : MovingObject
             }
 
             if (currentVisionState != _visionActivated)
+            {
                 GameManager.Instance.ToggleEnemyDispositions(_visionActivated);
+                GameManager.Instance.setState(_visionActivated);
+                eyeOpening.GetComponent<Image>().enabled = true;
+            }
+
         }
 
         if (_visionActivated)
@@ -171,10 +186,16 @@ public class Player : MovingObject
             currentVisionTime = Mathf.Clamp(currentVisionTime, 0, visionTime);
         }
 
+        if (currentVisionTime >= (visionTime - 1.0f))
+        {
+            eyeOpening.GetComponent<Image>().enabled = false;
+        }
+
         if (currentVisionTime >= visionTime)
         {
             _visionActivated = false;
             GameManager.Instance.ToggleEnemyDispositions(false);
+            GameManager.Instance.setState(false);
         }
     }
 
