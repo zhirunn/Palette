@@ -24,7 +24,7 @@ public class Player : MovingObject
     // From http://answers.unity3d.com/answers/11898/view.html
     void OnGUI()
     {
-        if (GameManager.Instance.doingSetup == false)
+        if (GameManager.Instance.enabled && GameManager.Instance.doingSetup == false)
         {
             // draw the background:
             InitStyles();
@@ -64,7 +64,7 @@ public class Player : MovingObject
     {
         if (visionBarStyle != null)
         {
-            visionBarStyle.normal.background = MakeTex(2, 2, DispositionHelper.getColor(disposition));
+            visionBarStyle.normal.background = MakeTex(2, 2, disposition.getColor());
         }
     }
 
@@ -188,6 +188,14 @@ public class Player : MovingObject
 
             // Disable the player object since level is over.
             enabled = false;
+        }
+        else
+        {
+            Enemy enemy = other.gameObject.GetComponent<EnemyPatrol>();
+            if(enemy != null && enemy.disposition.isSimilar(disposition) == false)
+            {
+                GameManager.Instance.GameOver();
+            }
         }
     }
 

@@ -17,7 +17,7 @@ public class GameManager : MonoBehaviour
     private Image _levelImage;
     public bool doingSetup = true; // Boolean to check if we're setting up, prevent Player from moving during setup.
 
-    public int playerDisposition = 50;
+    public Disposition playerDisposition = new Disposition(50);
 
     // Use this for initialization
     void Awake()
@@ -100,6 +100,9 @@ public class GameManager : MonoBehaviour
 
         // Enable black background image gameObject.
         _levelImage.enabled = true;
+
+        // Enable the game over message
+        levelText.enabled = true;
 
         // Disable this GameManager.
         enabled = false;

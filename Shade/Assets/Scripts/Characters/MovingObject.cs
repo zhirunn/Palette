@@ -8,17 +8,11 @@ public abstract class MovingObject : MonoBehaviour
     // Properties
     public float moveTime = 1.0f; // Time it will take object to move, in seconds.
     public LayerMask blockingLayer; // Layer on which collision will be checked.
-    [HideInInspector]
-    public int disposition
-    {
-        set { _disposition = value; OnDispositionChange(); }
-        get { return _disposition; }
-    }
-    [Range(0, 100)]
-    [SerializeField]
-    private int _disposition = 50;
     [Range(0, 100)]
     public float health = 100.0f;
+
+    [SerializeField]
+    public Disposition disposition;
 
     // Cache variables
     protected Collider2D collider2d;
@@ -37,8 +31,6 @@ public abstract class MovingObject : MonoBehaviour
         // Store the reciprocal so that we can use it by multiplication next time
         // More efficient approach
         inverseMoveTime = 1f / moveTime;
-
-        disposition = _disposition;
 
         if (psr != null)
         {
@@ -77,18 +69,17 @@ public abstract class MovingObject : MonoBehaviour
 
     private void UpdateDispositionColor()
     {
+        OnDispositionChange();
         if (psr != null)
         {
-            Color color = DispositionHelper.getColor(disposition);
             psr.material.SetColor("_Albedo", Color.black);
-            psr.material.SetColor("_EmissionColor", color);
+            psr.material.SetColor("_EmissionColor", disposition.getColor());
         }
     }
 
     // Update the color when changed in the Unity editor
     void OnValidate()
     {
-        disposition = _disposition;
         UpdateDispositionColor();
     }
 }
