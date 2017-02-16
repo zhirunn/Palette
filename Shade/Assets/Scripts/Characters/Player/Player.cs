@@ -31,6 +31,7 @@ public class Player : MovingObject
         {
             // draw the background:
             InitStyles();
+            OnDispositionChange();
             GUI.BeginGroup(new Rect(visionBarPos.x, visionBarPos.y, visionBarSize.x, visionBarSize.y));
             GUI.Box(new Rect(0, 0, visionBarSize.x, visionBarSize.y), progressBarEmpty, visionBarStyle);
 
@@ -48,15 +49,14 @@ public class Player : MovingObject
         if (visionBarStyle == null)
         {
             visionBarStyle = new GUIStyle(GUI.skin.box);
-            OnDispositionChange();
         }
     }
-
+    
     protected override void Start()
     {
         animator = GetComponent<Animator>();
 
-        //Get the current disposition point total stored in GameManager between levels.
+        // Get the current disposition point total stored in GameManager between levels.
         disposition = GameManager.Instance.playerDisposition;
 
         // Get reference for eye opening
@@ -68,7 +68,7 @@ public class Player : MovingObject
         // Call the Start function of the MovingObject base class.
         base.Start();
     }
-
+    
     protected override void OnDispositionChange()
     {
         if (visionBarStyle != null)
@@ -255,4 +255,5 @@ public class Player : MovingObject
             GameManager.Instance.GameOver();
         }
     }
+
 }

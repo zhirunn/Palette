@@ -9,7 +9,7 @@ public class Disposition : System.Object
 
     [Range(0,100)]
     [SerializeField]
-    public int disposition;
+    public int disposition = 50;
 
     public Disposition(int disposition)
     {

@@ -20,6 +20,8 @@ public class FollowPlayerCameraController : MonoBehaviour
     // Use this for initialization
     void Start()
     {
+        player = GameObject.FindGameObjectWithTag("Player");
+
         if (keepOffset)
         {
             // Calculate and store the offset value by getting the distance between the player's position and camera's position.
@@ -40,25 +42,5 @@ public class FollowPlayerCameraController : MonoBehaviour
             // Set the position of the camera's transform to be the same as the player's, but offset by the calculated offset distance.
             transform.position = player.transform.position + offset;
         }
-    }
-
-    // Idea from Addyarb 
-    // http://answers.unity3d.com/answers/1236899/view.html
-    void OnEnable()
-    {
-        //Tell our 'OnLevelFinishedLoading' function to start listening for a scene change as soon as this script is enabled.
-        SceneManager.sceneLoaded += OnLevelFinishedLoading;
-    }
-
-    void OnDisable()
-    {
-        //Tell our 'OnLevelFinishedLoading' function to stop listening for a scene change as soon as this script is disabled. Remember to always have an unsubscription for every delegate you subscribe to!
-        SceneManager.sceneLoaded -= OnLevelFinishedLoading;
-    }
-
-
-    void OnLevelFinishedLoading(Scene scene, LoadSceneMode mode)
-    {
-        player = GameObject.FindGameObjectWithTag("Player");
     }
 }
