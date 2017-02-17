@@ -39,14 +39,13 @@ public class SnakeMovement : MonoBehaviour {
             if (Input.GetKeyUp(KeyCode.R))
             {
                 SnakeMode = false;
-                MainBody.GetComponent<playercharacter>().PlayerMode = true;
+                MainBody.GetComponent<Player>().PlayerMode = true;
             }
-            else if (Input.GetKeyUp(KeyCode.Q)) {
-                SnakeMode = false;
-                
+            /*else if (Input.GetKeyUp(KeyCode.Q)) {
+                SnakeMode = false;              
                 Leap(0.1f);
-                MainBody.GetComponent<playercharacter>().PlayerMode = true;
-            }
+                MainBody.GetComponent<Player>().PlayerMode = true;
+            }*/
         }
         else {
             Shrink(0.1f);

@@ -13,6 +13,12 @@ public class Player : MovingObject
     private bool _visionActivated = false;
     private GameObject eyeOpening; // Image for eye opening
 
+    public GameObject Hand;// Player's hand
+    public bool walking = false;// variable for player's state
+    public bool casting = false;// variable for player's state
+    public bool PlayerMode = true;// Controlling the player by default
+
+
     // Cache variables
     private Animator animator; // Used to store a reference to the Player's animator component.
 
@@ -114,14 +120,34 @@ public class Player : MovingObject
         float horizontal = Input.GetAxis("Horizontal");
         float vertical = Input.GetAxis("Vertical");
 
+
+        //Check if we have a non-zero value for horizontal or vertical
+        if (PlayerMode == true)
+        {
+            if ((horizontal != 0 || vertical != 0) && (casting == false))
+            {
+                walking = true;
+                Move(horizontal, vertical);
+            }
+            else
+            {
+                walking = false;
+            }
+            animator.SetBool("walk", walking);
+        }
+        HandleArm();
+        
+
+
+        /*
         if (vertical == 0 && horizontal == 0)
         {
             animator.enabled = false;
         }
         else
         {
+            
             animator.enabled = true;
-
             if (vertical > 0)
             {
                 animator.SetInteger("Direction", Direction.Up);
@@ -138,13 +164,11 @@ public class Player : MovingObject
             {
                 animator.SetInteger("Direction", Direction.Left);
             }
-        }
+    }
+        */
 
         //Check if we have a non-zero value for horizontal or vertical
-        if (horizontal != 0 || vertical != 0)
-        {
-            Move(horizontal, vertical);
-        }
+        
     }
 
     private void HandleVision()
@@ -198,7 +222,23 @@ public class Player : MovingObject
             GameManager.Instance.setState(false);
         }
     }
+    private void HandleArm() {
+        if (Input.GetKey(KeyCode.E))
+        {
+            casting = true;
+            walking = false;
+            PlayerMode = false;
+            Hand.GetComponent<SnakeMovement>().SnakeMode = true;
+        }
+        if (Input.GetKey(KeyCode.R))
+        {
+            casting = false;
+            PlayerMode = true;
+            Hand.GetComponent<SnakeMovement>().SnakeMode = false;
+        }
 
+        animator.SetBool("cast", casting);
+    }
     private void OnTriggerEnter2D(Collider2D other)
     {
         // Check if the tag of the trigger collided with is Exit.
