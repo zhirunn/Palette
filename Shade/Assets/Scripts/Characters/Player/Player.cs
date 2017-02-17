@@ -107,6 +107,12 @@ public class Player : MovingObject
         while (GameManager.Instance.doingSetup) { return; }
         HandleMovement();
         HandleVision();
+        HandleDispositionUpdate();
+    }
+
+    private void HandleDispositionUpdate()
+    {
+        OnDispositionChange();
     }
 
     private void HandleMovement()

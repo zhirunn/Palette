@@ -20,7 +20,10 @@ public class GameManager : MonoBehaviour
 
     public bool doingSetup = true; // Boolean to check if we're setting up, prevent Player from moving during setup.
 
-    public Disposition playerDisposition = new Disposition(50);
+    public Disposition playerDisposition;
+
+    [HideInInspector]
+    public Story Story;
 
     // Use this for initialization
     void Awake()
@@ -54,6 +57,11 @@ public class GameManager : MonoBehaviour
 
         // Assign enemies to a new List of Enemy objects.
         enemies = new List<Enemy>();
+
+        playerDisposition = new Disposition(50);
+
+        // Create the story
+        Story = GetComponent<Story>();
 
         // Call the InitGame function to initialize the first level 
         // InitGame();

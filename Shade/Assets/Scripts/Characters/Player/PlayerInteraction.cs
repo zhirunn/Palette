@@ -2,15 +2,28 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class TwineTalkingScript : MonoBehaviour
+public class PlayerInteraction : MonoBehaviour
 {
     public TwineTextPlayer textPlayer;
 
-    private Interactable iteractable = null;
+    private Interactable interactable = null;
     private GameObject iteractableGameObject = null;
 
     private bool _showText = false;
     //bool _CanTalk = false;
+
+    void Start()
+    {
+        if(textPlayer == null)
+        {
+            textPlayer = GameObject.FindObjectOfType<TwineTextPlayer>();
+        }
+
+        if(textPlayer != null)
+        {
+            textPlayer.gameObject.GetComponent<Canvas>().enabled = false;
+        }
+    }
 
     void OnTriggerEnter2D(Collider2D other)
     {
@@ -18,7 +31,7 @@ public class TwineTalkingScript : MonoBehaviour
         if (iter != null)
         {
             iteractableGameObject = other.gameObject;
-            iteractable = iter;
+            interactable = iter;
         }
     }
 
@@ -29,9 +42,9 @@ public class TwineTalkingScript : MonoBehaviour
         // THEN disable the interaction
         //
         // This scenario solves the edge case of this method being called on non-interactable but collidable game objects
-        if (iteractable != null && other.gameObject == iteractableGameObject)
+        if (interactable != null && other.gameObject == iteractableGameObject)
         {
-            iteractable = null;
+            interactable = null;
             iteractableGameObject = null;
             _showText = false;
         }
@@ -42,17 +55,29 @@ public class TwineTalkingScript : MonoBehaviour
         bool iteractPressed = Input.GetButtonDown("Interact");
 
         // TODO Change animation keyframe of the player while talking?
-        if (iteractPressed && iteractable != null)
+        if (iteractPressed && interactable != null)
         {
             _showText = true;
-            textPlayer.gameObject.SetActive(true);
-            //textPlayer.gameObject.GetComponent<TwineTextPlayer>().StartStory = true;
+
+            if (textPlayer.Story.State == UnityTwine.TwineStoryState.Idle)
+            {
+                textPlayer.gameObject.GetComponent<Canvas>().enabled = true;
+
+                //GameManager.Instance.Story.Begin();
+                GameManager.Instance.Story.GoTo(interactable.Passage);
+                
+            }
         }
 
         if (_showText == false)
         {
-            textPlayer.gameObject.SetActive(false);
+            if (textPlayer.Story.State == UnityTwine.TwineStoryState.Playing)
+            {
+                textPlayer.Story.Pause();
+                textPlayer.gameObject.GetComponent<Canvas>().enabled = false;
+            }
         }
     }
+
 }
 
