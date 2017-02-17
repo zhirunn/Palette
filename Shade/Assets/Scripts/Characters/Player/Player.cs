@@ -13,9 +13,15 @@ public class Player : MovingObject
     private bool _visionActivated = false;
     private GameObject eyeOpening; // Image for eye opening
 
+    public GameObject Hand;// Player's hand
+    public bool walking = false;// variable for player's state
+    public bool casting = false;// variable for player's state
+    public bool PlayerMode = true;// Controlling the player by default
+
+
     // Cache variables
     private Animator animator; // Used to store a reference to the Player's animator component.
-
+    private BoxCollider2D col;
     // HUD for Vision
     private Vector2 visionBarPos = new Vector2(40, 40);
     private Vector2 visionBarSize = new Vector2(200, 60);
@@ -55,6 +61,7 @@ public class Player : MovingObject
     protected override void Start()
     {
         animator = GetComponent<Animator>();
+        col = GetComponent<BoxCollider2D>();
 
         // Get the current disposition point total stored in GameManager between levels.
         disposition = GameManager.Instance.playerDisposition;
@@ -120,37 +127,24 @@ public class Player : MovingObject
         float horizontal = Input.GetAxis("Horizontal");
         float vertical = Input.GetAxis("Vertical");
 
-        if (vertical == 0 && horizontal == 0)
-        {
-            animator.enabled = false;
-        }
-        else
-        {
-            animator.enabled = true;
-
-            if (vertical > 0)
-            {
-                animator.SetInteger("Direction", Direction.Up);
-            }
-            else if (vertical < 0)
-            {
-                animator.SetInteger("Direction", Direction.Down);
-            }
-            else if (horizontal > 0)
-            {
-                animator.SetInteger("Direction", Direction.Right);
-            }
-            else if (horizontal < 0)
-            {
-                animator.SetInteger("Direction", Direction.Left);
-            }
-        }
 
         //Check if we have a non-zero value for horizontal or vertical
-        if (horizontal != 0 || vertical != 0)
+        if (PlayerMode == true)
         {
-            Move(horizontal, vertical);
+            if ((horizontal != 0 || vertical != 0) && (casting == false))
+            {
+                walking = true;
+                Move(horizontal, vertical);
+            }
+            else
+            {
+                walking = false;
+            }
+            animator.SetBool("walk", walking);
         }
+        HandleArm();
+        
+        
     }
 
     private void HandleVision()
@@ -204,7 +198,27 @@ public class Player : MovingObject
             GameManager.Instance.setState(false);
         }
     }
+    private void HandleArm() {
+        if (Input.GetKey(KeyCode.E))
+        {
+            casting = true;
+            walking = false;
+            PlayerMode = false;
+            col.enabled = false;
+            Hand.GetComponent<SnakeMovement>().SnakeMode = true;
+            Hand.GetComponent<CircleCollider2D>().enabled = true;
+        }
+        if (Input.GetKey(KeyCode.R))
+        {
+            casting = false;
+            PlayerMode = true;
+            col.enabled = true;
+            Hand.GetComponent<SnakeMovement>().SnakeMode = false;
+            Hand.GetComponent<CircleCollider2D>().enabled = false;
+        }
 
+        animator.SetBool("cast", casting);
+    }
     private void OnTriggerEnter2D(Collider2D other)
     {
         // Check if the tag of the trigger collided with is Exit.

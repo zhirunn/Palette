@@ -11,11 +11,9 @@ public class SnakeMovement : MonoBehaviour {
     public float minddistance;
     public int size;
     public float speed = 0.5f;
-    public float rotationspeed = 50;
+    public float rotationspeed = 100;
     Vector2 dir = Vector2.left;
     public GameObject bodyprefab;
-    
-
     private float dis;
     private Transform cur_part;
     private Transform prev_part;
@@ -39,14 +37,13 @@ public class SnakeMovement : MonoBehaviour {
             if (Input.GetKeyUp(KeyCode.R))
             {
                 SnakeMode = false;
-                MainBody.GetComponent<playercharacter>().PlayerMode = true;
+                MainBody.GetComponent<Player>().PlayerMode = true;
             }
-            else if (Input.GetKeyUp(KeyCode.Q)) {
-                SnakeMode = false;
-                
+            /*else if (Input.GetKeyUp(KeyCode.Q)) {
+                SnakeMode = false;              
                 Leap(0.1f);
-                MainBody.GetComponent<playercharacter>().PlayerMode = true;
-            }
+                MainBody.GetComponent<Player>().PlayerMode = true;
+            }*/
         }
         else {
             Shrink(0.1f);
@@ -157,4 +154,5 @@ public class SnakeMovement : MonoBehaviour {
 
         }
     }
+
 }
