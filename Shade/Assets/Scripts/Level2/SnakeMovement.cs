@@ -11,11 +11,9 @@ public class SnakeMovement : MonoBehaviour {
     public float minddistance;
     public int size;
     public float speed = 0.5f;
-    public float rotationspeed = 50;
+    public float rotationspeed = 100;
     Vector2 dir = Vector2.left;
     public GameObject bodyprefab;
-    
-
     private float dis;
     private Transform cur_part;
     private Transform prev_part;
@@ -156,4 +154,5 @@ public class SnakeMovement : MonoBehaviour {
 
         }
     }
+
 }

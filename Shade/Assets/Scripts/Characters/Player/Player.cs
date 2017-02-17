@@ -18,7 +18,7 @@ public class Player : MovingObject
     public bool casting = false;// variable for player's state
     public bool PlayerMode = true;// Controlling the player by default
 
-
+    private BoxCollider2D col;
     // Cache variables
     private Animator animator; // Used to store a reference to the Player's animator component.
 
@@ -61,6 +61,7 @@ public class Player : MovingObject
     protected override void Start()
     {
         animator = GetComponent<Animator>();
+        col = GetComponent<BoxCollider2D>();
 
         // Get the current disposition point total stored in GameManager between levels.
         disposition = GameManager.Instance.playerDisposition;
@@ -137,37 +138,6 @@ public class Player : MovingObject
         }
         HandleArm();
         
-
-
-        /*
-        if (vertical == 0 && horizontal == 0)
-        {
-            animator.enabled = false;
-        }
-        else
-        {
-            
-            animator.enabled = true;
-            if (vertical > 0)
-            {
-                animator.SetInteger("Direction", Direction.Up);
-            }
-            else if (vertical < 0)
-            {
-                animator.SetInteger("Direction", Direction.Down);
-            }
-            else if (horizontal > 0)
-            {
-                animator.SetInteger("Direction", Direction.Right);
-            }
-            else if (horizontal < 0)
-            {
-                animator.SetInteger("Direction", Direction.Left);
-            }
-    }
-        */
-
-        //Check if we have a non-zero value for horizontal or vertical
         
     }
 
