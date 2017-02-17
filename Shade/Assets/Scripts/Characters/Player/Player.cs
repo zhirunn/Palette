@@ -18,10 +18,10 @@ public class Player : MovingObject
     public bool casting = false;// variable for player's state
     public bool PlayerMode = true;// Controlling the player by default
 
-    private BoxCollider2D col;
+
     // Cache variables
     private Animator animator; // Used to store a reference to the Player's animator component.
-
+    private BoxCollider2D col;
     // HUD for Vision
     private Vector2 visionBarPos = new Vector2(40, 40);
     private Vector2 visionBarSize = new Vector2(200, 60);
@@ -198,13 +198,17 @@ public class Player : MovingObject
             casting = true;
             walking = false;
             PlayerMode = false;
+            col.enabled = false;
             Hand.GetComponent<SnakeMovement>().SnakeMode = true;
+            Hand.GetComponent<CircleCollider2D>().enabled = true;
         }
         if (Input.GetKey(KeyCode.R))
         {
             casting = false;
             PlayerMode = true;
+            col.enabled = true;
             Hand.GetComponent<SnakeMovement>().SnakeMode = false;
+            Hand.GetComponent<CircleCollider2D>().enabled = false;
         }
 
         animator.SetBool("cast", casting);
