@@ -21,7 +21,6 @@ public class Player : MovingObject
 
     // Cache variables
     private Animator animator; // Used to store a reference to the Player's animator component.
-    private BoxCollider2D col;
     // HUD for Vision
     private Vector2 visionBarPos = new Vector2(40, 40);
     private Vector2 visionBarSize = new Vector2(200, 60);
@@ -61,7 +60,6 @@ public class Player : MovingObject
     protected override void Start()
     {
         animator = GetComponent<Animator>();
-        col = GetComponent<BoxCollider2D>();
 
         // Get the current disposition point total stored in GameManager between levels.
         disposition = GameManager.Instance.playerDisposition;
@@ -204,7 +202,7 @@ public class Player : MovingObject
             casting = true;
             walking = false;
             PlayerMode = false;
-            col.enabled = false;
+            collider2d.enabled = false;
             Hand.GetComponent<SnakeMovement>().SnakeMode = true;
             Hand.GetComponent<CircleCollider2D>().enabled = true;
         }
@@ -212,7 +210,7 @@ public class Player : MovingObject
         {
             casting = false;
             PlayerMode = true;
-            col.enabled = true;
+            collider2d.enabled = true;
             Hand.GetComponent<SnakeMovement>().SnakeMode = false;
             Hand.GetComponent<CircleCollider2D>().enabled = false;
         }
