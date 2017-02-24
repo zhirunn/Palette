@@ -8,6 +8,8 @@ public class Player : MovingObject
     public float restartLevelDelay = 1f; // Delay time in seconds to restart level.
     public float visionTime = 4.0f; // Time in seconds
     public float eyeTime = 1.0f; 
+	public AudioClip[] walkingSound;
+	public AudioSource source;
 
     private float currentVisionTime = 0; // Approaches the total allowed vision ti me
     private bool _visionActivated = false;
@@ -133,6 +135,8 @@ public class Player : MovingObject
             {
                 walking = true;
                 Move(horizontal, vertical);
+				source.clip = walkingSound[Random.Range(0, walkingSound.Length)];
+				source.Play();
             }
             else
             {

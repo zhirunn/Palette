@@ -9,7 +9,7 @@ public class opendoor : MonoBehaviour {
         if (col.gameObject.tag == "door") {
 			AudioSource unlockSound = GetComponent<AudioSource>();
 			unlockSound.Play();
-			yield return new WaitForSeconds(0.9f);
+			yield return new WaitForSeconds(1.1f);
             Destroy(col.gameObject, 0.3f);
             Destroy(this.gameObject, 0.1f);
         }
