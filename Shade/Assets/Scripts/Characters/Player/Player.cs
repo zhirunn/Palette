@@ -135,14 +135,16 @@ public class Player : MovingObject
             {
                 walking = true;
                 Move(horizontal, vertical);
-				source.clip = walkingSound[Random.Range(0, walkingSound.Length)];
-				source.Play();
             }
             else
             {
                 walking = false;
             }
             animator.SetBool("walk", walking);
+			if (walking == true) {
+				source.clip = walkingSound[Random.Range(0, walkingSound.Length)];
+				source.Play();
+			}
         }
         HandleArm();
         
