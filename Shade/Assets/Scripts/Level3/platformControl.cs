@@ -20,7 +20,7 @@ public class platformControl : MonoBehaviour {
             
             this.gameObject.SetActive(false);
 
-            lv3gen.SpawnNextRoom(lv3gen.all_tiles);
+            lv3gen.SpawnNextRoom();
 
         }
 	}

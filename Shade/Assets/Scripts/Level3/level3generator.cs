@@ -8,7 +8,7 @@ public class level3generator : MonoBehaviour {
     public GameObject tileprefab2;
     public GameObject tileprefab3;
 
-    List<GameObject> all_tiles;    
+    public List<GameObject> all_tiles;    
 	// Use this for initialization
 	void Start () {
         all_tiles = new List<GameObject>();
