@@ -210,6 +210,8 @@ public class Player : MovingObject
             PlayerMode = false;
             collider2d.enabled = false;
             Hand.GetComponent<SnakeMovement>().SnakeMode = true;
+            Hand.GetComponent<SnakeMovement>().footprints.footprints.Clear(); // force reset
+            Hand.GetComponent<SnakeMovement>().footprints.EnableFootprintTracking(true);
             Hand.GetComponent<CircleCollider2D>().enabled = true;
         }
         if (Input.GetKey(KeyCode.R))
@@ -218,6 +220,7 @@ public class Player : MovingObject
             PlayerMode = true;
             collider2d.enabled = true;
             Hand.GetComponent<SnakeMovement>().SnakeMode = false;
+            Hand.GetComponent<SnakeMovement>().footprints.EnableFootprintTracking(false);
             Hand.GetComponent<CircleCollider2D>().enabled = false;
         }
 

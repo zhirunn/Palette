@@ -17,6 +17,10 @@ public class SnakeMovement : MonoBehaviour {
     private float dis;
     private Transform cur_part;
     private Transform prev_part;
+
+    [HideInInspector]
+    public Footprints footprints;
+
 	// Use this for initialization
 	void Start () {
         for (int i = 0; i < size - 1; i++) {
@@ -24,7 +28,9 @@ public class SnakeMovement : MonoBehaviour {
             //set up the line renderer
         }
         //BodyParts[size-1] connects to shoulder
-	}
+
+        footprints = GetComponent<Footprints>();
+    }
 	
 	// Update is called once per frame
 	void Update () {
@@ -114,7 +120,38 @@ public class SnakeMovement : MonoBehaviour {
         
     }
     public void Shrink(float time) {
+        // TODO: Z, the hand is special and shouldn't be in this list
+        Transform hand = BodyParts[0]; 
 
+        if(footprints.footprints.Count == 0)
+        {
+            hand.position = Vector2.Lerp(hand.position, handPos.position, time);
+            hand.rotation = Quaternion.Slerp(hand.rotation, handPos.rotation, time);
+        }
+        else
+        {
+            Transform target = footprints.footprints[footprints.footprints.Count - 1].transform;
+            hand.position = Vector2.Lerp(hand.position, target.position, time);
+            hand.rotation = Quaternion.Slerp(hand.rotation, target.rotation, time);
+
+            if ((transform.position - target.position).sqrMagnitude <= 0.1f)
+            {
+                footprints.footprints.Remove(footprints.footprints[footprints.footprints.Count - 1]);
+            }
+        }
+
+        // TODO: Z, adjust code so that the other body parts follow along
+
+        // FIXME: Z, if the player presses E, R, and then E again, the 
+        // footprint tracing forces the arm straight back to the player (see 
+        // Player.cs#HandleArm() code that clears the footprint list)!
+        //
+        // Therefore, only allow the player to activate this ability if it's 
+        // not already activated and if it's back at the default position. One 
+        // way to know if it's back at the default position is if the 
+        // footprints list is empty again, perhaps?
+        
+        /*
         foreach (Transform node in BodyParts)
         {
             node.position = Vector2.Lerp(node.position, handPos.position, time);
@@ -123,6 +160,7 @@ public class SnakeMovement : MonoBehaviour {
 
 
         }
+        */
 
 /*
         for (int i = BodyParts.Count - 1; i > 0 ; i--)
@@ -144,6 +182,7 @@ public class SnakeMovement : MonoBehaviour {
             }*/
         
     }
+
     public void Leap(float time)
     {
         foreach (Transform node in BodyParts)

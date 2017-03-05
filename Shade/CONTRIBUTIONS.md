@@ -11,3 +11,6 @@ Contributors / Licensing
   https://forum.unity3d.com/threads/change-gui-box-color.174609/#post-1194616
 * HUD vision bar by duck (http://answers.unity3d.com/users/82/duck.html)
   http://answers.unity3d.com/answers/11898/view.html
+* Arm trail reversal idea inspired by footprint code by 
+  alucardj (http://answers.unity3d.com/users/20706/alucardj.html) at 
+  http://answers.unity3d.com/answers/477059/view.html
