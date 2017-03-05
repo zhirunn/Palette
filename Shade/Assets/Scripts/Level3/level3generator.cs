@@ -8,37 +8,51 @@ public class level3generator : MonoBehaviour {
     public GameObject tileprefab2;
     public GameObject tileprefab3;
 
-    public List<GameObject> all_tiles;    
+    public Transform SpawnPoint;
+
+    public List<GameObject> All_tiles;    
 	// Use this for initialization
 	void Start () {
-        all_tiles = new List<GameObject>();
+        All_tiles = new List<GameObject>();
 
-        for (int i = 0; i < 3; i++) {
-            GameObject obj = (GameObject) Instantiate(tileprefab1);
-            obj.SetActive(false);
-            all_tiles.Add(obj);
-        }
-	}
+
+        GameObject obj = (GameObject)Instantiate(tileprefab1);
+        obj.SetActive(false);
+        All_tiles.Add(obj);
+
+        GameObject obj2 = (GameObject)Instantiate(tileprefab2);
+        obj2.SetActive(false);
+        All_tiles.Add(obj2);
+
+        GameObject obj3 = (GameObject)Instantiate(tileprefab3);
+        obj3.SetActive(false);
+        All_tiles.Add(obj3);
+
+
+    }
 	
-	// Update is called once per frame
-	void Update () {
-		
-	}
     public void SpawnNextRoom(){
-
+        GameObject obj = (GameObject) GetUsableObject();
+        obj.transform.position = SpawnPoint.position;
+        obj.transform.rotation = SpawnPoint.rotation;
+        obj.SetActive(true);
 
     }
 
     public GameObject GetUsableObject() {
-        for (int i = 0; i < all_tiles.Count;i++ ) {
-            if (!all_tiles[i].activeInHierarchy)
+        Debug.Log(All_tiles.Count);
+        for (int i = 0; i < All_tiles.Count;i++ ) {
+            
+            if (!All_tiles[i].activeInHierarchy)
             {
-                return all_tiles[i];
+                Debug.Log("I found one");
+                return All_tiles[i];
             }
         }
         GameObject obj = (GameObject)Instantiate(tileprefab1);
         obj.SetActive(false);
-        all_tiles.Add(obj);
+        All_tiles.Add(obj);
+        Debug.Log("I create one");
         return obj;
 
     }
