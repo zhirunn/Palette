@@ -41,14 +41,13 @@ public class EnemyPatrol : Enemy
 
 
     /// <summary>
-    /// Calculates the Euclidean distance between two vector positions.
+    /// Calculates the Euclidean distance between the object's position target vector position.
     /// </summary>
-    /// <param name="x"></param>
-    /// <param name="y"></param>
+    /// <param name="v"></param>
     /// <returns>The squared length between the two vectors.</returns>
-    private float getDistance(Transform x, Transform y)
+    private float getDistance(Vector3 target)
     {
-        return (x.transform.position - transform.position).sqrMagnitude;
+        return (target - transform.position).sqrMagnitude;
     }
 
     // Use this for initialization
@@ -61,7 +60,7 @@ public class EnemyPatrol : Enemy
 
         // Attempt to find the closest marker
         List<Transform> orderedMarkers = markers.OrderBy(
-            x => getDistance(x, transform))
+            x => getDistance(x.position))
             .ToList<Transform>();
 
         for (int i = 0; i < markers.Length; ++i)
@@ -80,14 +79,14 @@ public class EnemyPatrol : Enemy
     // Update is called once per frame
     void Update()
     {
-        float distanceToPlayer = getDistance(player.transform, transform);
+        float distanceToPlayer = getDistance(player.transform.position);
 
         // I see the player! I'm not going to give up!
         if (distanceToPlayer < 25.0f)
         {
             lastGiveUpTime = 0;
         }
-        
+
         // Don't give up quite yet...
         if (lastGiveUpTime < giveUpTime)
         {
@@ -101,8 +100,18 @@ public class EnemyPatrol : Enemy
         }
         else // I give up!
         {
-            path = null;
+            float distanceToRoute = getDistance(markers[markerIndex].transform.position);
+            if (distanceToRoute > 3.0f)
+            {
+                seeker.StartPath(transform.position, markers[markerIndex].position, OnPathComplete);
+            }
+            else
+            {
+                path = null;
+            }
         }
+        
+        Vector3 target;
 
         if (path != null)
         {
@@ -119,10 +128,6 @@ public class EnemyPatrol : Enemy
                 return;
             }
 
-            // Direction to the next waypoint
-            Vector2 dir = (path.vectorPath[currentWaypoint] - transform.position).normalized;
-            Move(dir.x, dir.y);
-
             // The commented line is equivalent to the one below, but the one that is used
             // is slightly faster since it does not have to calculate a square root
             // if (Vector2.Distance (transform.position,path.vectorPath[currentWaypoint]) < nextWaypointDistance) {
@@ -133,47 +138,49 @@ public class EnemyPatrol : Enemy
                     currentWaypoint++;
                 }
             }
+
+            target = path.vectorPath[currentWaypoint];
         }
         else
         {
-            Transform target = markers[markerIndex];
-
-            // Determine direction and perform rotation
-            //
-            // Idea from asafsitner and robertbu
-            // http://answers.unity3d.com/users/12068/asafsitner.html
-            // http://answers.unity3d.com/users/16320/robertbu.html
-            // Source:
-            // http://answers.unity3d.com/answers/254209/view.html
-            // http://answers.unity3d.com/answers/651344/view.html
-            Vector2 direction = (target.position - transform.position).normalized;
-            float angle = Mathf.Atan2(direction.y, direction.x) * Mathf.Rad2Deg;
-            Quaternion lookRotation = Quaternion.AngleAxis(angle, Vector3.forward);
-
-            transform.rotation = Quaternion.Slerp(
-                transform.rotation,
-                lookRotation,
-                Time.deltaTime * rotateSpeed);
-
-            // Debug.Log("Direction and rotation set to: " + direction + " : " + lookRotation);
-
-            // Move the enemy
-            Move(direction.x, direction.y);
+            target = markers[markerIndex].position;
 
             // Debug.Log(getDistance(target, transform) + " units to " + target.name);
-            if (getDistance(target, transform) < distanceToMarker)
+            if (getDistance(target) < distanceToMarker)
             {
                 markerIndex = (markerIndex + 1) % markers.Length;
-                target = markers[markerIndex];
+                target = markers[markerIndex].position;
                 // Debug.Log(String.Format("New target: {0} with distance of {1}.", 
                 //     target.name, getDistance(target, transform)));
             }
         }
+
+        // Determine direction and perform rotation
+        //
+        // Idea from asafsitner and robertbu
+        // http://answers.unity3d.com/users/12068/asafsitner.html
+        // http://answers.unity3d.com/users/16320/robertbu.html
+        // Source:
+        // http://answers.unity3d.com/answers/254209/view.html
+        // http://answers.unity3d.com/answers/651344/view.html
+        Vector2 direction = (target - transform.position).normalized;
+        float angle = Mathf.Atan2(direction.y, direction.x) * Mathf.Rad2Deg;
+        Quaternion lookRotation = Quaternion.AngleAxis(angle, Vector3.forward);
+
+        transform.rotation = Quaternion.Slerp(
+            transform.rotation,
+            lookRotation,
+            Time.deltaTime * rotateSpeed);
+
+        // Debug.Log("Direction and rotation set to: " + direction + " : " + lookRotation);
+
+        // Move the enemy
+        Move(direction.x, direction.y);
     }
 
     public void OnPathComplete(Path p)
     {
-        if(!p.error)
+        if (!p.error)
         {
             // Debug.Log("Found the next path to the player!");
             path = p;
@@ -188,7 +195,7 @@ public class EnemyPatrol : Enemy
 
     private void footprintGeneration()
     {
-        
+
     }
 
     public void OnDisable()
