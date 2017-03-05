@@ -1,0 +1,188 @@
+fileFormatVersion: 2
+guid: f8021c0c3b83eab40aa8ef4396606c70
+timeCreated: 1488686536
+licenseType: Free
+TextureImporter:
+  fileIDToRecycleName:
+    21300000: Eye_Normal
+    21300002: Eye Upper
+    21300004: Eye Lower
+    21300006: arm body
+    21300008: Hand Root
+    21300010: Hand Thumb
+    21300012: Hand Finger
+    21300014: Arm Transition
+  serializedVersion: 4
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    filterMode: -1
+    aniso: -1
+    mipBias: -1
+    wrapMode: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spritePixelsToUnits: 1350
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  platformSettings:
+  - buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+  - buildTarget: Standalone
+    maxTextureSize: 2048
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Eye_Normal
+      rect:
+        serializedVersion: 2
+        x: 113.9982
+        y: 2404
+        width: 208.1904
+        height: 163.07617
+      alignment: 9
+      pivot: {x: 0.494748, y: 0.49670038}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Eye Upper
+      rect:
+        serializedVersion: 2
+        x: 83.99866
+        y: 2108
+        width: 211.413
+        height: 150.18555
+      alignment: 9
+      pivot: {x: 0.49902964, y: 0.49605304}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Eye Lower
+      rect:
+        serializedVersion: 2
+        x: 92.99852
+        y: 1950.0001
+        width: 184.02083
+        height: 105.06824
+      alignment: 9
+      pivot: {x: 0.4945173, y: 0.49015647}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: arm body
+      rect:
+        serializedVersion: 2
+        x: 214.99672
+        y: 853.99994
+        width: 138.90428
+        height: 156.63086
+      alignment: 9
+      pivot: {x: 0.4931692, y: 0.49798656}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Hand Root
+      rect:
+        serializedVersion: 2
+        x: 108.785576
+        y: 1073.6044
+        width: 138.90628
+        height: 106.67969
+      alignment: 9
+      pivot: {x: 0.494682, y: 0.49583602}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Hand Thumb
+      rect:
+        serializedVersion: 2
+        x: 338.99484
+        y: 1050
+        width: 121.17993
+        height: 167.91016
+      alignment: 9
+      pivot: {x: 0.49517378, y: 0.49431196}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Hand Finger
+      rect:
+        serializedVersion: 2
+        x: 443.9933
+        y: 847
+        width: 117.95734
+        height: 164.6875
+      alignment: 9
+      pivot: {x: 0.49176037, y: 0.49487665}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Arm Transition
+      rect:
+        serializedVersion: 2
+        x: 538.9918
+        y: 1095
+        width: 88.95392
+        height: 119.57031
+      alignment: 9
+      pivot: {x: 0.48910987, y: 0.48925185}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    outline: []
+  spritePackingTag: 
+  userData: 97562660508918
+  assetBundleName: 
+  assetBundleVariant: 

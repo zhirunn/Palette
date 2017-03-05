@@ -1,19 +1,18 @@
 fileFormatVersion: 2
-guid: cb1ab56f486d91e4a9bddeb172f94341
-timeCreated: 1486938884
+guid: 02d2be71e337e0d4f8899cdbd7fbd78a
+timeCreated: 1488687304
 licenseType: Free
 TextureImporter:
   fileIDToRecycleName:
-    21300000: FrontHair
-    21300002: body
-    21300004: ArmLeft
-    21300006: ArmRight
-    21300008: FootLeft
-    21300010: FootRight
-    21300012: LegLeft
-    21300014: LegRight
-    21300016: Head
-    21300018: PonyTail
+    21300000: Left Head
+    21300002: Left Tail
+    21300004: Left body
+    21300006: Left Arm1
+    21300008: Left Arm2
+    21300010: Left InnerLeg
+    21300012: Left Outer Leg
+    21300014: Left foot1
+    21300016: Left Foot2
   serializedVersion: 4
   mipmaps:
     mipMapMode: 0
@@ -50,7 +49,7 @@ TextureImporter:
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
-  spritePixelsToUnits: 250
+  spritePixelsToUnits: 1350
   alphaUsage: 1
   alphaIsTransparency: 1
   spriteTessellationDetail: -1
@@ -80,141 +79,124 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: FrontHair
+      name: Left Head
       rect:
         serializedVersion: 2
-        x: 398.82138
-        y: 2378.012
-        width: 601.3574
-        height: 775.38086
-      alignment: 9
-      pivot: {x: 0.11109022, y: 0.9073307}
+        x: 262
+        y: 1787
+        width: 973
+        height: 1034
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: body
+      name: Left Tail
       rect:
         serializedVersion: 2
-        x: 1303.194
-        y: 2361.3757
-        width: 517.56824
-        height: 636.80664
-      alignment: 9
-      pivot: {x: 0.49714416, y: 0.4987766}
+        x: 1952
+        y: 1195
+        width: 452
+        height: 822
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: ArmLeft
+      name: Left body
       rect:
         serializedVersion: 2
-        x: 1827.1608
-        y: 2443.9612
-        width: 240.4198
-        height: 375.77148
-      alignment: 9
-      pivot: {x: 0.84389544, y: 0.89202034}
+        x: 456
+        y: 690
+        width: 349
+        height: 479
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: ArmRight
+      name: Left Arm1
       rect:
         serializedVersion: 2
-        x: 2271.881
-        y: 2443.9473
-        width: 240.41992
-        height: 375.77148
-      alignment: 9
-      pivot: {x: 0.17110361, y: 0.87824464}
+        x: 470
+        y: 1360
+        width: 109
+        height: 324
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: FootLeft
+      name: Left Arm2
       rect:
         serializedVersion: 2
-        x: 1273.9924
-        y: 1568.3351
-        width: 196.91406
-        height: 303.26184
-      alignment: 9
-      pivot: {x: 0.53961205, y: 0.87577254}
+        x: 729
+        y: 1366
+        width: 112
+        height: 309
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: FootRight
+      name: Left InnerLeg
       rect:
         serializedVersion: 2
-        x: 1661.3198
-        y: 1567.7041
-        width: 198.52539
-        height: 304.87317
-      alignment: 9
-      pivot: {x: 0.42315412, y: 0.8589005}
+        x: 1034
+        y: 1290
+        width: 116
+        height: 90
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: LegLeft
+      name: Left Outer Leg
       rect:
         serializedVersion: 2
-        x: 1976.5497
-        y: 1664.2471
-        width: 143.74011
-        height: 158.24219
-      alignment: 9
-      pivot: {x: 0.4892235, y: 0.6576632}
+        x: 1237
+        y: 1259
+        width: 114
+        height: 119
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: LegRight
+      name: Left foot1
       rect:
         serializedVersion: 2
-        x: 2234.5598
-        y: 1664.2471
-        width: 143.74023
-        height: 158.24219
-      alignment: 9
-      pivot: {x: 0.47439367, y: 0.7518229}
+        x: 1580
+        y: 1054
+        width: 234
+        height: 291
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: Head
+      name: Left Foot2
       rect:
         serializedVersion: 2
-        x: 127.2961
-        y: 1285.743
-        width: 980.0196
-        height: 1065.42
-      alignment: 9
-      pivot: {x: 0.48600993, y: 0.15104789}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      tessellationDetail: 0
-    - serializedVersion: 2
-      name: PonyTail
-      rect:
-        serializedVersion: 2
-        x: 442.93796
-        y: 366.2003
-        width: 354.82425
-        height: 686.7578
-      alignment: 9
-      pivot: {x: 0.28285187, y: 0.8609751}
+        x: 1604
+        y: 624
+        width: 236
+        height: 295
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       tessellationDetail: 0
     outline: []
   spritePackingTag: 
-<<<<<<< HEAD
-  userData: 97503894286312
-=======
-  userData: 97504501432456
->>>>>>> origin/master
+  userData: 
   assetBundleName: 
   assetBundleVariant: 
