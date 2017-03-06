@@ -86,12 +86,12 @@ TextureImporter:
       name: Right Head
       rect:
         serializedVersion: 2
-        x: 194
-        y: 1776
-        width: 974
-        height: 1041
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+        x: 186.80627
+        y: 1765.5107
+        width: 989.6875
+        height: 1063.8086
+      alignment: 9
+      pivot: {x: 0.5759324, y: 0.1044216}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       tessellationDetail: 0
@@ -99,12 +99,12 @@ TextureImporter:
       name: Right FrontHair
       rect:
         serializedVersion: 2
-        x: 1289
-        y: 1738
-        width: 163
-        height: 907
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+        x: 1278.9791
+        y: 1728.1825
+        width: 187.2461
+        height: 930.06824
+      alignment: 9
+      pivot: {x: 0.2188993, y: 0.92763966}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       tessellationDetail: 0
@@ -112,12 +112,12 @@ TextureImporter:
       name: Right Tail
       rect:
         serializedVersion: 2
-        x: 1649
-        y: 1891
-        width: 444
-        height: 790
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+        x: 1641.8231
+        y: 1885.9403
+        width: 464.3944
+        height: 805.9962
+      alignment: 9
+      pivot: {x: 0.5323581, y: 0.9203004}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       tessellationDetail: 0
@@ -125,12 +125,12 @@ TextureImporter:
       name: Right Body
       rect:
         serializedVersion: 2
-        x: 305
-        y: 294
-        width: 349
-        height: 471
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+        x: 297.6507
+        y: 288.7666
+        width: 362.88086
+        height: 483.73053
+      alignment: 9
+      pivot: {x: 0.4747038, y: 0.19312479}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       tessellationDetail: 0
@@ -138,12 +138,12 @@ TextureImporter:
       name: Right Arm1
       rect:
         serializedVersion: 2
-        x: 1022
-        y: 310
-        width: 105
-        height: 307
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+        x: 1016.7441
+        y: 305.24316
+        width: 116.34772
+        height: 317.76367
+      alignment: 9
+      pivot: {x: 0.45029825, y: 0.9116602}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       tessellationDetail: 0
@@ -151,12 +151,12 @@ TextureImporter:
       name: Right Arm2
       rect:
         serializedVersion: 2
-        x: 1261
-        y: 310
-        width: 110
-        height: 308
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+        x: 1255.638
+        y: 305
+        width: 121.14966
+        height: 319.375
+      alignment: 9
+      pivot: {x: 0.49824375, y: 0.49784738}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       tessellationDetail: 0
@@ -164,12 +164,12 @@ TextureImporter:
       name: Right Foot1
       rect:
         serializedVersion: 2
-        x: 1331
-        y: 1019
-        width: 242
-        height: 290
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+        x: 1327.4949
+        y: 1010.4463
+        width: 250.08789
+        height: 308.0957
+      alignment: 9
+      pivot: {x: 0.32946134, y: 0.8693865}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       tessellationDetail: 0
@@ -177,12 +177,12 @@ TextureImporter:
       name: Right Foot2
       rect:
         serializedVersion: 2
-        x: 1754
-        y: 1042
-        width: 242
-        height: 305
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+        x: 1747.8616
+        y: 1043.5557
+        width: 251.69922
+        height: 306.48438
+      alignment: 9
+      pivot: {x: 0.33303475, y: 0.85759264}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       tessellationDetail: 0
@@ -190,12 +190,12 @@ TextureImporter:
       name: Right LegOuter
       rect:
         serializedVersion: 2
-        x: 1354
-        y: 1467
-        width: 116
-        height: 132
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+        x: 1346.9126
+        y: 1464.9424
+        width: 130.84961
+        height: 137.29492
+      alignment: 9
+      pivot: {x: 0.43305564, y: 0.776131}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       tessellationDetail: 0
@@ -203,12 +203,12 @@ TextureImporter:
       name: Right LegInner
       rect:
         serializedVersion: 2
-        x: 1768
-        y: 1507
-        width: 110
-        height: 94
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+        x: 1761.3701
+        y: 1501.4366
+        width: 126.015625
+        height: 100.234375
+      alignment: 9
+      pivot: {x: 0.46042314, y: 0.64444053}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       tessellationDetail: 0
@@ -216,12 +216,12 @@ TextureImporter:
       name: Right Eye Normal
       rect:
         serializedVersion: 2
-        x: 912
-        y: 1424
-        width: 169
-        height: 162
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+        x: 905.4683
+        y: 1417.6143
+        width: 184.0235
+        height: 179.18945
+      alignment: 9
+      pivot: {x: 0.8934986, y: 0.29295126}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       tessellationDetail: 0
@@ -229,12 +229,12 @@ TextureImporter:
       name: Right Eye Upper
       rect:
         serializedVersion: 2
-        x: 583
-        y: 1238
-        width: 201
-        height: 126
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+        x: 577.9749
+        y: 1227.6943
+        width: 216.25
+        height: 143.74023
+      alignment: 9
+      pivot: {x: 0.8885686, y: 0.41791308}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       tessellationDetail: 0
@@ -242,17 +242,17 @@ TextureImporter:
       name: Right Eye Lower
       rect:
         serializedVersion: 2
-        x: 618
-        y: 1060
-        width: 166
-        height: 69
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+        x: 609.2881
+        y: 1052.1631
+        width: 184.02344
+        height: 87.34375
+      alignment: 9
+      pivot: {x: 0.838352, y: 0.6224648}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       tessellationDetail: 0
     outline: []
   spritePackingTag: 
-  userData: 
+  userData: 97568363999966
   assetBundleName: 
   assetBundleVariant: 
