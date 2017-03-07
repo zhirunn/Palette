@@ -52,7 +52,7 @@ public class level3generator : MonoBehaviour {
         GameObject obj = (GameObject)Instantiate(tileprefab1);
         obj.SetActive(false);
         All_tiles.Add(obj);
-        Debug.Log("I create one");
+        Debug.Log("I created one");
         return obj;
 
     }
