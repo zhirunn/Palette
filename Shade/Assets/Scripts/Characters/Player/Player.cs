@@ -15,11 +15,10 @@ public class Player : MovingObject
     private bool _visionActivated = false;
     private GameObject eyeOpening; // Image for eye opening
 
-    public GameObject Hand;// Player's hand
-    public bool walking = false;// variable for player's state
-    public bool casting = false;// variable for player's state
-    public bool PlayerMode = true;// Controlling the player by default
-
+    public GameObject Hand; // Player's hand
+    public bool walking = false; // variable for player's state
+    public bool casting = false; // variable for player's state
+    public bool PlayerMode = true; // Controlling the player by default
 
     // Cache variables
     private Animator animator; // Used to store a reference to the Player's animator component.
@@ -29,6 +28,9 @@ public class Player : MovingObject
     private GUIStyle visionBarStyle = null;
     private Texture2D progressBarEmpty;
     private Texture2D progressBarFull;
+
+    // Hand snake movement
+    private SnakeMovement handSnakeMovement;
 
     // By duck (http://answers.unity3d.com/users/82/duck.html)
     // From http://answers.unity3d.com/answers/11898/view.html
@@ -71,6 +73,8 @@ public class Player : MovingObject
 
         // Set eye opening as false to start
         eyeOpening.GetComponent<Image>().enabled = false;
+
+        handSnakeMovement = Hand.GetComponent<SnakeMovement>();
 
         // Call the Start function of the MovingObject base class.
         base.Start();
@@ -128,8 +132,8 @@ public class Player : MovingObject
         float vertical = Input.GetAxis("Vertical");
 
 
-        //Check if we have a non-zero value for horizontal or vertical
-        if (PlayerMode == true)
+        // Check if we have a non-zero value for horizontal or vertical
+        if (PlayerMode == true && handSnakeMovement.RetractMode == false)
         {
             if ((horizontal != 0 || vertical != 0) && (casting == false))
             {
@@ -211,8 +215,8 @@ public class Player : MovingObject
             walking = false;
             PlayerMode = false;
             collider2d.enabled = false;
-            Hand.GetComponent<SnakeMovement>().SnakeMode = true;
-            Hand.GetComponent<SnakeMovement>().footprints.EnableFootprintTracking(true);
+            handSnakeMovement.SnakeMode = true;
+            handSnakeMovement.footprints.EnableFootprintTracking(true);
             Hand.GetComponent<CircleCollider2D>().enabled = true;
         }
         if (Input.GetKey(KeyCode.R))
@@ -220,8 +224,8 @@ public class Player : MovingObject
             casting = false;
             PlayerMode = true;
             collider2d.enabled = true;
-            Hand.GetComponent<SnakeMovement>().SnakeMode = false;
-            Hand.GetComponent<SnakeMovement>().footprints.EnableFootprintTracking(false);
+            handSnakeMovement.SnakeMode = false;
+            handSnakeMovement.footprints.EnableFootprintTracking(false);
             Hand.GetComponent<CircleCollider2D>().enabled = false;
         }
 
