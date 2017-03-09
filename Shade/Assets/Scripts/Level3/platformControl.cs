@@ -8,26 +8,28 @@ public class platformControl : MonoBehaviour {
     public GameObject mapspawner;
     public level3generator lv3gen;
 
-/*
-    public GameObject Explosive;
-    public GameObject Shield;
-    public GameObject HP_portion;
-    public GameObject Empty;
+    /*
+        public GameObject Explosive;
+        public GameObject Shield;
+        public GameObject HP_portion;
+        public GameObject Empty;
 
 
 
 
-    public Transform obstacle_pos1;
-    public List<Transform> item_pos;
 
-    private List<GameObject> all_items;
-    */
+        public List<Transform> item_pos;
+
+        private List<GameObject> all_items;
+        */
+    //public Transform obstacle_pos1;
+    public List<GameObject> all_blocks;
     // Use this for initialization
     void Start () {
 
         mapspawner = GameObject.Find("MapSpawner");
         lv3gen = mapspawner.GetComponent<level3generator>();
-        //lv3gen.all_tiles.Add(this.gameObject);
+        
 /*
         for (int i = 0; i < 6; i++) {
             int j = Random.Range(0, 2);
@@ -59,7 +61,7 @@ public class platformControl : MonoBehaviour {
             this.gameObject.SetActive(false);
             
             lv3gen.SpawnNextRoom();
-
+            
         }
 	}
 
@@ -67,5 +69,11 @@ public class platformControl : MonoBehaviour {
       //  foreach (Transform pos in item_pos) {
 
         //}
+    }
+    public void SpawnBlocks() {
+        int num = Random.Range(0, 6);
+        GameObject block = (GameObject)Instantiate(all_blocks[num]);
+        // Set Position
+        // Set Parent
     }
 }
