@@ -212,7 +212,6 @@ public class Player : MovingObject
             PlayerMode = false;
             collider2d.enabled = false;
             Hand.GetComponent<SnakeMovement>().SnakeMode = true;
-            Hand.GetComponent<SnakeMovement>().footprints.footprints.Clear(); // force reset
             Hand.GetComponent<SnakeMovement>().footprints.EnableFootprintTracking(true);
             Hand.GetComponent<CircleCollider2D>().enabled = true;
         }
