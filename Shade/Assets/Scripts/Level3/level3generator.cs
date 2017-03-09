@@ -10,6 +10,7 @@ public class level3generator : MonoBehaviour {
 
     public Transform SpawnPoint;
 
+   
     public List<GameObject> All_tiles;    
 	// Use this for initialization
 	void Start () {
@@ -33,8 +34,10 @@ public class level3generator : MonoBehaviour {
 	
     public void SpawnNextRoom(){
         GameObject obj = (GameObject) GetUsableObject();
+        
         obj.transform.position = SpawnPoint.position;
         obj.transform.rotation = SpawnPoint.rotation;
+        obj.GetComponent<platformControl>().SpawnItems();
         obj.SetActive(true);
 
     }
