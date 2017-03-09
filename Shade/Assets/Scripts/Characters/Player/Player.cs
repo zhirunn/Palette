@@ -7,9 +7,9 @@ public class Player : MovingObject
     // Player variables
     public float restartLevelDelay = 1f; // Delay time in seconds to restart level.
     public float visionTime = 4.0f; // Time in seconds
-    public float eyeTime = 1.0f; 
-	public AudioClip[] walkingSound;
-	public AudioSource source;
+    public float eyeTime = 1.0f;
+    public AudioClip[] walkingSound;
+    public AudioSource source;
 
     private float currentVisionTime = 0; // Approaches the total allowed vision ti me
     private bool _visionActivated = false;
@@ -58,7 +58,7 @@ public class Player : MovingObject
             visionBarStyle = new GUIStyle(GUI.skin.box);
         }
     }
-    
+
     protected override void Start()
     {
         animator = GetComponent<Animator>();
@@ -75,7 +75,7 @@ public class Player : MovingObject
         // Call the Start function of the MovingObject base class.
         base.Start();
     }
-    
+
     protected override void OnDispositionChange()
     {
         if (visionBarStyle != null)
@@ -141,14 +141,15 @@ public class Player : MovingObject
                 walking = false;
             }
             animator.SetBool("walk", walking);
-			if (walking == true) {
-				source.clip = walkingSound[Random.Range(0, walkingSound.Length)];
-				source.Play();
-			}
+            if (walking == true)
+            {
+                source.clip = walkingSound[Random.Range(0, walkingSound.Length)];
+                source.Play();
+            }
         }
         HandleArm();
-        
-        
+
+
     }
 
     private void HandleVision()
@@ -202,7 +203,8 @@ public class Player : MovingObject
             GameManager.Instance.setState(false);
         }
     }
-    private void HandleArm() {
+    private void HandleArm()
+    {
         if (Input.GetKey(KeyCode.E))
         {
             casting = true;
@@ -240,7 +242,7 @@ public class Player : MovingObject
         else
         {
             Enemy enemy = other.gameObject.GetComponent<EnemyPatrol>();
-            if(enemy != null && enemy.disposition.isSimilar(disposition) == false)
+            if (enemy != null && enemy.disposition.isSimilar(disposition) == false)
             {
                 GameManager.Instance.GameOver();
             }

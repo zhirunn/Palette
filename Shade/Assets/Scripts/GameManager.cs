@@ -12,7 +12,7 @@ public class GameManager : MonoBehaviour
 
     public float levelStartDelay = 0f; // Time to wait before starting level, in seconds.
 
-    private List<Enemy> enemies;
+    private List<DispositionObject> dispositionObjects;
     private GameObject[] footprints;
     private Text levelText; // Text to display current level number.
     private Image levelImage; // Image to block out level as levels are being set up, background for levelText.
@@ -55,8 +55,8 @@ public class GameManager : MonoBehaviour
         // Sets this to not be destroyed when reloading scene
         DontDestroyOnLoad(gameObject);
 
-        // Assign enemies to a new List of Enemy objects.
-        enemies = new List<Enemy>();
+        // Assign enemies to a new List of disposition objects.
+        dispositionObjects = new List<DispositionObject>();
 
         playerDisposition = new Disposition(50);
 
@@ -90,7 +90,7 @@ public class GameManager : MonoBehaviour
         Invoke("HideLevelImage", levelStartDelay);
 
         // Clear any Enemy objects in our List to prepare for next level.
-        enemies.Clear();
+        dispositionObjects.Clear();
 
         // Get reference for eye opening
         eyeOpening = GameObject.Find("EyeOpening");
@@ -140,11 +140,11 @@ public class GameManager : MonoBehaviour
         InitGame();
     }
 
-    // Call this to add the passed in Enemy to the List of Enemy objects.
-    public void AddEnemyToList(Enemy script)
+    // Call this to add the passed in disposition object to the List of disposition objects.
+    public void AddDispositionObjectToList(DispositionObject obj)
     {
         // Add Enemy to List enemies.
-        enemies.Add(script);
+        dispositionObjects.Add(obj);
     }
 
     // GameOver is called when the player reaches 0 health points
@@ -165,7 +165,7 @@ public class GameManager : MonoBehaviour
 
     public void ToggleEnemyDispositions(bool enable)
     {
-        foreach (Enemy e in enemies)
+        foreach (DispositionObject e in dispositionObjects)
         {
             e.ToggleDisposition(enable);
         }

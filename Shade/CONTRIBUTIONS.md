@@ -14,3 +14,4 @@ Contributors / Licensing
 * Arm trail reversal idea inspired by footprint code by 
   alucardj (http://answers.unity3d.com/users/20706/alucardj.html) at 
   http://answers.unity3d.com/answers/477059/view.html
+* Field of vision idea from http://unity.grogansoft.com/enemies-that-can-see/

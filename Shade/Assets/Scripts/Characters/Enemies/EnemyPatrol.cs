@@ -21,7 +21,7 @@ public class EnemyPatrol : Enemy
     ////////////////////////////////////////
     // A star path finding vars
 
-    private GameObject player;
+    private GameObject targetFound;
 
     private Path path = null;
 
@@ -39,6 +39,7 @@ public class EnemyPatrol : Enemy
 
     ////////////////////////////////////////
 
+    private VisionObject visionObject;
 
     /// <summary>
     /// Calculates the Euclidean distance between the object's position target vector position.
@@ -55,7 +56,6 @@ public class EnemyPatrol : Enemy
     {
         base.Start();
 
-        player = GameObject.FindGameObjectWithTag("Player");
         seeker = GetComponent<Seeker>();
 
         // Attempt to find the closest marker
@@ -74,47 +74,87 @@ public class EnemyPatrol : Enemy
         }
 
         lastGiveUpTime = giveUpTime;
+
+        visionObject = GetComponentInChildren<VisionObject>();
+        visionObject.NewTargetFound += HandleNewTargetFound;
+    }
+
+    void HandleNewTargetFound(object sender, EventArgs args)
+    {
+        targetFound = visionObject.GetClosestTarget();
     }
 
     // Update is called once per frame
     void Update()
     {
-        float distanceToPlayer = getDistance(player.transform.position);
-
-        // I see the player! I'm not going to give up!
-        if (distanceToPlayer < 25.0f)
+        if (targetFound != null)
         {
-            lastGiveUpTime = 0;
-        }
-
-        // Don't give up quite yet...
-        if (lastGiveUpTime < giveUpTime)
-        {
-            lastGiveUpTime += Time.deltaTime;
-
-            if (Time.time - lastRepath > repathRate && seeker.IsDone())
+            // Verify that the targetFound is actually the closest target
+            // Switch targets if a closer target is found
+            GameObject newCloserTarget = visionObject.GetClosestTarget();
+            if (newCloserTarget != targetFound && newCloserTarget != null)
             {
-                lastRepath = Time.time + UnityEngine.Random.value * repathRate * 0.5f;
-                seeker.StartPath(transform.position, player.transform.position, OnPathComplete);
+                DispositionObject targetFoundDisposition = newCloserTarget.GetComponent<DispositionObject>();
+                if (targetFoundDisposition != null
+                    && targetFoundDisposition.health > 0 && targetFoundDisposition.recharging == false)
+                {
+                    targetFound = newCloserTarget;
+                    if (targetFound == null)
+                        return;
+                }
+
+                // Debug.Log("New closer target found: " + newCloserTarget);
+                targetFound = newCloserTarget;
+            }
+
+            float distanceToPlayer = getDistance(targetFound.transform.position);
+
+            // I see the player! I'm not going to give up!
+            if (visionObject.activeTargetsFound.Contains(targetFound))
+            {
+                lastGiveUpTime = 0;
+            }
+
+            // Don't give up quite yet...
+            if (lastGiveUpTime < giveUpTime)
+            {
+                lastGiveUpTime += Time.deltaTime;
+
+                if (Time.time - lastRepath > repathRate && seeker.IsDone())
+                {
+                    lastRepath = Time.time + UnityEngine.Random.value * repathRate * 0.5f;
+                    seeker.StartPath(transform.position, targetFound.transform.position, OnPathComplete);
+                }
+            }
+            else // I give up!
+            {
+                float distanceToRoute = getDistance(markers[markerIndex].transform.position);
+                if (distanceToRoute > 3.0f)
+                {
+                    seeker.StartPath(transform.position, markers[markerIndex].position, OnPathComplete);
+                }
+                else
+                {
+                    path = null;
+                }
             }
         }
-        else // I give up!
-        {
-            float distanceToRoute = getDistance(markers[markerIndex].transform.position);
-            if (distanceToRoute > 3.0f)
-            {
-                seeker.StartPath(transform.position, markers[markerIndex].position, OnPathComplete);
-            }
-            else
-            {
-                path = null;
-            }
-        }
-        
+
         Vector3 target;
 
         if (path != null)
         {
+            // The commented line is equivalent to the one below, but the one that is used
+            // is slightly faster since it does not have to calculate a square root
+            // if (Vector2.Distance (transform.position,path.vectorPath[currentWaypoint]) < nextWaypointDistance) {
+            if (currentWaypoint < path.vectorPath.Count)
+            {
+                if ((transform.position - path.vectorPath[currentWaypoint]).sqrMagnitude < distanceToMarker * distanceToMarker)
+                {
+                    currentWaypoint++;
+                }
+            }
+
             if (currentWaypoint > path.vectorPath.Count)
             {
                 path = null;
@@ -126,17 +166,6 @@ public class EnemyPatrol : Enemy
                 // Debug.Log("End Of Path Reached");
                 currentWaypoint++;
                 return;
-            }
-
-            // The commented line is equivalent to the one below, but the one that is used
-            // is slightly faster since it does not have to calculate a square root
-            // if (Vector2.Distance (transform.position,path.vectorPath[currentWaypoint]) < nextWaypointDistance) {
-            if (currentWaypoint < path.vectorPath.Count)
-            {
-                if ((transform.position - path.vectorPath[currentWaypoint]).sqrMagnitude < distanceToMarker * distanceToMarker)
-                {
-                    currentWaypoint++;
-                }
             }
 
             target = path.vectorPath[currentWaypoint];
@@ -189,7 +218,27 @@ public class EnemyPatrol : Enemy
         }
         else
         {
-            Debug.Log("There was an error when calculating the path to the player!");
+            Debug.LogError("There was an error when calculating the path to the player!");
+        }
+    }
+
+    void OnTriggerStay2D(Collider2D coll)
+    {
+        if (coll.gameObject.tag == "Distraction"
+            && (transform.position - coll.gameObject.transform.position).sqrMagnitude < distanceToMarker * distanceToMarker)
+        {
+            DispositionObject dispositionObj = coll.gameObject.GetComponent<DispositionObject>();
+
+            if (dispositionObj == null)
+            {
+                Debug.LogError(String.Format("Distraction does not have the {1} script attached!", typeof(DispositionObject).Name));
+                return;
+            }
+
+            if (dispositionObj.health >= 0 && dispositionObj.recharging == false)
+            {
+                dispositionObj.health -= 10 * Time.deltaTime;
+            }
         }
     }
 
@@ -201,6 +250,6 @@ public class EnemyPatrol : Enemy
     public void OnDisable()
     {
         seeker.pathCallback -= OnPathComplete;
+        visionObject.NewTargetFound -= HandleNewTargetFound;
     }
-
 }
