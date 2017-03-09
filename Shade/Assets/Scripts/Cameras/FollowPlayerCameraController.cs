@@ -7,7 +7,9 @@ using UnityEngine.SceneManagement;
 public class FollowPlayerCameraController : MonoBehaviour
 {
     // Store a reference to the player game object
-    private GameObject player;
+    private Player player;
+
+    private SnakeMovement hand;
 
     /// <summary>
     /// Set to true if the scene x and y offset to the player should always be maintained; false to force the camera to center on the player.
@@ -20,7 +22,10 @@ public class FollowPlayerCameraController : MonoBehaviour
     // Use this for initialization
     void Start()
     {
-        player = GameObject.FindGameObjectWithTag("Player");
+        player = GameObject.FindGameObjectWithTag("Player").GetComponent<Player>();
+
+        if(player.Hand != null)
+            hand = player.Hand.GetComponent<SnakeMovement>();
 
         if (keepOffset)
         {
@@ -39,8 +44,13 @@ public class FollowPlayerCameraController : MonoBehaviour
     {
         if(player != null)
         {
+            GameObject target = player.gameObject;
+
+            if (hand != null && (hand.SnakeMode || hand.RetractMode))
+                target = hand.gameObject;
+
             // Set the position of the camera's transform to be the same as the player's, but offset by the calculated offset distance.
-            transform.position = player.transform.position + offset;
+            transform.position = target.transform.position + offset;
         }
     }
 }
