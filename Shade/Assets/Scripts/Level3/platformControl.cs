@@ -22,12 +22,14 @@ public class platformControl : MonoBehaviour {
 
         private List<GameObject> all_items;
         */
-    //public Transform obstacle_pos1;
+    public GameObject obstacle_pos;
+    
     public List<GameObject> all_blocks;
     // Use this for initialization
     void Start () {
 
         mapspawner = GameObject.Find("MapSpawner");
+        obstacle_pos = GameObject.Find("Obstacle");
         lv3gen = mapspawner.GetComponent<level3generator>();
         
 /*
@@ -74,6 +76,9 @@ public class platformControl : MonoBehaviour {
         int num = Random.Range(0, 6);
         GameObject block = (GameObject)Instantiate(all_blocks[num]);
         // Set Position
+        block.transform.position = obstacle_pos.transform.position;
+        block.transform.rotation = obstacle_pos.transform.rotation;
         // Set Parent
+        block.transform.parent = transform;
     }
 }

@@ -16,7 +16,7 @@ public class level3generator : MonoBehaviour {
 	void Start () {
         All_tiles = new List<GameObject>();
 
-
+        // Create All the tiles prefab
         GameObject obj = (GameObject)Instantiate(tileprefab1);
         obj.SetActive(false);
         All_tiles.Add(obj);
@@ -29,7 +29,9 @@ public class level3generator : MonoBehaviour {
         obj3.SetActive(false);
         All_tiles.Add(obj3);
 
-
+        GameObject obj4 = (GameObject)Instantiate(tileprefab2);
+        obj4.SetActive(false);
+        All_tiles.Add(obj4);
     }
 	
     public void SpawnNextRoom(){
@@ -38,6 +40,7 @@ public class level3generator : MonoBehaviour {
         obj.transform.position = SpawnPoint.position;
         obj.transform.rotation = SpawnPoint.rotation;
         obj.GetComponent<platformControl>().SpawnItems();
+        obj.GetComponent<platformControl>().SpawnBlocks();
         obj.SetActive(true);
 
     }
@@ -57,6 +60,7 @@ public class level3generator : MonoBehaviour {
         All_tiles.Add(obj);
         Debug.Log("I created one");
         return obj;
-
     }
+    
+
 }
