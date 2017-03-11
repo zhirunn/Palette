@@ -6,7 +6,7 @@ public class BlockControl : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
-        Destroy(this.gameObject, 6f);
+        Destroy(this.gameObject, 7f);
 	}
 	
 	// Update is called once per frame

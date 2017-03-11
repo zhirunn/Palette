@@ -15,7 +15,7 @@ public class timetest : MonoBehaviour {
     }
     private void HandleInput() {
         if (Input.GetKey(KeyCode.Space)) {
-            Time.timeScale = 0.05f;
+            Time.timeScale = 0.5f;
         }
         if (Input.GetKey(KeyCode.S)) {
             Time.timeScale = 1f;

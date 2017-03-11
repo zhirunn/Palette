@@ -56,7 +56,8 @@ public class platformControl : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-        transform.position = new Vector3(transform.position.x, transform.position.y + 0.03f);
+        //transform.position = new Vector3(transform.position.x, transform.position.y + 0.03f);
+        transform.Translate(0,Time.deltaTime*5f,0);
         if (transform.position.y >= recyclePoint.transform.position.y) {
             
             
