@@ -21,9 +21,11 @@ public class Level1 : MonoBehaviour {
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetButtonUp("Vision"))
+        //Show doors to rooms
+        //Remove wall beneath the door or turn off collider
+        if (Input.GetButtonDown("Vision"))
         {
-            //Show rooms
+
         }
     }
 
