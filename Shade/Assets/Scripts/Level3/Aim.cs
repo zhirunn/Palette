@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class Aim : MonoBehaviour {
 
+    public int rotOffset;
 	// Use this for initialization
 	void Start () {
 		
@@ -20,7 +21,7 @@ public class Aim : MonoBehaviour {
 
 
         float rotZ = Mathf.Atan2(difference.y, difference.x) * Mathf.Rad2Deg;
-        //transform.rotation = Quaternion.Euler(0f, 0f, rotZ + rotOffset);
+        transform.rotation = Quaternion.Euler(0f, 0f, rotZ + rotOffset);
         
     }
 }
