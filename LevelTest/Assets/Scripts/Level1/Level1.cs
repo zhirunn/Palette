@@ -6,7 +6,6 @@ public class Level1 : MonoBehaviour {
     public GameObject room1;
     public GameObject room2;
     public GameObject room3;
-    public GameObject room4;
     public GameObject doors;
 
 	// Use this for initialization
@@ -14,7 +13,6 @@ public class Level1 : MonoBehaviour {
         disableSprite(room1);
         disableSprite(room2);
         disableSprite(room3);
-        disableSprite(room4);
         disableSprite(doors);
     }
 
