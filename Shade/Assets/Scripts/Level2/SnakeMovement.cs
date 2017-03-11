@@ -46,9 +46,12 @@ public class SnakeMovement : MonoBehaviour
     {
         if (SnakeMode == true)
         {
-            FreeHand();
-            MoveBodyParts();
-
+            if(distanceTravelled < maxDistance)
+            {
+                FreeHand();
+                MoveBodyParts();
+            }
+            
             if (transform.position != lastPosition)
                 distanceTravelled += Vector3.Distance(transform.position, lastPosition);
 
