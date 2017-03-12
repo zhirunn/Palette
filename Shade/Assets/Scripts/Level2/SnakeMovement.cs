@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class SnakeMovement : MonoBehaviour
+public class SnakeMovement : MovingObject
 {
     public bool SnakeMode = false;
     [HideInInspector]
@@ -28,7 +28,7 @@ public class SnakeMovement : MonoBehaviour
     private Vector3 lastPosition;
 
     // Use this for initialization
-    void Start()
+    protected override void Start()
     {
         for (int i = 0; i < size - 1; i++)
         {
@@ -39,6 +39,8 @@ public class SnakeMovement : MonoBehaviour
 
         footprints = GetComponent<Footprints>();
         lastPosition = transform.position;
+
+        base.Start();
     }
 
     // Update is called once per frame
@@ -46,12 +48,12 @@ public class SnakeMovement : MonoBehaviour
     {
         if (SnakeMode == true)
         {
-            if(distanceTravelled < maxDistance)
+            if (distanceTravelled < maxDistance)
             {
                 FreeHand();
                 MoveBodyParts();
             }
-            
+
             if (transform.position != lastPosition)
                 distanceTravelled += Vector3.Distance(transform.position, lastPosition);
 
@@ -114,7 +116,8 @@ public class SnakeMovement : MonoBehaviour
     public void FreeHand()
     {
         transform.Rotate(0, 0, -Input.GetAxis("Horizontal") * rotationspeed * Time.deltaTime);
-        transform.position += transform.up * Input.GetAxis("Vertical") * speed * Time.deltaTime;
+        Vector3 vec = transform.up * Input.GetAxis("Vertical") * speed;
+        Move(vec.x, vec.y);
     }
 
     private Transform _targetToTravel = null;
@@ -177,6 +180,18 @@ public class SnakeMovement : MonoBehaviour
             node.position = Vector2.Lerp(node.position, BodyParts[0].transform.position, time);
             //cur_part.LookAt(prev_part);
             node.rotation = Quaternion.Slerp(node.rotation, BodyParts[0].transform.rotation, time);
+        }
+    }
+
+    void OnTriggerEnter2D(Collider2D coll)
+    {
+        if (coll.gameObject.tag == "Enemy")
+        {
+            DispositionObject dispositionObj = coll.gameObject.GetComponent<DispositionObject>();
+            if(dispositionObj.disposition.isSimilar(MainBody.GetComponent<Player>().disposition) == false)
+            {
+                GameManager.Instance.GameOver();
+            }
         }
     }
 
