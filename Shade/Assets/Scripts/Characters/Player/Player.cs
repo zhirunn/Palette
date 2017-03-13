@@ -137,6 +137,30 @@ public class Player : MovingObject
         {
             if ((horizontal != 0 || vertical != 0) && (casting == false))
             {
+                if (horizontal > 0) {
+                    animator.SetBool("Right", true);
+                    animator.SetBool("Left", false);
+                    animator.SetBool("Up", false);
+                    animator.SetBool("Down", false);
+                }
+                if (horizontal < 0) {
+                    animator.SetBool("Left", true);
+                    animator.SetBool("Right", false);
+                    animator.SetBool("Up", false);
+                    animator.SetBool("Down", false);
+                }
+                if (vertical > 0) {
+                    animator.SetBool("Up", true);
+                    animator.SetBool("Left", false);
+                    animator.SetBool("Right", false);
+                    animator.SetBool("Down", false);
+                }
+                if (vertical < 0) {
+                    animator.SetBool("Down", true);
+                    animator.SetBool("Left", false);
+                    animator.SetBool("Up", false);
+                    animator.SetBool("Right", false);
+                }
                 walking = true;
                 Move(horizontal, vertical);
             }
@@ -144,12 +168,13 @@ public class Player : MovingObject
             {
                 walking = false;
             }
-            animator.SetBool("walk", walking);
+            /*
             if (walking == true)
             {
                 source.clip = walkingSound[Random.Range(0, walkingSound.Length)];
                 source.Play();
             }
+            */
         }
         HandleArm();
 
@@ -223,6 +248,9 @@ public class Player : MovingObject
             PlayerMode = true;
             handSnakeMovement.SnakeMode = false;
             handSnakeMovement.footprints.EnableFootprintTracking(false);
+        }
+        if (Input.GetKeyUp(KeyCode.J)) {
+            animator.SetTrigger("ATK");
         }
 
         animator.SetBool("cast", casting);
