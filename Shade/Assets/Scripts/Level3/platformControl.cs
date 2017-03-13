@@ -13,13 +13,7 @@ public class platformControl : MonoBehaviour {
         public GameObject Shield;
         public GameObject HP_portion;
         public GameObject Empty;
-
-
-
-
-
         public List<Transform> item_pos;
-
         private List<GameObject> all_items;
         */
     public GameObject obstacle_pos;
@@ -30,8 +24,7 @@ public class platformControl : MonoBehaviour {
 
         mapspawner = GameObject.Find("MapSpawner");
         obstacle_pos = GameObject.Find("Obstacle");
-        lv3gen = mapspawner.GetComponent<level3generator>();
-        
+        lv3gen = mapspawner.GetComponent<level3generator>();       
 /*
         for (int i = 0; i < 6; i++) {
             int j = Random.Range(0, 2);
@@ -48,8 +41,7 @@ public class platformControl : MonoBehaviour {
             else {
                 GameObject obj = (GameObject)Instantiate(Shield);
                 all_items.Add(obj);
-            }
-            
+            }           
         }
         */
 	}

@@ -21,17 +21,15 @@ public class level3generator : MonoBehaviour {
         obj.SetActive(false);
         All_tiles.Add(obj);
 
-        GameObject obj2 = (GameObject)Instantiate(tileprefab2);
-        obj2.SetActive(false);
-        All_tiles.Add(obj2);
-
-        GameObject obj3 = (GameObject)Instantiate(tileprefab3);
-        obj3.SetActive(false);
-        All_tiles.Add(obj3);
-
         GameObject obj4 = (GameObject)Instantiate(tileprefab2);
         obj4.SetActive(false);
         All_tiles.Add(obj4);
+
+        for (int i = 0; i < 3; i++) {
+            GameObject obj3 = (GameObject)Instantiate(tileprefab3);
+            obj3.SetActive(false);
+            All_tiles.Add(obj3);
+        }
     }
 	
     public void SpawnNextRoom(){
