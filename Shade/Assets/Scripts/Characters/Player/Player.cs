@@ -214,19 +214,15 @@ public class Player : MovingObject
             casting = true;
             walking = false;
             PlayerMode = false;
-            collider2d.enabled = false;
             handSnakeMovement.SnakeMode = true;
             handSnakeMovement.footprints.EnableFootprintTracking(true);
-            Hand.GetComponent<CircleCollider2D>().enabled = true;
         }
         if (Input.GetKey(KeyCode.R))
         {
             casting = false;
             PlayerMode = true;
-            collider2d.enabled = true;
             handSnakeMovement.SnakeMode = false;
             handSnakeMovement.footprints.EnableFootprintTracking(false);
-            Hand.GetComponent<CircleCollider2D>().enabled = false;
         }
 
         animator.SetBool("cast", casting);
