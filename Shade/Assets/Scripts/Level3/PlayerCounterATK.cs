@@ -28,9 +28,15 @@ public class PlayerCounterATK : MonoBehaviour {
         if (Input.GetKeyUp(KeyCode.K)) {
             Time.timeScale = 1f;
             foreach (GameObject item in Spikes){
-                item.transform.Rotate(0, 0, 180f);
-                item.GetComponent<spikeControl>().speed = 5f;
+                if (item)
+                {
+                    item.transform.Rotate(0, 0, 180f);
+                    spikeControl ctrl = item.GetComponent<spikeControl>();
+                    ctrl.speed = 5f;
+                    ctrl.friendly_fire = true;
+                }
             }
+            Spikes.Clear();
         }
 	}
     private void OnTriggerEnter2D(Collider2D col)
