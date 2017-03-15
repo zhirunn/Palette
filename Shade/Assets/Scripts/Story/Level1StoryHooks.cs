@@ -5,6 +5,10 @@ using UnityTwine;
 
 public class Level1StoryHooks : MonoBehaviour {
 
+    public GameObject doctorEvian;
+    public Transform moveTo;
+    public float speed = 1f;
+
     public TwineTextPlayer textPlayer;
     private Canvas textPlayerCanvas;
     private TwineStory story;
@@ -35,5 +39,20 @@ public class Level1StoryHooks : MonoBehaviour {
 
         // Can't used the locally cached reference
         GameObject.FindObjectOfType<TwineTextPlayer>().GetComponent<Canvas>().enabled = false;
+
+        StartCoroutine(MoveOverSeconds());
+    }
+
+    public IEnumerator MoveOverSeconds()
+    {
+        float elapsedTime = 0;
+        Vector3 startingPos = doctorEvian.transform.position;
+        while (elapsedTime < speed)
+        {
+            doctorEvian.transform.position = Vector3.Lerp(startingPos, moveTo.position, (elapsedTime / speed));
+            elapsedTime += Time.deltaTime;
+            yield return new WaitForEndOfFrame();
+        }
+        doctorEvian.transform.position = moveTo.position;
     }
 }

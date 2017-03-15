@@ -9,7 +9,15 @@ Shade final proto
 
 
 
+
+
+
+
 :: UserStylesheet[stylesheet]
+
+
+
+
 
 
 
@@ -20,64 +28,66 @@ Shade final proto
 :: Start
 <<set $disposition = 50>>
 
-The dialogue will be paraphrased and edited in certain sections to suit the need of this prototype. The MC (Siam) wakes up after a cutscene is shown, depicting flashs of memory). Siam opens their eyes and enters into a conversation with a doctor, named Doctor Evian. 
+(Shion slowly blinks awake, eyebrows furrowing in pain emenating from behind thier eyes)
 
 Doctor Evian: Ah, you've awoken, good, good. How do you feel? Can you hear me?
 
-Siam: Ugh. What happened to me? Where is this?
+Shion: Ugh. What happened to me? Where is this? Why do my eyes hurt?
 
 Doctor Evian: Not sure, you were brought here, and I took care of you!
 
-Siam: What?! But, where is this? Why can't I remember how I got here, or any reason why I would be here? I was at home last time I-
+Shion: What?! But, where is this? Why can't I remember how I got here, or any reason why I would be here? I was at home last time I-
 
 Doctor Evian: Ah! Interesting! Memory issues! I didn't think-
 
-(Loud sound erupts like glass breaking, or something breaking perhaps)
+(Loud sound erupts like glass breaking, and a shadowy figure appears near)
 
 Doctor Evian: NO!! THEY CANNOT COME HERE!
 
-(pick an option, these choices influence your characters interactions in the game)
+[[Shion: How rude! What is this place anyways?|Negative1]] 
 
-[[Siam: How rude! What is this place anyways?|Negative1]] 
-
-[[Siam: I gotta get out of this place fast, something is very wrong here!|Positive1]] 
+[[Shion: I gotta get out of this place fast, something is very wrong here!|Positive1]] 
 
 
 
-:: Holophone recovery
-Siam: My holophone at least I still have that with me, maybe it can tell me whats going on But first I need to escape this place!
-
+:: Holophone recovery first
+Shion: My holophone!...but it's missing the battery, where is it?
 
 :: After exiting
-(When they exit the room they end up inside Equinox HQ and the door to the room MC was in vanishes.)
+( As Shion exits the room a metal gate comes down, blocking the entrance of the door from being acessed again. At the same time Shions arm begins to throbb a bit.)
 
-Siam: I should be able to figure out what happened, or at least get an idea if I take a look at my holophones memory??? That cannot be right! There's only one location on my holophone!
+Shion:...Ouch...my arm..why is it hurting?
 
-Siam spends time going through their holophone and searches in the phones settings, it notes that the phone's data was wiped 3 days ago.
+( Shion looks at their arm and notices nothing out of the ordinary aside from the slight green twinge to the skin.)
+
+Shion: Strange...anyways...I should be able to figure out what happened, or at least get an idea if I take a look at my holophones memory??? That cannot be right! There's only one location on my holophone!
+
+Shion spends time going through their holophone and searches in the phones settings, it notes that the phone's data was wiped 3 days ago.
+
+Shion: Ugh, something is not right here. I'll contact support and see If I can find some way to restore the data.
+
+(Shion contacts Equinox's Holosupport number)
 
 
-Siam: Ugh, something is not right here. I'll contact support and see If I can find some way to restore the data.
 
-(Siam calls support and enters contact with Kazkaza, an IT worker for Equinox, the producers of the Holophone and also the workplace of Siam)
 
-[[Kazkaza's request]]
 
 
 :: Kazkaza's request
 Kazkaza: Hello, this is Equinox, " Advancement through Technology" is our prime principle, this is Kazkaza speaking, how may I help you?
 
-Siam: Hello, I'm from the research department, I was wondering, is it possible to have the data on my holophone restored? It's important.
+Shion: Hello, I'm from the research department, I was wondering, is it possible to have the data on my holophone restored? It's important.
 
 Kazkaza: Let me guess, you drank too many elements at the company dinner party, ended up with some strange person who robbed you bli-
 
-[[Siam(assertive/demanding): No! I got into an accident, and the information on my phone is really important! I need you to fix it immediately|Negative Siam Kazkaza]]
+[[Shion: No! I got into an accident, and the information on my phone is really important! I need you to fix it immediately!|Negative Shion Kazkaza]]
 
-[[Siam (calm):  Apologies, nothing that interesting. Or so I think, I can't remember, and the information on my phone would be important on figuring out what's wrong.|Positive Siam Kazkaza]]
+[[Shion:  Apologies, nothing that interesting. Or so I think, I can't remember, and the information on my phone would be important on figuring out what's wrong.|Positive Shion Kazkaza]]
 
 
 
 :: Level 2 warehouse
-(Quick travels to electronics warehouse, couple of nondescript NPC's hanging around. And a obviously different NPC who is the boss of the warehouse.)
+(Siam moves to a warehouse, couple of nondescript NPC's hanging around. And a obviously different NPC who is the boss of the warehouse.)
 
 
 [[Talk to big boss]]
@@ -88,40 +98,42 @@ Kazkaza: Let me guess, you drank too many elements at the company dinner party, 
 
 
 :: Talk to big boss
-Siam: Hello, you wouldn't happen to know where I can find someone who is incharge of this place, or someone who would know where I can find some boxes for pickup, would you?
+Shion: Hello, you wouldn't happen to know where I can find someone who is incharge of this place, or someone who would know where I can find some boxes for pickup, would you?
 
 Big Boss: Ya betcha I would. Ya looking at the Big Boss ‘imself! What'cha looking for squirt?
 
-Siam: Someone named Kazkaza sent-
+Shion: Someone named Kazkaza sent-
 
 Big Boss: Kazkaza, by Urgot ‘imself I knew this would happen eventually. Kazkaza's been picking me noggin for them parts for a 4 days now now. The woman's pretty persistent, at least she sent someone in person this time!
 
-Siam: Is there a problem with the parts she ordered?
+Shion: Is there a problem with the parts she ordered?
 
 Big Boss (sighs): Not really an issue with the parts ya see. The issue is the warehouse has been a complete wreck since those whacko cat things showed up 5 days ago. None of us can do a darn tootin' thing because of those pests!
 
-[[Siam (kindly):  Is there some way I can get in there and get the parts myself? I need them quite urgently.|Nice Boss]]
+[[Shion: Is there some way I can get in there and get the parts myself? I need them quite urgently.|Nice Boss]]
 
-[[Siam (annoyed):  Cats? I think I can deal with those, let me in. I'll go grab the parts myself.|Smirking Boss]] 
+[[Shion: Cats? I think I can deal with those, let me in. I'll go grab the parts myself.|Smirking Boss]] 
 
-:: If spoken to after the fact
+:: If spoken to after obtaining parts
 Big Boss: Well, Urgot me twisted, ya did it squirt! Well, ya best be running back to Kazkaza, that way she can finally stop pagin' me for her parts!
 
-:: Call to Siam after level 2
-(Siam gets a call from Kazkaza)
+:: Call to Shion after level 2
+(Shion gets a call from Kazkaza)
 
 Kazkaza: Hey, MC, how's it going? Find those parts yet?
 
-Siam: Yeah, I got them, something weird is going on in that warehouse, I encountered some cats they definitely weren't normal cats either..
+Shion: Yeah, I got them, something weird is going on in that warehouse, I encountered moving shadows, monsters!
 
-Kazkaza: Oh well, who cares, just bring them back over to Equinox HQ, I really need those parts, I've already been put far behind because they were late!
+Kazkaza: Oh well, who cares, just bring them back over to Equinox HQ, I really need those parts, I've already been put far behind because they were late! Bye now!~
 
-(Siam can go to Equinox HQ)
+Shion: I should go to Kazkaza's office and drop these off...
 
 :: Enter Equinox
-Siam enters the building, there is a main lobby and 3 wings. One for IT, One that is closed off, and One that is the hospital ward Siam came from earlier.
+Shion: I'm finally back, I should go deliver these to Kazkaza quickly.
 
-Siam goes north, enteres a room with a lot of rooms. Only 1 you can really go into, where Kazkaza is. Kazkaza's room is full of gadgets and wires and strange devices all over the place with a lot of screens.
+
+
+
 
 
 
@@ -130,124 +142,25 @@ Siam goes north, enteres a room with a lot of rooms. Only 1 you can really go in
 Kazkaza: Oh ho! You are finally here! Nice to finally meet you  after all this time!
 
 
-Siam (to self): Why do I have this feeling. Kazkaza feels familiar..
+Shion: Why do I have this feeling as if this is not our first encounter. Kazkaza feels familiar...
 
 
-[[Siam (casual): Nice to meet you as well.|Casual Siam]] 
+[[Shion: Nice to meet you as well!|Casual Shion]] 
 
-[[Siam (annoyed): Same.|Annoyed Siam]] 
-
-
-
-
-:: Giving info
-(MC opens holophone and sees that there's a new document, the documents contains a photo of the strange rubbery cats the MC encountered in the warehouse and a bunch of medical notes and other things. Also gets access to another location, where the rubber cats live. Call it "The Pits")
-
-Siam: Hey these are the things I saw in th-
-
-Kazkaza: Doesn't concern me, now could you please leave MC? I got a lot of work to get back to now that I have those parts again! I'll let you know if I find any new information later when I have the time! 
-
-:: Enter the pits
-(Won't be in prototype, but it is here)
-
-"The Pits"  is an area that's very green tinted, a lot of ooze super decrepit, looks very post apocalyptic. There's a cave somewhere, this is where the cats are.
-
-
-Siam experiences a headache (headache servers as a reminder to players to active their vision abilities) (flashback shots) and triggers Siam's vision ability and sees a ton of footprints everywhere, with only one set of footprints standing out, heading towards the cave.
-
-
-Siam (to self): What is this place....it's such a mess, but there seems to be a lot of  animal tracks around....can I find that creature here? 
-
-
-(Siam enters a cave, the cave has multiple paths and ways to get around it.)
-
-
-At the end of the puzzle (mostly using the arms) MC find what appears to be the main cat nest. There is a syringe and some broken electronic parts.
+[[Shion: Same...|Annoyed Shion]] 
 
 
 
-Siam: "What..." (experiences headache, footprints appear all over,  flashbacks to syringe being inserted into a regular-ish wild cat)
-
-
-
-:: If we need to make it a complete story in the prototype
-Change the ending temporarily in the Kazkaza giving info senario senario, you should be able to tag this on, if we need to complete it.
-
-Siam's head hurts yet again while Kazkaza looks on mildly interested. At this point another series of flashbacks occurs and Siam recalls what happened.
-
-
-MC discovers that the truth around the accident. Kazkaza was working with the MC on a new project the couple days before the accident on manufacturing mutations in the residents of the city. This was so that the Equinox can have control of the people through the use of mutants . Kazkaza turns out to be the CTO of Equinox who manufactured the whole thing together with MC being the researcher behind it all. MC ended up in the accident because Kazkaza found out that MC had the best genetic match for the mutation, as the previous test subjects didn't work out due to tbeing incompatible. MC turned into a monster and ended up hurting a lot of people which is why the one wing of Equinox was abandoned, and sealed off, to hide the truth of what happened.
-
-Kazkaza muses in annoyance that the experiment didn't work out perfectly and quickly stabs Siam with another needle with a more wicked look on her face.
-
-Kazkaza: Let us try again. Shall we? Maybe next time you'll be more obedient!
-
-Ending if player accumulates a greater negative disposition
-
-:: Positive ending
-
-Siam discovers that the truth around the accident. Kazkaza is the CTO of Eqinox, and doesn't actually work in IT, she is the Siam's former boss on a project she recruited them for recently. Kazkaza was working with Siam in the last week to develop a way to harness mutations, a subject Siam had been fascinated before they worked in Equinox, before they met Kazkaza. This was so that Equinox can gain control of the people through the use of mutants.Siam ended up in the accident because Kazkaza found out that Siam had the best genetic match for the mutation, as the previous test subjects didn't work out due to tbeing incompatible. Siam turned into a monster and ended up hurting a lot of people which is why the one wing of the holophone company was abandoned, and sealed off, to hide the truth of what happened.
-
-Kazkaza stares at Siam curiously as Siams face lights with renewed awareness and clarity.
-
-Kazkaza: So, how do you feel?
-
-Siam: Awful, truly awful, you made me do all those things! You made me!
-
-Kazkaza: I didn't do anything, you did, remmeber? You tore those people apart you made the very mutation you currently have!
-
-Siam: So those shadows...they were.... that's why...
-
-Kazkaza: Oh, if only you listened, Siam. But it's all fine now, we know that what you created is stable so I think we can move onto the next stage of development.
-
-Siam: I don't want to.
-
-Kazkaza: Excuse me?
-
-Siam: What your doing is creating weapons! I didn't come into researching this to create weapons! I did it to help people who were suffering and to improve thier lives using mutations!
-
-Kazkaza: And weapons create peace! See without your ability, do you think you could have getten around the hospital? Do you think you would have been able to get those parts from the warehouse?
-
-Siam: YES! There are many methods to do any one thing in this world! It's not worth the cost of humanity!
-
-(blah blah, option to kill Kazkaza  or let her live, cuts to immediate ending scene)
-
-
-
-
-
-
-:: Post pits
-Kazkaza calls Siam: Hey! Whatcha up to? Find anything interesting? Yes? No? Well no matter, I heard something really fun, sounds like it might be related to what's happened to you!
-
-
-Siam: Hm what are you talking about?
-
-Kazkaza: That east wing that's been closed of from regular Equinox staff! I was chatting with Big Boss a while ago and he told me about those cat things, there's a rumor in the Equinox HQ about some weird cats that some night shift staff saw. Maybe you should come back and look around? Oh hey! While you are on your way could you pick me up a couple of elements bottles? Actually never mind, boss wouldn't like me trying to solve problems while half drunk. Well bye-bye!~
-
-
-MC:  What a strange woman well it's not like much else is going on
 
 :: Negative1
 <<set disposition -= 15>>
 
-Siam: I don't have any of my belonging, just what is going on in here? I should check around quickly for my holophone!
+Shion:I don't have any of my belongings, just what is going on in here? I should check around quickly for my holophone!
 
 :: Positive1
 <<set disposition += 15>>
 
-Siam: I don't have anything with me, is my holophone somewhere near here? I should check quickly before I leave!
-
-:: Negative Siam Kazkaza
-<<set disposition -= 15>>
-
-Kazkaza: That's not my issue. Everyone's gotta take out their issues on IT.  I'll do it, it won't be easy since I have to pull it from the cloud and I have other work to do y'anno, it's not like you're the only one with holophone issues right now. [[Well it'll go faster if you help me out with a problem|Kazkaza Request]]
-
-
-:: Positive Siam Kazkaza
-<<set disposition += 15>>
-
-Kazkaza (mischievious): Well, maybe you really did end up drinking too much at the company party, hmm? Well, no matter, I have quite a bit of work to do, but I'll work on getting your phones information restored, It'll be kinda a pain though, and it might take a while for me to bring all the data back to you, I tell ya, cloud storage is one hell of a pain! [[Well it'll go faster if you help me out with a problem|Kazkaza Request]]
+Shion: I don't have anything with me, is my holophone somewhere near here? I should check quickly before I leave!
 
 :: Kazkaza Request
 Siam: I guess I could? Depending on what it is, if it helps you get my phones data back sooner
@@ -267,30 +180,380 @@ Kazkaza: Hey! Thanks, I feel motivated to getting your holo data back already!
 <<set disposition += 15>>
 
 
-Big Boss: Y'anno. I don't feel too great about letting ya in there to run around those Urgot-sent demons. But if Kazkaza aint got no time for waitin' then I suppose I can let ya in. Just don't get hurt in there
+Big Boss: Y'anno. I don't feel too great about letting ya in there to run around those Urgot-sent demons. But if Kazkaza aint got no time for waitin' then I suppose I can let ya in. Just don't get hurt in there!
+
+( Acess to the inside of the warehouse is unlocked)
+
+Big Boss: One thing there kiddo! There's a seal that we were using to keep those shadow monsters outta the stock, problem is someone didn't activate the seal properly so those monsters ran all over the warehouse. Once you get in there I can't let you out until you activate the seal properly! Take a look at this picture real quick, and memorize it. It'll give you an idea of what to do with the seal, and here's another picture of the parts for Kazkaza. Good luck!
 
 :: Smirking Boss
 <<set disposition -= 15>>
 
-Big Boss (Patronizingly): Well, I reckon you can squirt. Go tango with the beasts then, don't come crying to me when they get to ya!
+Big Boss : Well, I reckon you can squirt. Go tango with the beasts then, don't come crying to me when they get to ya!
 
-:: Casual Siam
+( Acess to the inside of the warehouse is unlocked)
+
+
+Big Boss: One thing there kiddo! There's a seal that we were using to keep those shadow monsters outta the stock, problem is someone didn't activate the seal properly so those monsters ran all over the warehouse. Once you get in there I can't let you out until you activate the seal properly! Take a look at this picture real quick, and memorize it. It'll give you an idea of what to do with the seal, and here's another picture of the parts for Kazkaza. Good luck!
+
+:: Giving info
+MC: Hey,these are the things I saw in the-
+
+Kazkaza: Doesn't concern me, now could you please leave, Shion? I have a great deal of work to get back to, now that I have those parts again.
+
+[[Shion:I'll leave you to it Kazkaza, let me know if you find any more information.|KindShion]]
+
+[[Shion: Fine! I'll get out of your hair! Just let me know if you find anymore information.|AnnoyShion]] 
+
+:: KindShion
+<<set disposition += 15>>
+
+Shion: Well, doesn't look like there's anything else to do here, I should find more information on this closed wing, I have a feeling I can get my memories back there.
+
+:: AnnoyShion
+<<set disposition -= 15>>
+
+Shion: Well, I should get going, not like there's anything else to do here. I should see If I can find anymore information on this closed wing. I think something important happened there, something I did.
+
+:: Equinox NPC's talking
+( Shion walks up to two Equinox employee's chatting in the hallway who wave at Shion on approach)
+
+Equinox Employee ( male): Oh! Hey Shion, long time no see!
+
+Equinox Employee ( female): It's been what? A couple weeks no hasn't it?
+
+[[Shion:Yeah...I guess? How have you been?|NPC1 Shion Confused]]
+
+[[Shion:Who the heck are you two?|NPC1 Shion Rage]]
+
+
+
+
+:: NPC1 Shion Confused
+<<set disposition += 15>>
+
+Equinox Employee (female): It's going all right... anyways you came at the perfect time. Don't you work in the research division? Maybe you know about what's going on lately.
+
+Equinox Employee (male): You talking about those shadow beasts?
+
+Equinox Employee ( female) : Yeah, Shion here transfered to the research division a while back, you know, the wing that got shut down recently. they probably know something about it, since that's where everyone is saying these shadows are comming from.
+
+Shion: I'm sorry, I actually got into an accident recently, I dont'...I don't remember what I was working on much.
+
+Equinox Employee ( female) : Sorry to hear that. Well.. I guess we'll never know. But between all of you and me, I think those shadow beasts came from that wing. Why else would we be the only place in the entire city with the most reports of them? Not to mention the wing got shut down right after they started poppingup all-
+
+Equinox Employee ( male) : I think that's enough talk about this.Talking about some wild conspiracy theories won't get us anywhere anyways...
+
+( The two NPC's go back to their chattering seemingly forgetting Shion's prescence)
+
+[[Shion: Sounds like there really must be more to the research wing, but I need more information, if the shadow beasts are really comming from in there, then I need to be prepaired. I need more information |Shion's Conviction]]
+
+
+:: NPC1 Shion Rage
+<<set disposition -= 15>>
+
+Equinox Employee (female): Hey you don't remember me? You used to work in the Q&A department before you transfered to the research division! Geeze...
+
+Equinox Employee (male): Well, don't give them a hard time, time are hard enough as it is with those...things wandering around.
+
+Equinox Employee ( female) : Those shadow things....they are so creepy, pure black, moving shadows! t first you think it's a trick of they eye but.... I can't belive they are actually real.  thought they were rumors of people working too many overtime shifts.
+
+Equinox Employee (male): Well, they are most certainely real. I can't belive managment isn't doing anything about them.They told us they are containing them and doing something about it. But people are still being attacked by them!
+
+Equinox Employee ( female) : We should get out of this company...I think what some of the staff are saying is true. Those...things, they came from the closed wing.
+
+Equinox Employee ( male) : I think that's enough talk about this. Talking about wild conspiracy theories won't get us anywhere anyways...
+
+
+( The two NPC's go back to their chattering seemingly forgetting Shion's prescence)
+
+[[Shion: I need to get into the research wing, there must be a way in, but I can't go in there unprepaired, there must be some place that has more information... the place I woke up. there must be something there, but how do I go there? The way sealed itself when I left that place? |Shion's Conviction]]
+
+
+
+:: Shion's Conviction
+Shion : Ah... my head... why is it hurting?
+
+
+
+:: Eye ability in lobby[On-spotting-footprints]
+Shion: Footsteps...again? Where do they lead
+
+:: Entering the research lab
+Shion: ... I remember being here... but I still can't remember what happened here. I need to look around more.
+
+
+
+:: After reading the final note.If Good Shion
+( need to set the threshold number)
+
+Shion: I...I created these monsters. I did this, my research created these...
+
+
+
+:: If Good, Kazkaza enters.
+Kazkaza: That's right! Wow, you were much faster than I thought! But then again I should have expected as much from the person who discovered the shadows beasts.The person who gave them physical form, in a lot of ways, you are their parent. After all, these shadows that are roaming around are mostly yours.
+
+Shion: ...Mine?
+
+Kazkaza: Aparently you still don't remember enough, interesting. Well it's easy, the strongest of emotions, regret, despair, guilt, shadows are made of these, fueled by this. A lot of the shadows here are from yourself, but they are not all yours...
+
+Shion: Emotions...I remember, I was doing research on shadows, on utilizing negative emotional energy in a way to benifit everyone, a way to remove the negative emotions from people while making use of those emotions.
+
+Kazkaza: Oh good, I don't have to explain everything it seems. Well then let's get down to business. Work with me again. I can't manage everything being a CTO and trying to cultivate these shadows gives me close to no free time these days.
+
+Shion: What are you planning to do with the shadows? What are you doing with them right now?
+
+Kazkaza: These shadows can do many things, I don't think we've discovered the full extent of thier abilities yet, either. But imagine, to have the control on the emotions of others, to pull the emotions out of others and utilize them, there is nothing we cannot do with them!
+
+Shion: We can't play with people emotions like that! Emotions make a person, the expression of our emotions is how we convey ourselves to each other!To take them away turns us into monsters!
+
+Kazkaza: Doesn't matter to me, the way I see it, we are all monsters. And by that logic are you not worse than myself? You are the one who discovered this method after all!
+
+Shion But... I?!
+
+Kazkaza: Silence dear. Like I told you before I don't have that much free time, and I can see that you won't work for me, so It's time for us to end this relationship. Pity, I had hoped that when I enjected the essense of the shadows into you that you would have seen things differently. Look how strong you are now. Oh well. Pity.
+
+( Kazkaza hits a switch and a couple of robots appear, which grab and push Shion into a large hallway that is connected to the room, once she does this a divider appears seperating the room from the hall)
+
+Kazkaza: I hope you die quickly!
+
+(  Boss appears and chases after Shion)
+
+:: Good Shion, post Boss
+( After Shion kills the boss, a whispered "thank you" seems to emenate from the boss's corpse)
+
+Shion: ....ha...Is it over?
+
+(Kazkaza walks over to Shion's location/ or reappears in the main research room with Shion)
+
+Kazkaza: HOW?! DO YOU KNOW HOW MUCH MONEY? RESEARCH WENT INTO THAT?!
+
+Shion: It was a suffering, I said thank you after I killed it. This is what you are doing with this research, you are only brining harm!
+
+Kazkaza: WHAT DO YOU KNOW?! THOSE PEOPLE WERE GOING TO DIE AWFUL PITIFUL DEATHS ANYWAYS!
+
+Shion: Everyone has the right to live the way they wish to, and we can't judge who's life is worth living and who's is not. It was never our place, and it was never the intent of the research I did, you twisted it to your own ideals.
+
+Kazkaza: There's nothing wrong with that. I have the power to do so after all.
+
+Shion: Not anymore. I won't let this continue!
+
+( Shion takes a nearby flamable substance, (something used in the boss fight prefered) and lights the desk on fire which quickly consumes the room)
+
+Kazkaza: ARE YOU MAD! HOW CAN YOU DO THIS? THIS RESEARCH IS THE FUTURE OF EQUINOX, MY FURTURE!
+
+
+
+
+
+:: Kazkaza attempt
+(Shion attempts to speak to Kazkaza but she pays you no heed as she rushes to secure information and research before the area burns down)
+
+Shion: I should get out of here.
+
+:: Get out of the pan
+Shion: I need to get out of here! Before it all burns down!
+
+
+
+:: After reading final note. If Bad
+
+Shion: Hm. I knew I was connected to this, but I didn't think I would be in the midst of it.
+
+:: If Bad Kazkaza enters.
+Kazkaza: That's right! Wow, you were much faster than I thought! But then again I should have expected as much from the person who discovered the shadows beasts.The person who gave them physical form, in a lot of ways, you are their parent. After all, these shadows that are roaming around are mostly yours.
+
+Shion: Mine? Those came from me?
+
+Kazkaza: Aparently you still don't remember enough, interesting. Well it's easy, the strongest of emotions, regret, despair, guilt, shadows are made of these, fueled by this. A lot of the shadows here are from yourself, but they are not all yours...
+
+Shion: Emotions, huh? I recall it a bit now that you mention it. I was doing research on shadows, on utilizing negative emotional energy to be benificial.
+
+Kazkaza: Oh good, I don't have to explain everything it seems. Well then let's get down to business. Work with me again. I can't manage everything being a CTO and trying to cultivate these shadows gives me close to no free time these days.
+
+Shion: Why would I trust someone like you, clearly you did something to me to affect my memory, and you are most likely the reason why I'm suffering from my current...ailment.
+
+Kazkaza: You had it comming, you wouldn't listen to me! And in the end isn't it fine? You research has become much more effective now that I've taken it over, and you are much stronger!
+
+Shion: Fine? You think it's fine just because I've aquired some new abilities? I liked how I was before much more! How dare you try to steal MY research and use it against me!
+
+Kazkaza: Silence dear. Like I told you before I don't have that much free time, and I can see that you won't work for me, so It's time for us to end this relationship. Pity, I had hoped that when I enjected the essense of the shadows into you that you would have seen things differently. Look how strong you are now. Oh well. Pity.
+
+( Kazkaza hits a switch and a couple of robots appear, which grab and push Shion into a large hallway that is connected to the room, once she does this a divider appears seperating the room from the hall)
+
+Kazkaza: I hope you die quickly, dear!
+
+(  Boss appears and chases after Shion)
+
+:: Bad Shion, post boss
+( After Shion kills the boss a whispered "thank you" seems to emenate from the boss's corpse)
+
+Shion: It's finally over...
+
+(Kazkaza walks over to Shion's location/ or reappears in the main research room with Shion)
+
+Kazkaza: HOW?! DO YOU KNOW HOW MUCH MONEY? RESEARCH WENT INTO THAT?!
+
+Shion: Do I care? Not really, especially after what YOU did to me, incase you have forgotten.
+
+Kazkaza: WHAT DO YOU KNOW?! I MADE YOU BETTER. YOU DIDN'T LISTEN TO ME! YOU WANTED TO HIDE YOUR RESEARCH FROM ME!
+
+Shion: Yeah? Because you are a crazy lady! Again, I didn't ask you to make me "better" and YOU stole MY research because you couldn't get anything done otherwise! You didn't have the ability or skills to discover what I did!
+
+Kazkaza: You say that but look at you! In the end you are a monster, you have nothing! I'm the CTO of Equinox not you! I have 
+
+Shion: Not anymore! I won't let this continue, I'm taking back what's mine!
+
+( Shion takes a nearby substance preferably from the boss fight and uses it on Kazkaza)
+
+Kazkaza: ARE YOU MAD! HOW CAN YOU DO THIS?! I'M SUPPOSED TO LEAD EQUINOX INTO THE NEW AGE!
+
+Shion: Not anymore! I'm taking back my place!
+
+Kazkaza: AAAAAAAAAH!
+
+(Kazkaza's form vanishes into a couple of shadow monsters, produced by her anguish and rage)
+
+Shion: I better get out of here, that's one too many fights for one day!
+
+
+
+
+
+
+:: Epilogue Good
+After lighting their old lab on fire Kazkaza perishes in the fire, attempting to save information and research on the shadow beasts. A new CTO is placed into power a month after Kazkaza's death. The new CTO demolishes the research wing, replacing it with a wing devoted to research for the holophone.
+
+Research on the shadow beasts stops as there is no one left, but there are still issues with the shadow beasts running rampant, remnants of Kazkaza's expiriments. Shion spends the rest of their life trying to remove of traces of these shadow beasts and help those affected by the attacks. 
+
+Eventually, Shion develops a serum to turn themselves back to being mostly human, but Shion still suffers from some of the quips of being mutated, in a good way, with the enhanced vision,Shion had obtainined staying with them.
+
+:: Epilogue Bad
+Shion eliminates Kazkaza following the battle with the massive shadow beast, and furthers the research of the shadow beasts themselves.
+
+Shion's research eventually makes them the new CTO of Equinox and instilling fear on the populous, mercilessly testing and enhancing the strength of the shadows using humans, and cultivating people to express strong enough emotions to give birth to strong shadow monsters.
+
+Shion's actions eventually spurs rebellion in the commonfolk in the city and in the employee's of Equinox as well against Shion's inhumane treatement of test subjects.
+
+Shion is in constant combat against those trying to destroy or steal thier research making them paranoid.
+
+Eventually Shion goes insane with stress and frustration, and vanishes from Equinox. Rumors are heard of a massive shadow beast prowling the city and night attacking the unsuspecting...
+
+
+
+:: Mirror
+( Shion see's a mirror infront of them, the mirror twinkles eerily as Shion looks into it.)
+
+[[Shion: It feels like I'm being watched...|Creepy Mirror]]
+
+[[Shion spends some time looking at their face in the mirror|Smirking Mirror]] 
+
+
+:: Holophone battery recovery second
+Shion: Here it is! Well, time to get out of here!
+
+:: Holophone recovery second
+Shion: My holophone! I found the battery earlier, I just have to put it together and it should be good to go!
+
+:: Holophone battery recovery first
+Shion: This looks like a holophone battery. I'll just take this with me for now.
+
+:: Desk
+( Shion sees a messy desk with numerous items and papers spread about. A glimmering object catches Shion's eye and on inspection it appears to be a small jeweled cat ornament that appears to be a paper weight)
+
+[[Shion: It's pretty, but it's not mine. I'll just leave it here|Jeweled Cat]]
+
+[[Shion: It's pretty, looks like it's a waste amongst this filth. I'll take it with me.|Pretty Jeweled Cat]]
+
+
+:: Creepy Mirror
+<<set disposition += 15>>
+
+Shion: I don't think I should stare at this anymore...
+
+:: Smirking Mirror
+<<set disposition -= 15>>
+
+( Shion's reflection in the mirror smirks at Shion)
+
+Shion: Well, maybe I haven't recovered enough yet...
+
+:: Jeweled Cat
+<<set disposition += 15>>
+
+Shion: This place really needs to be cleaned up...
+
+:: Pretty Jeweled Cat
+<<set disposition -= 15>>
+
+Shion: It's for the best really..
+
+:: Negative Shion Kazkaza
+<<set disposition += 15>>
+
+Kazkaza : Well, maybe you really did end up drinking too much at the company party, hmm? Well, no matter, I have quite a bit of work to do, but I'll work on getting your phones information restored, It'll be kinda a pain though, and it might take a while for me to bring all the data back to you, I tell ya, cloud storage is a monster to deal with! [[Well it'll go faster if you help me out with a problem|Kazkaza Request]]
+
+:: Positive Shion Kazkaza
+<<set disposition -= 15>>
+
+Kazkaza: That's not my issue. Everyone's gotta take out their issues on IT.  I'll do it, it won't be easy since I have to pull it from the cloud and I have other work to do y'anno, it's not like you're the only one with holophone issues right now. [[Well it'll go faster if you help me out with a problem|Kazkaza Request]]
+
+:: Obtaining the parts
+( Shion says this while near one of the windows/openings)
+
+Shion: Are those...the parts through the windows here?
+
+:: The arm grows[edit-this]
+( Shion suddenly collapses in pain upon entering the warehouse, the pain is originating from Shion's arm)
+
+Shion: AHHH! What?! 
+
+(screen blacks out, when it comes back Shion's arm has rubbery like consistancy, letting it expand and stretch to unnatural lengths.)
+
+Shion: What...what is this? What happened to me?!
+
+
+
+:: Obtain parts
+( on obtaining a part, but not the last part)
+
+Shion: Just a few more to go...
+
+:: Last part
+Shion: Finally! The last part! Time to get out of here!
+
+:: Sealing the warehouse
+Shion: Yep, this feels like the way it was on the picture! Just a few more seals to go!
+
+:: Unsleaing the warehouse
+Shion: I don't think this is the right order...
+
+:: Finished the seal
+Shion: Looks like that's the last of it!
+
+( A booming noise comes from above, for the sounds of it, it's from a old Com system)
+
+Big Boss: AY! YOU DID IT KIDDO! LETS GET YOU OUTTA HERE!
+
+( The exit unlocks)
+
+:: Casual Shion
 <<set disposition += 15>>
 
 Kazkaza: Geeze, don't be so polite, we work for the same company after all....but so does almost everyone who lives here so.....well no matter, thanks for the parts! Give me your holophone real quick. I have something that might interest you that I happened to find!
 
-- Kazkaza takes the phone and plugs it into one of the many cables lying around, after punching a few things into her keyboard she unplugs it and hands it back to MC-
+(Kazkaza takes the phone and plugs it into one of the many cables lying around, after punching a few things into her keyboard she unplugs it and hands it back to MC)
 
 [[Giving info|Giving info]]
 
-
-:: Annoyed Siam
+:: Annoyed Shion
 <<set disposition -= 15>>
 
-Kazkaza: You researchers, all the same, no manners. Well whatever, I found something that probably interests you, give me your holophone
+Kazkaza: You researchers, all the same, no manners. Well whatever, I found something that probably interests you, give me your holophone for a bit.
 
-(note that Siam is a researcher in Equinox, will be better exposed in the actual dialogue, as with everything else)
+(Kazkaza takes the phone and plugs it into one of the many cables lying around, after punching a few things into her keyboard she unplugs it and hands it back to MC)
 
--Kazkaza takes the phone and plugs it into one of the many cables lying around, after punching a few things into her keyboard she unplugs it and hands it back to MC-
+Shion: ...researcher?...
 
 [[Giving info|Giving info]]
