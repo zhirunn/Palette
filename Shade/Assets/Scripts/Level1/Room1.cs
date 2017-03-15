@@ -4,25 +4,37 @@ using UnityEngine;
 
 public class Room1 : MonoBehaviour {
     public GameObject spawner;
-    //public Transform[] spawnPoints;
     public GameObject enemyToSpawn;
-    public Transform[] enemyMarkers;
 
-    public int numEnemy;
+    public int totalEnemy;
 
-    // Use this for initialization
-    void Start () {
-        
-	}
+    public Transform[] spawnPoints;
+    //private GameObject[] spawnObjects;
 
+    /*
+    void onStart()
+    {
+        spawnObjects = GameObject.FindGameObjectsWithTag("Level1Spawn");
+        spawnPoints.SetValue(spawnObjects[0].GetComponent<Transform>(), 0);
+   
+    }
+    */
+    
     void OnTriggerEnter2D(Collider2D other)
     {
         if (other.tag != "Player") { return; }
 
         //TODO: Room mod
 
-        spawner.GetComponent<Spawn>().enemyMarkers = this.enemyMarkers;
-        spawner.GetComponent<Spawn>().spawnPoint = this.enemyMarkers[2];
-        spawner.GetComponent<Spawn>().enemyToSpawn = this.enemyToSpawn;
+        for (int i = 0; i < totalEnemy; i++)
+        {
+            Spawn enemySpawn = spawner.GetComponent<Spawn>();
+
+            enemySpawn.setEnemyMarkers(spawnPoints);
+            enemySpawn.GetComponent<Spawn>().setSpawnPoint(spawnPoints[i]);
+            enemySpawn.GetComponent<Spawn>().setEnemy(enemyToSpawn);
+            enemySpawn.GetComponent<Spawn>().spawn();
+        }
+        
     }
 }
