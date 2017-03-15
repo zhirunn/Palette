@@ -32,14 +32,15 @@ public class spikeControl : MonoBehaviour {
                 // Explode
             
         }
-        if (collision.tag == "Player") {
-            collision.GetComponent<Player>().health -= 20f;
-            // Destroy(this.gameObject, 1f);
-
-            Destroy(this.gameObject, 0.1f);
-            // Explode
-        }
+        
         if (collision.tag == "ATKbox") {
+            Destroy(this.gameObject, 0.1f);
+
+        }
+        if (collision.tag == "Player")
+        {
+            collision.GetComponent<Player>().health -= 20f;
+
             Destroy(this.gameObject, 0.1f);
 
         }
