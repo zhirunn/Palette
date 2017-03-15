@@ -10,11 +10,7 @@ public class LevelChange : MonoBehaviour {
    */
     void OnTriggerEnter2D(Collider2D other)
     {
-<<<<<<< HEAD
-        if (other.tag == "Player")
-=======
         if(other.tag == "Player")
->>>>>>> refs/remotes/origin/master
         {
             SceneManager.LoadScene(levelName);
         }
