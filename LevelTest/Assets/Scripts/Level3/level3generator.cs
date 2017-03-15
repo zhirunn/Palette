@@ -15,26 +15,31 @@ public class level3generator : MonoBehaviour {
 	void Start () {
         All_tiles = new List<GameObject>();
 
-
+        // Create All the tiles prefab
         GameObject obj = (GameObject)Instantiate(tileprefab1);
         obj.SetActive(false);
         All_tiles.Add(obj);
 
-        GameObject obj2 = (GameObject)Instantiate(tileprefab2);
-        obj2.SetActive(false);
-        All_tiles.Add(obj2);
+        GameObject obj4 = (GameObject)Instantiate(tileprefab2);
+        obj4.SetActive(false);
+        All_tiles.Add(obj4);
 
-        GameObject obj3 = (GameObject)Instantiate(tileprefab3);
-        obj3.SetActive(false);
-        All_tiles.Add(obj3);
-
-
+        for (int i = 0; i < 3; i++) {
+            GameObject obj3 = (GameObject)Instantiate(tileprefab3);
+            obj3.SetActive(false);
+            All_tiles.Add(obj3);
+        }
     }
 	
     public void SpawnNextRoom(){
         GameObject obj = (GameObject) GetUsableObject();
         obj.transform.position = SpawnPoint.position;
         obj.transform.rotation = SpawnPoint.rotation;
+<<<<<<< HEAD:LevelTest/Assets/Scripts/Level3/level3generator.cs
+=======
+        obj.GetComponent<platformControl>().SpawnItems();
+        obj.GetComponent<platformControl>().SpawnBlocks();
+>>>>>>> refs/remotes/origin/master:Shade/Assets/Scripts/Level3/level3generator.cs
         obj.SetActive(true);
 
     }
@@ -54,6 +59,7 @@ public class level3generator : MonoBehaviour {
         All_tiles.Add(obj);
         Debug.Log("I created one");
         return obj;
-
     }
+    
+
 }

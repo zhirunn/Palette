@@ -1,6 +1,10 @@
 fileFormatVersion: 2
 guid: c40ce05e274de7f4099bbbb96e8b4669
+<<<<<<< HEAD:LevelTest/Assets/Prefabs/Level3/EscapeRoom_2.prefab.meta
 timeCreated: 1488598389
+=======
+timeCreated: 1489424900
+>>>>>>> refs/remotes/origin/master:Shade/Assets/Prefabs/Level3/EscapeRoom_2.prefab.meta
 licenseType: Free
 NativeFormatImporter:
   userData: 

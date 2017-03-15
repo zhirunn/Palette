@@ -133,6 +133,30 @@ public class Player : MovingObject
         {
             if ((horizontal != 0 || vertical != 0) && (casting == false))
             {
+                if (horizontal > 0) {
+                    animator.SetBool("Right", true);
+                    animator.SetBool("Left", false);
+                    animator.SetBool("Up", false);
+                    animator.SetBool("Down", false);
+                }
+                if (horizontal < 0) {
+                    animator.SetBool("Left", true);
+                    animator.SetBool("Right", false);
+                    animator.SetBool("Up", false);
+                    animator.SetBool("Down", false);
+                }
+                if (vertical > 0) {
+                    animator.SetBool("Up", true);
+                    animator.SetBool("Left", false);
+                    animator.SetBool("Right", false);
+                    animator.SetBool("Down", false);
+                }
+                if (vertical < 0) {
+                    animator.SetBool("Down", true);
+                    animator.SetBool("Left", false);
+                    animator.SetBool("Up", false);
+                    animator.SetBool("Right", false);
+                }
                 walking = true;
                 Move(horizontal, vertical);
             }
@@ -140,11 +164,21 @@ public class Player : MovingObject
             {
                 walking = false;
             }
+<<<<<<< HEAD:LevelTest/Assets/Scripts/Characters/Player/Player.cs
             animator.SetBool("walk", walking);
 			if (walking == true) {
 				source.clip = walkingSound[Random.Range(0, walkingSound.Length)];
 				source.Play();
 			}
+=======
+            /*
+            if (walking == true)
+            {
+                source.clip = walkingSound[Random.Range(0, walkingSound.Length)];
+                source.Play();
+            }
+            */
+>>>>>>> refs/remotes/origin/master:Shade/Assets/Scripts/Characters/Player/Player.cs
         }
         HandleArm();
         
@@ -208,20 +242,33 @@ public class Player : MovingObject
             casting = true;
             walking = false;
             PlayerMode = false;
+<<<<<<< HEAD:LevelTest/Assets/Scripts/Characters/Player/Player.cs
             collider2d.enabled = false;
             Hand.GetComponent<SnakeMovement>().SnakeMode = true;
             Hand.GetComponent<SnakeMovement>().footprints.footprints.Clear(); // force reset
             Hand.GetComponent<SnakeMovement>().footprints.EnableFootprintTracking(true);
             Hand.GetComponent<CircleCollider2D>().enabled = true;
+=======
+            handSnakeMovement.SnakeMode = true;
+            handSnakeMovement.footprints.EnableFootprintTracking(true);
+>>>>>>> refs/remotes/origin/master:Shade/Assets/Scripts/Characters/Player/Player.cs
         }
         if (Input.GetKey(KeyCode.R))
         {
             casting = false;
             PlayerMode = true;
+<<<<<<< HEAD:LevelTest/Assets/Scripts/Characters/Player/Player.cs
             collider2d.enabled = true;
             Hand.GetComponent<SnakeMovement>().SnakeMode = false;
             Hand.GetComponent<SnakeMovement>().footprints.EnableFootprintTracking(false);
             Hand.GetComponent<CircleCollider2D>().enabled = false;
+=======
+            handSnakeMovement.SnakeMode = false;
+            handSnakeMovement.footprints.EnableFootprintTracking(false);
+        }
+        if (Input.GetKeyUp(KeyCode.J)) {
+            animator.SetTrigger("ATK");
+>>>>>>> refs/remotes/origin/master:Shade/Assets/Scripts/Characters/Player/Player.cs
         }
 
         animator.SetBool("cast", casting);
