@@ -1,0 +1,494 @@
+fileFormatVersion: 2
+guid: 28613a677e5da7b4da099f039e7db3aa
+timeCreated: 1489559052
+licenseType: Free
+TextureImporter:
+  fileIDToRecycleName:
+    21300000: HospitalTileset_0
+    21300002: HospitalTileset_1
+    21300004: HospitalTileset_2
+    21300006: HospitalTileset_3
+    21300008: HospitalTileset_4
+    21300010: HospitalTileset_5
+    21300012: HospitalTileset_6
+    21300014: HospitalTileset_7
+    21300016: HospitalTileset_8
+    21300018: HospitalTileset_9
+    21300020: HospitalTileset_10
+    21300022: HospitalTileset_11
+    21300024: HospitalTileset_12
+    21300026: HospitalTileset_13
+    21300028: HospitalTileset_14
+    21300030: HospitalTileset_15
+    21300032: HospitalTileset_16
+    21300034: HospitalTileset_17
+    21300036: HospitalTileset_18
+    21300038: HospitalTileset_19
+    21300040: HospitalTileset_20
+    21300042: HospitalTileset_21
+    21300044: HospitalTileset_22
+    21300046: HospitalTileset_23
+    21300048: HospitalTileset_24
+    21300050: HospitalTileset_25
+    21300052: HospitalTileset_26
+    21300054: HospitalTileset_27
+    21300056: HospitalTileset_28
+    21300058: HospitalTileset_29
+    21300060: HospitalTileset_30
+    21300062: HospitalTileset_31
+    21300064: HospitalTileset_32
+    21300066: HospitalTileset_33
+    21300068: HospitalTileset_34
+    21300070: HospitalTileset_35
+    21300072: HospitalTileset_36
+    21300074: HospitalTileset_37
+    21300076: HospitalTileset_38
+    21300078: HospitalTileset_39
+    21300080: HospitalTileset_40
+    21300082: HospitalTileset_41
+    21300084: HospitalTileset_42
+    21300086: HospitalTileset_43
+    21300088: HospitalTileset_44
+    21300090: HospitalTileset_45
+    21300092: HospitalTileset_46
+    21300094: HospitalTileset_47
+    21300096: HospitalTileset_48
+    21300098: HospitalTileset_49
+    21300100: HospitalTileset_50
+    21300102: HospitalTileset_51
+    21300104: HospitalTileset_52
+    21300106: HospitalTileset_53
+    21300108: HospitalTileset_54
+    21300110: HospitalTileset_55
+    21300112: HospitalTileset_56
+    21300114: HospitalTileset_57
+    21300116: HospitalTileset_58
+    21300118: HospitalTileset_59
+    21300120: HospitalTileset_60
+    21300122: HospitalTileset_61
+    21300124: HospitalTileset_62
+    21300126: HospitalTileset_63
+    21300128: HospitalTileset_64
+    21300130: HospitalTileset_65
+    21300132: HospitalTileset_66
+    21300134: HospitalTileset_67
+    21300136: HospitalTileset_68
+    21300138: HospitalTileset_69
+    21300140: HospitalTileset_70
+    21300142: HospitalTileset_71
+    21300144: HospitalTileset_72
+    21300146: HospitalTileset_73
+    21300148: HospitalTileset_74
+    21300150: HospitalTileset_75
+    21300152: HospitalTileset_76
+    21300154: HospitalTileset_77
+    21300156: HospitalTileset_78
+    21300158: HospitalTileset_79
+    21300160: HospitalTileset_80
+    21300162: HospitalTileset_81
+    21300164: HospitalTileset_82
+    21300166: HospitalTileset_83
+    21300168: HospitalTileset_84
+    21300170: HospitalTileset_85
+    21300172: HospitalTileset_86
+    21300174: HospitalTileset_87
+    21300176: HospitalTileset_88
+    21300178: HospitalTileset_89
+    21300180: HospitalTileset_90
+    21300182: HospitalTileset_91
+    21300184: HospitalTileset_92
+    21300186: HospitalTileset_93
+    21300188: HospitalTileset_94
+    21300190: HospitalTileset_95
+    21300192: HospitalTileset_96
+    21300194: HospitalTileset_97
+    21300196: HospitalTileset_98
+    21300198: HospitalTileset_99
+    21300200: HospitalTileset_100
+    21300202: HospitalTileset_101
+    21300204: HospitalTileset_102
+    21300206: HospitalTileset_103
+    21300208: HospitalTileset_104
+    21300210: HospitalTileset_105
+    21300212: HospitalTileset_106
+    21300214: HospitalTileset_107
+    21300216: HospitalTileset_108
+    21300218: HospitalTileset_109
+    21300220: HospitalTileset_110
+    21300222: HospitalTileset_111
+    21300224: HospitalTileset_112
+    21300226: HospitalTileset_113
+    21300228: HospitalTileset_114
+    21300230: HospitalTileset_115
+    21300232: HospitalTileset_116
+    21300234: HospitalTileset_117
+    21300236: HospitalTileset_118
+    21300238: HospitalTileset_119
+    21300240: HospitalTileset_120
+    21300242: HospitalTileset_121
+    21300244: HospitalTileset_122
+    21300246: HospitalTileset_123
+    21300248: HospitalTileset_124
+    21300250: HospitalTileset_125
+    21300252: HospitalTileset_126
+    21300254: HospitalTileset_127
+    21300256: HospitalTileset_128
+    21300258: HospitalTileset_129
+    21300260: HospitalTileset_130
+    21300262: HospitalTileset_131
+    21300264: HospitalTileset_132
+    21300266: HospitalTileset_133
+    21300268: HospitalTileset_134
+    21300270: HospitalTileset_135
+    21300272: HospitalTileset_136
+    21300274: HospitalTileset_137
+    21300276: HospitalTileset_138
+    21300278: HospitalTileset_139
+    21300280: HospitalTileset_140
+    21300282: HospitalTileset_141
+    21300284: HospitalTileset_142
+    21300286: HospitalTileset_143
+    21300288: HospitalTileset_144
+    21300290: HospitalTileset_145
+    21300292: HospitalTileset_146
+    21300294: HospitalTileset_147
+    21300296: HospitalTileset_148
+    21300298: HospitalTileset_149
+    21300300: HospitalTileset_150
+    21300302: HospitalTileset_151
+    21300304: HospitalTileset_152
+    21300306: HospitalTileset_153
+    21300308: HospitalTileset_154
+    21300310: HospitalTileset_155
+    21300312: HospitalTileset_156
+    21300314: HospitalTileset_157
+    21300316: HospitalTileset_158
+    21300318: HospitalTileset_159
+    21300320: HospitalTileset_160
+    21300322: HospitalTileset_161
+    21300324: HospitalTileset_162
+    21300326: HospitalTileset_163
+    21300328: HospitalTileset_164
+    21300330: HospitalTileset_165
+    21300332: HospitalTileset_166
+    21300334: HospitalTileset_167
+    21300336: HospitalTileset_168
+    21300338: HospitalTileset_169
+    21300340: HospitalTileset_170
+    21300342: HospitalTileset_171
+    21300344: HospitalTileset_172
+    21300346: HospitalTileset_173
+    21300348: HospitalTileset_174
+    21300350: HospitalTileset_175
+    21300352: HospitalTileset_176
+    21300354: HospitalTileset_177
+    21300356: HospitalTileset_178
+    21300358: HospitalTileset_179
+    21300360: HospitalTileset_180
+    21300362: HospitalTileset_181
+    21300364: HospitalTileset_182
+    21300366: HospitalTileset_183
+    21300368: HospitalTileset_184
+    21300370: HospitalTileset_185
+    21300372: HospitalTileset_186
+    21300374: HospitalTileset_187
+    21300376: HospitalTileset_188
+    21300378: HospitalTileset_189
+    21300380: HospitalTileset_190
+    21300382: HospitalTileset_191
+    21300384: HospitalTileset_192
+    21300386: HospitalTileset_193
+    21300388: HospitalTileset_194
+    21300390: HospitalTileset_195
+    21300392: HospitalTileset_196
+    21300394: HospitalTileset_197
+    21300396: HospitalTileset_198
+    21300398: HospitalTileset_199
+    21300400: HospitalTileset_200
+    21300402: HospitalTileset_201
+    21300404: HospitalTileset_202
+    21300406: HospitalTileset_203
+    21300408: HospitalTileset_204
+    21300410: HospitalTileset_205
+    21300412: HospitalTileset_206
+    21300414: HospitalTileset_207
+    21300416: HospitalTileset_208
+    21300418: HospitalTileset_209
+    21300420: HospitalTileset_210
+    21300422: HospitalTileset_211
+    21300424: HospitalTileset_212
+    21300426: HospitalTileset_213
+    21300428: HospitalTileset_214
+    21300430: HospitalTileset_215
+    21300432: HospitalTileset_216
+    21300434: HospitalTileset_217
+    21300436: HospitalTileset_218
+    21300438: HospitalTileset_219
+    21300440: HospitalTileset_220
+    21300442: HospitalTileset_221
+    21300444: HospitalTileset_222
+    21300446: HospitalTileset_223
+    21300448: HospitalTileset_224
+    21300450: HospitalTileset_225
+    21300452: HospitalTileset_226
+    21300454: HospitalTileset_227
+    21300456: HospitalTileset_228
+    21300458: HospitalTileset_229
+    21300460: HospitalTileset_230
+    21300462: HospitalTileset_231
+    21300464: HospitalTileset_232
+    21300466: HospitalTileset_233
+    21300468: HospitalTileset_234
+    21300470: HospitalTileset_235
+    21300472: HospitalTileset_236
+    21300474: HospitalTileset_237
+    21300476: HospitalTileset_238
+    21300478: HospitalTileset_239
+    21300480: HospitalTileset_240
+    21300482: HospitalTileset_241
+    21300484: HospitalTileset_242
+    21300486: HospitalTileset_243
+    21300488: HospitalTileset_244
+    21300490: HospitalTileset_245
+    21300492: HospitalTileset_246
+    21300494: HospitalTileset_247
+    21300496: HospitalTileset_248
+    21300498: HospitalTileset_249
+    21300500: HospitalTileset_250
+    21300502: HospitalTileset_251
+    21300504: HospitalTileset_252
+    21300506: HospitalTileset_253
+    21300508: HospitalTileset_254
+    21300510: HospitalTileset_255
+    21300512: hospital_tileset_0
+    21300514: hospital_tileset_1
+    21300516: hospital_tileset_2
+    21300518: hospital_tileset_3
+    21300520: hospital_tileset_4
+    21300522: hospital_tileset_5
+    21300524: hospital_tileset_6
+    21300526: hospital_tileset_7
+    21300528: hospital_tileset_8
+    21300530: hospital_tileset_9
+    21300532: hospital_tileset_10
+  serializedVersion: 4
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    filterMode: -1
+    aniso: -1
+    mipBias: -1
+    wrapMode: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spritePixelsToUnits: 128
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  platformSettings:
+  - buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+  - buildTarget: Standalone
+    maxTextureSize: 2048
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+  - buildTarget: WebGL
+    maxTextureSize: 2048
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: hospital_tileset_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1920
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: hospital_tileset_1
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 1920
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: hospital_tileset_2
+      rect:
+        serializedVersion: 2
+        x: 256
+        y: 1920
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: hospital_tileset_3
+      rect:
+        serializedVersion: 2
+        x: 384
+        y: 1920
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: hospital_tileset_4
+      rect:
+        serializedVersion: 2
+        x: 512
+        y: 1920
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: hospital_tileset_5
+      rect:
+        serializedVersion: 2
+        x: 640
+        y: 1920
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: hospital_tileset_6
+      rect:
+        serializedVersion: 2
+        x: 768
+        y: 1920
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: hospital_tileset_7
+      rect:
+        serializedVersion: 2
+        x: 896
+        y: 1920
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: hospital_tileset_8
+      rect:
+        serializedVersion: 2
+        x: 1024
+        y: 1920
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: hospital_tileset_9
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1792
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: hospital_tileset_10
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1664
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    outline: []
+  spritePackingTag: 
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
