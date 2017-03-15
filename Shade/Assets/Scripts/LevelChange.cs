@@ -10,6 +10,9 @@ public class LevelChange : MonoBehaviour {
    */
     void OnTriggerEnter2D(Collider2D other)
     {
-        SceneManager.LoadScene(levelName);
+        if(other.tag == "Player")
+        {
+            SceneManager.LoadScene(levelName);
+        }
     }
 }
