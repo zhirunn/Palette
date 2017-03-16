@@ -22,8 +22,13 @@ public class Room1 : MonoBehaviour {
             Spawn enemySpawn = spawner.GetComponent<Spawn>();
 
             enemySpawn.setEnemyMarkers(spawnPoints);
-            enemySpawn.GetComponent<Spawn>().setSpawnPoint(spawnPoints[i]);
             enemySpawn.GetComponent<Spawn>().setEnemy(enemyToSpawn);
+
+            if (i < spawnPoints.Length)
+            {
+                print(spawnPoints.Length);
+                enemySpawn.GetComponent<Spawn>().setSpawnPoint(spawnPoints[i]);
+            }
             enemySpawn.GetComponent<Spawn>().spawn();
         }
 
