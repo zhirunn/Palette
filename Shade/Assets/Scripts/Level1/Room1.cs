@@ -10,17 +10,6 @@ public class Room1 : MonoBehaviour {
 
     public Transform[] spawnPoints;
     public GameObject passThrough;
-
-    //private GameObject[] spawnObjects;
-
-    /*
-    void onStart()
-    {
-        spawnObjects = GameObject.FindGameObjectsWithTag("Level1Spawn");
-        spawnPoints.SetValue(spawnObjects[0].GetComponent<Transform>(), 0);
-   
-    }
-    */
     
     void OnTriggerEnter2D(Collider2D other)
     {
@@ -39,6 +28,8 @@ public class Room1 : MonoBehaviour {
         }
 
         passThrough.GetComponent<BoxCollider2D>().enabled = false;
+
+        this.GetComponent<BoxCollider2D>().enabled = false;
         
     }
 }
