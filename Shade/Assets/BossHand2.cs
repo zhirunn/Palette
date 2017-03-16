@@ -6,9 +6,11 @@ public class BossHand2 : MonoBehaviour {
 
     public int HP;
     public Animator anim;
+    private int Real_HP;
 	// Use this for initialization
 	void Start () {
         HP = 1;
+        Real_HP = 3;
         anim = GetComponent<Animator>();
         StartCoroutine(ATK());
 	}
@@ -17,6 +19,10 @@ public class BossHand2 : MonoBehaviour {
         if (HP <= 0) {
             anim.SetTrigger("Reset");
             HP = 1;
+            Real_HP -= 1;
+        }
+        if (Real_HP <= 0) {
+            Destroy(this.gameObject, 0.1f);
         }
     }
     // Update is called once per frame
