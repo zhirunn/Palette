@@ -3,25 +3,15 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityTwine;
 
-public class Level1StoryHooks : MonoBehaviour {
+public class Level1StoryHooks : StoryHooks {
 
     public GameObject doctorEvian;
     public Transform moveTo;
     public float speed = 1f;
 
-    public TwineTextPlayer textPlayer;
-    private Canvas textPlayerCanvas;
-    private TwineStory story;
-
-    void Start()
+    protected override void Start()
     {
-        if (textPlayer == null)
-        {
-            textPlayer = GameObject.FindObjectOfType<TwineTextPlayer>();
-        }
-
-        textPlayerCanvas = textPlayer.gameObject.GetComponent<Canvas>();
-        story = textPlayer.Story;
+        base.Start();
     }
 
     IEnumerator Negative1_Enter()
@@ -31,14 +21,7 @@ public class Level1StoryHooks : MonoBehaviour {
 
     IEnumerator Positive1_Enter()
     {
-        yield return null; // idle after one frame
-
-        //TwineTextPlayer textPlayer = GameObject.FindObjectOfType<TwineTextPlayer>();
-        GameManager.Instance.playerDisposition.disposition = (int) textPlayer.Story["disposition"];
-        yield return new WaitForSeconds(3f);
-
-        // Can't used the locally cached reference
-        GameObject.FindObjectOfType<TwineTextPlayer>().GetComponent<Canvas>().enabled = false;
+        yield return SaveDispostionWaitAndThenExit();
 
         StartCoroutine(MoveOverSeconds());
     }
@@ -54,5 +37,25 @@ public class Level1StoryHooks : MonoBehaviour {
             yield return new WaitForEndOfFrame();
         }
         doctorEvian.transform.position = moveTo.position;
+    }
+
+    IEnumerator PrettyJeweledCat_Enter()
+    {
+        yield return SaveDispostionWaitAndThenExit();
+    }
+
+    IEnumerator JeweledCat_Enter()
+    {
+        yield return SaveDispostionWaitAndThenExit();
+    }
+
+    IEnumerator CreepyMirror_Enter()
+    {
+        yield return SaveDispostionWaitAndThenExit();
+    }
+
+    IEnumerator SmokingMirror_Enter()
+    {
+        yield return SaveDispostionWaitAndThenExit();
     }
 }

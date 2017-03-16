@@ -8,7 +8,7 @@ public class Footprints : MonoBehaviour
     public float footprintSpacing = 0.1f;
     [HideInInspector]
     public List<GameObject> footprints = new List<GameObject>();
-    public bool enableFootprintTracking = true;
+    public bool enableFootprintTracking = false;
 
     // Update is called once per frame
     void Update()

@@ -14,24 +14,27 @@ public class PlayerInteraction : MonoBehaviour
 
     void Start()
     {
-        if(textPlayer == null)
+        if (textPlayer == null)
         {
             textPlayer = GameObject.FindObjectOfType<TwineTextPlayer>();
         }
 
-        if(textPlayer != null)
+        if (textPlayer != null)
         {
             textPlayer.gameObject.GetComponent<Canvas>().enabled = false;
         }
     }
 
-    void OnTriggerEnter2D(Collider2D other)
+    void OnTriggerStay2D(Collider2D other)
     {
-        Interactable iter = other.gameObject.GetComponent<Interactable>();
-        if (iter != null)
+        if(interactable == null)
         {
-            iteractableGameObject = other.gameObject;
-            interactable = iter;
+            Interactable iter = other.gameObject.GetComponent<Interactable>();
+            if (iter != null)
+            {
+                iteractableGameObject = other.gameObject;
+                interactable = iter;
+            }
         }
     }
 
@@ -52,20 +55,22 @@ public class PlayerInteraction : MonoBehaviour
 
     void Update()
     {
-        bool iteractPressed = Input.GetButtonDown("Interact");
+        bool interactPressed = Input.GetButtonDown("Interact");
 
         // TODO Change animation keyframe of the player while talking?
-        if (iteractPressed && interactable != null)
+        if (interactPressed && interactable != null && interactable.Completed == false)
         {
             _showText = true;
 
-            if (textPlayer.Story.State == UnityTwine.TwineStoryState.Idle)
+            if (textPlayer.Story.State == UnityTwine.TwineStoryState.Idle
+                || textPlayer.Story.State == UnityTwine.TwineStoryState.Complete)
             {
                 textPlayer.gameObject.GetComponent<Canvas>().enabled = true;
 
                 //GameManager.Instance.Story.Begin();
+                GameManager.Instance.Story.Reset();
                 GameManager.Instance.Story.GoTo(interactable.Passage);
-                
+                interactable.Completed = true;
             }
         }
 

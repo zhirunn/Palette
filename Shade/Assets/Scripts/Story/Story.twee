@@ -26,7 +26,7 @@ Shade final proto
 
 
 :: Start
-<<set $disposition = 50>>
+<<set $disposition = 0>>
 
 (Shion slowly blinks awake, eyebrows furrowing in pain emenating from behind thier eyes)
 
@@ -443,11 +443,13 @@ Eventually Shion goes insane with stress and frustration, and vanishes from Equi
 
 
 :: Mirror
+<<set $disposition = 0>>
+
 ( Shion see's a mirror infront of them, the mirror twinkles eerily as Shion looks into it.)
 
-[[Shion: It feels like I'm being watched...|Creepy Mirror]]
+[[Shion: It feels like I'm being watched...|CreepyMirror]]
 
-[[Shion spends some time looking at their face in the mirror|Smirking Mirror]] 
+[[Shion spends some time looking at their face in the mirror|SmirkingMirror]] 
 
 
 :: Holophone battery recovery second
@@ -460,31 +462,33 @@ Shion: My holophone! I found the battery earlier, I just have to put it together
 Shion: This looks like a holophone battery. I'll just take this with me for now.
 
 :: Desk
-( Shion sees a messy desk with numerous items and papers spread about. A glimmering object catches Shion's eye and on inspection it appears to be a small jeweled cat ornament that appears to be a paper weight)
+<<set $disposition = 0>>
 
-[[Shion: It's pretty, but it's not mine. I'll just leave it here|Jeweled Cat]]
+( Shion sees a messy desk with numerous items and papers spread about. A glimmering object catches Shion's eye and on inspection it appears to be a small JeweledCat ornament that appears to be a paper weight)
 
-[[Shion: It's pretty, looks like it's a waste amongst this filth. I'll take it with me.|Pretty Jeweled Cat]]
+[[Shion: It's pretty, but it's not mine. I'll just leave it here|JeweledCat]]
+
+[[Shion: It's pretty, looks like it's a waste amongst this filth. I'll take it with me.|PrettyJeweledCat]]
 
 
-:: Creepy Mirror
+:: CreepyMirror
 <<set disposition += 15>>
 
 Shion: I don't think I should stare at this anymore...
 
-:: Smirking Mirror
+:: SmirkingMirror
 <<set disposition -= 15>>
 
 ( Shion's reflection in the mirror smirks at Shion)
 
 Shion: Well, maybe I haven't recovered enough yet...
 
-:: Jeweled Cat
+:: JeweledCat
 <<set disposition += 15>>
 
 Shion: This place really needs to be cleaned up...
 
-:: Pretty Jeweled Cat
+:: PrettyJeweledCat
 <<set disposition -= 15>>
 
 Shion: It's for the best really..
