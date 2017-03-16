@@ -28,7 +28,7 @@ public class BossControl : MonoBehaviour {
     IEnumerator FireCycle() {
         yield return new WaitForSeconds(5);
         Fire();
-        yield return new WaitForSeconds(5);
+        StartCoroutine(FireCycle());
     }
     public void Fire() {
         foreach (GameObject point in FirePoints) {
