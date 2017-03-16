@@ -28,11 +28,21 @@ public class BossControl : MonoBehaviour {
     IEnumerator FireCycle() {
         yield return new WaitForSeconds(5);
         Fire();
-        StartCoroutine(FireCycle());
+        yield return new WaitForSeconds(5);
     }
     public void Fire() {
         foreach (GameObject point in FirePoints) {
             Instantiate(Spike_prefab, point.transform.position, point.transform.rotation);
+        }
+    }
+
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if (collision.tag == "ATKbox") {
+            HP -= 1;
+        }
+        if (collision.tag == "")
+        {
         }
     }
 }
