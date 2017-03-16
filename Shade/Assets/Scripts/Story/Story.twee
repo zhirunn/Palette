@@ -13,6 +13,7 @@ Shade final proto
 
 
 
+
 :: UserStylesheet[stylesheet]
 
 
@@ -25,8 +26,9 @@ Shade final proto
 
 
 
+
 :: Start
-<<set $disposition = 50>>
+<<set $disposition = 0>>
 
 (Shion slowly blinks awake, eyebrows furrowing in pain emenating from behind thier eyes)
 
@@ -50,10 +52,11 @@ Doctor Evian: NO!! THEY CANNOT COME HERE!
 
 
 
-:: Holophone recovery first
+:: Holophonerecoveryfirst
+<<set $disposition = 0>>
 Shion: My holophone!...but it's missing the battery, where is it?
 
-:: After exiting
+:: Afterexiting
 ( As Shion exits the room a metal gate comes down, blocking the entrance of the door from being acessed again. At the same time Shions arm begins to throbb a bit.)
 
 Shion:...Ouch...my arm..why is it hurting?
@@ -73,31 +76,31 @@ Shion: Ugh, something is not right here. I'll contact support and see If I can f
 
 
 
-:: Kazkaza's request
+:: Kazkazasrequest
 Kazkaza: Hello, this is Equinox, " Advancement through Technology" is our prime principle, this is Kazkaza speaking, how may I help you?
 
 Shion: Hello, I'm from the research department, I was wondering, is it possible to have the data on my holophone restored? It's important.
 
 Kazkaza: Let me guess, you drank too many elements at the company dinner party, ended up with some strange person who robbed you bli-
 
-[[Shion: No! I got into an accident, and the information on my phone is really important! I need you to fix it immediately!|Negative Shion Kazkaza]]
+[[Shion: No! I got into an accident, and the information on my phone is really important! I need you to fix it immediately!|NegativeShionKazkaza]]
 
-[[Shion:  Apologies, nothing that interesting. Or so I think, I can't remember, and the information on my phone would be important on figuring out what's wrong.|Positive Shion Kazkaza]]
-
-
-
-:: Level 2 warehouse
-(Siam moves to a warehouse, couple of nondescript NPC's hanging around. And a obviously different NPC who is the boss of the warehouse.)
+[[Shion:  Apologies, nothing that interesting. Or so I think, I can't remember, and the information on my phone would be important on figuring out what's wrong.|PositiveShionKazkaza]]
 
 
-[[Talk to big boss]]
+
+:: Level2warehouse
+(Shion moves to a warehouse, couple of nondescript NPC's hanging around. And a obviously different NPC who is the boss of the warehouse.)
 
 
+[[Talktobigboss]]
 
 
 
 
-:: Talk to big boss
+
+
+:: Talktobigboss
 Shion: Hello, you wouldn't happen to know where I can find someone who is incharge of this place, or someone who would know where I can find some boxes for pickup, would you?
 
 Big Boss: Ya betcha I would. Ya looking at the Big Boss ‘imself! What'cha looking for squirt?
@@ -110,14 +113,14 @@ Shion: Is there a problem with the parts she ordered?
 
 Big Boss (sighs): Not really an issue with the parts ya see. The issue is the warehouse has been a complete wreck since those whacko cat things showed up 5 days ago. None of us can do a darn tootin' thing because of those pests!
 
-[[Shion: Is there some way I can get in there and get the parts myself? I need them quite urgently.|Nice Boss]]
+[[Shion: Is there some way I can get in there and get the parts myself? I need them quite urgently.|NiceBoss]]
 
-[[Shion: Cats? I think I can deal with those, let me in. I'll go grab the parts myself.|Smirking Boss]] 
+[[Shion: Cats? I think I can deal with those, let me in. I'll go grab the parts myself.|SmirkingBoss]] 
 
-:: If spoken to after obtaining parts
+:: Ifspokentoafterobtainingparts
 Big Boss: Well, Urgot me twisted, ya did it squirt! Well, ya best be running back to Kazkaza, that way she can finally stop pagin' me for her parts!
 
-:: Call to Shion after level 2
+:: CalltoShionafterlevel2
 (Shion gets a call from Kazkaza)
 
 Kazkaza: Hey, MC, how's it going? Find those parts yet?
@@ -128,7 +131,7 @@ Kazkaza: Oh well, who cares, just bring them back over to Equinox HQ, I really n
 
 Shion: I should go to Kazkaza's office and drop these off...
 
-:: Enter Equinox
+:: EnterEquinox
 Shion: I'm finally back, I should go deliver these to Kazkaza quickly.
 
 
@@ -137,7 +140,7 @@ Shion: I'm finally back, I should go deliver these to Kazkaza quickly.
 
 
 
-:: Meeting makeupwipes
+:: Meetingmakeupwipes
 
 Kazkaza: Oh ho! You are finally here! Nice to finally meet you  after all this time!
 
@@ -145,9 +148,9 @@ Kazkaza: Oh ho! You are finally here! Nice to finally meet you  after all this t
 Shion: Why do I have this feeling as if this is not our first encounter. Kazkaza feels familiar...
 
 
-[[Shion: Nice to meet you as well!|Casual Shion]] 
+[[Shion: Nice to meet you as well!|CasualShion]] 
 
-[[Shion: Same...|Annoyed Shion]] 
+[[Shion: Same...|AnnoyedShion]] 
 
 
 
@@ -162,21 +165,22 @@ Shion:I don't have any of my belongings, just what is going on in here? I should
 
 Shion: I don't have anything with me, is my holophone somewhere near here? I should check quickly before I leave!
 
-:: Kazkaza Request
-Siam: I guess I could? Depending on what it is, if it helps you get my phones data back sooner
+:: KazkazaRequest
+Shion: I guess I could? Depending on what it is, if it helps you get my phones data back sooner
 
 Kazkaza: It's nothing really, I just need you to pick up a box of parts I ordered for some repairs. I'll mark the location on your holophone's holopath.
 
 
 (electronics warehouse location now unlocked)
 
-Siam: I got the location, I'll head there and get your parts
+Shion: I got the location, I'll head there and get your parts
 
 Kazkaza: Hey! Thanks, I feel motivated to getting your holo data back already! 
 
 
 
-:: Nice Boss
+:: NiceBoss
+<<set $disposition = 0>>
 <<set disposition += 15>>
 
 
@@ -186,7 +190,8 @@ Big Boss: Y'anno. I don't feel too great about letting ya in there to run around
 
 Big Boss: One thing there kiddo! There's a seal that we were using to keep those shadow monsters outta the stock, problem is someone didn't activate the seal properly so those monsters ran all over the warehouse. Once you get in there I can't let you out until you activate the seal properly! Take a look at this picture real quick, and memorize it. It'll give you an idea of what to do with the seal, and here's another picture of the parts for Kazkaza. Good luck!
 
-:: Smirking Boss
+:: SmirkingBoss
+<<set $disposition = 0>>
 <<set disposition -= 15>>
 
 Big Boss : Well, I reckon you can squirt. Go tango with the beasts then, don't come crying to me when they get to ya!
@@ -196,7 +201,7 @@ Big Boss : Well, I reckon you can squirt. Go tango with the beasts then, don't c
 
 Big Boss: One thing there kiddo! There's a seal that we were using to keep those shadow monsters outta the stock, problem is someone didn't activate the seal properly so those monsters ran all over the warehouse. Once you get in there I can't let you out until you activate the seal properly! Take a look at this picture real quick, and memorize it. It'll give you an idea of what to do with the seal, and here's another picture of the parts for Kazkaza. Good luck!
 
-:: Giving info
+:: Givinginfo
 MC: Hey,these are the things I saw in the-
 
 Kazkaza: Doesn't concern me, now could you please leave, Shion? I have a great deal of work to get back to, now that I have those parts again.
@@ -206,30 +211,33 @@ Kazkaza: Doesn't concern me, now could you please leave, Shion? I have a great d
 [[Shion: Fine! I'll get out of your hair! Just let me know if you find anymore information.|AnnoyShion]] 
 
 :: KindShion
+<<set $disposition = 0>>
 <<set disposition += 15>>
 
 Shion: Well, doesn't look like there's anything else to do here, I should find more information on this closed wing, I have a feeling I can get my memories back there.
 
 :: AnnoyShion
+<<set $disposition = 0>>
 <<set disposition -= 15>>
 
 Shion: Well, I should get going, not like there's anything else to do here. I should see If I can find anymore information on this closed wing. I think something important happened there, something I did.
 
-:: Equinox NPC's talking
+:: EquinoxNPCstalking
 ( Shion walks up to two Equinox employee's chatting in the hallway who wave at Shion on approach)
 
 Equinox Employee ( male): Oh! Hey Shion, long time no see!
 
 Equinox Employee ( female): It's been what? A couple weeks no hasn't it?
 
-[[Shion:Yeah...I guess? How have you been?|NPC1 Shion Confused]]
+[[Shion:Yeah...I guess? How have you been?|NPC1ShionConfused]]
 
-[[Shion:Who the heck are you two?|NPC1 Shion Rage]]
-
-
+[[Shion:Who the heck are you two?|NPC1ShionRage]]
 
 
-:: NPC1 Shion Confused
+
+
+:: NPC1ShionConfused
+<<set $disposition = 0>>
 <<set disposition += 15>>
 
 Equinox Employee (female): It's going all right... anyways you came at the perfect time. Don't you work in the research division? Maybe you know about what's going on lately.
@@ -246,10 +254,11 @@ Equinox Employee ( male) : I think that's enough talk about this.Talking about s
 
 ( The two NPC's go back to their chattering seemingly forgetting Shion's prescence)
 
-[[Shion: Sounds like there really must be more to the research wing, but I need more information, if the shadow beasts are really comming from in there, then I need to be prepaired. I need more information |Shion's Conviction]]
+[[Shion: Sounds like there really must be more to the research wing, but I need more information, if the shadow beasts are really comming from in there, then I need to be prepaired. I need more information |ShionsConviction]]
 
 
-:: NPC1 Shion Rage
+:: NPC1ShionRage
+<<set $disposition = 0>>
 <<set disposition -= 15>>
 
 Equinox Employee (female): Hey you don't remember me? You used to work in the Q&A department before you transfered to the research division! Geeze...
@@ -267,31 +276,31 @@ Equinox Employee ( male) : I think that's enough talk about this. Talking about 
 
 ( The two NPC's go back to their chattering seemingly forgetting Shion's prescence)
 
-[[Shion: I need to get into the research wing, there must be a way in, but I can't go in there unprepaired, there must be some place that has more information... the place I woke up. there must be something there, but how do I go there? The way sealed itself when I left that place? |Shion's Conviction]]
+[[Shion: I need to get into the research wing, there must be a way in, but I can't go in there unprepaired, there must be some place that has more information... the place I woke up. there must be something there, but how do I go there? The way sealed itself when I left that place? |ShionsConviction]]
 
 
 
-:: Shion's Conviction
+:: ShionsConviction
 Shion : Ah... my head... why is it hurting?
 
 
 
-:: Eye ability in lobby[On-spotting-footprints]
+:: Eyeabilityinlobby[On-spotting-footprints]
 Shion: Footsteps...again? Where do they lead
 
-:: Entering the research lab
+:: Enteringtheresearchlab
 Shion: ... I remember being here... but I still can't remember what happened here. I need to look around more.
 
 
 
-:: After reading the final note.If Good Shion
+:: AfterreadingthefinalnoteIfGoodShion
 ( need to set the threshold number)
 
 Shion: I...I created these monsters. I did this, my research created these...
 
 
 
-:: If Good, Kazkaza enters.
+:: IfGoodKazkazaenters
 Kazkaza: That's right! Wow, you were much faster than I thought! But then again I should have expected as much from the person who discovered the shadows beasts.The person who gave them physical form, in a lot of ways, you are their parent. After all, these shadows that are roaming around are mostly yours.
 
 Shion: ...Mine?
@@ -320,7 +329,7 @@ Kazkaza: I hope you die quickly!
 
 (  Boss appears and chases after Shion)
 
-:: Good Shion, post Boss
+:: GoodShionpostBoss
 ( After Shion kills the boss, a whispered "thank you" seems to emenate from the boss's corpse)
 
 Shion: ....ha...Is it over?
@@ -347,21 +356,21 @@ Kazkaza: ARE YOU MAD! HOW CAN YOU DO THIS? THIS RESEARCH IS THE FUTURE OF EQUINO
 
 
 
-:: Kazkaza attempt
+:: Kazkazaattempt
 (Shion attempts to speak to Kazkaza but she pays you no heed as she rushes to secure information and research before the area burns down)
 
 Shion: I should get out of here.
 
-:: Get out of the pan
+:: Getoutofthepan
 Shion: I need to get out of here! Before it all burns down!
 
 
 
-:: After reading final note. If Bad
+:: AfterreadingfinalnoteIfBad
 
 Shion: Hm. I knew I was connected to this, but I didn't think I would be in the midst of it.
 
-:: If Bad Kazkaza enters.
+:: IfBadKazkazaenters
 Kazkaza: That's right! Wow, you were much faster than I thought! But then again I should have expected as much from the person who discovered the shadows beasts.The person who gave them physical form, in a lot of ways, you are their parent. After all, these shadows that are roaming around are mostly yours.
 
 Shion: Mine? Those came from me?
@@ -386,7 +395,7 @@ Kazkaza: I hope you die quickly, dear!
 
 (  Boss appears and chases after Shion)
 
-:: Bad Shion, post boss
+:: BadShionpostboss
 ( After Shion kills the boss a whispered "thank you" seems to emenate from the boss's corpse)
 
 Shion: It's finally over...
@@ -422,14 +431,14 @@ Shion: I better get out of here, that's one too many fights for one day!
 
 
 
-:: Epilogue Good
+:: EpilogueGood
 After lighting their old lab on fire Kazkaza perishes in the fire, attempting to save information and research on the shadow beasts. A new CTO is placed into power a month after Kazkaza's death. The new CTO demolishes the research wing, replacing it with a wing devoted to research for the holophone.
 
 Research on the shadow beasts stops as there is no one left, but there are still issues with the shadow beasts running rampant, remnants of Kazkaza's expiriments. Shion spends the rest of their life trying to remove of traces of these shadow beasts and help those affected by the attacks. 
 
 Eventually, Shion develops a serum to turn themselves back to being mostly human, but Shion still suffers from some of the quips of being mutated, in a good way, with the enhanced vision,Shion had obtainined staying with them.
 
-:: Epilogue Bad
+:: EpilogueBad
 Shion eliminates Kazkaza following the battle with the massive shadow beast, and furthers the research of the shadow beasts themselves.
 
 Shion's research eventually makes them the new CTO of Equinox and instilling fear on the populous, mercilessly testing and enhancing the strength of the shadows using humans, and cultivating people to express strong enough emotions to give birth to strong shadow monsters.
@@ -445,66 +454,75 @@ Eventually Shion goes insane with stress and frustration, and vanishes from Equi
 :: Mirror
 ( Shion see's a mirror infront of them, the mirror twinkles eerily as Shion looks into it.)
 
-[[Shion: It feels like I'm being watched...|Creepy Mirror]]
+[[Shion: It feels like I'm being watched...|CreepyMirror]]
 
-[[Shion spends some time looking at their face in the mirror|Smirking Mirror]] 
+[[Shion spends some time looking at their face in the mirror|SmirkingMirror]] 
 
 
-:: Holophone battery recovery second
+:: Holophonebatteryrecoverysecond
+<<set $disposition = 0>>
 Shion: Here it is! Well, time to get out of here!
 
-:: Holophone recovery second
+:: Holophonerecoverysecond
+<<set $disposition = 0>>
 Shion: My holophone! I found the battery earlier, I just have to put it together and it should be good to go!
 
-:: Holophone battery recovery first
+:: Holophonebatteryrecoveryfirst
+<<set $disposition = 0>>
 Shion: This looks like a holophone battery. I'll just take this with me for now.
 
 :: Desk
 ( Shion sees a messy desk with numerous items and papers spread about. A glimmering object catches Shion's eye and on inspection it appears to be a small jeweled cat ornament that appears to be a paper weight)
 
-[[Shion: It's pretty, but it's not mine. I'll just leave it here|Jeweled Cat]]
+[[Shion: It's pretty, but it's not mine. I'll just leave it here|JeweledCat]]
 
-[[Shion: It's pretty, looks like it's a waste amongst this filth. I'll take it with me.|Pretty Jeweled Cat]]
+[[Shion: It's pretty, looks like it's a waste amongst this filth. I'll take it with me.|PrettyJeweledCat]]
 
 
-:: Creepy Mirror
+:: CreepyMirror
+<<set $disposition = 0>>
 <<set disposition += 15>>
 
 Shion: I don't think I should stare at this anymore...
 
-:: Smirking Mirror
+:: SmirkingMirror
+<<set $disposition = 0>>
 <<set disposition -= 15>>
 
 ( Shion's reflection in the mirror smirks at Shion)
 
 Shion: Well, maybe I haven't recovered enough yet...
 
-:: Jeweled Cat
+:: JeweledCat
+<<set $disposition = 0>>
 <<set disposition += 15>>
 
 Shion: This place really needs to be cleaned up...
 
-:: Pretty Jeweled Cat
+:: PrettyJeweledCat
+<<set $disposition = 0>>
 <<set disposition -= 15>>
 
 Shion: It's for the best really..
 
-:: Negative Shion Kazkaza
+:: NegativeShionKazkaza
+<<set $disposition = 0>>
 <<set disposition += 15>>
 
-Kazkaza : Well, maybe you really did end up drinking too much at the company party, hmm? Well, no matter, I have quite a bit of work to do, but I'll work on getting your phones information restored, It'll be kinda a pain though, and it might take a while for me to bring all the data back to you, I tell ya, cloud storage is a monster to deal with! [[Well it'll go faster if you help me out with a problem|Kazkaza Request]]
+Kazkaza : Well, maybe you really did end up drinking too much at the company party, hmm? Well, no matter, I have quite a bit of work to do, but I'll work on getting your phones information restored, It'll be kinda a pain though, and it might take a while for me to bring all the data back to you, I tell ya, cloud storage is a monster to deal with! [[Well it'll go faster if you help me out with a problem|KazkazaRequest]]
 
-:: Positive Shion Kazkaza
+:: PositiveShionKazkaza
+<<set $disposition = 0>>
 <<set disposition -= 15>>
 
-Kazkaza: That's not my issue. Everyone's gotta take out their issues on IT.  I'll do it, it won't be easy since I have to pull it from the cloud and I have other work to do y'anno, it's not like you're the only one with holophone issues right now. [[Well it'll go faster if you help me out with a problem|Kazkaza Request]]
+Kazkaza: That's not my issue. Everyone's gotta take out their issues on IT.  I'll do it, it won't be easy since I have to pull it from the cloud and I have other work to do y'anno, it's not like you're the only one with holophone issues right now. [[Well it'll go faster if you help me out with a problem|KazkazaRequest]]
 
 :: Obtaining the parts
 ( Shion says this while near one of the windows/openings)
 
 Shion: Are those...the parts through the windows here?
 
-:: The arm grows[edit-this]
+:: Thearmgrows[edit-this]
 ( Shion suddenly collapses in pain upon entering the warehouse, the pain is originating from Shion's arm)
 
 Shion: AHHH! What?! 
@@ -515,21 +533,21 @@ Shion: What...what is this? What happened to me?!
 
 
 
-:: Obtain parts
+:: Obtainparts
 ( on obtaining a part, but not the last part)
 
 Shion: Just a few more to go...
 
-:: Last part
+:: Lastpart
 Shion: Finally! The last part! Time to get out of here!
 
-:: Sealing the warehouse
+:: Sealingthewarehouse
 Shion: Yep, this feels like the way it was on the picture! Just a few more seals to go!
 
-:: Unsleaing the warehouse
+:: Unsleaingthewarehouse
 Shion: I don't think this is the right order...
 
-:: Finished the seal
+:: Finishedtheseal
 Shion: Looks like that's the last of it!
 
 ( A booming noise comes from above, for the sounds of it, it's from a old Com system)
@@ -538,16 +556,18 @@ Big Boss: AY! YOU DID IT KIDDO! LETS GET YOU OUTTA HERE!
 
 ( The exit unlocks)
 
-:: Casual Shion
+:: CasualShion
+<<set $disposition = 0>>
 <<set disposition += 15>>
 
 Kazkaza: Geeze, don't be so polite, we work for the same company after all....but so does almost everyone who lives here so.....well no matter, thanks for the parts! Give me your holophone real quick. I have something that might interest you that I happened to find!
 
 (Kazkaza takes the phone and plugs it into one of the many cables lying around, after punching a few things into her keyboard she unplugs it and hands it back to MC)
 
-[[Giving info|Giving info]]
+[[Giving info|Givinginfo]]
 
-:: Annoyed Shion
+:: AnnoyedShion
+<<set $disposition = 0>>
 <<set disposition -= 15>>
 
 Kazkaza: You researchers, all the same, no manners. Well whatever, I found something that probably interests you, give me your holophone for a bit.
@@ -556,4 +576,4 @@ Kazkaza: You researchers, all the same, no manners. Well whatever, I found somet
 
 Shion: ...researcher?...
 
-[[Giving info|Giving info]]
+[[Giving info|Givinginfo]]

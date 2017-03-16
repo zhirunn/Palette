@@ -35,4 +35,14 @@ public class BossControl : MonoBehaviour {
             Instantiate(Spike_prefab, point.transform.position, point.transform.rotation);
         }
     }
+
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if (collision.tag == "ATKbox") {
+            HP -= 1;
+        }
+        if (collision.tag == "")
+        {
+        }
+    }
 }
