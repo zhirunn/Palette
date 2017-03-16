@@ -9,6 +9,8 @@ public class Room1 : MonoBehaviour {
     public int totalEnemy;
 
     public Transform[] spawnPoints;
+    public GameObject passThrough;
+
     //private GameObject[] spawnObjects;
 
     /*
@@ -35,6 +37,8 @@ public class Room1 : MonoBehaviour {
             enemySpawn.GetComponent<Spawn>().setEnemy(enemyToSpawn);
             enemySpawn.GetComponent<Spawn>().spawn();
         }
+
+        passThrough.GetComponent<BoxCollider2D>().enabled = false;
         
     }
 }

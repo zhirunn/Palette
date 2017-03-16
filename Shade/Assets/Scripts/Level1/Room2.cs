@@ -3,36 +3,41 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class Room2 : MonoBehaviour {
+    public GameObject spawner;
+    public GameObject enemyToSpawn;
 
-    public int HP;
-    public GameObject Spike_prefab;
-    public GameObject Hand1_prefab;
-    public GameObject Hand2_prefab;
-    public GameObject Shield;
-    public List<GameObject> FirePoints;
-	// Use this for initialization
-	void Start () {
-        HP = 20;
-        StartCoroutine(FireCycle());
-        
+    public int totalEnemy;
 
-	}
+    public Transform[] spawnPoints;
+    public GameObject passThrough;
 
-    void Update() {
-        if (HP <= 0 ) {
-            Debug.Log("You Win!");
-            Destroy(this.gameObject, 0.1f);
-        }
+    //private GameObject[] spawnObjects;
+
+    /*
+    void onStart()
+    {
+        spawnObjects = GameObject.FindGameObjectsWithTag("Level1Spawn");
+        spawnPoints.SetValue(spawnObjects[0].GetComponent<Transform>(), 0);
+   
     }
+    */
 
-    IEnumerator FireCycle() {
-        yield return new WaitForSeconds(5);
-        Fire();
-        StartCoroutine(FireCycle());
-    }
-    public void Fire() {
-        foreach (GameObject point in FirePoints) {
-            Instantiate(Spike_prefab, point.transform.position, point.transform.rotation);
+    void OnTriggerEnter2D(Collider2D other)
+    {
+        if (other.tag != "Player") { return; }
+
+        //TODO: Room mod
+
+        for (int i = 0; i < totalEnemy; i++)
+        {
+            Spawn enemySpawn = spawner.GetComponent<Spawn>();
+
+            enemySpawn.setEnemyMarkers(spawnPoints);
+            enemySpawn.GetComponent<Spawn>().setSpawnPoint(spawnPoints[i]);
+            enemySpawn.GetComponent<Spawn>().setEnemy(enemyToSpawn);
+            enemySpawn.GetComponent<Spawn>().spawn();
         }
+
+        passThrough.GetComponent<BoxCollider2D>().enabled = false;
     }
 }
