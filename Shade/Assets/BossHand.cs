@@ -6,18 +6,29 @@ public class BossHand : MonoBehaviour {
 
     public GameObject target;
 
+    public Animator anim;
+
     public float turnRate;
     public float turnRateAcceleration;
     public float speed;
+
+    private Player p;
+
 	// Use this for initialization
 	void Start () {
-		
-	}
-	
-	// Update is called once per frame
-	void Update () {
-        ReachForPlayer();
-	}
+        p = target.GetComponent<Player>();
+        StartCoroutine(Punch());
+    }
+
+    // Update is called once per frame
+
+    IEnumerator Punch()
+    {
+        yield return new WaitForSeconds(10);
+        anim.SetTrigger("atk");
+        StartCoroutine(Punch());
+    }
+    
     public void ReachForPlayer() {
         if (target) {
             Vector3 targetPos = target.gameObject.transform.position;
@@ -36,6 +47,12 @@ public class BossHand : MonoBehaviour {
             transform.rotation = tiltedRot;
 
             transform.Translate(new Vector3( speed * Time.deltaTime, 0f,0f));
+        }
+    }
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if (collision.tag == "Player") {
+            p.health -= 1;
         }
     }
 }
