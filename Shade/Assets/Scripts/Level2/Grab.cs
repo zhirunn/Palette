@@ -3,12 +3,11 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class Grab : MonoBehaviour {
-    public Transform hand;
     // Use this for initialization
     void OnTriggerEnter2D(Collider2D col) {
         if (col.gameObject.tag == "Reward")
         {
-            col.transform.parent = hand;
+            col.transform.parent = this.transform;
         }
     }
     void OnTriggerStay2D(Collider2D col) {
