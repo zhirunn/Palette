@@ -1,0 +1,398 @@
+fileFormatVersion: 2
+guid: 39aeab99e047834489819c70e22cc78d
+timeCreated: 1489868172
+licenseType: Free
+TextureImporter:
+  fileIDToRecycleName:
+    21300000: Monster_Body
+    21300002: Monster_Tail
+    21300004: Monster_UpperJAW
+    21300006: MonsterLowerJAW
+    21300008: Mback1
+    21300010: Mback2
+    21300012: Mback3
+    21300014: Mback4
+    21300016: Mback5
+    21300018: Mback6
+    21300020: Mback7
+    21300022: HamLeg1
+    21300024: HamLeg2
+    21300026: HamLeg3
+    21300028: HamLeg4
+    21300030: Leg1
+    21300032: Leg2
+    21300034: Leg3
+    21300036: Leg4
+    21300038: foot1
+    21300040: foot2
+    21300042: foot3
+    21300044: foot4
+  serializedVersion: 4
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    filterMode: -1
+    aniso: -1
+    mipBias: -1
+    wrapMode: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spritePixelsToUnits: 1350
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  platformSettings:
+  - buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+  - buildTarget: Standalone
+    maxTextureSize: 2048
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Monster_Body
+      rect:
+        serializedVersion: 2
+        x: 2807.371
+        y: 1769.5592
+        width: 1292.1802
+        height: 637.7555
+      alignment: 9
+      pivot: {x: 0.2690729, y: 0.49329054}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Monster_Tail
+      rect:
+        serializedVersion: 2
+        x: 360.8135
+        y: 87.888954
+        width: 477.7394
+        height: 1308.5922
+      alignment: 9
+      pivot: {x: 0.74208874, y: 0.30598396}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Monster_UpperJAW
+      rect:
+        serializedVersion: 2
+        x: 3445.011
+        y: 907.0877
+        width: 648.01294
+        height: 777.25665
+      alignment: 9
+      pivot: {x: 0.10386356, y: 0.25369245}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: MonsterLowerJAW
+      rect:
+        serializedVersion: 2
+        x: 2875.839
+        y: 524.5616
+        width: 551.593
+        height: 397.73132
+      alignment: 9
+      pivot: {x: 0.20975158, y: 0.74190176}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Mback1
+      rect:
+        serializedVersion: 2
+        x: 902.57275
+        y: 1225.2102
+        width: 260.28162
+        height: 387.47388
+      alignment: 9
+      pivot: {x: 0.47945458, y: 0.29591587}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Mback2
+      rect:
+        serializedVersion: 2
+        x: 1245.7787
+        y: 1240.7981
+        width: 323.8778
+        height: 477.73938
+      alignment: 9
+      pivot: {x: 0.46819, y: 0.14004606}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Mback3
+      rect:
+        serializedVersion: 2
+        x: 1709.8336
+        y: 1228.9011
+        width: 262.333
+        height: 381.31946
+      alignment: 9
+      pivot: {x: 0.46276417, y: 0.17927542}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Mback4
+      rect:
+        serializedVersion: 2
+        x: 2064.659
+        y: 1203.7249
+        width: 389.5254
+        height: 697.24866
+      alignment: 9
+      pivot: {x: 0.48445374, y: 0.1734953}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Mback5
+      rect:
+        serializedVersion: 2
+        x: 2571.6338
+        y: 1269.8715
+        width: 147.4497
+        height: 350.54712
+      alignment: 9
+      pivot: {x: 0.47167996, y: 0.19001617}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Mback6
+      rect:
+        serializedVersion: 2
+        x: 2846.4807
+        y: 1187.9312
+        width: 217.20044
+        height: 494.15125
+      alignment: 9
+      pivot: {x: 0.48665714, y: 0.16575187}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Mback7
+      rect:
+        serializedVersion: 2
+        x: 3136.064
+        y: 1262.0773
+        width: 122.83179
+        height: 256.1787
+      alignment: 9
+      pivot: {x: 0.4690878, y: 0.22787827}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: HamLeg1
+      rect:
+        serializedVersion: 2
+        x: 1151.429
+        y: 432.07324
+        width: 498.25415
+        height: 543.38696
+      alignment: 9
+      pivot: {x: 0.28336146, y: 0.7703577}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: HamLeg2
+      rect:
+        serializedVersion: 2
+        x: 1735.2095
+        y: 384.16574
+        width: 498.2544
+        height: 545.4385
+      alignment: 9
+      pivot: {x: 0.26921505, y: 0.794857}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: HamLeg3
+      rect:
+        serializedVersion: 2
+        x: 2414.0876
+        y: 606.7595
+        width: 334.13525
+        height: 377.21643
+      alignment: 9
+      pivot: {x: 0.6150796, y: 0.7345638}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: HamLeg4
+      rect:
+        serializedVersion: 2
+        x: 3624.6838
+        y: 442.62112
+        width: 256.17847
+        height: 289.00247
+      alignment: 9
+      pivot: {x: 0.6599212, y: 0.79333943}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Leg1
+      rect:
+        serializedVersion: 2
+        x: 1068.4459
+        y: 110.09089
+        width: 250.02417
+        height: 293.1054
+      alignment: 9
+      pivot: {x: 0.16841096, y: 0.8421651}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Leg2
+      rect:
+        serializedVersion: 2
+        x: 1762.923
+        y: 91.58004
+        width: 247.97266
+        height: 293.10538
+      alignment: 9
+      pivot: {x: 0.23967801, y: 0.80438316}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Leg3
+      rect:
+        serializedVersion: 2
+        x: 2348.0796
+        y: 103.21963
+        width: 397.7312
+        height: 356.70154
+      alignment: 9
+      pivot: {x: 0.24909045, y: 0.81842434}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Leg4
+      rect:
+        serializedVersion: 2
+        x: 3304.1018
+        y: 107.16814
+        width: 344.39258
+        height: 311.5688
+      alignment: 9
+      pivot: {x: 0.2078976, y: 0.8283334}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: foot1
+      rect:
+        serializedVersion: 2
+        x: 1430.5051
+        y: 103
+        width: 229.4336
+        height: 135.14078
+      alignment: 9
+      pivot: {x: 0.2018111, y: 0.3973741}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: foot2
+      rect:
+        serializedVersion: 2
+        x: 2040.2948
+        y: 84
+        width: 229.43372
+        height: 135.1408
+      alignment: 9
+      pivot: {x: 0.17919514, y: 0.4684029}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: foot3
+      rect:
+        serializedVersion: 2
+        x: 2790.0364
+        y: 102.99999
+        width: 375.03906
+        height: 182.32501
+      alignment: 9
+      pivot: {x: 0.18418524, y: 0.5610783}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: foot4
+      rect:
+        serializedVersion: 2
+        x: 3754.7039
+        y: 99
+        width: 329.92188
+        height: 165.91312
+      alignment: 9
+      pivot: {x: 0.1518818, y: 0.49122104}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    outline: []
+  spritePackingTag: 
+  userData: 97641335413136
+  assetBundleName: 
+  assetBundleVariant: 

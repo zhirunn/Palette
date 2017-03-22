@@ -53,7 +53,7 @@ TextureImporter:
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
-  spritePixelsToUnits: 1350
+  spritePixelsToUnits: 1400
   alphaUsage: 1
   alphaIsTransparency: 1
   spriteTessellationDetail: -1
@@ -256,6 +256,7 @@ TextureImporter:
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
   userData: 97619774708103
 =======
   userData: 97619683615860
@@ -265,6 +266,9 @@ TextureImporter:
 >>>>>>> refs/remotes/origin/master
 =======
   userData: 97617732410637
+>>>>>>> refs/remotes/origin/master
+=======
+  userData: 97641606908474
 >>>>>>> refs/remotes/origin/master
   assetBundleName: 
   assetBundleVariant: 
