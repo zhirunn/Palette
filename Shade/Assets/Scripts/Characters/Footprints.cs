@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class Footprints : MonoBehaviour
 {
+    public GameObject armbody;
     private Vector3 lastPos = Vector3.zero;
     public float footprintSpacing = 0.1f;
     [HideInInspector]
@@ -28,7 +29,7 @@ public class Footprints : MonoBehaviour
 
     private void AddFootprint()
     {
-        GameObject fp = new GameObject();
+        GameObject fp = (GameObject) Instantiate(armbody);
         fp.transform.position = gameObject.transform.position;
         fp.transform.rotation = gameObject.transform.rotation;
         footprints.Add(fp);

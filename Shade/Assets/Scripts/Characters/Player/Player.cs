@@ -242,7 +242,7 @@ public class Player : MovingObject
             handSnakeMovement.SnakeMode = true;
             handSnakeMovement.footprints.EnableFootprintTracking(true);
         }
-        if (Input.GetKey(KeyCode.R))
+        if (Input.GetKeyUp(KeyCode.R))
         {
             casting = false;
             PlayerMode = true;

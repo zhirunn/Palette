@@ -10,15 +10,14 @@ public class SnakeMovement : MovingObject
     public GameObject MainBody;
     public Transform handPos;
     public List<Transform> BodyParts = new List<Transform>();
-    public float minddistance;
-    public int size;
+
     public float speed = 0.5f;
     public float rotationspeed = 100;
-    Vector2 dir = Vector2.left;
-    public GameObject bodyprefab;
+    
+    
     private float dis;
-    private Transform cur_part;
-    private Transform prev_part;
+
+
 
     [HideInInspector]
     public Footprints footprints;
@@ -30,11 +29,6 @@ public class SnakeMovement : MovingObject
     // Use this for initialization
     protected override void Start()
     {
-        for (int i = 0; i < size - 1; i++)
-        {
-            AddBodyPart();
-            //set up the line renderer
-        }
         //BodyParts[size-1] connects to shoulder
 
         footprints = GetComponent<Footprints>();
@@ -51,7 +45,6 @@ public class SnakeMovement : MovingObject
             if (distanceTravelled < maxDistance)
             {
                 FreeHand();
-                MoveBodyParts();
             }
 
             if (transform.position != lastPosition)
@@ -81,37 +74,9 @@ public class SnakeMovement : MovingObject
         lastPosition = transform.position;
     }
 
-    public void AddBodyPart()
-    {
-        int length = BodyParts.Count - 1;
-        Transform newpart = (Instantiate(bodyprefab, BodyParts[length].position, BodyParts[length].rotation) as GameObject).transform;
+    
 
-        // newpart.SetParent(transform);
-        newpart.SetParent(MainBody.transform);
-        BodyParts.Add(newpart);
-        // Create Line Renderer for each node
-    }
-
-    public void MoveBodyParts()
-    {
-        for (int i = 1; i < BodyParts.Count; i++)
-        {
-            cur_part = BodyParts[i];
-            prev_part = BodyParts[i - 1];
-
-            dis = Vector3.Distance(prev_part.position, cur_part.position);
-            Vector3 newpos = prev_part.position;
-            //newpos.y = BodyParts[0].position.y;
-            float T = Time.deltaTime * dis / minddistance * speed;
-            if (T > 0.5f)
-            {
-                T = 0.5f;
-            }
-            cur_part.position = Vector2.Lerp(cur_part.position, newpos, T);
-            //cur_part.LookAt(prev_part);
-            cur_part.rotation = Quaternion.Slerp(cur_part.rotation, prev_part.rotation, 0.1f);
-        }
-    }
+    
 
     public void FreeHand()
     {
@@ -173,16 +138,6 @@ public class SnakeMovement : MovingObject
         // TODO: Z, adjust code so that the other body parts follow along
     }
 
-    public void Leap(float time)
-    {
-        foreach (Transform node in BodyParts)
-        {
-            node.position = Vector2.Lerp(node.position, BodyParts[0].transform.position, time);
-            //cur_part.LookAt(prev_part);
-            node.rotation = Quaternion.Slerp(node.rotation, BodyParts[0].transform.rotation, time);
-        }
-    }
-
     void OnTriggerEnter2D(Collider2D coll)
     {
         if (coll.gameObject.tag == "Enemy")
@@ -194,5 +149,54 @@ public class SnakeMovement : MovingObject
             }
         }
     }
+
+
+    /*
+    public GameObject bodyprefab; 
+        private Transform cur_part;
+    Vector2 dir = Vector2.left;
+        public float minddistance;
+            private Transform prev_part;
+    public void Leap(float time)
+     {
+         foreach (Transform node in BodyParts)
+         {
+             node.position = Vector2.Lerp(node.position, BodyParts[0].transform.position, time);
+             //cur_part.LookAt(prev_part);
+             node.rotation = Quaternion.Slerp(node.rotation, BodyParts[0].transform.rotation, time);
+         }
+     }
+     public void AddBodyPart()
+     {
+         int length = BodyParts.Count - 1;
+         Transform newpart = (Instantiate(bodyprefab, BodyParts[length].position, BodyParts[length].rotation) as GameObject).transform;
+
+         // newpart.SetParent(transform);
+         newpart.SetParent(MainBody.transform);
+         BodyParts.Add(newpart);
+         // Create Line Renderer for each node
+     }
+     public void MoveBodyParts()
+    {
+        for (int i = 1; i < BodyParts.Count; i++)
+        {
+            cur_part = BodyParts[i];
+            prev_part = BodyParts[i - 1];
+
+            dis = Vector3.Distance(prev_part.position, cur_part.position);
+            Vector3 newpos = prev_part.position;
+            //newpos.y = BodyParts[0].position.y;
+            float T = Time.deltaTime * dis / minddistance * speed;
+            if (T > 0.5f)
+            {
+                T = 0.5f;
+            }
+            cur_part.position = Vector2.Lerp(cur_part.position, newpos, T);
+            //cur_part.LookAt(prev_part);
+            cur_part.rotation = Quaternion.Slerp(cur_part.rotation, prev_part.rotation, 0.1f);
+        }
+    }
+     */
+
 
 }
