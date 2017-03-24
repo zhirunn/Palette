@@ -1,0 +1,580 @@
+fileFormatVersion: 2
+guid: 15925f1a5eabbff4382ee9c67ae3afad
+timeCreated: 1490321949
+licenseType: Free
+TextureImporter:
+  fileIDToRecycleName:
+    21300000: hair
+    21300002: spike
+    21300004: tail3
+    21300006: tail2
+    21300008: tail1
+    21300010: Face
+    21300012: body1
+    21300014: body2
+    21300016: body3
+    21300018: lowerJaw
+    21300020: LeftLegUpper
+    21300022: RightLegUpper
+    21300024: LeftFoot
+    21300026: RightFoot
+    21300028: ArmUpperLeft
+    21300030: ArmUpperRight
+    21300032: HandLeft
+    21300034: HandRight
+    21300036: ArmLowerRight
+    21300038: ArmLowerLeft
+    21300040: thumb11
+    21300042: thumb12
+    21300044: thumb21
+    21300046: thumb22
+    21300048: f1
+    21300050: f11
+    21300052: f2
+    21300054: f22
+    21300056: f3
+    21300058: f31
+    21300060: f4
+    21300062: f41
+    21300064: f5
+    21300066: f51
+    21300068: f6
+    21300070: f61
+  serializedVersion: 4
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    filterMode: -1
+    aniso: -1
+    mipBias: -1
+    wrapMode: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spritePixelsToUnits: 1350
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  platformSettings:
+  - buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+  - buildTarget: Standalone
+    maxTextureSize: 2048
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: hair
+      rect:
+        serializedVersion: 2
+        x: 3977.0002
+        y: 143.15666
+        width: 1929.3362
+        height: 1692.8087
+      alignment: 9
+      pivot: {x: 0.49913526, y: 0.4928751}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: spike
+      rect:
+        serializedVersion: 2
+        x: 5237.0547
+        y: 2684.3696
+        width: 258.2422
+        height: 715.2058
+      alignment: 9
+      pivot: {x: 0.47995764, y: 0.49794075}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: tail3
+      rect:
+        serializedVersion: 2
+        x: 5069.0005
+        y: 3463.1873
+        width: 576.1133
+        height: 585.06055
+      alignment: 9
+      pivot: {x: 0.49816594, y: 0.49706435}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: tail2
+      rect:
+        serializedVersion: 2
+        x: 5100.0005
+        y: 4153.1074
+        width: 503.45703
+        height: 376.22266
+      alignment: 9
+      pivot: {x: 0.498552, y: 0.48479825}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: tail1
+      rect:
+        serializedVersion: 2
+        x: 5089.0005
+        y: 4563.9565
+        width: 503.45703
+        height: 382.27588
+      alignment: 9
+      pivot: {x: 0.49656573, y: 0.49321306}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Face
+      rect:
+        serializedVersion: 2
+        x: 64.02733
+        y: 1829.5974
+        width: 1348.0858
+        height: 1486.9976
+      alignment: 9
+      pivot: {x: 0.49698073, y: 0.49993512}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: body1
+      rect:
+        serializedVersion: 2
+        x: 109.999985
+        y: 3534.171
+        width: 924.2578
+        height: 545.71436
+      alignment: 9
+      pivot: {x: 0.49769664, y: 0.49903277}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: body2
+      rect:
+        serializedVersion: 2
+        x: 208
+        y: 4068.0457
+        width: 715.3711
+        height: 482.15503
+      alignment: 9
+      pivot: {x: 0.49904168, y: 0.49974453}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: body3
+      rect:
+        serializedVersion: 2
+        x: 325
+        y: 4537.9355
+        width: 503.4571
+        height: 370.16943
+      alignment: 9
+      pivot: {x: 0.49954605, y: 0.49724248}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: lowerJaw
+      rect:
+        serializedVersion: 2
+        x: 197.99998
+        y: 946.777
+        width: 890.95703
+        height: 439.7821
+      alignment: 9
+      pivot: {x: 0.5022689, y: 0.49620688}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: LeftLegUpper
+      rect:
+        serializedVersion: 2
+        x: 1240
+        y: 3934.077
+        width: 1178.5547
+        height: 954.3103
+      alignment: 9
+      pivot: {x: 0.49934033, y: 0.5002808}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: RightLegUpper
+      rect:
+        serializedVersion: 2
+        x: 1746
+        y: 2558.4268
+        width: 1190.6641
+        height: 966.4165
+      alignment: 9
+      pivot: {x: 0.49846113, y: 0.5195205}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: LeftFoot
+      rect:
+        serializedVersion: 2
+        x: 2595
+        y: 4466.007
+        width: 1635.6836
+        height: 457.94238
+      alignment: 9
+      pivot: {x: 0.49917954, y: 0.4945888}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: RightFoot
+      rect:
+        serializedVersion: 2
+        x: 2656.0273
+        y: 3649.1711
+        width: 1641.7383
+        height: 457.94165
+      alignment: 9
+      pivot: {x: 0.497931, y: 0.49750632}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: ArmUpperLeft
+      rect:
+        serializedVersion: 2
+        x: 149.99998
+        y: 126.969086
+        width: 1375.332
+        height: 479.12833
+      alignment: 9
+      pivot: {x: 0.49878865, y: 0.49888697}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: ArmUpperRight
+      rect:
+        serializedVersion: 2
+        x: 1869.1095
+        y: 131.96791
+        width: 1372.3046
+        height: 470.04846
+      alignment: 9
+      pivot: {x: 0.49470812, y: 0.4978892}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: HandLeft
+      rect:
+        serializedVersion: 2
+        x: 1512
+        y: 895.789
+        width: 385.39062
+        height: 358.0628
+      alignment: 9
+      pivot: {x: 0.4981955, y: 0.49631238}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: HandRight
+      rect:
+        serializedVersion: 2
+        x: 3951.1096
+        y: 2155.4937
+        width: 403.55493
+        height: 367.14307
+      alignment: 9
+      pivot: {x: 0.48293397, y: 0.49573687}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: ArmLowerRight
+      rect:
+        serializedVersion: 2
+        x: 3256.0276
+        y: 2823.3647
+        width: 651.7969
+        height: 579.0073
+      alignment: 9
+      pivot: {x: 0.49627832, y: 0.5071352}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: ArmLowerLeft
+      rect:
+        serializedVersion: 2
+        x: 4232
+        y: 2825.3367
+        width: 648.76953
+        height: 575.98096
+      alignment: 9
+      pivot: {x: 0.49632415, y: 0.503772}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: thumb11
+      rect:
+        serializedVersion: 2
+        x: 1745
+        y: 1942.5435
+        width: 300.625
+        height: 128.03882
+      alignment: 9
+      pivot: {x: 0.49563372, y: 0.49169698}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: thumb12
+      rect:
+        serializedVersion: 2
+        x: 1494
+        y: 1628.6173
+        width: 161.36719
+        height: 276.34375
+      alignment: 9
+      pivot: {x: 0.49266443, y: 0.4971442}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: thumb21
+      rect:
+        serializedVersion: 2
+        x: 5409.164
+        y: 2215.4797
+        width: 303.65234
+        height: 140.14526
+      alignment: 9
+      pivot: {x: 0.4819177, y: 0.5138955}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: thumb22
+      rect:
+        serializedVersion: 2
+        x: 5801.1646
+        y: 1907.6338
+        width: 173.47656
+        height: 282.39697
+      alignment: 9
+      pivot: {x: 0.43715099, y: 0.47934726}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: f1
+      rect:
+        serializedVersion: 2
+        x: 2271.0547
+        y: 1764.5854
+        width: 185.58594
+        height: 355.03613
+      alignment: 9
+      pivot: {x: 0.4927384, y: 0.49830014}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: f11
+      rect:
+        serializedVersion: 2
+        x: 2273.2188
+        y: 1326.77
+        width: 94.765625
+        height: 279.37036
+      alignment: 9
+      pivot: {x: 0.3881286, y: 0.48226297}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: f2
+      rect:
+        serializedVersion: 2
+        x: 3069.0002
+        y: 1736.5918
+        width: 140.17554
+        height: 291.47705
+      alignment: 9
+      pivot: {x: 0.49580517, y: 0.49543595}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: f22
+      rect:
+        serializedVersion: 2
+        x: 3060
+        y: 1265.7024
+        width: 97
+        height: 259.94128
+      alignment: 9
+      pivot: {x: 0.49999997, y: 0.50125736}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: f3
+      rect:
+        serializedVersion: 2
+        x: 3515.0547
+        y: 1721.5953
+        width: 167.42188
+        height: 249.10413
+      alignment: 9
+      pivot: {x: 0.47153378, y: 0.4953934}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: f31
+      rect:
+        serializedVersion: 2
+        x: 3529
+        y: 1271.7008
+        width: 131.09375
+        height: 224.89111
+      alignment: 9
+      pivot: {x: 0.4958265, y: 0.49490258}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: f4
+      rect:
+        serializedVersion: 2
+        x: 4546
+        y: 4284.9946
+        width: 164.39453
+        height: 255.15771
+      alignment: 9
+      pivot: {x: 0.49879706, y: 0.49775243}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: f41
+      rect:
+        serializedVersion: 2
+        x: 4561.1367
+        y: 3826.1023
+        width: 134.1211
+        height: 243.05054
+      alignment: 9
+      pivot: {x: 0.43515, y: 0.4933016}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: f5
+      rect:
+        serializedVersion: 2
+        x: 5855.1646
+        y: 4382.999
+        width: 137.14844
+        height: 294.5039
+      alignment: 9
+      pivot: {x: 0.45450726, y: 0.49745002}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: f51
+      rect:
+        serializedVersion: 2
+        x: 5902.137
+        y: 3917.081
+        width: 97.79297
+        height: 255.15723
+      alignment: 9
+      pivot: {x: 0.42296287, y: 0.49741465}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: f6
+      rect:
+        serializedVersion: 2
+        x: 5855.0005
+        y: 3123.2668
+        width: 182.5586
+        height: 352.00977
+      alignment: 9
+      pivot: {x: 0.48750937, y: 0.49922737}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: f61
+      rect:
+        serializedVersion: 2
+        x: 5936.0005
+        y: 2691.3682
+        width: 96.99951
+        height: 268.9392
+      alignment: 9
+      pivot: {x: 0.49999747, y: 0.5024615}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    outline: []
+  spritePackingTag: 
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
