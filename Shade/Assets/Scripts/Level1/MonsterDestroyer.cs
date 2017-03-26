@@ -21,6 +21,6 @@ public class MonsterDestroyer : MonoBehaviour
     {
         if (other.tag != "Player") { return; }
         //Turn off trigger and turn on collider
-        this.GetComponent<BoxCollider2D>().isTrigger = false;
+        //this.GetComponent<BoxCollider2D>().isTrigger = false;
     }
 }

@@ -13,8 +13,8 @@ public class Room1 : MonoBehaviour {
     private GameObject phonePart;
 
     public GameObject[] phoneParts;
-    private float speed = 0.40F;
-    private int dispo = 100;
+    private float speed = (float)((Random.Range(30, 50)) / 100.0F);
+    private int dispo = Random.Range(75, 100);
 
     void OnTriggerEnter2D(Collider2D other)
     {
