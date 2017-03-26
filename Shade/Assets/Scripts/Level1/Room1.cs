@@ -15,14 +15,23 @@ public class Room1 : MonoBehaviour {
     void OnTriggerEnter2D(Collider2D other)
     {
         if (other.tag != "Player") { return; }
-        if (this.CompareTag("FakeDoor")) {
-            phonePart = GameObject.Find("phonePart (1)");
 
+        phonePart = GameObject.Find("phonePart (1)");
+
+        //Do not run this script is phone part is picked up
+        if (this.CompareTag("FakeDoor")) {
             if(phonePart.GetComponent<SpriteRenderer>().enabled == true)
             {
                 return;
             }
+        }/* else
+        {
+            if (phonePart.GetComponent<SpriteRenderer>().enabled == false)
+            {
+                return;
+            }
         }
+        */
 
         //TODO: Room mod
 

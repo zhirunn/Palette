@@ -25,7 +25,7 @@ public class SwitchType1 : MonoBehaviour {
         pattern1();
 
         //Open door if last switch is disabled
-        if (switches[switches.Length].GetComponent<Switches>().getState())
+        if (switches[switches.Length - 1].GetComponent<Switches>().getState())
         {
             door.GetComponent<BoxCollider2D>().isTrigger = true;
         }

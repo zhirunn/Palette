@@ -30,7 +30,7 @@ public class Room2 : MonoBehaviour {
             int mark1 = Random.Range(0, spawnPoints.Length);
             int mark2 = Random.Range(0, spawnPoints.Length);
             int mark3 = Random.Range(0, spawnPoints.Length);
-
+             
             //Choose patrol path
             while ((mark1 == mark2) && (mark2 == mark3))
             {
