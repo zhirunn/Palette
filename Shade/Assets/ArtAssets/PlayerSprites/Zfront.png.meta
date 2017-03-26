@@ -184,9 +184,13 @@ TextureImporter:
     outline: []
   spritePackingTag: 
 <<<<<<< HEAD
-  userData: 97680033237476
+<<<<<<< HEAD
+  userData: 97680163050444
+=======
+  userData: 97680023289856
+>>>>>>> origin/master
 =======
   userData: 97679935989984
->>>>>>> refs/remotes/origin/master
+>>>>>>> parent of 7c45555... a bunch of meta
   assetBundleName: 
   assetBundleVariant: 
