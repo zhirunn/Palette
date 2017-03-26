@@ -12,6 +12,10 @@ public class Room1 : MonoBehaviour {
     private Transform[] temp;
     private GameObject phonePart;
 
+    public GameObject[] phoneParts;
+    private float speed = 0.40F;
+    private int dispo = 100;
+
     void OnTriggerEnter2D(Collider2D other)
     {
         if (other.tag != "Player") { return; }
@@ -32,8 +36,6 @@ public class Room1 : MonoBehaviour {
             }
         }
         */
-
-        //TODO: Room mod
 
         for (int i = 0; i < totalEnemy; i++)
         {
@@ -67,6 +69,14 @@ public class Room1 : MonoBehaviour {
 
             enemySpawn.setEnemyMarkers(temp);
 
+            roomMod();
+
+            //Set enemy disposition
+            enemySpawn.setDisposition(dispo);
+
+            //Set enemy at random speed
+            enemySpawn.setSpeed(speed);
+
             //Cycle through spawn points to spawn monsters.
             if (i >= spawnPoints.Length) {
                 enemySpawn.GetComponent<Spawn>().setSpawnPoint(spawnPoints[i % spawnPoints.Length]);
@@ -90,5 +100,23 @@ public class Room1 : MonoBehaviour {
             this.GetComponent<BoxCollider2D>().enabled = false;
         }
         
+    }
+
+    private void roomMod()
+    {
+        //Check if part 1 has been picked up
+        if (!phoneParts[0].GetComponent<SpriteRenderer>().enabled)
+        {
+            //Picked up
+            dispo = Random.Range(25, 75);
+            speed = (float)((Random.Range(75, 110)) / 100.0F);
+        }
+
+        //Check if parts 3 or 4 have been picked up
+        if ((!phoneParts[1].GetComponent<SpriteRenderer>().enabled) || (!phoneParts[2].GetComponent<SpriteRenderer>().enabled))
+        {
+            dispo = Random.Range(0, 50);
+            speed = (float)((Random.Range(30, 50)) / 100.0F);
+        }
     }
 }
