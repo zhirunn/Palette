@@ -7,7 +7,7 @@ public class Part1 : MonoBehaviour {
     public GameObject fakeDoors;
     public GameObject monsterDestroy;
 
-    void OnTriggerEnter2D(Collider2D other)
+    void OnTriggerEnter2D(Collider2D other) 
     {
         if (other.tag != "Player") { return; }
 

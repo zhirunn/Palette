@@ -13,10 +13,10 @@ public class Room1 : MonoBehaviour {
     private GameObject phonePart;
 
     public GameObject[] phoneParts;
-    private float speed = (float)((Random.Range(30, 50)) / 100.0F);
-    private int dispo = Random.Range(75, 100);
+    private float speed; // = 1.0F;
+    private int dispo;// = 50;
 
-    void OnTriggerEnter2D(Collider2D other)
+void OnTriggerEnter2D(Collider2D other)
     {
         if (other.tag != "Player") { return; }
 
@@ -36,6 +36,9 @@ public class Room1 : MonoBehaviour {
             }
         }
         */
+
+        speed = (float)((Random.Range(30, 50)) / 100.0F);
+        dispo = Random.Range(75, 100);
 
         for (int i = 0; i < totalEnemy; i++)
         {

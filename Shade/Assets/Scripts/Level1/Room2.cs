@@ -14,14 +14,17 @@ public class Room2 : MonoBehaviour {
     private Transform[] temp;
 
     public GameObject[] phoneParts;
-    private float speed = (float)((Random.Range(60, 80)) / 100.0F);
-    private int dispo = Random.Range(35, 75);
+    private float speed;
+    private int dispo;
 
     void OnTriggerEnter2D(Collider2D other)
     {
         if (other.tag != "Player") { return; }
 
-       
+        //Defaults
+        speed = (float)((Random.Range(30, 50)) / 100.0F);
+        dispo = Random.Range(75, 100);
+
         for (int i = 0; i < totalEnemy; i++)
         {
             Spawn enemySpawn = spawner.GetComponent<Spawn>();
