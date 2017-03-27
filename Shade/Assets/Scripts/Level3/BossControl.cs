@@ -6,8 +6,8 @@ public class BossControl : MonoBehaviour {
 
     public int HP;
     public GameObject Spike_prefab;
-    public GameObject Hand1_prefab;
-    public GameObject Hand2_prefab;
+    public GameObject Hand_Left;
+    public GameObject Hand_Right;
     public GameObject Shield;
     public List<GameObject> FirePoints;
 	// Use this for initialization
