@@ -9,7 +9,7 @@ public class BossControl : MonoBehaviour {
     public GameObject Hand_Left;
     public GameObject Hand_Right;
     public GameObject Shield;
-    public List<GameObject> FirePoints;
+    public GameObject FirePoint;
 	// Use this for initialization
 	void Start () {
         HP = 20;
@@ -31,9 +31,7 @@ public class BossControl : MonoBehaviour {
         StartCoroutine(FireCycle());
     }
     public void Fire() {
-        foreach (GameObject point in FirePoints) {
-            Instantiate(Spike_prefab, point.transform.position, point.transform.rotation);
-        }
+         Instantiate(Spike_prefab, FirePoint.transform.position, FirePoint.transform.rotation);
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
