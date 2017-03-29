@@ -1,0 +1,244 @@
+fileFormatVersion: 2
+guid: 0fab62c5b4f454c47b6a203453163525
+timeCreated: 1490803258
+licenseType: Free
+TextureImporter:
+  fileIDToRecycleName:
+    21300000: head
+    21300002: mouth
+    21300004: hair
+    21300006: hair1
+    21300008: hair2
+    21300010: body
+    21300012: RightArm
+    21300014: LeftArm
+    21300016: Lleg
+    21300018: Lfoot
+    21300020: Rleg
+    21300022: Rfoot
+  serializedVersion: 4
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    filterMode: -1
+    aniso: -1
+    mipBias: -1
+    wrapMode: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spritePixelsToUnits: 1400
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  platformSettings:
+  - buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+  - buildTarget: Standalone
+    maxTextureSize: 2048
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: head
+      rect:
+        serializedVersion: 2
+        x: 154.53516
+        y: 1591.7423
+        width: 920.4004
+        height: 881.72864
+      alignment: 9
+      pivot: {x: 0.4981146, y: 0.50158024}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: mouth
+      rect:
+        serializedVersion: 2
+        x: 1839.6113
+        y: 1902.452
+        width: 543.3496
+        height: 320.8971
+      alignment: 9
+      pivot: {x: 0.5051659, y: 0.117148995}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: hair
+      rect:
+        serializedVersion: 2
+        x: 502.84866
+        y: 54.144417
+        width: 913.9551
+        height: 1208.8281
+      alignment: 9
+      pivot: {x: 0.5417917, y: 0.7445451}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: hair1
+      rect:
+        serializedVersion: 2
+        x: 147.72949
+        y: 988.7948
+        width: 340.32227
+        height: 601.3574
+      alignment: 9
+      pivot: {x: 0.34636843, y: 0.7395234}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: hair2
+      rect:
+        serializedVersion: 2
+        x: 1292.577
+        y: 1764.1945
+        width: 333.87695
+        height: 590.078
+      alignment: 9
+      pivot: {x: 0.6538832, y: 0.78374153}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: body
+      rect:
+        serializedVersion: 2
+        x: 1713.8495
+        y: 437.3399
+        width: 467.61707
+        height: 685.1464
+      alignment: 9
+      pivot: {x: 0.41215736, y: 0.46218827}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: RightArm
+      rect:
+        serializedVersion: 2
+        x: 2652.6162
+        y: 214.71278
+        width: 196.91406
+        height: 348.37897
+      alignment: 9
+      pivot: {x: 0.37218437, y: 0.72690773}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: LeftArm
+      rect:
+        serializedVersion: 2
+        x: 2894.8604
+        y: 1815.7079
+        width: 219.47266
+        height: 404.7755
+      alignment: 9
+      pivot: {x: 0.8321739, y: 0.76228327}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Lleg
+      rect:
+        serializedVersion: 2
+        x: 1945.0001
+        y: 1644.5261
+        width: 116.347534
+        height: 108.26294
+      alignment: 9
+      pivot: {x: 0.4985065, y: 0.49854323}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Lfoot
+      rect:
+        serializedVersion: 2
+        x: 1941.0001
+        y: 1302.6244
+        width: 114.736206
+        height: 206.52563
+      alignment: 9
+      pivot: {x: 0.48807502, y: 0.49570414}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Rleg
+      rect:
+        serializedVersion: 2
+        x: 2190
+        y: 1650.5245
+        width: 114.73633
+        height: 111.4845
+      alignment: 9
+      pivot: {x: 0.4924334, y: 0.49312097}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Rfoot
+      rect:
+        serializedVersion: 2
+        x: 2193
+        y: 1301.6248
+        width: 116.34766
+        height: 204.91467
+      alignment: 9
+      pivot: {x: 0.49420848, y: 0.49959877}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    outline: []
+  spritePackingTag: 
+  userData: 97701565940384
+  assetBundleName: 
+  assetBundleVariant: 
