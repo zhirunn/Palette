@@ -10,8 +10,10 @@ public class BossControl : MonoBehaviour {
     //public GameObject Hand_Right;
     //public GameObject Shield;
     public GameObject FirePoint;
-	// Use this for initialization
+    // Use this for initialization
+    private Animator anim;
 	void Start () {
+        anim = GetComponent<Animator>();
         HP = 20;
         StartCoroutine(FireCycle());
         
@@ -27,9 +29,14 @@ public class BossControl : MonoBehaviour {
 
     IEnumerator FireCycle() {
         yield return new WaitForSeconds(5);
-        Fire();
+        anim.SetTrigger("SpikeATK");
         StartCoroutine(FireCycle());
     }
+    IEnumerator MeleeATK() {
+        yield return new WaitForSeconds(3);
+        anim.SetTrigger("MeleeATK"); 
+    }
+
     public void Fire() {
          Instantiate(Spike_prefab, FirePoint.transform.position, FirePoint.transform.rotation);
     }
