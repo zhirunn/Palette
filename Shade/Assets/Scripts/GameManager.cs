@@ -25,6 +25,15 @@ public class GameManager : MonoBehaviour
     [HideInInspector]
     public Story Story;
 
+    [HideInInspector]
+    public ReloadInfo reloadInfo = new ReloadInfo();
+
+    public class ReloadInfo
+    {
+        public int disposition = 0;
+        public Scene scene;
+    }
+
     // Use this for initialization
     void Awake()
     {
@@ -125,12 +134,14 @@ public class GameManager : MonoBehaviour
     {
         // Tell our 'OnLevelFinishedLoading' function to start listening for a scene change as soon as this script is enabled.
         SceneManager.sceneLoaded += OnLevelFinishedLoading;
+        SceneManager.activeSceneChanged += RecordCurrentLevel;
     }
 
     void OnDisable()
     {
         // Tell our 'OnLevelFinishedLoading' function to stop listening for a scene change as soon as this script is disabled. Remember to always have an unsubscription for every delegate you subscribe to!
         SceneManager.sceneLoaded -= OnLevelFinishedLoading;
+        SceneManager.activeSceneChanged -= RecordCurrentLevel;
     }
 
 
@@ -183,6 +194,13 @@ public class GameManager : MonoBehaviour
         {
             footprints[i].GetComponent<SpriteRenderer>().enabled = state;
         }
+    }
+
+    public void RecordCurrentLevel(Scene oldScene, Scene newScene)
+    {
+        Debug.Log(string.Format("Recorded the current level ({0}) and disposition ({1})!", newScene.name, playerDisposition.disposition));
+        reloadInfo.scene = newScene;
+        reloadInfo.disposition = playerDisposition.disposition;
     }
 
 }
