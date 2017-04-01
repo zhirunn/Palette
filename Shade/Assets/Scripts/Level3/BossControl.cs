@@ -6,40 +6,56 @@ public class BossControl : MonoBehaviour {
 
     public int HP;
     public GameObject Spike_prefab;
-    public GameObject Hand1_prefab;
-    public GameObject Hand2_prefab;
-    public GameObject Shield;
-    public List<GameObject> FirePoints;
-	// Use this for initialization
+    //public GameObject Hand_Left;
+    //public GameObject Hand_Right;
+    //public GameObject Shield;
+    public GameObject FirePoint;
+    public GameObject player;
+    // Use this for initialization
+    private Animator anim;
+    private float distance;
 	void Start () {
+        anim = GetComponent<Animator>();
         HP = 20;
-        StartCoroutine(FireCycle());
+        //StartCoroutine(FireCycle());
         
 
 	}
 
+
     void Update() {
+        distance = transform.position.y - player.transform.position.y;
         if (HP <= 0 ) {
             Debug.Log("You Win!");
-            Destroy(this.gameObject, 0.1f);
+            //anim.SetTrigger("Death");
+            //anim.SetBool("dead", true);
+            //Destroy(this.gameObject, 0.1f);
+            Application.LoadLevel("BossPlayerSettlement");
         }
-    }
 
+    }
+    IEnumerator Attack() {
+        yield return new WaitForSeconds(5);
+    }
     IEnumerator FireCycle() {
         yield return new WaitForSeconds(5);
-        Fire();
-        StartCoroutine(FireCycle());
+        anim.SetTrigger("SpikeATK");
+        //StartCoroutine(FireCycle());
     }
+    IEnumerator MeleeATK() {
+        yield return new WaitForSeconds(3);
+        anim.SetTrigger("MeleeATK"); 
+    }
+
     public void Fire() {
-        foreach (GameObject point in FirePoints) {
-            Instantiate(Spike_prefab, point.transform.position, point.transform.rotation);
-        }
+         Instantiate(Spike_prefab, FirePoint.transform.position, FirePoint.transform.rotation);
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
         if (collision.tag == "ATKbox") {
             HP -= 1;
+            anim.SetTrigger("hit");
         }
         if (collision.tag == "")
         {

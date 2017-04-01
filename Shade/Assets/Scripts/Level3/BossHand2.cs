@@ -7,8 +7,10 @@ public class BossHand2 : MonoBehaviour {
     public int HP;
     public Animator anim;
     private int Real_HP;
+    private AudioSource audio1;
 	// Use this for initialization
 	void Start () {
+        audio1 = GetComponent<AudioSource>();
         HP = 1;
         Real_HP = 3;
         anim = GetComponent<Animator>();
@@ -36,6 +38,7 @@ public class BossHand2 : MonoBehaviour {
     {
         if (collision.tag == "ATKbox") {
             HP -= 1;
+            audio1.Play();
         }
     }
     
