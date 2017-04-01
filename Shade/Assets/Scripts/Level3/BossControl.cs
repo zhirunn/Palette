@@ -10,27 +10,37 @@ public class BossControl : MonoBehaviour {
     //public GameObject Hand_Right;
     //public GameObject Shield;
     public GameObject FirePoint;
+    public GameObject player;
     // Use this for initialization
     private Animator anim;
+    private float distance;
 	void Start () {
         anim = GetComponent<Animator>();
         HP = 20;
-        StartCoroutine(FireCycle());
+        //StartCoroutine(FireCycle());
         
 
 	}
 
+
     void Update() {
+        distance = transform.position.y - player.transform.position.y;
         if (HP <= 0 ) {
             Debug.Log("You Win!");
-            Destroy(this.gameObject, 0.1f);
+            //anim.SetTrigger("Death");
+            //anim.SetBool("dead", true);
+            //Destroy(this.gameObject, 0.1f);
+            Application.LoadLevel("BossPlayerSettlement");
         }
-    }
 
+    }
+    IEnumerator Attack() {
+        yield return new WaitForSeconds(5);
+    }
     IEnumerator FireCycle() {
         yield return new WaitForSeconds(5);
         anim.SetTrigger("SpikeATK");
-        StartCoroutine(FireCycle());
+        //StartCoroutine(FireCycle());
     }
     IEnumerator MeleeATK() {
         yield return new WaitForSeconds(3);
@@ -45,6 +55,7 @@ public class BossControl : MonoBehaviour {
     {
         if (collision.tag == "ATKbox") {
             HP -= 1;
+            anim.SetTrigger("hit");
         }
         if (collision.tag == "")
         {
