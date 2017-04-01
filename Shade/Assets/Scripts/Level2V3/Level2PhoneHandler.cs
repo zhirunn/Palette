@@ -5,8 +5,23 @@ using UnityEngine;
 public class Level2PhoneHandler : MonoBehaviour
 {
     public GameObject[] phoneParts;
+    public GameObject door;
 
-    void OnTriggerEnter2D(Collider2D other)
+    private void OnTriggerEnter2D(Collider2D other)
+    {
+        if (other.tag != "Player") { return; }
+
+        //Check pattern
+        pattern1();
+
+        //Open door if last switch is disabled
+        if (!phoneParts[phoneParts.Length - 1].GetComponent<Switches>().getState())
+        {
+            door.GetComponent<BoxCollider2D>().isTrigger = true;
+        }
+    }
+
+    void pattern1()
     {
         {
             int counter = 0;
