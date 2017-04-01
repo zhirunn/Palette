@@ -17,8 +17,9 @@ public class BossHand : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
-        LifeCycle = 3;
+        LifeCycle = 10;
         p = target.GetComponent<Player>();
+        anim = GetComponent<Animator>();
         StartCoroutine(Punch());
     }
 
@@ -32,7 +33,7 @@ public class BossHand : MonoBehaviour {
     IEnumerator Punch()
     {
         LifeCycle -= 1;
-        yield return new WaitForSeconds(10);
+        yield return new WaitForSeconds(7);
         
         anim.SetTrigger("atk");
         
@@ -66,6 +67,10 @@ public class BossHand : MonoBehaviour {
         }
         if (collision.tag == "Untagged") {
             Time.timeScale = 0.3f;
+        }
+        if (collision.tag == "ATKbox") {
+            LifeCycle -= 1;
+            anim.ResetTrigger("hit");
         }
     }
     private void OnTriggerExit2D(Collider2D other)

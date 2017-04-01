@@ -5,7 +5,6 @@ using UnityEngine;
 public class spikeControl : MonoBehaviour {
     public float speed;
     public PlayerCounterATK counter;
-
     public bool friendly_fire;
 	// Use this for initialization
 	void Start () {

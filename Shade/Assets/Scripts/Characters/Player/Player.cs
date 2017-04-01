@@ -8,7 +8,6 @@ public class Player : MovingObject
     public float restartLevelDelay = 1f; // Delay time in seconds to restart level.
     public float visionTime = 4.0f; // Time in seconds
     public float eyeTime = 1.0f;
-    public AudioClip[] walkingSound;
     public AudioSource source;
 
     private float currentVisionTime = 0; // Approaches the total allowed vision ti me
@@ -64,6 +63,7 @@ public class Player : MovingObject
     protected override void Start()
     {
         animator = GetComponent<Animator>();
+        source = GetComponent<AudioSource>();
 
         // Get the current disposition point total stored in GameManager between levels.
         disposition = GameManager.Instance.playerDisposition;
@@ -311,5 +311,7 @@ public class Player : MovingObject
             GameManager.Instance.GameOver();
         }
     }
-
+    public void StepSound() {
+        source.Play();
+    }
 }
