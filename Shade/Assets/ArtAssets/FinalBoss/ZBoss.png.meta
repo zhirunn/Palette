@@ -76,7 +76,7 @@ TextureImporter:
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
-  spritePixelsToUnits: 1350
+  spritePixelsToUnits: 1200
   alphaUsage: 1
   alphaIsTransparency: 1
   spriteTessellationDetail: -1
@@ -166,7 +166,7 @@ TextureImporter:
         width: 503.45703
         height: 382.27588
       alignment: 9
-      pivot: {x: 0.49656573, y: 0.49321306}
+      pivot: {x: 0.5079179, y: 0.7623403}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       tessellationDetail: 0
@@ -575,14 +575,6 @@ TextureImporter:
       tessellationDetail: 0
     outline: []
   spritePackingTag: 
-<<<<<<< HEAD
-<<<<<<< HEAD
-  userData: 97680571356827
-=======
-  userData: 97680023289856
->>>>>>> origin/master
-=======
-  userData: 97679935934930
->>>>>>> parent of 7c45555... a bunch of meta
+  userData: 97720077873446
   assetBundleName: 
   assetBundleVariant: 
