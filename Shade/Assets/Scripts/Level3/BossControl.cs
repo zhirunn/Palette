@@ -14,11 +14,12 @@ public class BossControl : MonoBehaviour {
     // Use this for initialization
     private Animator anim;
     private float distance;
+    private bool dead;
 	void Start () {
         anim = GetComponent<Animator>();
         HP = 20;
         //StartCoroutine(FireCycle());
-        
+        dead = false;
 
 	}
 
@@ -27,10 +28,19 @@ public class BossControl : MonoBehaviour {
         distance = transform.position.y - player.transform.position.y;
         if (HP <= 0 ) {
             Debug.Log("You Win!");
-            //anim.SetTrigger("Death");
-            //anim.SetBool("dead", true);
+            
+            if (dead == false) {
+                anim.SetTrigger("Death");
+                anim.SetTrigger("Death");
+                anim.SetTrigger("Death");
+                anim.SetTrigger("Death");
+                anim.SetBool("dead", true);
+                dead = true;
+
+            }
+            
             //Destroy(this.gameObject, 0.1f);
-            Application.LoadLevel("BossPlayerSettlement");
+            //Application.LoadLevel("BossPlayerSettlement");
         }
 
     }
