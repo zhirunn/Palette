@@ -20,7 +20,7 @@ public class Player : MovingObject
     public bool PlayerMode = true; // Controlling the player by default
 
     // Cache variables
-    private Animator animator; // Used to store a reference to the Player's animator component.
+    public Animator animator; // Used to store a reference to the Player's animator component.
     // HUD for Vision
     private Vector2 visionBarPos = new Vector2(40, 40);
     private Vector2 visionBarSize = new Vector2(200, 60);

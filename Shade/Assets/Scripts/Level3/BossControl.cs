@@ -35,11 +35,11 @@ public class BossControl : MonoBehaviour {
                 anim.SetTrigger("Death");
                 anim.SetBool("dead", true);
                 dead = true;
-
+                StartCoroutine(ShiftToNext());
             }
             
             //Destroy(this.gameObject, 0.1f);
-            //Application.LoadLevel("BossPlayerSettlement");
+            //
         }
 
     }
@@ -47,15 +47,25 @@ public class BossControl : MonoBehaviour {
         yield return new WaitForSeconds(1);
         if (distance >= 3)
         {
-            anim.SetTrigger("SpikeATK");
-            yield return new WaitForSeconds(3);
+            if (!dead)
+            {
+                anim.SetTrigger("SpikeATK");
+                yield return new WaitForSeconds(3);
+            }
         }
         else {
-            anim.SetTrigger("MeleeATK");
-            yield return new WaitForSeconds(6);
+            if (!dead)
+            {
+                anim.SetTrigger("MeleeATK");
+                yield return new WaitForSeconds(6);
+            }
         }
         StartCoroutine(Attack());
 
+    }
+    IEnumerator ShiftToNext() {
+        yield return new WaitForSeconds(5);
+        Application.LoadLevel("BossPlayerSettlement");
     }
 
     public void Fire() {

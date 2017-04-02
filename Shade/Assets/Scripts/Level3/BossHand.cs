@@ -64,13 +64,14 @@ public class BossHand : MonoBehaviour {
     {
         if (collision.tag == "Player") {
             p.health -= 1;
+            p.animator.SetTrigger("hit");
         }
         if (collision.tag == "Untagged") {
             Time.timeScale = 0.3f;
         }
         if (collision.tag == "ATKbox") {
             LifeCycle -= 1;
-            anim.ResetTrigger("hit");
+            anim.SetTrigger("hit");
         }
     }
     private void OnTriggerExit2D(Collider2D other)
