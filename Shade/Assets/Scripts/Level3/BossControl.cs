@@ -18,9 +18,9 @@ public class BossControl : MonoBehaviour {
 	void Start () {
         anim = GetComponent<Animator>();
         HP = 20;
-        //StartCoroutine(FireCycle());
+        //
         dead = false;
-
+        StartCoroutine(Attack());
 	}
 
 
@@ -30,7 +30,6 @@ public class BossControl : MonoBehaviour {
             Debug.Log("You Win!");
             
             if (dead == false) {
-                anim.SetTrigger("Death");
                 anim.SetTrigger("Death");
                 anim.SetTrigger("Death");
                 anim.SetTrigger("Death");
@@ -45,16 +44,18 @@ public class BossControl : MonoBehaviour {
 
     }
     IEnumerator Attack() {
-        yield return new WaitForSeconds(5);
-    }
-    IEnumerator FireCycle() {
-        yield return new WaitForSeconds(5);
-        anim.SetTrigger("SpikeATK");
-        //StartCoroutine(FireCycle());
-    }
-    IEnumerator MeleeATK() {
-        yield return new WaitForSeconds(3);
-        anim.SetTrigger("MeleeATK"); 
+        yield return new WaitForSeconds(1);
+        if (distance >= 3)
+        {
+            anim.SetTrigger("SpikeATK");
+            yield return new WaitForSeconds(3);
+        }
+        else {
+            anim.SetTrigger("MeleeATK");
+            yield return new WaitForSeconds(6);
+        }
+        StartCoroutine(Attack());
+
     }
 
     public void Fire() {
