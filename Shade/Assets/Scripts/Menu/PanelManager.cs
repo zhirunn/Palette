@@ -3,6 +3,7 @@ using UnityEngine.UI;
 using UnityEngine.EventSystems;
 using System.Collections;
 using System.Collections.Generic;
+using UnityEngine.SceneManagement;
 
 public class PanelManager : MonoBehaviour {
 
@@ -15,6 +16,8 @@ public class PanelManager : MonoBehaviour {
 	const string k_OpenTransitionName = "Open";
 	const string k_ClosedStateName = "Closed";
 
+    private bool closeMenu = false;
+
 	public void OnEnable()
 	{
 		m_OpenParameterId = Animator.StringToHash (k_OpenTransitionName);
@@ -24,6 +27,20 @@ public class PanelManager : MonoBehaviour {
 
 		OpenPanel(initiallyOpen);
 	}
+
+    public void Update()
+    {
+        if (Input.GetKeyUp(KeyCode.Escape))
+        {
+            CloseMenu();
+        }
+    }
+
+    public void CloseMenu()
+    {
+        closeMenu = true;
+        CloseCurrent();
+    }
 
 	public void OpenPanel (Animator anim)
 	{
@@ -87,6 +104,13 @@ public class PanelManager : MonoBehaviour {
 
 		if (wantToClose)
 			anim.gameObject.SetActive(false);
+
+        if(closeMenu)
+        {
+            bool state = gameObject.activeSelf;
+            closeMenu = false;
+            GameManager.Instance.pauseGame(!state);
+        }
 	}
 
 	private void SetSelected(GameObject go)

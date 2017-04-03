@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.EventSystems;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
@@ -24,6 +25,19 @@ public class GameManager : MonoBehaviour
 
     [HideInInspector]
     public Story Story;
+
+    [HideInInspector]
+    public ReloadInfo reloadInfo = new ReloadInfo();
+
+    public float gameSpeed = 1.0f;
+    public GameObject menu;
+    private Animator[] animators;
+
+    public class ReloadInfo
+    {
+        public int disposition = 0;
+        public Scene scene;
+    }
 
     // Use this for initialization
     void Awake()
@@ -100,6 +114,14 @@ public class GameManager : MonoBehaviour
 
         //Finds all objects with specified tag
         footprints = GameObject.FindGameObjectsWithTag("Footprint");
+
+        menu = GameObject.FindGameObjectWithTag("Menu");
+        animators = GameObject.FindObjectsOfType<Animator>();
+
+        if(menu)
+        {
+            menu.GetComponentInChildren<ApplicationManager>().menuManager.CloseMenu();
+        }
     }
 
     // Hides black image used between levels
@@ -117,6 +139,11 @@ public class GameManager : MonoBehaviour
     {
         if (doingSetup)
             return;
+
+        if (menu != null && menu.activeSelf == false && Input.GetKeyUp(KeyCode.Escape))
+        {
+            pauseGame(true);
+        }
     }
 
     // Idea from Addyarb 
@@ -125,12 +152,14 @@ public class GameManager : MonoBehaviour
     {
         // Tell our 'OnLevelFinishedLoading' function to start listening for a scene change as soon as this script is enabled.
         SceneManager.sceneLoaded += OnLevelFinishedLoading;
+        SceneManager.activeSceneChanged += RecordCurrentLevel;
     }
 
     void OnDisable()
     {
         // Tell our 'OnLevelFinishedLoading' function to stop listening for a scene change as soon as this script is disabled. Remember to always have an unsubscription for every delegate you subscribe to!
         SceneManager.sceneLoaded -= OnLevelFinishedLoading;
+        SceneManager.activeSceneChanged -= RecordCurrentLevel;
     }
 
 
@@ -185,4 +214,49 @@ public class GameManager : MonoBehaviour
         }
     }
 
+    public void RecordCurrentLevel(Scene oldScene, Scene newScene)
+    {
+        Debug.Log(string.Format("Recorded the current level ({0}) and disposition ({1})!", newScene.name, playerDisposition.disposition));
+        reloadInfo.scene = newScene;
+        reloadInfo.disposition = playerDisposition.disposition;
+    }
+
+    public void pauseGame(bool state = true)
+    {
+        if (state)
+        {
+            gameSpeed = 0.0f;
+            menu.SetActive(true);
+            menu.GetComponentInChildren<EventSystem>().enabled = true;
+            pauseAnimations();
+        }
+        else
+        {
+            gameSpeed = 1.0f;
+            menu.SetActive(false);
+            menu.GetComponentInChildren<EventSystem>().enabled = false;
+            pauseAnimations(false);
+        }
+    }
+
+    public void pauseAnimations(bool pause = true)
+    {
+        foreach (Animator animator in animators)
+        {
+            if (animator.transform.root.gameObject.tag != "Menu")
+            {
+                animator.enabled = !pause;
+            }
+        }
+    }
+
+    public bool IsPaused
+    {
+        get
+        {
+            if (gameSpeed == 0.0f) return true;
+            if (menu != null && menu.activeSelf) return true;
+            return false;
+        }
+    }
 }
