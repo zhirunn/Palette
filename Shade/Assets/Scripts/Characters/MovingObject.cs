@@ -44,8 +44,8 @@ public abstract class MovingObject : DispositionObject
 
         // Calculate end position based on the direction parameters passed in when calling Move.
         Vector2 end = start + new Vector2(
-            xDir * Time.deltaTime * inverseMoveTime,
-            yDir * Time.deltaTime * inverseMoveTime);
+            xDir * Time.deltaTime * inverseMoveTime * GameManager.Instance.gameSpeed,
+            yDir * Time.deltaTime * inverseMoveTime * GameManager.Instance.gameSpeed);
         lastMove = end;
 
         rb2d.MovePosition(end);
