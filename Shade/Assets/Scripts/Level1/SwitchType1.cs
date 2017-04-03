@@ -6,10 +6,11 @@ public class SwitchType1 : MonoBehaviour {
     public GameObject door;
     public GameObject[] switches;
 
-    void OnTriggerEnter2D(Collider2D other)
+    private void OnTriggerEnter2D(Collider2D other)
     {
         if (other.tag != "Player") { return; }
 
+        //Open door if only one switch
         if (switches.Length == 0)
         {
             door.GetComponent<BoxCollider2D>().isTrigger = true;
@@ -18,23 +19,19 @@ public class SwitchType1 : MonoBehaviour {
             this.GetComponent<SpriteRenderer>().enabled = false;
 
             return;
-        } 
-
-        /*
-        //First trigger
-        if(switches[0].name == this.name) 
-        {
-            switches[0].GetComponent<SpriteRenderer>().enabled = false;
-            switches[1].GetComponent<CircleCollider2D>().enabled = true;
-            switches[1].GetComponent<CircleCollider2D>().isTrigger = true;
         }
-        */
 
         //Check pattern
         pattern1();
+
+        //Open door if last switch is disabled
+        if (!switches[switches.Length - 1].GetComponent<Switches>().getState())
+        {
+            door.GetComponent<BoxCollider2D>().isTrigger = true;
+        }
     }
 
-    void pattern1()
+    private void pattern1()
     {
         int counter = 0;
 
@@ -49,27 +46,29 @@ public class SwitchType1 : MonoBehaviour {
 
             counter++;
         }
-        print(counter);
-        counter = counter - 1;
-        //Check previous are all disabled
-        for(int i = 0; i < counter; i++)
+        
+        //First object
+        if(counter == 0)
         {
-            if (!switches[i].GetComponent<SpriteRenderer>().enabled == false)
-            {
-                foreach (GameObject item in switches)
-                {
-                    item.GetComponent<CircleCollider2D>().enabled = true;
-                    item.GetComponent<SpriteRenderer>().enabled = true;
+            //Disable
+            switches[0].GetComponent<Switches>().disable();
+            return;
+        }
 
-                    counter = 0;
-                    return;
+        for (int i = 0; i <= counter - 1; i++)
+        {
+            //Check if enabled. If so enable everything and reset
+            if(switches[i].GetComponent<Switches>().getState())
+            {
+                foreach(GameObject item in switches) {
+                    item.GetComponent<Switches>().enable();
                 }
+                return;
             }
         }
 
-        //All previous switches pressed in the right order
-        this.GetComponent<CircleCollider2D>().enabled = false;
-        this.GetComponent<SpriteRenderer>().enabled = false;
+        switches[counter].GetComponent<Switches>().disable();
+        return;
     }
 
 }

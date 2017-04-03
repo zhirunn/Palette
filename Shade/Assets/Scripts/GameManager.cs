@@ -208,6 +208,9 @@ public class GameManager : MonoBehaviour
     */
     public void setState(bool state = false)
     {
+        //Finds all objects with specified tag
+        footprints = GameObject.FindGameObjectsWithTag("Footprint");
+
         for (int i = 0; i < footprints.Length; i++)
         {
             footprints[i].GetComponent<SpriteRenderer>().enabled = state;

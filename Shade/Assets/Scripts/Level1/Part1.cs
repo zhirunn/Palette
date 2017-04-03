@@ -5,8 +5,9 @@ using UnityEngine;
 public class Part1 : MonoBehaviour {
     public GameObject doors;
     public GameObject fakeDoors;
+    public GameObject monsterDestroy;
 
-    void OnTriggerEnter2D(Collider2D other)
+    void OnTriggerEnter2D(Collider2D other) 
     {
         if (other.tag != "Player") { return; }
 
@@ -26,6 +27,11 @@ public class Part1 : MonoBehaviour {
             collider.isTrigger = true;
         }
 
+        //Enable trigger for monster destruction
+        monsterDestroy.GetComponent<BoxCollider2D>().enabled = true;
+        monsterDestroy.GetComponent<BoxCollider2D>().isTrigger = true;
+
+        //Disable this object
         this.GetComponent<SpriteRenderer>().enabled = false;
     }
 

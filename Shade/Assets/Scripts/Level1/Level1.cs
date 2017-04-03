@@ -8,8 +8,11 @@ public class Level1 : MonoBehaviour {
     public GameObject room3;
     public GameObject doors;
 
-	// Use this for initialization
-	void Start () {
+    public GameObject phoneParts;
+    public GameObject newLevelDoor;
+
+    // Use this for initialization
+    void Start () {
         //disableSprite(room1);
         //disableSprite(room2);
         //disableSprite(room3);
@@ -25,6 +28,9 @@ public class Level1 : MonoBehaviour {
         {
 
         }
+
+        //Enable level two if conditions met
+        nextLevel();
     }
 
     //Disable sprite renderers of all child objects
@@ -34,5 +40,22 @@ public class Level1 : MonoBehaviour {
         {
             renderer.enabled = false;
         }
+    }
+
+    //Checks and gets level two ready
+    void nextLevel()
+    {
+        foreach (SpriteRenderer part in phoneParts.GetComponentsInChildren<SpriteRenderer>())
+        {
+            if(part.enabled)
+            {
+                return;
+            }
+        }
+
+        //No phoneparts are left, next level enabled
+        newLevelDoor.GetComponent<BoxCollider2D>().isTrigger = true;
+        LevelChange changeLevel = newLevelDoor.AddComponent<LevelChange>();
+        changeLevel.levelName = "Level2V3";
     }
 }
