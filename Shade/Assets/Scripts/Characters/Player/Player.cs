@@ -28,6 +28,8 @@ public class Player : MovingObject
     private Texture2D progressBarEmpty;
     private Texture2D progressBarFull;
 
+    //UI for Health Bar
+    public Slider healthbar;
     // Hand snake movement
     private SnakeMovement handSnakeMovement;
 
@@ -75,7 +77,7 @@ public class Player : MovingObject
         eyeOpening.GetComponent<Image>().enabled = false;
 
         handSnakeMovement = Hand.GetComponent<SnakeMovement>();
-
+        healthbar.value = CalculateHealth();
         // Call the Start function of the MovingObject base class.
         base.Start();
     }
@@ -297,9 +299,13 @@ public class Player : MovingObject
         animator.SetTrigger("hit");
 
         health -= loss;
-
+        healthbar.value = CalculateHealth();
         // Check to see if game has ended.
         CheckIfGameOver();
+    }
+
+    float CalculateHealth() {
+        return health/ 100;
     }
 
     /// <summary>

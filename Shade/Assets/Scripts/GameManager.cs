@@ -4,6 +4,7 @@ using UnityEngine;
 using UnityEngine.EventSystems;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
+using UnityTwine;
 
 // GameManager code inspired by Unity 2D Rougelike tutorial
 // https://unity3d.com/learn/tutorials/projects/2d-roguelike-tutorial/writing-game-manager?playlist=17150
@@ -24,7 +25,7 @@ public class GameManager : MonoBehaviour
     public Disposition playerDisposition;
 
     [HideInInspector]
-    public Story Story;
+    public TwineStory Story;
 
     [HideInInspector]
     public ReloadInfo reloadInfo = new ReloadInfo();
@@ -75,7 +76,7 @@ public class GameManager : MonoBehaviour
         playerDisposition = new Disposition(50);
 
         // Create the story
-        Story = GetComponent<Story>();
+        Story = GetComponent<TwineStory>();
 
         // Call the InitGame function to initialize the first level 
         // InitGame();

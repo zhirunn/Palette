@@ -38,7 +38,7 @@ public class spikeControl : MonoBehaviour {
         }
         if (collision.tag == "Player")
         {
-            collision.GetComponent<Player>().health -= 20f;
+            collision.GetComponent<Player>().LoseHealth(10);
 
             Destroy(this.gameObject, 0.1f);
 

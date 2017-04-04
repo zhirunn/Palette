@@ -1,7 +1,9 @@
 :: StoryTitle
-Shade final proto
+Yin Final
 
 :: UserScript[script]
+
+
 
 
 
@@ -27,10 +29,12 @@ Shade final proto
 
 
 
-:: Start
-<<set $disposition = 0>>
 
-(Shion slowly blinks awake, eyebrows furrowing in pain emenating from behind thier eyes)
+
+:: Start
+<<set $disposition = 50>>
+
+(Shion slowly blinks awake, eyebrows furrowing in pain emenating from behind their eyes)
 
 Doctor Evian: Ah, you've awoken, good, good. How do you feel? Can you hear me?
 
@@ -42,7 +46,7 @@ Shion: What?! But, where is this? Why can't I remember how I got here, or any re
 
 Doctor Evian: Ah! Interesting! Memory issues! I didn't think-
 
-(Loud sound erupts like glass breaking, and a shadowy figure appears near)
+(A loud shattering noise sounds from behind Doctor Evian)
 
 Doctor Evian: NO!! THEY CANNOT COME HERE!
 
@@ -103,13 +107,14 @@ Kazkaza: Let me guess, you drank too many elements at the company dinner party, 
 :: Talktobigboss
 Shion: Hello, you wouldn't happen to know where I can find someone who is incharge of this place, or someone who would know where I can find some boxes for pickup, would you?
 
-Big Boss: Ya betcha I would. Ya looking at the Big Boss ‘imself! What'cha looking for squirt?
+Big Boss: Ya betcha I would. Ya looking at the Big Boss â€˜imself! What'cha looking for squirt?
 
 Shion: Someone named Kazkaza sent-
 
-Big Boss: Kazkaza, by Urgot ‘imself I knew this would happen eventually. Kazkaza's been picking me noggin for them parts for a 4 days now now. The woman's pretty persistent, at least she sent someone in person this time!
+Big Boss: Kazkaza, by Urgot â€˜imself I knew this would happen eventually. Kazkaza's been picking me noggin for them parts for a 4 days now now. The woman's pretty persistent, at least she sent someone in person this time!
 
 Shion: Is there a problem with the parts she ordered?
+
 
 Big Boss (sighs): Not really an issue with the parts ya see. The issue is the warehouse has been a complete wreck since those whacko cat things showed up 5 days ago. None of us can do a darn tootin' thing because of those pests!
 
@@ -141,6 +146,7 @@ Shion: I'm finally back, I should go deliver these to Kazkaza quickly.
 
 
 :: Meetingmakeupwipes
+<<set $disposition = 0>>
 
 Kazkaza: Oh ho! You are finally here! Nice to finally meet you  after all this time!
 
@@ -163,7 +169,7 @@ Shion:I don't have any of my belongings, just what is going on in here? I should
 :: Positive1
 <<set disposition += 15>>
 
-Shion: I don't have anything with me, is my holophone somewhere near here? I should check quickly before I leave!
+Shion: I don't have anything with me... my holophone, did they take it away from me? Did I lose it? It wouldn't hurt to look around quickly as I escape from here...
 
 :: KazkazaRequest
 Shion: I guess I could? Depending on what it is, if it helps you get my phones data back sooner
@@ -202,6 +208,8 @@ Big Boss : Well, I reckon you can squirt. Go tango with the beasts then, don't c
 Big Boss: One thing there kiddo! There's a seal that we were using to keep those shadow monsters outta the stock, problem is someone didn't activate the seal properly so those monsters ran all over the warehouse. Once you get in there I can't let you out until you activate the seal properly! Take a look at this picture real quick, and memorize it. It'll give you an idea of what to do with the seal, and here's another picture of the parts for Kazkaza. Good luck!
 
 :: Givinginfo
+
+
 MC: Hey,these are the things I saw in the-
 
 Kazkaza: Doesn't concern me, now could you please leave, Shion? I have a great deal of work to get back to, now that I have those parts again.
@@ -211,13 +219,13 @@ Kazkaza: Doesn't concern me, now could you please leave, Shion? I have a great d
 [[Shion: Fine! I'll get out of your hair! Just let me know if you find anymore information.|AnnoyShion]] 
 
 :: KindShion
-<<set $disposition = 0>>
+
 <<set disposition += 15>>
 
 Shion: Well, doesn't look like there's anything else to do here, I should find more information on this closed wing, I have a feeling I can get my memories back there.
 
 :: AnnoyShion
-<<set $disposition = 0>>
+
 <<set disposition -= 15>>
 
 Shion: Well, I should get going, not like there's anything else to do here. I should see If I can find anymore information on this closed wing. I think something important happened there, something I did.
@@ -237,28 +245,20 @@ Equinox Employee ( female): It's been what? A couple weeks no hasn't it?
 
 
 :: NPC1ShionConfused
-<<set $disposition = 0>>
 <<set disposition += 15>>
 
 Equinox Employee (female): It's going all right... anyways you came at the perfect time. Don't you work in the research division? Maybe you know about what's going on lately.
 
 Equinox Employee (male): You talking about those shadow beasts?
 
-Equinox Employee ( female) : Yeah, Shion here transfered to the research division a while back, you know, the wing that got shut down recently. they probably know something about it, since that's where everyone is saying these shadows are comming from.
+[[(continue)|ShionConfused2]]
 
-Shion: I'm sorry, I actually got into an accident recently, I dont'...I don't remember what I was working on much.
 
-Equinox Employee ( female) : Sorry to hear that. Well.. I guess we'll never know. But between all of you and me, I think those shadow beasts came from that wing. Why else would we be the only place in the entire city with the most reports of them? Not to mention the wing got shut down right after they started poppingup all-
 
-Equinox Employee ( male) : I think that's enough talk about this.Talking about some wild conspiracy theories won't get us anywhere anyways...
 
-( The two NPC's go back to their chattering seemingly forgetting Shion's prescence)
-
-[[Shion: Sounds like there really must be more to the research wing, but I need more information, if the shadow beasts are really comming from in there, then I need to be prepaired. I need more information |ShionsConviction]]
 
 
 :: NPC1ShionRage
-<<set $disposition = 0>>
 <<set disposition -= 15>>
 
 Equinox Employee (female): Hey you don't remember me? You used to work in the Q&A department before you transfered to the research division! Geeze...
@@ -267,16 +267,9 @@ Equinox Employee (male): Well, don't give them a hard time, time are hard enough
 
 Equinox Employee ( female) : Those shadow things....they are so creepy, pure black, moving shadows! t first you think it's a trick of they eye but.... I can't belive they are actually real.  thought they were rumors of people working too many overtime shifts.
 
-Equinox Employee (male): Well, they are most certainely real. I can't belive managment isn't doing anything about them.They told us they are containing them and doing something about it. But people are still being attacked by them!
-
-Equinox Employee ( female) : We should get out of this company...I think what some of the staff are saying is true. Those...things, they came from the closed wing.
-
-Equinox Employee ( male) : I think that's enough talk about this. Talking about wild conspiracy theories won't get us anywhere anyways...
+[[(continue)|ShionRage2]]
 
 
-( The two NPC's go back to their chattering seemingly forgetting Shion's prescence)
-
-[[Shion: I need to get into the research wing, there must be a way in, but I can't go in there unprepaired, there must be some place that has more information... the place I woke up. there must be something there, but how do I go there? The way sealed itself when I left that place? |ShionsConviction]]
 
 
 
@@ -286,80 +279,43 @@ Shion : Ah... my head... why is it hurting?
 
 
 :: Eyeabilityinlobby[On-spotting-footprints]
-Shion: Footsteps...again? Where do they lead
+Shion: Footsteps...again? Where do they lead?
 
 :: Enteringtheresearchlab
-Shion: ... I remember being here... but I still can't remember what happened here. I need to look around more.
+Shion: ... I remember being here... but I still can't remember what happened here... I need to look around more.
 
 
 
 :: AfterreadingthefinalnoteIfGoodShion
 ( need to set the threshold number)
 
-Shion: I...I created these monsters. I did this, my research created these...
+( Shion reads the notes scattered around the room. These notes describe experiments with giving yin emotions a physical manifestation, types of shadow beasts. All of these notes are written in Shion's handwritting and are dated from the year before up until just last month. The most recent note reads " It's too risky, I need to stop this research before it gets out of hand! I have to destroy all of this before-" the rest is illegible...)
+
+[[(continue)|AfterreadingthefinalnoteIfGoodShion2]]
 
 
-
-:: IfGoodKazkazaenters
-Kazkaza: That's right! Wow, you were much faster than I thought! But then again I should have expected as much from the person who discovered the shadows beasts.The person who gave them physical form, in a lot of ways, you are their parent. After all, these shadows that are roaming around are mostly yours.
-
-Shion: ...Mine?
-
-Kazkaza: Aparently you still don't remember enough, interesting. Well it's easy, the strongest of emotions, regret, despair, guilt, shadows are made of these, fueled by this. A lot of the shadows here are from yourself, but they are not all yours...
-
-Shion: Emotions...I remember, I was doing research on shadows, on utilizing negative emotional energy in a way to benifit everyone, a way to remove the negative emotions from people while making use of those emotions.
-
-Kazkaza: Oh good, I don't have to explain everything it seems. Well then let's get down to business. Work with me again. I can't manage everything being a CTO and trying to cultivate these shadows gives me close to no free time these days.
-
-Shion: What are you planning to do with the shadows? What are you doing with them right now?
-
-Kazkaza: These shadows can do many things, I don't think we've discovered the full extent of thier abilities yet, either. But imagine, to have the control on the emotions of others, to pull the emotions out of others and utilize them, there is nothing we cannot do with them!
-
-Shion: We can't play with people emotions like that! Emotions make a person, the expression of our emotions is how we convey ourselves to each other!To take them away turns us into monsters!
-
-Kazkaza: Doesn't matter to me, the way I see it, we are all monsters. And by that logic are you not worse than myself? You are the one who discovered this method after all!
-
-Shion But... I?!
-
-Kazkaza: Silence dear. Like I told you before I don't have that much free time, and I can see that you won't work for me, so It's time for us to end this relationship. Pity, I had hoped that when I enjected the essense of the shadows into you that you would have seen things differently. Look how strong you are now. Oh well. Pity.
-
-( Kazkaza hits a switch and a couple of robots appear, which grab and push Shion into a large hallway that is connected to the room, once she does this a divider appears seperating the room from the hall)
-
-Kazkaza: I hope you die quickly!
-
-(  Boss appears and chases after Shion)
 
 :: GoodShionpostBoss
-( After Shion kills the boss, a whispered "thank you" seems to emenate from the boss's corpse)
 
 Shion: ....ha...Is it over?
 
-(Kazkaza walks over to Shion's location/ or reappears in the main research room with Shion)
+(Kazkaza returns back to her original form in agony)
 
-Kazkaza: HOW?! DO YOU KNOW HOW MUCH MONEY? RESEARCH WENT INTO THAT?!
+Kazkaza: HOW?! HOW COULD YOU DEFEAT ME?!
 
-Shion: It was a suffering, I said thank you after I killed it. This is what you are doing with this research, you are only brining harm!
+Shion: How could you even allow yourself to continue this research! You are only brining harm! Look at what's happening to the people who work here! They are being attacked by the abominations we created!
 
-Kazkaza: WHAT DO YOU KNOW?! THOSE PEOPLE WERE GOING TO DIE AWFUL PITIFUL DEATHS ANYWAYS!
+[[Continue|GoodShionpostBoss2]]
 
-Shion: Everyone has the right to live the way they wish to, and we can't judge who's life is worth living and who's is not. It was never our place, and it was never the intent of the research I did, you twisted it to your own ideals.
-
-Kazkaza: There's nothing wrong with that. I have the power to do so after all.
-
-Shion: Not anymore. I won't let this continue!
-
-( Shion takes a nearby flamable substance, (something used in the boss fight prefered) and lights the desk on fire which quickly consumes the room)
-
-Kazkaza: ARE YOU MAD! HOW CAN YOU DO THIS? THIS RESEARCH IS THE FUTURE OF EQUINOX, MY FURTURE!
 
 
 
 
 
 :: Kazkazaattempt
-(Shion attempts to speak to Kazkaza but she pays you no heed as she rushes to secure information and research before the area burns down)
+(Shion attempts to speak to Kazkaza but she pays you no heed as she is barely concious now)
 
-Shion: I should get out of here.
+Shion: I don't have time for this, I need to get out of here!
 
 :: Getoutofthepan
 Shion: I need to get out of here! Before it all burns down!
@@ -367,40 +323,19 @@ Shion: I need to get out of here! Before it all burns down!
 
 
 :: AfterreadingfinalnoteIfBad
+( need threshold number)
 
-Shion: Hm. I knew I was connected to this, but I didn't think I would be in the midst of it.
+( Shion reads the notes scattered around the room. These notes describe experiments with giving yin emotions a physical manifestation, types of shadow beasts. All of these notes are written in Shion's handwritting and are dated from the year before up until just last month. Notes are scribbled detailing how a to extract the energy from these creatures and put them inside someone else, transorming the recipient into a hybrid, some of these notes are in someone else's handwritting.Black stains make most of it illegible.)
 
-:: IfBadKazkazaenters
-Kazkaza: That's right! Wow, you were much faster than I thought! But then again I should have expected as much from the person who discovered the shadows beasts.The person who gave them physical form, in a lot of ways, you are their parent. After all, these shadows that are roaming around are mostly yours.
+[[continue|AfterreadingfinalnoteIfBad2]]
 
-Shion: Mine? Those came from me?
-
-Kazkaza: Aparently you still don't remember enough, interesting. Well it's easy, the strongest of emotions, regret, despair, guilt, shadows are made of these, fueled by this. A lot of the shadows here are from yourself, but they are not all yours...
-
-Shion: Emotions, huh? I recall it a bit now that you mention it. I was doing research on shadows, on utilizing negative emotional energy to be benificial.
-
-Kazkaza: Oh good, I don't have to explain everything it seems. Well then let's get down to business. Work with me again. I can't manage everything being a CTO and trying to cultivate these shadows gives me close to no free time these days.
-
-Shion: Why would I trust someone like you, clearly you did something to me to affect my memory, and you are most likely the reason why I'm suffering from my current...ailment.
-
-Kazkaza: You had it comming, you wouldn't listen to me! And in the end isn't it fine? You research has become much more effective now that I've taken it over, and you are much stronger!
-
-Shion: Fine? You think it's fine just because I've aquired some new abilities? I liked how I was before much more! How dare you try to steal MY research and use it against me!
-
-Kazkaza: Silence dear. Like I told you before I don't have that much free time, and I can see that you won't work for me, so It's time for us to end this relationship. Pity, I had hoped that when I enjected the essense of the shadows into you that you would have seen things differently. Look how strong you are now. Oh well. Pity.
-
-( Kazkaza hits a switch and a couple of robots appear, which grab and push Shion into a large hallway that is connected to the room, once she does this a divider appears seperating the room from the hall)
-
-Kazkaza: I hope you die quickly, dear!
-
-(  Boss appears and chases after Shion)
 
 :: BadShionpostboss
-( After Shion kills the boss a whispered "thank you" seems to emenate from the boss's corpse)
+
 
 Shion: It's finally over...
 
-(Kazkaza walks over to Shion's location/ or reappears in the main research room with Shion)
+(Kazkaza returns to her human form and appears bloodied and distressed)
 
 Kazkaza: HOW?! DO YOU KNOW HOW MUCH MONEY? RESEARCH WENT INTO THAT?!
 
@@ -408,23 +343,9 @@ Shion: Do I care? Not really, especially after what YOU did to me, incase you ha
 
 Kazkaza: WHAT DO YOU KNOW?! I MADE YOU BETTER. YOU DIDN'T LISTEN TO ME! YOU WANTED TO HIDE YOUR RESEARCH FROM ME!
 
-Shion: Yeah? Because you are a crazy lady! Again, I didn't ask you to make me "better" and YOU stole MY research because you couldn't get anything done otherwise! You didn't have the ability or skills to discover what I did!
+[[continue|BadShionpostboss2]]
 
-Kazkaza: You say that but look at you! In the end you are a monster, you have nothing! I'm the CTO of Equinox not you! I have 
 
-Shion: Not anymore! I won't let this continue, I'm taking back what's mine!
-
-( Shion takes a nearby substance preferably from the boss fight and uses it on Kazkaza)
-
-Kazkaza: ARE YOU MAD! HOW CAN YOU DO THIS?! I'M SUPPOSED TO LEAD EQUINOX INTO THE NEW AGE!
-
-Shion: Not anymore! I'm taking back my place!
-
-Kazkaza: AAAAAAAAAH!
-
-(Kazkaza's form vanishes into a couple of shadow monsters, produced by her anguish and rage)
-
-Shion: I better get out of here, that's one too many fights for one day!
 
 
 
@@ -436,7 +357,9 @@ After lighting their old lab on fire Kazkaza perishes in the fire, attempting to
 
 Research on the shadow beasts stops as there is no one left, but there are still issues with the shadow beasts running rampant, remnants of Kazkaza's expiriments. Shion spends the rest of their life trying to remove of traces of these shadow beasts and help those affected by the attacks. 
 
-Eventually, Shion develops a serum to turn themselves back to being mostly human, but Shion still suffers from some of the quips of being mutated, in a good way, with the enhanced vision,Shion had obtainined staying with them.
+Eventually, Shion develops a serum to turn themselves back to being mostly human, but Shion still suffers from some of the quips of being mutated, in a good way, with the enhanced vision, Shion had obtainined staying with them.
+
+[[The End|The End]]
 
 :: EpilogueBad
 Shion eliminates Kazkaza following the battle with the massive shadow beast, and furthers the research of the shadow beasts themselves.
@@ -448,6 +371,8 @@ Shion's actions eventually spurs rebellion in the commonfolk in the city and in 
 Shion is in constant combat against those trying to destroy or steal thier research making them paranoid.
 
 Eventually Shion goes insane with stress and frustration, and vanishes from Equinox. Rumors are heard of a massive shadow beast prowling the city and night attacking the unsuspecting...
+
+[[The End|The End]]
 
 
 
@@ -472,6 +397,8 @@ Shion: My holophone! I found the battery earlier, I just have to put it together
 Shion: This looks like a holophone battery. I'll just take this with me for now.
 
 :: Desk
+<<set $disposition = 0>>
+
 ( Shion sees a messy desk with numerous items and papers spread about. A glimmering object catches Shion's eye and on inspection it appears to be a small jeweled cat ornament that appears to be a paper weight)
 
 [[Shion: It's pretty, but it's not mine. I'll just leave it here|JeweledCat]]
@@ -480,13 +407,12 @@ Shion: This looks like a holophone battery. I'll just take this with me for now.
 
 
 :: CreepyMirror
-<<set $disposition = 0>>
+
 <<set disposition += 15>>
 
 Shion: I don't think I should stare at this anymore...
 
 :: SmirkingMirror
-<<set $disposition = 0>>
 <<set disposition -= 15>>
 
 ( Shion's reflection in the mirror smirks at Shion)
@@ -494,13 +420,11 @@ Shion: I don't think I should stare at this anymore...
 Shion: Well, maybe I haven't recovered enough yet...
 
 :: JeweledCat
-<<set $disposition = 0>>
 <<set disposition += 15>>
 
 Shion: This place really needs to be cleaned up...
 
 :: PrettyJeweledCat
-<<set $disposition = 0>>
 <<set disposition -= 15>>
 
 Shion: It's for the best really..
@@ -557,7 +481,7 @@ Big Boss: AY! YOU DID IT KIDDO! LETS GET YOU OUTTA HERE!
 ( The exit unlocks)
 
 :: CasualShion
-<<set $disposition = 0>>
+
 <<set disposition += 15>>
 
 Kazkaza: Geeze, don't be so polite, we work for the same company after all....but so does almost everyone who lives here so.....well no matter, thanks for the parts! Give me your holophone real quick. I have something that might interest you that I happened to find!
@@ -567,7 +491,7 @@ Kazkaza: Geeze, don't be so polite, we work for the same company after all....bu
 [[Giving info|Givinginfo]]
 
 :: AnnoyedShion
-<<set $disposition = 0>>
+
 <<set disposition -= 15>>
 
 Kazkaza: You researchers, all the same, no manners. Well whatever, I found something that probably interests you, give me your holophone for a bit.
@@ -577,3 +501,197 @@ Kazkaza: You researchers, all the same, no manners. Well whatever, I found somet
 Shion: ...researcher?...
 
 [[Giving info|Givinginfo]]
+
+:: ShionConfused2
+Equinox Employee ( female) : Yeah, Shion here transfered to the research division a while back, you know, the wing that got shut down recently. they probably know something about it, since that's where everyone is saying these shadows are comming from.
+
+Shion: I'm sorry, I actually got into an accident recently, I dont'...I don't remember what I was working on much.
+
+[[(continue)|ShionConfused3]]
+
+
+:: ShionRage2
+Equinox Employee (male): Well, they are most certainely real. I can't belive managment isn't doing anything about them.They told us they are containing them and doing something about it. But people are still being attacked by them!
+
+
+Equinox Employee ( female) : We should get out of this company...I think what some of the staff are saying is true. Those...things, they came from the closed wing.
+
+Equinox Employee ( male) : I think that's enough talk about this. Talking about wild conspiracy theories won't get us anywhere anyways...
+
+[[(continue)|ShionRage3]]
+
+
+
+
+
+:: ShionvsKazkazaGood
+Kazkaza: That's right! Wow, you were much faster than I thought! But then again I should have expected as much from the person who discovered the shadows beasts.The person who gave them physical form, in a lot of ways, you are their parent. After all, these shadows that are roaming around are mostly yours.
+
+Shion: ...Mine?
+
+[[(continue)|ShionvsKazkazaGood2]]
+
+
+
+
+
+:: ShionvsKazkazaGood2
+Kazkaza: Aparently you still don't remember enough, interesting. Well it's easy, the strongest of emotions, regret, despair, guilt, shadows are made of these, fueled by this. A lot of the shadows here are from yourself, but they are not all yours...
+
+Shion: Emotions...I remember, I was doing research on shadows, on utilizing negative emotional energy in a way to benifit everyone, a way to remove the negative emotions from people while making use of those emotions.
+
+[[(continue)|ShionvsKazkazaGood3]]
+
+
+
+
+
+:: ShionvsKazkazaGood3
+Kazkaza: Oh good, I don't have to explain everything it seems. Well then let's get down to business. Work with me again. I can't manage everything being a CTO and trying to cultivate these shadows gives me close to no free time these days.
+
+Shion: What are you planning to do with the shadows? What are you doing with them right now?
+
+[[(continue)|ShionvsKazkazaGood4]]
+
+
+
+
+
+:: ShionvsKazkazaBad
+Kazkaza: That's right! Wow, you were much faster than I thought! But then again I should have expected as much from the person who discovered the shadows beasts.The person who gave them physical form, in a lot of ways, you are their parent. After all, these shadows that are roaming around are mostly yours.
+
+Shion: Mine? Those came from me?
+
+[[(continue)|ShionvsKazkazaBad2]]
+
+:: ShionvsKazkazaBad2
+Kazkaza: Aparently you still don't remember enough, interesting. Well it's easy, the strongest of emotions, regret, despair, guilt, shadows are made of these, fueled by this. A lot of the shadows here are from yourself, but they are not all yours...
+
+Shion: Emotions, huh? I recall it a bit now that you mention it. I was doing research on shadows, on utilizing negative emotional energy to be benificial.
+
+[[(continue)|ShionvsKazkazaBad3]]
+
+
+
+
+
+
+
+:: ShionConfused3
+Equinox Employee ( female) : Sorry to hear that. Well.. I guess we'll never know. But between all of you and me, I think those shadow beasts came from that wing. Why else would we be the only place in the entire city with the most reports of them? Not to mention the wing got shut down right after they started poppingup all-
+
+Equinox Employee ( male) : I think that's enough talk about this.Talking about some wild conspiracy theories won't get us anywhere anyways...
+
+[[(continue)|ShionConfused4]]
+
+
+
+:: ShionConfused4
+( The two NPC's go back to their chattering seemingly forgetting Shion's prescence)
+
+[[Shion: Sounds like there really must be more to the research wing, but I need more information, if the shadow beasts are really comming from in there, then I need to be prepaired. I need more information |ShionsConviction]]
+
+
+:: ShionRage3
+( The two NPC's go back to their chattering seemingly forgetting Shion's prescence)
+
+[[Shion: I need to get into the research wing, there must be a way in, but I can't go in there unprepaired, there must be some place that has more information... the place I woke up. there must be something there, but how do I go there? The way sealed itself when I left that place? |ShionsConviction]]
+
+:: AfterreadingthefinalnoteIfGoodShion2
+Shion: I...I created these monsters. I did this, my research created these...
+
+[[(continue)|ShionvsKazkazaGood]]
+
+
+:: AfterreadingfinalnoteIfBad2
+Shion: Hm. I knew I was connected to this, but I didn't think I would be in the midst of it... yin emotions... taking the negative emotions of others and turning it into a physical manifiestation... But how are there so many shadow monsters everywhere?
+
+
+[[(continue)|ShionvsKazkazaBad]]
+
+:: ShionvsKazkazaBad3
+Kazkaza: Oh good, I don't have to explain everything it seems. Well then let's get down to business. Work with me again. I can't manage everything being a CTO and trying to cultivate these shadows gives me close to no free time these days.
+
+Shion: Why would I trust someone like you, clearly you did something to me to affect my memory, and you are most likely the reason why I'm suffering from my current...ailment.
+
+[[(continue)|ShionvsKazkazaBad4]]
+
+:: ShionvsKazkazaBad4
+Kazkaza: You had it comming, you wouldn't listen to me! And in the end isn't it fine? You research has become much more effective now that I've taken it over, and you are much stronger!
+
+Shion: Fine? You think it's fine just because I've aquired some new abilities? I liked how I was before much more! How dare you try to steal MY research and use it against me!
+
+:: ShionvsKazkazaGood4
+Kazkaza: These shadows can do many things, I don't think we've discovered the full extent of their abilities yet, either. But imagine, to have the control on the emotions of others, to pull the emotions out of others and utilize them, we can remove the negative emotions from people, and make them work optimally, imagine! No pain and agony! And we can use the negative energy however we want once we learn how to use it!
+
+Shion: We can't play with people emotions like that! Emotions make a person, the expression of our emotions is how we convey ourselves to each other!To take them away turns us into monsters! Yin cannot exist without yang!
+
+[[(continue)|ShionvsKazkazaGood5]]
+
+:: ShionvsKazkazaGood5
+Kazkaza: Doesn't matter to me, the way I see it, we are all monsters, what I do removes the demons from ourselves and pulls them to the outside. But...you know are you not worse than myself? You are the one who discovered this method after all!
+
+Shion But... I?!
+
+Kazkaza: Silence dear. Like I told you before I don't have that much free time, and I can see that you won't work for me, so It's time for us to end this relationship. Pity, I had hoped that when I enjected the essense of the shadows into you that you would have seen things differently. Look how strong you are now. Oh well. Pity.
+
+[[(continue)|ShionvsKazkazaGood6]]
+
+
+
+:: ShionvsKazkazaGood6
+(Kazkaza pulls out a needle and injects herself with a dark liquid. As it disapears into her she lets out a murderous shriek as she turns onto a large spider-like shadow beast. She looks like she is going to attack Shion!)
+
+
+Kazkaza: NOW!! LETS SEE YOU RUN!!! HAHAHAHA
+
+:: The End
+Double-click this passage to edit it.
+
+:: GoodShionpostBoss2
+Kazkaza: WHAT DO YOU KNOW?! THOSE PEOPLE WERE GOING TO DIE AWFUL PITIFUL DEATHS ANYWAYS!
+
+Shion: We can't judge who's life is worth living and who's is not. It was never our place, and it was never the intent of the research I did, you twisted it to your own ideals. I belived harnessing the power of human emotions and desires would be benificial somwhow, now I see how wrong I was...
+
+[[Continue|GoodShionpostBoss3]]
+
+:: GoodShionpostBoss3
+Kazkaza: You can't see the benifits? We rip the emotions from people, give them forms, and if we can control them, imagine how much we can be capable of!
+
+Shion: Not anymore. I won't let this continue!
+
+( Shion takes a nearby flamable substance, (something used in the boss fight prefered) and lights the desk on fire which quickly consumes the room)
+
+Kazkaza: ARE YOU MAD! HOW CAN YOU DO THIS? THIS RESEARCH IS THE FUTURE OF EQUINOX, MY FURTURE!
+
+
+
+:: BadShionpostboss2
+Shion: Yeah! Because you are clearly insane, that's why! Again, I didn't ask you to make me "better" and YOU stole MY research because you couldn't get anything done otherwise! You didn't have the ability or skills to discover what I did!
+
+Kazkaza: You say that but look at you! In the end you are a monster, you have nothing! I'm the CTO of Equinox not you! I have-
+
+Shion: Not anymore! I won't let this continue, I'm taking back what's mine!
+
+[[continue|BadShionpostboss3]]
+
+:: BadShionpostboss3
+
+( Shion stabs Kazkaza with their arm)
+
+Kazkaza: ARE YOU MAD! HOW CAN YOU DO THIS?! I'M SUPPOSED TO LEAD EQUINOX INTO THE NEW AGE!
+
+Shion: Not anymore! I'm taking back my place!
+
+Kazkaza: AAAAAAAAAH!
+
+(Kazkaza's form vanishes into a couple of shadow monsters, produced by her anguish and rage)
+
+[[continue|BadShionpostboss4]]
+
+
+
+
+:: BadShionpostboss4
+Shion: I better get out of here, that's one too many fights for one day!
+
