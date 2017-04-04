@@ -65,7 +65,7 @@ public class BossHand : MonoBehaviour {
     private void OnTriggerEnter2D(Collider2D collision)
     {
         if (collision.tag == "Player") {
-            p.health -= 1;
+            p.LoseHealth(5);
             p.animator.SetTrigger("hit");
         }
         if (collision.tag == "Untagged") {
