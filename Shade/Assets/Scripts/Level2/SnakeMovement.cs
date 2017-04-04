@@ -37,11 +37,37 @@ public class SnakeMovement : MovingObject
         base.Start();
     }
 
+
+   
+    void OnCollisionEnter2D(Collision2D coll)
+    {
+        if ((coll.gameObject.tag == "Window") && SnakeMode == true)
+        {
+            coll.gameObject.GetComponent<BoxCollider2D>().enabled = false;
+        }
+
+    }
+
+    void OnCollisionExit2D(Collision2D coll)
+    {
+        if (coll.gameObject.tag == "Window") 
+        {
+            coll.gameObject.GetComponent<BoxCollider2D>().enabled = true;
+        }
+
+    }
+
+  
+
+
+
     // Update is called once per frame
     void Update()
     {
         if (SnakeMode == true)
         {
+            //GetComponent<BoxCollider2D>().enabled = false;
+
             if (distanceTravelled < maxDistance)
             {
                 FreeHand();
@@ -54,6 +80,7 @@ public class SnakeMovement : MovingObject
             {
                 SnakeMode = false;
                 MainBody.GetComponent<Player>().PlayerMode = true;
+
             }
         }
         else
@@ -69,6 +96,7 @@ public class SnakeMovement : MovingObject
         if ((transform.position - handPos.position).magnitude < 0.1)
         {
             distanceTravelled = 0.0f; // reset
+            //GetComponent<BoxCollider2D>().enabled = true;
         }
 
         lastPosition = transform.position;
