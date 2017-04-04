@@ -320,6 +320,9 @@ public class Player : MovingObject
         }
     }
     public void StepSound() {
-        source.Play();
+        if (source != null)
+        {
+            source.Play();
+        }
     }
 }
