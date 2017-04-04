@@ -15,12 +15,14 @@ public class BossControl : MonoBehaviour {
     private Animator anim;
     private float distance;
     private bool dead;
+    private AudioSource source;
 	void Start () {
         anim = GetComponent<Animator>();
+        source = GetComponent<AudioSource>();
         HP = 20;
-        //StartCoroutine(FireCycle());
+        //
         dead = false;
-
+        StartCoroutine(Attack());
 	}
 
 
@@ -33,32 +35,46 @@ public class BossControl : MonoBehaviour {
                 anim.SetTrigger("Death");
                 anim.SetTrigger("Death");
                 anim.SetTrigger("Death");
-                anim.SetTrigger("Death");
                 anim.SetBool("dead", true);
                 dead = true;
-
+                StartCoroutine(ShiftToNext());
             }
             
             //Destroy(this.gameObject, 0.1f);
-            //Application.LoadLevel("BossPlayerSettlement");
+            //
         }
 
     }
     IEnumerator Attack() {
-        yield return new WaitForSeconds(5);
+        yield return new WaitForSeconds(1);
+        if (distance >= 3)
+        {
+            if (!dead)
+            {
+                anim.SetTrigger("SpikeATK");
+                yield return new WaitForSeconds(3);
+            }
+        }
+        else {
+            if (!dead)
+            {
+                anim.SetTrigger("MeleeATK");
+                yield return new WaitForSeconds(6);
+            }
+        }
+        StartCoroutine(Attack());
+
     }
-    IEnumerator FireCycle() {
+    IEnumerator ShiftToNext() {
         yield return new WaitForSeconds(5);
-        anim.SetTrigger("SpikeATK");
-        //StartCoroutine(FireCycle());
-    }
-    IEnumerator MeleeATK() {
-        yield return new WaitForSeconds(3);
-        anim.SetTrigger("MeleeATK"); 
+        Application.LoadLevel("BossPlayerSettlement");
     }
 
     public void Fire() {
          Instantiate(Spike_prefab, FirePoint.transform.position, FirePoint.transform.rotation);
+    }
+    public void Shout() {
+        source.Play();
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
@@ -67,8 +83,6 @@ public class BossControl : MonoBehaviour {
             HP -= 1;
             anim.SetTrigger("hit");
         }
-        if (collision.tag == "")
-        {
-        }
+        
     }
 }

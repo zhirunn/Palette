@@ -15,7 +15,7 @@ public class spikeControl : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-        transform.Translate(0, -Time.deltaTime * speed, 0);
+        transform.Translate(0, -Time.deltaTime * speed * GameManager.Instance.gameSpeed, 0);
     }
     private void OnTriggerEnter2D(Collider2D collision)
     {
@@ -38,7 +38,7 @@ public class spikeControl : MonoBehaviour {
         }
         if (collision.tag == "Player")
         {
-            collision.GetComponent<Player>().health -= 20f;
+            collision.GetComponent<Player>().LoseHealth(10);
 
             Destroy(this.gameObject, 0.1f);
 

@@ -20,7 +20,7 @@ public class Player : MovingObject
     public bool PlayerMode = true; // Controlling the player by default
 
     // Cache variables
-    private Animator animator; // Used to store a reference to the Player's animator component.
+    public Animator animator; // Used to store a reference to the Player's animator component.
     // HUD for Vision
     private Vector2 visionBarPos = new Vector2(40, 40);
     private Vector2 visionBarSize = new Vector2(200, 60);
@@ -28,6 +28,8 @@ public class Player : MovingObject
     private Texture2D progressBarEmpty;
     private Texture2D progressBarFull;
 
+    //UI for Health Bar
+    public Slider healthbar;
     // Hand snake movement
     private SnakeMovement handSnakeMovement;
 
@@ -35,7 +37,7 @@ public class Player : MovingObject
     // From http://answers.unity3d.com/answers/11898/view.html
     void OnGUI()
     {
-        if (GameManager.Instance.enabled && GameManager.Instance.doingSetup == false)
+        if (GameManager.Instance.enabled && GameManager.Instance.doingSetup == false && GameManager.Instance.IsPaused == false)
         {
             // draw the background:
             InitStyles();
@@ -75,7 +77,7 @@ public class Player : MovingObject
         eyeOpening.GetComponent<Image>().enabled = false;
 
         handSnakeMovement = Hand.GetComponent<SnakeMovement>();
-
+        healthbar.value = CalculateHealth();
         // Call the Start function of the MovingObject base class.
         base.Start();
     }
@@ -137,6 +139,7 @@ public class Player : MovingObject
         {
             if ((horizontal != 0 || vertical != 0) && (casting == false))
             {
+                animator.SetBool("walking", true);
                 if (horizontal > 0) {
                     animator.SetBool("Right", true);
                     animator.SetBool("Left", false);
@@ -167,6 +170,7 @@ public class Player : MovingObject
             else
             {
                 walking = false;
+                animator.SetBool("walking", walking);
             }
             /*
             if (walking == true)
@@ -292,12 +296,16 @@ public class Player : MovingObject
     public void LoseHealth(int loss)
     {
         // Set the trigger for the player animator to transition to the playerHit animation.
-        animator.SetTrigger("playerHit");
+        animator.SetTrigger("hit");
 
         health -= loss;
-
+        healthbar.value = CalculateHealth();
         // Check to see if game has ended.
         CheckIfGameOver();
+    }
+
+    float CalculateHealth() {
+        return health/ 100;
     }
 
     /// <summary>
