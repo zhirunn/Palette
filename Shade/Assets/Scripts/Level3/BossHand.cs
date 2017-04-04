@@ -14,10 +14,11 @@ public class BossHand : MonoBehaviour {
 
     private int LifeCycle;
     private Player p;
-
+    private AudioSource source;
 	// Use this for initialization
 	void Start () {
         LifeCycle = 10;
+        source = GetComponent<AudioSource>();
         p = target.GetComponent<Player>();
         anim = GetComponent<Animator>();
         StartCoroutine(Punch());
@@ -27,7 +28,8 @@ public class BossHand : MonoBehaviour {
     private void Update()
     {
         if (LifeCycle<=0) {
-            Destroy(this.gameObject);
+            Time.timeScale = 1.0f;
+            Destroy(this.gameObject, 0.1f);
         }
     }
     IEnumerator Punch()
@@ -72,6 +74,7 @@ public class BossHand : MonoBehaviour {
         if (collision.tag == "ATKbox") {
             LifeCycle -= 1;
             anim.SetTrigger("hit");
+            source.Play();
         }
     }
     private void OnTriggerExit2D(Collider2D other)

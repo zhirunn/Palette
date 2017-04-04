@@ -15,8 +15,10 @@ public class BossControl : MonoBehaviour {
     private Animator anim;
     private float distance;
     private bool dead;
+    private AudioSource source;
 	void Start () {
         anim = GetComponent<Animator>();
+        source = GetComponent<AudioSource>();
         HP = 20;
         //
         dead = false;
@@ -71,6 +73,9 @@ public class BossControl : MonoBehaviour {
     public void Fire() {
          Instantiate(Spike_prefab, FirePoint.transform.position, FirePoint.transform.rotation);
     }
+    public void Shout() {
+        source.Play();
+    }
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
@@ -78,8 +83,6 @@ public class BossControl : MonoBehaviour {
             HP -= 1;
             anim.SetTrigger("hit");
         }
-        if (collision.tag == "")
-        {
-        }
+        
     }
 }

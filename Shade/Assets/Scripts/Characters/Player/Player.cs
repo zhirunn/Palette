@@ -137,6 +137,7 @@ public class Player : MovingObject
         {
             if ((horizontal != 0 || vertical != 0) && (casting == false))
             {
+                animator.SetBool("walking", true);
                 if (horizontal > 0) {
                     animator.SetBool("Right", true);
                     animator.SetBool("Left", false);
@@ -167,6 +168,7 @@ public class Player : MovingObject
             else
             {
                 walking = false;
+                animator.SetBool("walking", walking);
             }
             /*
             if (walking == true)
@@ -292,7 +294,7 @@ public class Player : MovingObject
     public void LoseHealth(int loss)
     {
         // Set the trigger for the player animator to transition to the playerHit animation.
-        animator.SetTrigger("playerHit");
+        animator.SetTrigger("hit");
 
         health -= loss;
 
