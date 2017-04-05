@@ -173,7 +173,7 @@ public class SnakeMovement : MovingObject
             DispositionObject dispositionObj = coll.gameObject.GetComponent<DispositionObject>();
             if(dispositionObj.disposition.isSimilar(MainBody.GetComponent<Player>().disposition) == false)
             {
-                GameManager.Instance.GameOver();
+                StartCoroutine(GameManager.Instance.GameOver());
             }
         }
     }

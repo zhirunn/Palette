@@ -37,7 +37,10 @@ public class Player : MovingObject
     // From http://answers.unity3d.com/answers/11898/view.html
     void OnGUI()
     {
-        if (GameManager.Instance.enabled && GameManager.Instance.doingSetup == false && GameManager.Instance.IsMenuShowing == false)
+        if (GameManager.Instance.enabled 
+            && GameManager.Instance.doingSetup == false 
+            && GameManager.Instance.IsMenuShowing == false
+            && GameManager.Instance.IsGameOverShowing == false)
         {
             // draw the background:
             InitStyles();
@@ -275,7 +278,7 @@ public class Player : MovingObject
             Enemy enemy = other.gameObject.GetComponent<EnemyPatrol>();
             if (enemy != null && enemy.disposition.isSimilar(disposition) == false)
             {
-                GameManager.Instance.GameOver();
+                StartCoroutine(GameManager.Instance.GameOver());
             }
         }
     }
@@ -316,7 +319,7 @@ public class Player : MovingObject
         if (health <= 0)
         {
             // Call the GameOver function of GameManager.
-            GameManager.Instance.GameOver();
+            StartCoroutine(GameManager.Instance.GameOver());
         }
     }
     public void StepSound() {
