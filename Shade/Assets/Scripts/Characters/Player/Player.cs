@@ -37,7 +37,7 @@ public class Player : MovingObject
     // From http://answers.unity3d.com/answers/11898/view.html
     void OnGUI()
     {
-        if (GameManager.Instance.enabled && GameManager.Instance.doingSetup == false && GameManager.Instance.IsPaused == false)
+        if (GameManager.Instance.enabled && GameManager.Instance.doingSetup == false && GameManager.Instance.IsMenuShowing == false)
         {
             // draw the background:
             InitStyles();

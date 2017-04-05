@@ -94,6 +94,9 @@ Kazkaza: Let me guess, you drank too many elements at the company dinner party, 
 
 
 :: Level2warehouse
+
+<<set $disposition = 0>>
+
 (Shion moves to a warehouse, couple of nondescript NPC's hanging around. And a obviously different NPC who is the boss of the warehouse.)
 
 
@@ -111,16 +114,10 @@ Big Boss: Ya betcha I would. Ya looking at the Big Boss ‘imself! What'cha look
 
 Shion: Someone named Kazkaza sent-
 
-Big Boss: Kazkaza, by Urgot ‘imself I knew this would happen eventually. Kazkaza's been picking me noggin for them parts for a 4 days now now. The woman's pretty persistent, at least she sent someone in person this time!
-
-Shion: Is there a problem with the parts she ordered?
+[[continue|Talktobigboss2]]
 
 
-Big Boss (sighs): Not really an issue with the parts ya see. The issue is the warehouse has been a complete wreck since those whacko cat things showed up 5 days ago. None of us can do a darn tootin' thing because of those pests!
 
-[[Shion: Is there some way I can get in there and get the parts myself? I need them quite urgently.|NiceBoss]]
-
-[[Shion: Cats? I think I can deal with those, let me in. I'll go grab the parts myself.|SmirkingBoss]] 
 
 :: Ifspokentoafterobtainingparts
 Big Boss: Well, Urgot me twisted, ya did it squirt! Well, ya best be running back to Kazkaza, that way she can finally stop pagin' me for her parts!
@@ -186,7 +183,6 @@ Kazkaza: Hey! Thanks, I feel motivated to getting your holo data back already!
 
 
 :: NiceBoss
-<<set $disposition = 0>>
 <<set disposition += 15>>
 
 
@@ -197,7 +193,6 @@ Big Boss: Y'anno. I don't feel too great about letting ya in there to run around
 Big Boss: One thing there kiddo! There's a seal that we were using to keep those shadow monsters outta the stock, problem is someone didn't activate the seal properly so those monsters ran all over the warehouse. Once you get in there I can't let you out until you activate the seal properly! Take a look at this picture real quick, and memorize it. It'll give you an idea of what to do with the seal, and here's another picture of the parts for Kazkaza. Good luck!
 
 :: SmirkingBoss
-<<set $disposition = 0>>
 <<set disposition -= 15>>
 
 Big Boss : Well, I reckon you can squirt. Go tango with the beasts then, don't come crying to me when they get to ya!
@@ -231,6 +226,9 @@ Shion: Well, doesn't look like there's anything else to do here, I should find m
 Shion: Well, I should get going, not like there's anything else to do here. I should see If I can find anymore information on this closed wing. I think something important happened there, something I did.
 
 :: EquinoxNPCstalking
+<<set $disposition = 0>>
+
+
 ( Shion walks up to two Equinox employee's chatting in the hallway who wave at Shion on approach)
 
 Equinox Employee ( male): Oh! Hey Shion, long time no see!
@@ -442,9 +440,8 @@ Kazkaza : Well, maybe you really did end up drinking too much at the company par
 Kazkaza: That's not my issue. Everyone's gotta take out their issues on IT.  I'll do it, it won't be easy since I have to pull it from the cloud and I have other work to do y'anno, it's not like you're the only one with holophone issues right now. [[Well it'll go faster if you help me out with a problem|KazkazaRequest]]
 
 :: Obtaining the parts
-( Shion says this while near one of the windows/openings)
 
-Shion: Are those...the parts through the windows here?
+Shion: How am I supposed to reach those parts from here?... Maybe with my new arm I can...I should try.
 
 :: Thearmgrows[edit-this]
 ( Shion suddenly collapses in pain upon entering the warehouse, the pain is originating from Shion's arm)
@@ -617,9 +614,11 @@ Shion: Why would I trust someone like you, clearly you did something to me to af
 [[(continue)|ShionvsKazkazaBad4]]
 
 :: ShionvsKazkazaBad4
-Kazkaza: You had it comming, you wouldn't listen to me! And in the end isn't it fine? You research has become much more effective now that I've taken it over, and you are much stronger!
+Kazkaza: You had it comming, you wouldn't listen to me! And in the end isn't it fine? Your research has become much more effective now that I've taken it over, and you are much stronger now!
 
 Shion: Fine? You think it's fine just because I've aquired some new abilities? I liked how I was before much more! How dare you try to steal MY research and use it against me!
+
+[[(continue)|ShionvsKazkazaBad5]]
 
 :: ShionvsKazkazaGood4
 Kazkaza: These shadows can do many things, I don't think we've discovered the full extent of their abilities yet, either. But imagine, to have the control on the emotions of others, to pull the emotions out of others and utilize them, we can remove the negative emotions from people, and make them work optimally, imagine! No pain and agony! And we can use the negative energy however we want once we learn how to use it!
@@ -695,3 +694,26 @@ Kazkaza: AAAAAAAAAH!
 :: BadShionpostboss4
 Shion: I better get out of here, that's one too many fights for one day!
 
+
+:: ShionvsKazkazaBad5
+Kazkaza: A pity...It seems you cannot be reasoned with. So I guess I'll just have to take you out myself... Let yourself be destroyed by me and I'll make it easy for you, I promise...
+
+(Kazkaza pulls out a needle and injects herself with a dark liquid. As it disapears into her she lets out a murderous shriek as she turns onto a large spider-like shadow beast. She glares at Shion and starts her attack!)
+
+
+Kazkaza: NOW!! LETS SEE YOU RUN!!! HAHAHAHA
+
+:: Talktobigboss2
+Big Boss: Kazkaza, by Urgot ‘imself I knew this would happen eventually. Kazkaza's been picking me noggin for them parts for a 4 days now now. The woman's pretty persistent, at least she sent someone in person this time!
+
+Shion: Is there a problem with the parts she ordered?
+
+[[continue|Talktobigboss3]]
+
+
+:: Talktobigboss3
+Big Boss (sighs): Not really an issue with the parts ya see. The issue is the warehouse has been a complete wreck since those whacko shadow things showed up 5 days ago. None of us can do a darn tootin' thing because of those pests!
+
+[[Shion: Is there some way I can get in there and get the parts myself? I need them quite urgently.|NiceBoss]]
+
+[[Shion: Shadows? I think I can deal with those, let me in. I'll go grab the parts myself.|SmirkingBoss]] 

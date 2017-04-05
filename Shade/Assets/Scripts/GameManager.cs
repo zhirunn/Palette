@@ -143,7 +143,7 @@ public class GameManager : MonoBehaviour
 
         if (menu != null && menu.activeSelf == false && Input.GetKeyUp(KeyCode.Escape))
         {
-            pauseGame(true);
+            PauseGameAndShowMenu(true);
         }
     }
 
@@ -225,7 +225,21 @@ public class GameManager : MonoBehaviour
         reloadInfo.disposition = playerDisposition.disposition;
     }
 
-    public void pauseGame(bool state = true)
+    public void PauseGame(bool state = true)
+    {
+        if (state)
+        {
+            gameSpeed = 0.0f;
+            pauseAnimations();
+        }
+        else
+        {
+            gameSpeed = 1.0f;
+            pauseAnimations(false);
+        }
+    }
+
+    public void PauseGameAndShowMenu(bool state = true)
     {
         if (state)
         {
@@ -259,6 +273,15 @@ public class GameManager : MonoBehaviour
         get
         {
             if (gameSpeed == 0.0f) return true;
+            if (menu != null && menu.activeSelf) return true;
+            return false;
+        }
+    }
+
+    public bool IsMenuShowing
+    {
+        get
+        {
             if (menu != null && menu.activeSelf) return true;
             return false;
         }
