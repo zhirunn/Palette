@@ -109,7 +109,7 @@ public class PanelManager : MonoBehaviour {
         {
             bool state = gameObject.activeSelf;
             closeMenu = false;
-            GameManager.Instance.pauseGame(!state);
+            GameManager.Instance.PauseGameAndShowMenu(!state);
         }
 	}
 

@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityTwine;
 
 public class PlayerInteraction : MonoBehaviour
 {
@@ -11,6 +12,8 @@ public class PlayerInteraction : MonoBehaviour
 
     private bool _showText = false;
     //bool _CanTalk = false;
+
+    TwineStory story;
 
     void Start()
     {
@@ -23,6 +26,8 @@ public class PlayerInteraction : MonoBehaviour
         {
             textPlayer.gameObject.GetComponent<Canvas>().enabled = false;
         }
+
+        story = GameObject.FindGameObjectWithTag("TwineStory").GetComponent<TwineStory>();
     }
 
     void OnTriggerStay2D(Collider2D other)
@@ -64,9 +69,9 @@ public class PlayerInteraction : MonoBehaviour
             {
                 textPlayer.gameObject.GetComponent<Canvas>().enabled = true;
 
-                //GameManager.Instance.Story.Begin();
-                GameManager.Instance.Story.Reset();
-                GameManager.Instance.Story.GoTo(interactable.Passage);
+                //story.Begin();
+                story.Reset();
+                story.GoTo(interactable.Passage);
 
                 interactable.Completed = true;
             }

@@ -143,7 +143,7 @@ public class GameManager : MonoBehaviour
 
         if (menu != null && menu.activeSelf == false && Input.GetKeyUp(KeyCode.Escape))
         {
-            pauseGame(true);
+            PauseGameAndShowMenu(true);
         }
     }
 
@@ -178,7 +178,7 @@ public class GameManager : MonoBehaviour
     }
 
     // GameOver is called when the player reaches 0 health points
-    public void GameOver()
+    public IEnumerator GameOver()
     {
         // Display game over message
         levelText.text = "You have died.";
@@ -190,7 +190,20 @@ public class GameManager : MonoBehaviour
         levelText.enabled = true;
 
         // Disable this GameManager.
-        enabled = false;
+        // enabled = false;
+
+        PauseGame(true);
+
+        yield return new WaitForSeconds(3);
+
+        PauseGame(false);
+
+        SceneManager.LoadScene(reloadInfo.scene.name);
+
+        playerDisposition.disposition = reloadInfo.disposition;
+
+        levelImage.enabled = false;
+        levelText.enabled = false;
     }
 
     public void ToggleEnemyDispositions(bool enable)
@@ -225,7 +238,21 @@ public class GameManager : MonoBehaviour
         reloadInfo.disposition = playerDisposition.disposition;
     }
 
-    public void pauseGame(bool state = true)
+    public void PauseGame(bool state = true)
+    {
+        if (state)
+        {
+            gameSpeed = 0.0f;
+            pauseAnimations();
+        }
+        else
+        {
+            gameSpeed = 1.0f;
+            pauseAnimations(false);
+        }
+    }
+
+    public void PauseGameAndShowMenu(bool state = true)
     {
         if (state)
         {
@@ -261,6 +288,23 @@ public class GameManager : MonoBehaviour
             if (gameSpeed == 0.0f) return true;
             if (menu != null && menu.activeSelf) return true;
             return false;
+        }
+    }
+
+    public bool IsMenuShowing
+    {
+        get
+        {
+            if (menu != null && menu.activeSelf) return true;
+            return false;
+        }
+    }
+
+    public bool IsGameOverShowing
+    {
+        get
+        {
+            return levelImage.enabled && levelText.enabled;
         }
     }
 }
