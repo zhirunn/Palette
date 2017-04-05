@@ -7,7 +7,7 @@ public class EndingAnimator : MonoBehaviour {
     public Animator Boss;
 	// Use this for initialization
 	void Start () {
-        Boss.SetBool("Battle", false);
+        Boss.SetBool("battle", false);
         Boss.SetTrigger("Death");
         Boss.SetBool("dead", true);
 	}
