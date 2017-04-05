@@ -6,9 +6,6 @@ public class BossControl : MonoBehaviour {
 
     public int HP;
     public GameObject Spike_prefab;
-    //public GameObject Hand_Left;
-    //public GameObject Hand_Right;
-    //public GameObject Shield;
     public GameObject FirePoint;
     public GameObject player;
     // Use this for initialization
@@ -75,6 +72,12 @@ public class BossControl : MonoBehaviour {
     }
     public void Shout() {
         source.Play();
+    }
+    public void attacking() {
+        anim.SetBool("Attacking", true);
+    }
+    public void notatking() {
+        anim.SetBool("Attacking", false);
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
