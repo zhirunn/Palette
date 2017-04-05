@@ -39,17 +39,16 @@ public class Disposition : System.Object
     /// <returns></returns>
     public static Color getColor(int disposition)
     {
-        if (disposition >= 60)
+        if (disposition >= 50)
         {
             return Color.blue;
-        }
-        else if (disposition >= 40)
-        {
-            return Color.gray;
         }
         else
         {
             return Orange;
         }
     }
+
+    public static Color POSITIVE = Color.blue;
+    public static Color NEGATIVE = Orange;
 }

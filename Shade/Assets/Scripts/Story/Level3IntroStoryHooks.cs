@@ -9,6 +9,24 @@ public class Level3IntroStoryHooks : StoryHooks
     protected override void Start()
     {
         base.Start();
+
+        GameObject bossMonster = GameObject.Find("BossMonster");
+        if(bossMonster != null)
+        {
+            Interactable inter = bossMonster.GetComponent<Interactable>();
+            if (GameManager.Instance.playerDisposition.getColor() == Disposition.POSITIVE)
+            {
+                inter.Passage = "AfterreadingthefinalnoteIfGoodShion";
+            }
+            else
+            {
+                inter.Passage = "AfterreadingfinalnoteIfBad";
+            }
+        }
+        else
+        {
+            Debug.Log("Could not find GameObject with name BossMonster!");
+        }
     }
 
     IEnumerator Enteringtheresearchlab_Enter()
