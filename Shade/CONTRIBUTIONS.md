@@ -17,3 +17,5 @@ Contributors / Licensing
 * Field of vision idea from http://unity.grogansoft.com/enemies-that-can-see/
 * Menu concept by Unity Technologies from
   https://www.assetstore.unity3d.com/en/#!/content/25468 
+* Fade in/out script by Hayden Scott-Baron from
+  http://wiki.unity3d.com/index.php/FadeObjectInOut

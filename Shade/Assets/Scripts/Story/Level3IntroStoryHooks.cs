@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class Level3IntroStoryHooks : StoryHooks
 {
@@ -55,5 +56,9 @@ public class Level3IntroStoryHooks : StoryHooks
         yield return SaveDispostionWaitAndThenExit();
         yield return null;
         animator.SetTrigger("Transform");
+        yield return new WaitForSeconds(5.0f);
+
+        int nextSceneIndex = SceneManager.GetActiveScene().buildIndex + 1;
+        SceneManager.LoadScene(nextSceneIndex);
     }
 }
