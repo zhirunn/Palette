@@ -82,7 +82,7 @@ public class Room2 : MonoBehaviour {
         if(!phoneParts[0].GetComponent<SpriteRenderer>().enabled)
         {
             //Picked up
-            dispo = Random.Range(50, 100);
+            dispo = Random.Range(0, 50);
             speed = (float)((Random.Range(50, 110)) / 100.0F);
         }
 
@@ -90,7 +90,7 @@ public class Room2 : MonoBehaviour {
         if ((!phoneParts[1].GetComponent<SpriteRenderer>().enabled) || (!phoneParts[2].GetComponent<SpriteRenderer>().enabled))
         {
             dispo = Random.Range(0, 50);
-            speed = (float)((Random.Range(30, 50)) / 100.0F);
+            speed = (float)((Random.Range(20, 50)) / 100.0F);
         }
     }
 }

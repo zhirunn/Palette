@@ -11,6 +11,8 @@ public class Level1 : MonoBehaviour {
     public GameObject phoneParts;
     public GameObject newLevelDoor;
 
+    private bool added = false;
+
     // Use this for initialization
     void Start () {
         //disableSprite(room1);
@@ -22,15 +24,12 @@ public class Level1 : MonoBehaviour {
     // Update is called once per frame
     void Update()
     {
-        //Show doors to rooms
-        //Remove wall beneath the door or turn off collider
-        if (Input.GetButtonDown("Vision"))
+
+        if (!added)
         {
-
+            //Enable level two if conditions met
+            nextLevel();
         }
-
-        //Enable level two if conditions met
-        nextLevel();
     }
 
     //Disable sprite renderers of all child objects
@@ -57,5 +56,6 @@ public class Level1 : MonoBehaviour {
         newLevelDoor.GetComponent<BoxCollider2D>().isTrigger = true;
         LevelChange changeLevel = newLevelDoor.AddComponent<LevelChange>();
         changeLevel.levelName = "Level2V3";
+        added = true;
     }
 }
