@@ -79,6 +79,7 @@ public class Player : MovingObject
 
         // Set eye opening as false to start
         eyeOpening.GetComponent<Image>().enabled = false;
+        
 
         handSnakeMovement = Hand.GetComponent<SnakeMovement>();
         healthbar.value = CalculateHealth();
@@ -213,7 +214,8 @@ public class Player : MovingObject
             {
                 GameManager.Instance.ToggleEnemyDispositions(_visionActivated);
                 GameManager.Instance.setState(_visionActivated);
-                eyeOpening.GetComponent<Image>().enabled = true;
+                //eyeOpening.GetComponent<Image>().enabled = true;
+                eyeOpening.GetComponent<Animator>().SetTrigger("open");
             }
 
         }
