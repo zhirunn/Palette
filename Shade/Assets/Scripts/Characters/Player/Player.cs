@@ -13,6 +13,7 @@ public class Player : MovingObject
     private float currentVisionTime = 0; // Approaches the total allowed vision ti me
     private bool _visionActivated = false;
     private GameObject eyeOpening; // Image for eye opening
+    private GameObject eyeOpening2; // Image 2 for eye opening
 
     public GameObject Hand; // Player's hand
     public bool walking = false; // variable for player's state
@@ -213,7 +214,6 @@ public class Player : MovingObject
                 GameManager.Instance.ToggleEnemyDispositions(_visionActivated);
                 GameManager.Instance.setState(_visionActivated);
                 eyeOpening.GetComponent<Image>().enabled = true;
-                eyeOpening.GetComponent<Animator>().SetTrigger("open");
             }
 
         }
@@ -231,7 +231,6 @@ public class Player : MovingObject
         if (currentVisionTime >= (visionTime - 1.0f))
         {
             eyeOpening.GetComponent<Image>().enabled = false;
-            
         }
 
         if (currentVisionTime >= visionTime)
@@ -241,6 +240,7 @@ public class Player : MovingObject
             GameManager.Instance.setState(false);
         }
     }
+
     private void HandleArm()
     {
         if (Input.GetKey(KeyCode.E))

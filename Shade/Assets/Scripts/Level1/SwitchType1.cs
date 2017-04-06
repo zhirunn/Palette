@@ -15,7 +15,7 @@ public class SwitchType1 : MonoBehaviour {
         {
             door.GetComponent<BoxCollider2D>().isTrigger = true;
 
-            this.GetComponent<CircleCollider2D>().enabled = false;
+            this.GetComponent<BoxCollider2D>().enabled = false;
             this.GetComponent<SpriteRenderer>().enabled = false;
 
             return;

@@ -10,13 +10,13 @@ public class EnableRoom : MonoBehaviour
     {
         if (other.tag != "Player") { return; }
 
-        //Disable doors
+        //Enable
         foreach (SpriteRenderer renderer in doors.GetComponentsInChildren<SpriteRenderer>())
         {
             renderer.enabled = true;
         }
 
-        //Turn off seeing
+        //Turn off VISION
         foreach (Transform t in doors.GetComponentInChildren<Transform>())
         {
             t.gameObject.tag = "Untagged";
