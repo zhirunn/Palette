@@ -213,6 +213,7 @@ public class Player : MovingObject
                 GameManager.Instance.ToggleEnemyDispositions(_visionActivated);
                 GameManager.Instance.setState(_visionActivated);
                 eyeOpening.GetComponent<Image>().enabled = true;
+                eyeOpening.GetComponent<Animator>().SetTrigger("open");
             }
 
         }
@@ -230,6 +231,7 @@ public class Player : MovingObject
         if (currentVisionTime >= (visionTime - 1.0f))
         {
             eyeOpening.GetComponent<Image>().enabled = false;
+            
         }
 
         if (currentVisionTime >= visionTime)
