@@ -38,6 +38,17 @@ public class Level1StoryHooks : StoryHooks
             yield return new WaitForEndOfFrame();
         }
         doctorEvian.transform.position = moveTo.position;
+
+        FadeObjectInOut fadeObj = doctorEvian.GetComponent<FadeObjectInOut>();
+        if(fadeObj != null)
+        {
+            fadeObj.FadeOut();
+        }
+        else
+        {
+            doctorEvian.gameObject.SetActive(false);
+            Debug.LogWarning("FadeObjectInOut is not attached to Doctor Evian and therefore cannot fade out! Removing the doctor instead!");
+        }
     }
 
     IEnumerator PrettyJeweledCat_Enter()
