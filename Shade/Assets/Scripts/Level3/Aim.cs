@@ -34,10 +34,10 @@ public class Aim : MonoBehaviour {
         
     }
     private void HandleInput() {
-        if (Input.GetKeyDown(KeyCode.L)) {
+        if (Input.GetKeyDown(KeyCode.Q)) {
             Time.timeScale = 0.03f;
         }
-        if (Input.GetKeyUp(KeyCode.L)) {
+        if (Input.GetKeyUp(KeyCode.Q)) {
             m_anim.SetTrigger("Fire");
             Time.timeScale = 1f;
             
