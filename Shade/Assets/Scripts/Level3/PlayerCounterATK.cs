@@ -14,7 +14,7 @@ public class PlayerCounterATK : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-        if (Input.GetKeyDown(KeyCode.K)) {
+        if (Input.GetKeyDown(KeyCode.F)) {
 
             foreach (GameObject item in Spikes)
             {
@@ -27,7 +27,7 @@ public class PlayerCounterATK : MonoBehaviour {
                 m_anim.SetTrigger("Swipe");
             }
         }
-        if (Input.GetKeyUp(KeyCode.K)) {
+        if (Input.GetKeyUp(KeyCode.F)) {
             Time.timeScale = 1f;
             foreach (GameObject item in Spikes){
                 if (item)

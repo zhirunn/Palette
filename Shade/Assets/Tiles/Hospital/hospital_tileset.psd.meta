@@ -1,6 +1,6 @@
 fileFormatVersion: 2
 guid: 28613a677e5da7b4da099f039e7db3aa
-timeCreated: 1489559052
+timeCreated: 1491455710
 licenseType: Free
 TextureImporter:
   fileIDToRecycleName:
@@ -271,6 +271,7 @@ TextureImporter:
     21300528: hospital_tileset_8
     21300530: hospital_tileset_9
     21300532: hospital_tileset_10
+    21300534: hospital_tileset_11
   serializedVersion: 4
   mipmaps:
     mipMapMode: 0
@@ -480,6 +481,19 @@ TextureImporter:
         serializedVersion: 2
         x: 0
         y: 1664
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: hospital_tileset_11
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1536
         width: 128
         height: 128
       alignment: 0
