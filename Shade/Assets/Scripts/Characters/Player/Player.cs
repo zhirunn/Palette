@@ -76,11 +76,9 @@ public class Player : MovingObject
 
         // Get reference for eye opening
         eyeOpening = GameObject.Find("EyeOpening");
-        eyeOpening2 = GameObject.Find("EyeOpening2");
 
         // Set eye opening as false to start
         eyeOpening.GetComponent<Image>().enabled = false;
-        eyeOpening2.GetComponent<Image>().enabled = false;
 
         handSnakeMovement = Hand.GetComponent<SnakeMovement>();
         healthbar.value = CalculateHealth();
@@ -216,11 +214,6 @@ public class Player : MovingObject
                 GameManager.Instance.ToggleEnemyDispositions(_visionActivated);
                 GameManager.Instance.setState(_visionActivated);
                 eyeOpening.GetComponent<Image>().enabled = true;
-<<<<<<< HEAD
-                eyeOpening2.GetComponent<Image>().enabled = false;
-=======
-                eyeOpening.GetComponent<Animator>().SetTrigger("open");
->>>>>>> refs/remotes/origin/master
             }
 
         }
@@ -238,18 +231,6 @@ public class Player : MovingObject
         if (currentVisionTime >= (visionTime - 1.0f))
         {
             eyeOpening.GetComponent<Image>().enabled = false;
-<<<<<<< HEAD
-            eyeOpening2.GetComponent<Image>().enabled = true;
-        }
-
-
-        if (currentVisionTime >= (visionTime - 0.5f))
-        {
-            eyeOpening.GetComponent<Image>().enabled = false;
-            eyeOpening2.GetComponent<Image>().enabled = false;
-=======
-            
->>>>>>> refs/remotes/origin/master
         }
 
         if (currentVisionTime >= visionTime)
