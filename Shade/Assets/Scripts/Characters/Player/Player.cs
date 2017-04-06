@@ -216,7 +216,11 @@ public class Player : MovingObject
                 GameManager.Instance.ToggleEnemyDispositions(_visionActivated);
                 GameManager.Instance.setState(_visionActivated);
                 eyeOpening.GetComponent<Image>().enabled = true;
+<<<<<<< HEAD
                 eyeOpening2.GetComponent<Image>().enabled = false;
+=======
+                eyeOpening.GetComponent<Animator>().SetTrigger("open");
+>>>>>>> refs/remotes/origin/master
             }
 
         }
@@ -234,6 +238,7 @@ public class Player : MovingObject
         if (currentVisionTime >= (visionTime - 1.0f))
         {
             eyeOpening.GetComponent<Image>().enabled = false;
+<<<<<<< HEAD
             eyeOpening2.GetComponent<Image>().enabled = true;
         }
 
@@ -242,6 +247,9 @@ public class Player : MovingObject
         {
             eyeOpening.GetComponent<Image>().enabled = false;
             eyeOpening2.GetComponent<Image>().enabled = false;
+=======
+            
+>>>>>>> refs/remotes/origin/master
         }
 
         if (currentVisionTime >= visionTime)

@@ -6,6 +6,8 @@ public class BossHand2 : MonoBehaviour {
 
     public int HP;
     public Animator anim;
+    public Player player;
+    public Animator p_anim;
     private int Real_HP;
     private AudioSource audio1;
 	// Use this for initialization
@@ -39,6 +41,10 @@ public class BossHand2 : MonoBehaviour {
         if (collision.tag == "ATKbox") {
             HP -= 1;
             audio1.Play();
+        }
+        if (collision.tag == "Player") {
+            player.LoseHealth(5);
+            p_anim.SetTrigger("hit");
         }
     }
     
