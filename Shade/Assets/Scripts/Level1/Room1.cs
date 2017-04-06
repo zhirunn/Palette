@@ -107,7 +107,7 @@ void OnTriggerEnter2D(Collider2D other)
 
     private void roomMod()
     {
-        //Check if part 1 has been picked up
+        //Check if part 2 has been picked up
         if (!phoneParts[0].GetComponent<SpriteRenderer>().enabled)
         {
             //Picked up
