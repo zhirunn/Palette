@@ -22,6 +22,10 @@ public class Part1 : MonoBehaviour {
             collider.enabled = false;
             collider.isTrigger = false;
         }
+        foreach (SpriteRenderer collider in walls.GetComponentsInChildren<SpriteRenderer>())
+        {
+            collider.enabled = true;
+        }
         foreach (BoxCollider2D collider in walls.GetComponentsInChildren<BoxCollider2D>())
         {
             collider.enabled = true;
