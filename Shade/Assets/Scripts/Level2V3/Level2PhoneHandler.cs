@@ -11,13 +11,6 @@ public class Level2PhoneHandler : MonoBehaviour
     {
         if (other.tag != "Player") { return; }
 
-        this.transform.parent = this.transform;
-
-        //Open door if all swtiches disabled
-        //foreach (Sprite)
-
-
-        /*
         //Check pattern
         pattern1();
 
@@ -26,7 +19,6 @@ public class Level2PhoneHandler : MonoBehaviour
         {
             door.GetComponent<BoxCollider2D>().isTrigger = true;
         }
-        */
     }
 
     void pattern1()
