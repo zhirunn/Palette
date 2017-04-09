@@ -43,22 +43,19 @@ public class SnakeMovement : MovingObject
     {
         if ((coll.gameObject.tag == "Window") && SnakeMode == true)
         {
-            coll.gameObject.GetComponent<BoxCollider2D>().enabled = false;
+            //coll.gameObject.GetComponent<BoxCollider2D>().enabled = false;
+            coll.gameObject.GetComponent<BoxCollider2D>().isTrigger = true;
         }
 
     }
 
-    void OnCollisionExit2D(Collision2D coll)
+    void OnTriggerExit2D(Collider2D coll)
     {
-        if (coll.gameObject.tag == "Window") 
+        if ((coll.gameObject.tag == "Window") && SnakeMode == false)
         {
-            coll.gameObject.GetComponent<BoxCollider2D>().enabled = true;
+            coll.gameObject.GetComponent<BoxCollider2D>().isTrigger = false;
         }
-
     }
-
-  
-
 
 
     // Update is called once per frame
