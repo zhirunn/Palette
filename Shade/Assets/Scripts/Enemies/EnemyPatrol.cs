@@ -193,13 +193,13 @@ public class EnemyPatrol : Enemy
         // http://answers.unity3d.com/answers/254209/view.html
         // http://answers.unity3d.com/answers/651344/view.html
         Vector2 direction = (target - transform.position).normalized;
-        float angle = Mathf.Atan2(direction.y, direction.x) * Mathf.Rad2Deg;
-        Quaternion lookRotation = Quaternion.AngleAxis(angle, Vector3.forward);
+        //float angle = Mathf.Atan2(direction.y, direction.x) * Mathf.Rad2Deg;
+        //Quaternion lookRotation = Quaternion.AngleAxis(angle, Vector3.forward);
 
-        transform.rotation = Quaternion.Slerp(
-            transform.rotation,
-            lookRotation,
-            Time.deltaTime * rotateSpeed);
+        //transform.rotation = Quaternion.Slerp(
+        //    transform.rotation,
+        //    lookRotation,
+        //    Time.deltaTime * rotateSpeed);
 
         // Debug.Log("Direction and rotation set to: " + direction + " : " + lookRotation);
 
