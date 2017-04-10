@@ -11,6 +11,8 @@ public class Part2 : MonoBehaviour
         if (other.tag != "Player") { return; }
 
         //Enable trigger for monster destruction
+        monsterDestroy.AddComponent<MonsterDestroyer>();
+        monsterDestroy.GetComponent<MonsterDestroyer>().roomName = "Room2Tests";
         monsterDestroy.GetComponent<BoxCollider2D>().enabled = true;
         monsterDestroy.GetComponent<BoxCollider2D>().isTrigger = true;
 
