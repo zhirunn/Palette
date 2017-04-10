@@ -22,6 +22,14 @@ public class Part1 : MonoBehaviour {
             collider.enabled = false;
             collider.isTrigger = false;
         }
+        foreach (Transform obj in walls.GetComponentInChildren<Transform>())
+        {
+            obj.tag = "Untagged";
+        }
+        foreach (SpriteRenderer collider in walls.GetComponentsInChildren<SpriteRenderer>())
+        {
+            collider.enabled = true;
+        }
         foreach (BoxCollider2D collider in walls.GetComponentsInChildren<BoxCollider2D>())
         {
             collider.enabled = true;
@@ -35,6 +43,8 @@ public class Part1 : MonoBehaviour {
         }
 
         //Enable trigger for monster destruction
+        monsterDestroy.AddComponent<MonsterDestroyer>();
+        monsterDestroy.GetComponent<MonsterDestroyer>().roomName = "Room1Tests";
         monsterDestroy.GetComponent<BoxCollider2D>().enabled = true;
         monsterDestroy.GetComponent<BoxCollider2D>().isTrigger = true;
 

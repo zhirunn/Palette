@@ -229,6 +229,9 @@ public class GameManager : MonoBehaviour
         {
             footprints[i].GetComponent<SpriteRenderer>().enabled = state;
         }
+
+        //Swap the state of the distractions
+
     }
 
     public void RecordCurrentLevel(Scene oldScene, Scene newScene)

@@ -11,6 +11,17 @@ public class Level2PhoneHandler : MonoBehaviour
     {
         if (other.tag != "Player") { return; }
 
+        foreach(GameObject part in phoneParts)
+        {
+            if(part.GetComponent<BoxCollider2D>().enabled)
+            {
+                return;
+            }
+        }
+
+        door.GetComponent<BoxCollider2D>().isTrigger = true;
+
+        /*
         //Check pattern
         pattern1();
 
@@ -19,6 +30,7 @@ public class Level2PhoneHandler : MonoBehaviour
         {
             door.GetComponent<BoxCollider2D>().isTrigger = true;
         }
+        */
     }
 
     void pattern1()

@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class MonsterDestroyer : MonoBehaviour
 {
+    public string roomName;
 
     void OnTriggerEnter2D(Collider2D other)
     {
@@ -20,7 +21,15 @@ public class MonsterDestroyer : MonoBehaviour
     void OnTriggerExit2D(Collider2D other)
     {
         if (other.tag != "Player") { return; }
+
+        GameObject room = GameObject.Find(roomName);
+
+        foreach (SpriteRenderer tile in room.GetComponentsInChildren<SpriteRenderer>())
+        {
+            tile.enabled = false;
+        }
+
         //Turn off trigger and turn on collider
-        //this.GetComponent<BoxCollider2D>().isTrigger = false;
+        this.GetComponent<BoxCollider2D>().isTrigger = false;
     }
 }
