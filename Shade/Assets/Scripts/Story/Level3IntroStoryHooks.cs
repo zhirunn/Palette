@@ -56,7 +56,7 @@ public class Level3IntroStoryHooks : StoryHooks
         yield return SaveDispostionWaitAndThenExit();
         yield return null;
         animator.SetTrigger("Transform");
-        yield return new WaitForSeconds(5.0f);
+        yield return new WaitForSeconds(7.0f);
 
         int nextSceneIndex = SceneManager.GetActiveScene().buildIndex + 1;
         SceneManager.LoadScene(nextSceneIndex);
