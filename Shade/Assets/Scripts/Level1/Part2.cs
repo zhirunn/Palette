@@ -5,6 +5,7 @@ using UnityEngine;
 public class Part2 : MonoBehaviour
 {
     public GameObject monsterDestroy;
+    public GameObject wall;
 
     void OnTriggerEnter2D(Collider2D other)
     {
@@ -13,8 +14,10 @@ public class Part2 : MonoBehaviour
         //Enable trigger for monster destruction
         monsterDestroy.AddComponent<MonsterDestroyer>();
         monsterDestroy.GetComponent<MonsterDestroyer>().roomName = "Room2Tests";
-        monsterDestroy.GetComponent<BoxCollider2D>().enabled = true;
-        monsterDestroy.GetComponent<BoxCollider2D>().isTrigger = true;
+        monsterDestroy.GetComponent<MonsterDestroyer>().wall = wall;
+
+        //wall.GetComponent<BoxCollider2D>().enabled = true;
+        //wall.GetComponent<BoxCollider2D>().isTrigger = true;
 
         //Disable this key
         this.GetComponent<SpriteRenderer>().enabled = false;

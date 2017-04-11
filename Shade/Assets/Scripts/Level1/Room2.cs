@@ -97,7 +97,7 @@ public class Room2 : MonoBehaviour {
         //Check if parts 3 or 4 have been picked up
         if ((!phoneParts[1].GetComponent<SpriteRenderer>().enabled) || (!phoneParts[2].GetComponent<SpriteRenderer>().enabled))
         {
-            speed = (float)((Random.Range(20, 50)) / 100.0F);
+            speed = (float)((Random.Range(40, 90)) / 100.0F);
             dispo = other.GetComponent<Player>().disposition.disposition;
             if (dispo >= 50)
             {

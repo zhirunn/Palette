@@ -18,8 +18,8 @@ public class MonsteSpawn : MonoBehaviour {
         if (other.name != "HAND") { return; }
 
         //Defaults
-        speed = (float)((Random.Range(30, 50)) / 100.0F);
-        dispo = Random.Range(0, 100);
+        speed = (float)((Random.Range(50, 90)) / 100.0F);
+        dispo = Random.Range(0, 50);
 
         for (int i = 0; i < totalEnemy; i++)
         {
