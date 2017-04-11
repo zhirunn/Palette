@@ -15,10 +15,12 @@ public class Player : MovingObject
     private GameObject eyeOpening; // Image for eye opening
     private GameObject eyeOpening2; // Image 2 for eye opening
 
+    
     public GameObject Hand; // Player's hand
     public bool walking = false; // variable for player's state
     public bool casting = false; // variable for player's state
     public bool PlayerMode = true; // Controlling the player by default
+    public bool level3 = false;
 
     // Cache variables
     public Animator animator; // Used to store a reference to the Player's animator component.
@@ -245,26 +247,30 @@ public class Player : MovingObject
 
     private void HandleArm()
     {
-        if (Input.GetKey(KeyCode.E))
+        if (level3 == false)
         {
-            casting = true;
-            walking = false;
-            PlayerMode = false;
-            handSnakeMovement.SnakeMode = true;
-            handSnakeMovement.footprints.EnableFootprintTracking(true);
-        }
-        if (Input.GetKeyUp(KeyCode.R))
-        {
-            casting = false;
-            PlayerMode = true;
-            handSnakeMovement.SnakeMode = false;
-            handSnakeMovement.footprints.EnableFootprintTracking(false);
-        }
-        if (Input.GetKeyUp(KeyCode.J)) {
-            animator.SetTrigger("ATK");
-        }
+            if (Input.GetKey(KeyCode.E))
+            {
+                casting = true;
+                walking = false;
+                PlayerMode = false;
+                handSnakeMovement.SnakeMode = true;
+                handSnakeMovement.footprints.EnableFootprintTracking(true);
+            }
+            if (Input.GetKeyUp(KeyCode.R))
+            {
+                casting = false;
+                PlayerMode = true;
+                handSnakeMovement.SnakeMode = false;
+                handSnakeMovement.footprints.EnableFootprintTracking(false);
+            }
+            if (Input.GetKeyUp(KeyCode.J))
+            {
+                animator.SetTrigger("ATK");
+            }
 
-        animator.SetBool("cast", casting);
+            animator.SetBool("cast", casting);
+        }
     }
     private void OnTriggerEnter2D(Collider2D other)
     {
