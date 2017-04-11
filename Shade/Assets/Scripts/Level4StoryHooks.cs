@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class Level4StoryHooks : StoryHooks
 {
@@ -84,11 +85,12 @@ public class Level4StoryHooks : StoryHooks
 
     IEnumerator TheEnd_Enter()
     {
-        yield return WaitAndThenExit(10);
-#if UNITY_EDITOR
-        UnityEditor.EditorApplication.isPlaying = false;
-#else
-		Application.Quit();
-#endif
+        yield return WaitAndThenExit(3);
+        SceneManager.LoadScene("credits");
+//#if UNITY_EDITOR
+//        UnityEditor.EditorApplication.isPlaying = false;
+//#else
+		
+//#endif
     }
 }
