@@ -31,6 +31,20 @@ public class DispositionObject : MonoBehaviour
     // Use this for initialization
     protected virtual void Start()
     {
+
+        if (this.tag == "Distraction")
+        {
+            disposition = GameObject.FindGameObjectWithTag("Player").GetComponent<Player>().disposition;
+            if (disposition.disposition >= 50)
+            {
+                disposition.disposition = Random.Range(50, 100);
+            }
+            else
+            {
+                disposition.disposition = Random.Range(0, 49);
+            }
+        }
+
         psr = GetComponent<ParticleSystemRenderer>();
 
         if (psr != null)

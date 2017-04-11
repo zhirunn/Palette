@@ -5,6 +5,7 @@ using UnityEngine;
 public class MonsterDestroyer : MonoBehaviour
 {
     public string roomName;
+    public GameObject wall;
 
     void OnTriggerEnter2D(Collider2D other)
     {
@@ -30,6 +31,9 @@ public class MonsterDestroyer : MonoBehaviour
         }
 
         //Turn off trigger and turn on collider
-        this.GetComponent<BoxCollider2D>().isTrigger = false;
+        //this.GetComponent<BoxCollider2D>().isTrigger = false;
+        wall.GetComponent<BoxCollider2D>().isTrigger = false;
+        wall.GetComponent<BoxCollider2D>().enabled = true;
+
     }
 }

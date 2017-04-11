@@ -43,6 +43,7 @@ public class Level1StoryHooks : StoryHooks
         if(fadeObj != null)
         {
             fadeObj.FadeOut();
+            doctorEvian.GetComponent<CircleCollider2D>().isTrigger = true;
         }
         else
         {
