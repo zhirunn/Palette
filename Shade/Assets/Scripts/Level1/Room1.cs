@@ -36,9 +36,16 @@ void OnTriggerEnter2D(Collider2D other)
             }
         }
         */
-
         speed = (float)((Random.Range(30, 50)) / 100.0F);
-        dispo = Random.Range(75, 100);
+        dispo = other.GetComponent<Player>().disposition.disposition;
+        if (dispo >= 50)
+        {
+            dispo = Random.Range(0, 49);
+        }
+        else
+        {
+            dispo = Random.Range(75, 100);
+        }
 
         for (int i = 0; i < totalEnemy; i++)
         {
@@ -72,7 +79,7 @@ void OnTriggerEnter2D(Collider2D other)
 
             enemySpawn.setEnemyMarkers(temp);
 
-            roomMod();
+            roomMod(other);
 
             //Set enemy disposition
             enemySpawn.setDisposition(dispo);
@@ -105,21 +112,37 @@ void OnTriggerEnter2D(Collider2D other)
         
     }
 
-    private void roomMod()
+    private void roomMod(Collider2D other)
     {
         //Check if part 2 has been picked up
         if (!phoneParts[0].GetComponent<SpriteRenderer>().enabled)
         {
             //Picked up
-            dispo = Random.Range(25, 75);
             speed = (float)((Random.Range(75, 110)) / 100.0F);
+            dispo = other.GetComponent<Player>().disposition.disposition;
+            if (dispo >= 50)
+            {
+                dispo = Random.Range(35, 100);
+            }
+            else
+            {
+                dispo = Random.Range(0, 55);
+            }
         }
 
         //Check if parts 3 or 4 have been picked up
         if ((!phoneParts[1].GetComponent<SpriteRenderer>().enabled) || (!phoneParts[2].GetComponent<SpriteRenderer>().enabled))
         {
-            dispo = Random.Range(0, 50);
             speed = (float)((Random.Range(30, 50)) / 100.0F);
+            dispo = other.GetComponent<Player>().disposition.disposition;
+            if (dispo >= 50)
+            {
+                dispo = Random.Range(0, 75);
+            }
+            else
+            {
+                dispo = Random.Range(35, 100);
+            }
         }
     }
 }
