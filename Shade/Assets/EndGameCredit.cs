@@ -8,6 +8,18 @@ public class EndGameCredit : MonoBehaviour {
     public Animator player;
     public Animator boss;
     // Use this for initialization
+
+    private void Start()
+    {
+        StartCoroutine(end());
+    }
+    IEnumerator end()
+    {
+        yield return new WaitForSeconds(50f);
+        SceneManager.LoadScene("Level0");
+    }
+
+
     public void Matk() {
         monster.SetTrigger("atk");
     }
@@ -15,8 +27,4 @@ public class EndGameCredit : MonoBehaviour {
         boss.SetTrigger("Transform");
     }
 
-    public void EndGame() {
-        
-        SceneManager.LoadScene("Level0");
-    }
 }
