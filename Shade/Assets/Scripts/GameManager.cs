@@ -16,6 +16,7 @@ public class GameManager : MonoBehaviour
 
     private List<DispositionObject> dispositionObjects;
     private GameObject[] footprints;
+    private GameObject[] distractions;
     private Text levelText; // Text to display current level number.
     private Image levelImage; // Image to block out level as levels are being set up, background for levelText.
     private GameObject eyeOpening; // Image for eye opening
@@ -115,6 +116,7 @@ public class GameManager : MonoBehaviour
 
         //Finds all objects with specified tag
         footprints = GameObject.FindGameObjectsWithTag("Footprint");
+        distractions = GameObject.FindGameObjectsWithTag("Distraction");
 
         menu = GameObject.FindGameObjectWithTag("Menu");
         animators = GameObject.FindObjectsOfType<Animator>();
@@ -224,6 +226,7 @@ public class GameManager : MonoBehaviour
     {
         //Finds all objects with specified tag
         footprints = GameObject.FindGameObjectsWithTag("Footprint");
+        distractions = GameObject.FindGameObjectsWithTag("Distraction");
 
         for (int i = 0; i < footprints.Length; i++)
         {
@@ -231,6 +234,25 @@ public class GameManager : MonoBehaviour
         }
 
         //Swap the state of the distractions
+        foreach (GameObject candle in distractions)
+        {
+            if (state)
+            {
+                candle.GetComponent<SpriteRenderer>().enabled = false;
+                candle.GetComponent<CircleCollider2D>().enabled = false;
+                candle.GetComponent<DispositionObject>().enabled = false;
+                candle.GetComponent<DispositionObject>().health = 0;
+                //candle.GetComponent<ParticleSystem>().Stop();
+            }
+            else
+            {
+                candle.GetComponent<SpriteRenderer>().enabled = true;
+                candle.GetComponent<CircleCollider2D>().enabled = true;
+                candle.GetComponent<DispositionObject>().enabled = true;
+                //candle.GetComponent<DispositionObject>().health = 40;
+                candle.GetComponent<ParticleSystem>().Play();
+            }
+        }
 
     }
 
