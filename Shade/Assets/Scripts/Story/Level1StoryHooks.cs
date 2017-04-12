@@ -15,15 +15,14 @@ public class Level1StoryHooks : StoryHooks
         base.Start();
     }
 
-    IEnumerator Negative1_Enter()
+    IEnumerator Negative1_Exit()
     {
-        yield return Positive1_Enter();
+        yield return Positive1_Exit();
     }
 
-    IEnumerator Positive1_Enter()
+    IEnumerator Positive1_Exit()
     {
-        yield return SaveDispostionWaitAndThenExit();
-
+        yield return null;
         StartCoroutine(MoveOverSeconds());
     }
 
@@ -52,23 +51,8 @@ public class Level1StoryHooks : StoryHooks
         }
     }
 
-    IEnumerator PrettyJeweledCat_Enter()
+    IEnumerator Level1End_Enter()
     {
-        yield return SaveDispostionWaitAndThenExit();
-    }
-
-    IEnumerator JeweledCat_Enter()
-    {
-        yield return SaveDispostionWaitAndThenExit();
-    }
-
-    IEnumerator CreepyMirror_Enter()
-    {
-        yield return SaveDispostionWaitAndThenExit();
-    }
-
-    IEnumerator SmirkingMirror_Enter()
-    {
-        yield return SaveDispostionWaitAndThenExit();
+        yield return SaveDispostionWaitAndThenExit(time:0f);
     }
 }
