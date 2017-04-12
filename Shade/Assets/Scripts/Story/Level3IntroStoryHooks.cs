@@ -46,14 +46,9 @@ public class Level3IntroStoryHooks : StoryHooks
         GameManager.Instance.PauseGame(true);
     }
 
-    IEnumerator ShionvsKazkazaGood6_Enter()
+    IEnumerator FinaleIntroEnd_Enter()
     {
-        yield return ShionvsKazkazaBad5_Enter();
-    }
-
-    IEnumerator ShionvsKazkazaBad5_Enter()
-    {
-        yield return SaveDispostionWaitAndThenExit();
+        yield return SaveDispostionWaitAndThenExit(time:0f);
         yield return null;
         animator.SetTrigger("Transform");
         yield return new WaitForSeconds(7.0f);

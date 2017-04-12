@@ -7,9 +7,10 @@ public class TalkDoc : MonoBehaviour
     public GameObject doctor;
     public GameObject door;
 
-    void OnTriggerEnter2D(Collider2D other)
+    void OnTriggerStay2D(Collider2D other)
     {
-        if(!doctor.GetComponent<SpriteRenderer>().enabled)
+        bool isLevelChangeNotAddedYet = door.GetComponent<LevelChange>() == null;
+        if(!doctor.GetComponent<SpriteRenderer>().enabled && isLevelChangeNotAddedYet)
         {
             door.AddComponent<LevelChange>().levelName = "Level1Pt2";
         }

@@ -18,7 +18,9 @@ Yin Final
 
 
 
+
 :: UserStylesheet[stylesheet]
+
 
 
 
@@ -292,9 +294,7 @@ Shion: ... I remember being here... but I still can't remember what happened her
 
 
 :: AfterreadingthefinalnoteIfGoodShion
-( need to set the threshold number)
-
-( Shion reads the notes scattered around the room. These notes describe experiments with giving yin emotions a physical manifestation, types of shadow beasts. All of these notes are written in Shion's handwritting and are dated from the year before up until just last month. The most recent note reads " It's too risky, I need to stop this research before it gets out of hand! I have to destroy all of this before-" the rest is illegible...)
+(Shion reads the notes scattered around the room. These notes describe experiments with giving yin emotions a physical manifestation, types of shadow beasts. All of these notes are written in Shion's handwritting and are dated from the year before up until just last month. The most recent note reads " It's too risky, I need to stop this research before it gets out of hand! I have to destroy all of this before-" the rest is illegible...)
 
 [[(continue)|AfterreadingthefinalnoteIfGoodShion2]]
 
@@ -328,9 +328,7 @@ Shion: I need to get out of here! Before it all burns down!
 
 
 :: AfterreadingfinalnoteIfBad
-( need threshold number)
-
-( Shion reads the notes scattered around the room. These notes describe experiments with giving yin emotions a physical manifestation, types of shadow beasts. All of these notes are written in Shion's handwritting and are dated from the year before up until just last month. Notes are scribbled detailing how a to extract the energy from these creatures and put them inside someone else, transorming the recipient into a hybrid, some of these notes are in someone else's handwritting.Black stains make most of it illegible.)
+(Shion reads the notes scattered around the room. These notes describe experiments with giving yin emotions a physical manifestation, types of shadow beasts. All of these notes are written in Shion's handwritting and are dated from the year before up until just last month. Notes are scribbled detailing how a to extract the energy from these creatures and put them inside someone else, transorming the recipient into a hybrid, some of these notes are in someone else's handwritting.Black stains make most of it illegible.)
 
 [[continue|AfterreadingfinalnoteIfBad2]]
 

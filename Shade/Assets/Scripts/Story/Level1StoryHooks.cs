@@ -28,6 +28,8 @@ public class Level1StoryHooks : StoryHooks
 
     public IEnumerator MoveOverSeconds()
     {
+        doctorEvian.GetComponent<Collider2D>().enabled = false;
+
         float elapsedTime = 0;
         Vector3 startingPos = doctorEvian.transform.position;
         while (elapsedTime < speed)
