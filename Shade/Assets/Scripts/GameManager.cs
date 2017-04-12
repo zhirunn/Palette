@@ -83,6 +83,11 @@ public class GameManager : MonoBehaviour
         // InitGame();
     }
 
+    void Start()
+    {
+        menu = GameObject.FindGameObjectWithTag("Menu");
+    }
+
     // Initializes the game for each level.
     void InitGame()
     {
@@ -117,8 +122,7 @@ public class GameManager : MonoBehaviour
         //Finds all objects with specified tag
         footprints = GameObject.FindGameObjectsWithTag("Footprint");
         distractions = GameObject.FindGameObjectsWithTag("Distraction");
-
-        menu = GameObject.FindGameObjectWithTag("Menu");
+        
         animators = GameObject.FindObjectsOfType<Animator>();
 
         if(menu)
