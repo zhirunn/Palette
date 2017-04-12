@@ -16,6 +16,7 @@ public class SnakeMovement : MovingObject
     
     
     private float dis;
+    private GameObject player;
 
 
 
@@ -33,12 +34,13 @@ public class SnakeMovement : MovingObject
 
         footprints = GetComponent<Footprints>();
         lastPosition = transform.position;
+        player = GameObject.FindGameObjectWithTag("Player");
 
         base.Start();
     }
 
 
-   
+
     void OnCollisionEnter2D(Collision2D coll)
     {
         if ((coll.gameObject.tag == "Window") && SnakeMode == true)
@@ -46,7 +48,6 @@ public class SnakeMovement : MovingObject
             //coll.gameObject.GetComponent<BoxCollider2D>().enabled = false;
             coll.gameObject.GetComponent<BoxCollider2D>().isTrigger = true;
         }
-
     }
 
     void OnTriggerExit2D(Collider2D coll)
@@ -63,7 +64,8 @@ public class SnakeMovement : MovingObject
     {
         if (SnakeMode == true)
         {
-            //GetComponent<BoxCollider2D>().enabled = false;
+            player.GetComponent<BoxCollider2D>().enabled = false;
+            player.GetComponent<CircleCollider2D>().enabled = false;
 
             if (distanceTravelled < maxDistance)
             {
@@ -88,6 +90,9 @@ public class SnakeMovement : MovingObject
             {
                 distanceTravelled -= Vector2.Distance(transform.position, lastPosition);
             }
+
+            //player.GetComponent<BoxCollider2D>().enabled = true;
+            //player.GetComponent<CircleCollider2D>().enabled = true;
         }
 
         if ((transform.position - handPos.position).magnitude < 0.1)
@@ -124,6 +129,8 @@ public class SnakeMovement : MovingObject
             hand.position = handPos.position;
             hand.rotation = handPos.rotation;
             RetractMode = false;
+            player.GetComponent<BoxCollider2D>().enabled = true;
+            player.GetComponent<CircleCollider2D>().enabled = true;
         }
         else
         {
