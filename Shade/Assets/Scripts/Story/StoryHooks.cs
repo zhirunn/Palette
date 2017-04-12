@@ -21,7 +21,7 @@ public class StoryHooks : MonoBehaviour
         story = textPlayer.Story;
     }
 
-    protected IEnumerator SaveDispostionWaitAndThenExit()
+    protected IEnumerator SaveDispostionWaitAndThenExit(float time=3f)
     {
         yield return null; // idle after one frame
 
@@ -30,7 +30,7 @@ public class StoryHooks : MonoBehaviour
 
         GameManager.Instance.PauseGame(true);
 
-        yield return new WaitForSeconds(3f);
+        yield return new WaitForSeconds(time);
 
         // Can't used the locally cached reference
         GameObject.FindObjectOfType<TwineTextPlayer>().GetComponent<Canvas>().enabled = false;

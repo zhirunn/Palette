@@ -75,6 +75,8 @@ public class PlayerInteraction : MonoBehaviour
 
                 interactable.Completed = true;
             }
+
+            GameManager.Instance.PauseGame(true);
         }
 
         if (_showText == false)
@@ -83,6 +85,8 @@ public class PlayerInteraction : MonoBehaviour
             {
                 textPlayer.Story.Pause();
                 textPlayer.gameObject.GetComponent<Canvas>().enabled = false;
+
+                GameManager.Instance.PauseGame(false);
             }
         }
     }

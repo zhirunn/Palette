@@ -17,6 +17,7 @@ Yin Final
 
 
 
+
 :: UserStylesheet[stylesheet]
 
 
@@ -33,8 +34,9 @@ Yin Final
 
 
 
+
 :: Start
-<<set $disposition = 50>>
+<<set $disposition = 0>>
 
 (Shion slowly blinks awake, eyebrows furrowing in pain emenating from behind their eyes)
 
@@ -75,15 +77,10 @@ Shion spends time going through their holophone and searches in the phones setti
 
 Shion: Ugh, something is not right here. I'll contact support and see If I can find some way to restore the data.
 
-(Shion contacts Equinox's Holosupport number)
-
-
-
-
-
+[[(Contacts Equinox's Holosupport number)|Kazkazasrequest]]
 
 :: Kazkazasrequest
-Kazkaza: Hello, this is Equinox, " Advancement through Technology" is our prime principle, this is Kazkaza speaking, how may I help you?
+Kazkaza: Hello, this is Equinox, "Advancement through Technology" is our prime principle, this is Kazkaza speaking, how may I help you?
 
 Shion: Hello, I'm from the research department, I was wondering, is it possible to have the data on my holophone restored? It's important.
 
@@ -102,7 +99,7 @@ Kazkaza: Let me guess, you drank too many elements at the company dinner party, 
 (Shion moves to a warehouse, couple of nondescript NPC's hanging around. And a obviously different NPC who is the boss of the warehouse.)
 
 
-[[Talktobigboss]]
+[[(Talk to Big Boss)|Talktobigboss]]
 
 
 
@@ -124,10 +121,12 @@ Shion: Someone named Kazkaza sent-
 :: Ifspokentoafterobtainingparts
 Big Boss: Well, Urgot me twisted, ya did it squirt! Well, ya best be running back to Kazkaza, that way she can finally stop pagin' me for her parts!
 
+[[(End Conversation)|Level2End]]
+
 :: CalltoShionafterlevel2
 (Shion gets a call from Kazkaza)
 
-Kazkaza: Hey, MC, how's it going? Find those parts yet?
+Kazkaza: Hey, Shion, how's it going? Find those parts yet?
 
 Shion: Yeah, I got them, something weird is going on in that warehouse, I encountered moving shadows, monsters!
 
@@ -135,19 +134,15 @@ Kazkaza: Oh well, who cares, just bring them back over to Equinox HQ, I really n
 
 Shion: I should go to Kazkaza's office and drop these off...
 
+[[(End Conversation)|Level2End]]
+
 :: EnterEquinox
 Shion: I'm finally back, I should go deliver these to Kazkaza quickly.
-
-
-
-
-
-
 
 :: Meetingmakeupwipes
 <<set $disposition = 0>>
 
-Kazkaza: Oh ho! You are finally here! Nice to finally meet you  after all this time!
+Kazkaza: Oh ho! You are finally here! Nice to finally meet you after all this time!
 
 
 Shion: Why do I have this feeling as if this is not our first encounter. Kazkaza feels familiar...
@@ -165,10 +160,14 @@ Shion: Why do I have this feeling as if this is not our first encounter. Kazkaza
 
 Shion:I don't have any of my belongings, just what is going on in here? I should check around quickly for my holophone!
 
+[[(End Conversation)|Level1End]]
+
 :: Positive1
 <<set disposition += 15>>
 
 Shion: I don't have anything with me... my holophone, did they take it away from me? Did I lose it? It wouldn't hurt to look around quickly as I escape from here...
+
+[[(End Conversation)|Level1End]]
 
 :: KazkazaRequest
 Shion: I guess I could? Depending on what it is, if it helps you get my phones data back sooner
@@ -182,7 +181,7 @@ Shion: I got the location, I'll head there and get your parts
 
 Kazkaza: Hey! Thanks, I feel motivated to getting your holo data back already! 
 
-
+[[(End Conversation)|KazkazarequestEnd]]
 
 :: NiceBoss
 <<set disposition += 15>>
@@ -190,24 +189,26 @@ Kazkaza: Hey! Thanks, I feel motivated to getting your holo data back already!
 
 Big Boss: Y'anno. I don't feel too great about letting ya in there to run around those Urgot-sent demons. But if Kazkaza aint got no time for waitin' then I suppose I can let ya in. Just don't get hurt in there!
 
-( Acess to the inside of the warehouse is unlocked)
+(Access to the inside of the warehouse is unlocked)
 
 Big Boss: One thing there kiddo! There's a seal that we were using to keep those shadow monsters outta the stock, problem is someone didn't activate the seal properly so those monsters ran all over the warehouse. Once you get in there I can't let you out until you activate the seal properly! Take a look at this picture real quick, and memorize it. It'll give you an idea of what to do with the seal, and here's another picture of the parts for Kazkaza. Good luck!
+
+[[(End Conversation)|Level2End]]
 
 :: SmirkingBoss
 <<set disposition -= 15>>
 
 Big Boss : Well, I reckon you can squirt. Go tango with the beasts then, don't come crying to me when they get to ya!
 
-( Acess to the inside of the warehouse is unlocked)
+(Access to the inside of the warehouse is unlocked)
 
 
 Big Boss: One thing there kiddo! There's a seal that we were using to keep those shadow monsters outta the stock, problem is someone didn't activate the seal properly so those monsters ran all over the warehouse. Once you get in there I can't let you out until you activate the seal properly! Take a look at this picture real quick, and memorize it. It'll give you an idea of what to do with the seal, and here's another picture of the parts for Kazkaza. Good luck!
 
+[[(End Conversation)|Level2End]]
+
 :: Givinginfo
-
-
-MC: Hey,these are the things I saw in the-
+Shion: Hey,these are the things I saw in the-
 
 Kazkaza: Doesn't concern me, now could you please leave, Shion? I have a great deal of work to get back to, now that I have those parts again.
 
@@ -221,11 +222,15 @@ Kazkaza: Doesn't concern me, now could you please leave, Shion? I have a great d
 
 Shion: Well, doesn't look like there's anything else to do here, I should find more information on this closed wing, I have a feeling I can get my memories back there.
 
+[[(End Conversation)|MeetingmakeupwipesEnd]]
+
 :: AnnoyShion
 
 <<set disposition -= 15>>
 
 Shion: Well, I should get going, not like there's anything else to do here. I should see If I can find anymore information on this closed wing. I think something important happened there, something I did.
+
+[[(End Conversation)|MeetingmakeupwipesEnd]]
 
 :: EquinoxNPCstalking
 <<set $disposition = 0>>
@@ -276,7 +281,7 @@ Equinox Employee ( female) : Those shadow things....they are so creepy, pure bla
 :: ShionsConviction
 Shion : Ah... my head... why is it hurting?
 
-
+[[(End Conversation)|EquinoxNPCstalkingEnd]]
 
 :: Eyeabilityinlobby[On-spotting-footprints]
 Shion: Footsteps...again? Where do they lead?
@@ -359,7 +364,7 @@ Research on the shadow beasts stops as there is no one left, but there are still
 
 Eventually, Shion develops a serum to turn themselves back to being mostly human, but Shion still suffers from some of the quips of being mutated, in a good way, with the enhanced vision, Shion had obtainined staying with them.
 
-[[The End|TheEnd]]
+[[The End|The End]]
 
 :: EpilogueBad
 Shion eliminates Kazkaza following the battle with the massive shadow beast, and furthers the research of the shadow beasts themselves.
@@ -372,7 +377,7 @@ Shion is in constant combat against those trying to destroy or steal thier resea
 
 Eventually Shion goes insane with stress and frustration, and vanishes from Equinox. Rumors are heard of a massive shadow beast prowling the city and night attacking the unsuspecting...
 
-[[The End|TheEnd]]
+[[The End|The End]]
 
 
 
@@ -412,6 +417,8 @@ Shion: This looks like a holophone battery. I'll just take this with me for now.
 
 Shion: I don't think I should stare at this anymore...
 
+[[(End Conversation)|Level1End]]
+
 :: SmirkingMirror
 <<set disposition -= 15>>
 
@@ -419,15 +426,21 @@ Shion: I don't think I should stare at this anymore...
 
 Shion: Well, maybe I haven't recovered enough yet...
 
+[[(End Conversation)|Level1End]]
+
 :: JeweledCat
 <<set disposition += 15>>
 
 Shion: This place really needs to be cleaned up...
 
+[[(End Conversation)|Level1End]]
+
 :: PrettyJeweledCat
 <<set disposition -= 15>>
 
 Shion: It's for the best really..
+
+[[(End Conversation)|Level1End]]
 
 :: NegativeShionKazkaza
 <<set $disposition = 0>>
@@ -441,12 +454,8 @@ Kazkaza : Well, maybe you really did end up drinking too much at the company par
 
 Kazkaza: That's not my issue. Everyone's gotta take out their issues on IT.  I'll do it, it won't be easy since I have to pull it from the cloud and I have other work to do y'anno, it's not like you're the only one with holophone issues right now. [[Well it'll go faster if you help me out with a problem|KazkazaRequest]]
 
-:: Obtaining the parts
-
-Shion: How am I supposed to reach those parts from here?... Maybe with my new arm I can...I should try.
-
-:: Thearmgrows[edit-this]
-( Shion suddenly collapses in pain upon entering the warehouse, the pain is originating from Shion's arm)
+:: Thearmgrows
+(Shion suddenly collapses in pain upon entering the warehouse, the pain is originating from Shion's arm)
 
 Shion: AHHH! What?! 
 
@@ -454,11 +463,9 @@ Shion: AHHH! What?!
 
 Shion: What...what is this? What happened to me?!
 
-
+[[(Return)|Level2End]]
 
 :: Obtainparts
-( on obtaining a part, but not the last part)
-
 Shion: Just a few more to go...
 
 :: Lastpart
@@ -473,11 +480,13 @@ Shion: I don't think this is the right order...
 :: Finishedtheseal
 Shion: Looks like that's the last of it!
 
-( A booming noise comes from above, for the sounds of it, it's from a old Com system)
+(A booming noise comes from above, for the sounds of it, it's from a old Com system)
 
 Big Boss: AY! YOU DID IT KIDDO! LETS GET YOU OUTTA HERE!
 
-( The exit unlocks)
+(The exit unlocks)
+
+[[(End Conversation)|Level2End]]
 
 :: CasualShion
 
@@ -485,7 +494,7 @@ Big Boss: AY! YOU DID IT KIDDO! LETS GET YOU OUTTA HERE!
 
 Kazkaza: Geeze, don't be so polite, we work for the same company after all....but so does almost everyone who lives here so.....well no matter, thanks for the parts! Give me your holophone real quick. I have something that might interest you that I happened to find!
 
-(Kazkaza takes the phone and plugs it into one of the many cables lying around, after punching a few things into her keyboard she unplugs it and hands it back to MC)
+(Kazkaza takes the phone and plugs it into one of the many cables lying around, after punching a few things into her keyboard she unplugs it and hands it back to Shion)
 
 [[Giving info|Givinginfo]]
 
@@ -495,7 +504,7 @@ Kazkaza: Geeze, don't be so polite, we work for the same company after all....bu
 
 Kazkaza: You researchers, all the same, no manners. Well whatever, I found something that probably interests you, give me your holophone for a bit.
 
-(Kazkaza takes the phone and plugs it into one of the many cables lying around, after punching a few things into her keyboard she unplugs it and hands it back to MC)
+(Kazkaza takes the phone and plugs it into one of the many cables lying around, after punching a few things into her keyboard she unplugs it and hands it back to Shion)
 
 Shion: ...researcher?...
 
@@ -646,6 +655,11 @@ Kazkaza: Silence dear. Like I told you before I don't have that much free time, 
 
 Kazkaza: NOW!! LETS SEE YOU RUN!!! HAHAHAHA
 
+[[(End Conversation)|FinaleIntroEnd]]
+
+:: The End
+
+
 :: GoodShionpostBoss2
 Kazkaza: WHAT DO YOU KNOW?! THOSE PEOPLE WERE GOING TO DIE AWFUL PITIFUL DEATHS ANYWAYS!
 
@@ -662,7 +676,7 @@ Shion: Not anymore. I won't let this continue!
 
 Kazkaza: ARE YOU MAD! HOW CAN YOU DO THIS? THIS RESEARCH IS THE FUTURE OF EQUINOX, MY FURTURE!
 
-[[Continue|GoodShionpostBoss4]]
+[[(End Conversation)|ShionpostBossEnd]]
 
 :: BadShionpostboss2
 Shion: Yeah! Because you are clearly insane, that's why! Again, I didn't ask you to make me "better" and YOU stole MY research because you couldn't get anything done otherwise! You didn't have the ability or skills to discover what I did!
@@ -693,6 +707,7 @@ Kazkaza: AAAAAAAAAH!
 :: BadShionpostboss4
 Shion: I better get out of here, that's one too many fights for one day!
 
+[[(End Conversation)|ShionpostBossEnd]]
 
 :: ShionvsKazkazaBad5
 Kazkaza: A pity...It seems you cannot be reasoned with. So I guess I'll just have to take you out myself... Let yourself be destroyed by me and I'll make it easy for you, I promise...
@@ -701,6 +716,8 @@ Kazkaza: A pity...It seems you cannot be reasoned with. So I guess I'll just hav
 
 
 Kazkaza: NOW!! LETS SEE YOU RUN!!! HAHAHAHA
+
+[[(End Conversation)|FinaleIntroEnd]]
 
 :: Talktobigboss2
 Big Boss: Kazkaza, by Urgot ‘imself I knew this would happen eventually. Kazkaza's been picking me noggin for them parts for a 4 days now now. The woman's pretty persistent, at least she sent someone in person this time!
@@ -717,12 +734,26 @@ Big Boss (sighs): Not really an issue with the parts ya see. The issue is the wa
 
 [[Shion: Shadows? I think I can deal with those, let me in. I'll go grab the parts myself.|SmirkingBoss]] 
 
-:: GoodShionpostBoss4
+:: MeetingmakeupwipesEnd
 
 
-:: TheEnd
-The End.
+:: ShionpostBossEnd
 
-Thank you for playing our game!
 
-- Team Palette
+:: KazkazarequestEnd
+
+
+:: FinaleIntroEnd
+
+
+:: EquinoxNPCstalkingEnd
+
+
+:: Level1End
+
+
+:: Level2End
+
+
+:: Obtainingtheparts
+Shion: How am I supposed to reach those parts from here?... Maybe with my new arm I can...I should try.
