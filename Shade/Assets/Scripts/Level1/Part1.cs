@@ -8,6 +8,7 @@ public class Part1 : MonoBehaviour {
     public GameObject walls;
     public GameObject monsterDestroy;
     public GameObject wall;
+    public GameObject[] props;
 
     void OnTriggerEnter2D(Collider2D other) 
     {
@@ -48,6 +49,7 @@ public class Part1 : MonoBehaviour {
         monsterDestroy.GetComponent<MonsterDestroyer>().roomName = "Room1Tests";
         wall.GetComponent<BoxCollider2D>().isTrigger = true;
         monsterDestroy.GetComponent<MonsterDestroyer>().wall = wall;
+        monsterDestroy.GetComponent<MonsterDestroyer>().props = props;
 
         //Disable this object
         this.GetComponent<SpriteRenderer>().enabled = false;

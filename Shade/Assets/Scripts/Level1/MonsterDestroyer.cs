@@ -6,6 +6,7 @@ public class MonsterDestroyer : MonoBehaviour
 {
     public string roomName;
     public GameObject wall;
+    public GameObject[] props;
 
     void OnTriggerEnter2D(Collider2D other)
     {
@@ -35,5 +36,18 @@ public class MonsterDestroyer : MonoBehaviour
         wall.GetComponent<BoxCollider2D>().isTrigger = false;
         wall.GetComponent<BoxCollider2D>().enabled = true;
 
+        foreach (GameObject item in props)
+        {
+            if(item.tag == "Footprint")
+            {
+                item.tag = "Untagged";
+            }
+            if (item.tag == "Distraction")
+            {
+                item.tag = "Untagged";
+                item.GetComponent<ParticleSystem>().Stop();
+            }
+            item.GetComponent<SpriteRenderer>().enabled = false;
+        }
     }
 }
