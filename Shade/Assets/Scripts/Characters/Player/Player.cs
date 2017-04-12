@@ -264,13 +264,12 @@ public class Player : MovingObject
                 handSnakeMovement.SnakeMode = false;
                 handSnakeMovement.footprints.EnableFootprintTracking(false);
             }
-            if (Input.GetKeyUp(KeyCode.J))
-            {
-                animator.SetTrigger("ATK");
-            }
 
             animator.SetBool("cast", casting);
         }
+        
+        
+
     }
     private void OnTriggerEnter2D(Collider2D other)
     {
