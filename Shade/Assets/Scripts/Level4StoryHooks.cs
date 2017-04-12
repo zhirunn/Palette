@@ -70,6 +70,11 @@ public class Level4StoryHooks : StoryHooks
         // TODO: Show fires
     }
 
+    IEnumerator ShionpostBossEnd_Enter()
+    {
+        return WaitAndThenExit(time: 0f);
+    }
+
     IEnumerator Kazkazaattempt_Enter()
     {
         yield return WaitAndThenExit();
@@ -85,7 +90,7 @@ public class Level4StoryHooks : StoryHooks
 
     IEnumerator TheEnd_Enter()
     {
-        yield return WaitAndThenExit(3);
+        yield return WaitAndThenExit(time:0f);
         SceneManager.LoadScene("credits");
 //#if UNITY_EDITOR
 //        UnityEditor.EditorApplication.isPlaying = false;
