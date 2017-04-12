@@ -1,0 +1,543 @@
+<html>
+	<head>
+		<title>Yin Final</title>
+		<meta charset="UTF-8">
+		<script type="text/javascript">
+/**
+ * Entweedle - Twine 2 Twee Export Story Format
+ * 
+ * Copyright (c) 2016 Michael McCollum
+ * http://www.maximumverbosity.net/twine/Entweedle/
+ *
+ * This license applies exclusively to the Entweedle story format for Twine 2. No ownership of, nor
+ * licensing restrictions on, the content within the generated story are stated or implied.
+ *
+ * Permission is hereby granted, free of charge, to any person obtaining a copy of this software and
+ * associated documentation files (the "Software"), to deal in the Software without restriction,
+ * including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense,
+ * and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so,
+ * subject to the following conditions:
+ *
+ * The above copyright notice and this permission notice shall be included in all copies or substantial
+ * portions of the Software.
+ *
+ * THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT
+ * LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT.
+ * IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY,
+ * WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE
+ * SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
+ */
+window.onload=function(){if(typeof(window.Entweedle)=="undefined"){window.Entweedle={convert:function(){var output=window.document.getElementById("output");output.innerHTML=this.export();},export:function(){var buffer=[];var storyData=window.document.getElementsByTagName("tw-storydata");if(storyData){buffer.push(this.buildPassage("StoryTitle","",storyData[0].getAttribute("name")));}
+var userScript=window.document.getElementById("twine-user-script");if(userScript){buffer.push(this.buildPassage("UserScript","script",userScript.innerHTML));}
+var userStylesheet=window.document.getElementById("twine-user-stylesheet");if(userStylesheet){buffer.push(this.buildPassage("UserStylesheet","stylesheet",userStylesheet.innerHTML));}
+var passages=window.document.getElementsByTagName("tw-passagedata");for(var i=0;i<passages.length;++i){buffer.push(this.buildPassageFromElement(passages[i]));}
+return buffer.join('');},buildPassageFromElement:function(passage){var name=passage.getAttribute("name");if(!name){name="Untitled Passage";}
+var tags=passage.getAttribute("tags");var content=passage.textContent;return this.buildPassage(name,tags,content);},buildPassage:function(title,tags,content){var result=[];result.push(":: ",title);if(tags){result.push("[",tags,"]");}
+result.push("\r\n",this.scrub(content),"\r\n\r\n");return result.join('');},scrub:function(content){if(content){content=content.replace(/^::/gm," ::");content=content.replace(/\</gm,"&lt;");content=content.replace(/\>/gm,"&gt;");}
+return content;}}}
+window.Entweedle.convert();}		
+		</script>
+	</head>
+	<body>
+		<pre id="output">
+		
+		</pre>
+		<div id="storyData" style="display: none;">
+			<tw-storydata name="Yin Final" startnode="1" creator="Twine" creator-version="2.1.0" ifid="CA448292-CB5E-4C82-8DB5-DA3C3C87AF65" format="Entweedle" format-version="1.0.3" options="" hidden><style role="stylesheet" id="twine-user-stylesheet" type="text/twine-css">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</style><script role="script" id="twine-user-script" type="text/twine-javascript">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</script><tw-passagedata pid="1" name="Start" tags="" position="62,0">&lt;&lt;set $disposition = 0&gt;&gt;
+
+(Shion slowly blinks awake, eyebrows furrowing in pain emenating from behind their eyes)
+
+Doctor Evian: Ah, you&#x27;ve awoken, good, good. How do you feel? Can you hear me?
+
+Shion: Ugh. What happened to me? Where is this? Why do my eyes hurt?
+
+Doctor Evian: Not sure, you were brought here, and I took care of you!
+
+Shion: What?! But, where is this? Why can&#x27;t I remember how I got here, or any reason why I would be here? I was at home last time I-
+
+Doctor Evian: Ah! Interesting! Memory issues! I didn&#x27;t think-
+
+(A loud shattering noise sounds from behind Doctor Evian)
+
+Doctor Evian: NO!! THEY CANNOT COME HERE!
+
+[[Shion: How rude! What is this place anyways?|Negative1]] 
+
+[[Shion: I gotta get out of this place fast, something is very wrong here!|Positive1]] 
+
+</tw-passagedata><tw-passagedata pid="2" name="Holophonerecoveryfirst" tags="" position="10,789">&lt;&lt;set $disposition = 0&gt;&gt;
+Shion: My holophone!...but it&#x27;s missing the battery, where is it?</tw-passagedata><tw-passagedata pid="3" name="Afterexiting" tags="" position="143,931">( As Shion exits the room a metal gate comes down, blocking the entrance of the door from being acessed again. At the same time Shions arm begins to throbb a bit.)
+
+Shion:...Ouch...my arm..why is it hurting?
+
+( Shion looks at their arm and notices nothing out of the ordinary aside from the slight green twinge to the skin.)
+
+Shion: Strange...anyways...I should be able to figure out what happened, or at least get an idea if I take a look at my holophones memory??? That cannot be right! There&#x27;s only one location on my holophone!
+
+Shion spends time going through their holophone and searches in the phones settings, it notes that the phone&#x27;s data was wiped 3 days ago.
+
+Shion: Ugh, something is not right here. I&#x27;ll contact support and see If I can find some way to restore the data.
+
+[[(Contacts Equinox&#x27;s Holosupport number)|Kazkazasrequest]]</tw-passagedata><tw-passagedata pid="4" name="Kazkazasrequest" tags="" position="19,1001">Kazkaza: Hello, this is Equinox, &quot;Advancement through Technology&quot; is our prime principle, this is Kazkaza speaking, how may I help you?
+
+Shion: Hello, I&#x27;m from the research department, I was wondering, is it possible to have the data on my holophone restored? It&#x27;s important.
+
+Kazkaza: Let me guess, you drank too many elements at the company dinner party, ended up with some strange person who robbed you bli-
+
+[[Shion: No! I got into an accident, and the information on my phone is really important! I need you to fix it immediately!|NegativeShionKazkaza]]
+
+[[Shion:  Apologies, nothing that interesting. Or so I think, I can&#x27;t remember, and the information on my phone would be important on figuring out what&#x27;s wrong.|PositiveShionKazkaza]]
+
+</tw-passagedata><tw-passagedata pid="5" name="Level2warehouse" tags="" position="519,23">
+&lt;&lt;set $disposition = 0&gt;&gt;
+
+(Shion moves to a warehouse, couple of nondescript NPC&#x27;s hanging around. And a obviously different NPC who is the boss of the warehouse.)
+
+
+[[(Talk to Big Boss)|Talktobigboss]]
+
+
+
+
+</tw-passagedata><tw-passagedata pid="6" name="Talktobigboss" tags="" position="338,93">Shion: Hello, you wouldn&#x27;t happen to know where I can find someone who is incharge of this place, or someone who would know where I can find some boxes for pickup, would you?
+
+Big Boss: Ya betcha I would. Ya looking at the Big Boss ‘imself! What&#x27;cha looking for squirt?
+
+Shion: Someone named Kazkaza sent-
+
+[[continue|Talktobigboss2]]
+
+
+</tw-passagedata><tw-passagedata pid="7" name="Ifspokentoafterobtainingparts" tags="" position="278,1090">Big Boss: Well, Urgot me twisted, ya did it squirt! Well, ya best be running back to Kazkaza, that way she can finally stop pagin&#x27; me for her parts!
+
+[[(End Conversation)|Level2End]]</tw-passagedata><tw-passagedata pid="8" name="CalltoShionafterlevel2" tags="" position="457,1164">(Shion gets a call from Kazkaza)
+
+Kazkaza: Hey, Shion, how&#x27;s it going? Find those parts yet?
+
+Shion: Yeah, I got them, something weird is going on in that warehouse, I encountered moving shadows, monsters!
+
+Kazkaza: Oh well, who cares, just bring them back over to Equinox HQ, I really need those parts, I&#x27;ve already been put far behind because they were late! Bye now!~
+
+Shion: I should go to Kazkaza&#x27;s office and drop these off...
+
+[[(End Conversation)|Level2End]]</tw-passagedata><tw-passagedata pid="9" name="EnterEquinox" tags="" position="298,1217">Shion: I&#x27;m finally back, I should go deliver these to Kazkaza quickly.</tw-passagedata><tw-passagedata pid="10" name="Meetingmakeupwipes" tags="" position="316,1379">&lt;&lt;set $disposition = 0&gt;&gt;
+
+Kazkaza: Oh ho! You are finally here! Nice to finally meet you after all this time!
+
+
+Shion: Why do I have this feeling as if this is not our first encounter. Kazkaza feels familiar...
+
+
+[[Shion: Nice to meet you as well!|CasualShion]] 
+
+[[Shion: Same...|AnnoyedShion]] 
+
+
+</tw-passagedata><tw-passagedata pid="11" name="Negative1" tags="" position="103,116">&lt;&lt;set disposition -= 15&gt;&gt;
+
+Shion:I don&#x27;t have any of my belongings, just what is going on in here? I should check around quickly for my holophone!
+
+[[(End Conversation)|Level1End]]</tw-passagedata><tw-passagedata pid="12" name="Positive1" tags="" position="228,71">&lt;&lt;set disposition += 15&gt;&gt;
+
+Shion: I don&#x27;t have anything with me... my holophone, did they take it away from me? Did I lose it? It wouldn&#x27;t hurt to look around quickly as I escape from here...
+
+[[(End Conversation)|Level1End]]</tw-passagedata><tw-passagedata pid="13" name="KazkazaRequest" tags="" position="51,1280">Shion: I guess I could? Depending on what it is, if it helps you get my phones data back sooner
+
+Kazkaza: It&#x27;s nothing really, I just need you to pick up a box of parts I ordered for some repairs. I&#x27;ll mark the location on your holophone&#x27;s holopath.
+
+
+(electronics warehouse location now unlocked)
+
+Shion: I got the location, I&#x27;ll head there and get your parts
+
+Kazkaza: Hey! Thanks, I feel motivated to getting your holo data back already! 
+
+[[(End Conversation)|KazkazarequestEnd]]</tw-passagedata><tw-passagedata pid="14" name="NiceBoss" tags="" position="235,390">&lt;&lt;set disposition += 15&gt;&gt;
+
+
+Big Boss: Y&#x27;anno. I don&#x27;t feel too great about letting ya in there to run around those Urgot-sent demons. But if Kazkaza aint got no time for waitin&#x27; then I suppose I can let ya in. Just don&#x27;t get hurt in there!
+
+(Access to the inside of the warehouse is unlocked)
+
+Big Boss: One thing there kiddo! There&#x27;s a seal that we were using to keep those shadow monsters outta the stock, problem is someone didn&#x27;t activate the seal properly so those monsters ran all over the warehouse. Once you get in there I can&#x27;t let you out until you activate the seal properly! Take a look at this picture real quick, and memorize it. It&#x27;ll give you an idea of what to do with the seal, and here&#x27;s another picture of the parts for Kazkaza. Good luck!
+
+[[(End Conversation)|Level2End]]</tw-passagedata><tw-passagedata pid="15" name="SmirkingBoss" tags="" position="475,386">&lt;&lt;set disposition -= 15&gt;&gt;
+
+Big Boss : Well, I reckon you can squirt. Go tango with the beasts then, don&#x27;t come crying to me when they get to ya!
+
+(Access to the inside of the warehouse is unlocked)
+
+
+Big Boss: One thing there kiddo! There&#x27;s a seal that we were using to keep those shadow monsters outta the stock, problem is someone didn&#x27;t activate the seal properly so those monsters ran all over the warehouse. Once you get in there I can&#x27;t let you out until you activate the seal properly! Take a look at this picture real quick, and memorize it. It&#x27;ll give you an idea of what to do with the seal, and here&#x27;s another picture of the parts for Kazkaza. Good luck!
+
+[[(End Conversation)|Level2End]]</tw-passagedata><tw-passagedata pid="16" name="Givinginfo" tags="" position="318,1670">Shion: Hey,these are the things I saw in the-
+
+Kazkaza: Doesn&#x27;t concern me, now could you please leave, Shion? I have a great deal of work to get back to, now that I have those parts again.
+
+[[Shion:I&#x27;ll leave you to it Kazkaza, let me know if you find any more information.|KindShion]]
+
+[[Shion: Fine! I&#x27;ll get out of your hair! Just let me know if you find anymore information.|AnnoyShion]] </tw-passagedata><tw-passagedata pid="17" name="KindShion" tags="" position="220,1782">
+&lt;&lt;set disposition += 15&gt;&gt;
+
+Shion: Well, doesn&#x27;t look like there&#x27;s anything else to do here, I should find more information on this closed wing, I have a feeling I can get my memories back there.
+
+[[(End Conversation)|MeetingmakeupwipesEnd]]</tw-passagedata><tw-passagedata pid="18" name="AnnoyShion" tags="" position="390,1779">
+&lt;&lt;set disposition -= 15&gt;&gt;
+
+Shion: Well, I should get going, not like there&#x27;s anything else to do here. I should see If I can find anymore information on this closed wing. I think something important happened there, something I did.
+
+[[(End Conversation)|MeetingmakeupwipesEnd]]</tw-passagedata><tw-passagedata pid="19" name="EquinoxNPCstalking" tags="" position="732,242">&lt;&lt;set $disposition = 0&gt;&gt;
+
+
+( Shion walks up to two Equinox employee&#x27;s chatting in the hallway who wave at Shion on approach)
+
+Equinox Employee ( male): Oh! Hey Shion, long time no see!
+
+Equinox Employee ( female): It&#x27;s been what? A couple weeks no hasn&#x27;t it?
+
+[[Shion:Yeah...I guess? How have you been?|NPC1ShionConfused]]
+
+[[Shion:Who the heck are you two?|NPC1ShionRage]]
+
+
+</tw-passagedata><tw-passagedata pid="20" name="NPC1ShionConfused" tags="" position="634,390">&lt;&lt;set disposition += 15&gt;&gt;
+
+Equinox Employee (female): It&#x27;s going all right... anyways you came at the perfect time. Don&#x27;t you work in the research division? Maybe you know about what&#x27;s going on lately.
+
+Equinox Employee (male): You talking about those shadow beasts?
+
+[[(continue)|ShionConfused2]]
+
+
+
+
+</tw-passagedata><tw-passagedata pid="21" name="NPC1ShionRage" tags="" position="807,395">&lt;&lt;set disposition -= 15&gt;&gt;
+
+Equinox Employee (female): Hey you don&#x27;t remember me? You used to work in the Q&amp;A department before you transfered to the research division! Geeze...
+
+Equinox Employee (male): Well, don&#x27;t give them a hard time, time are hard enough as it is with those...things wandering around.
+
+Equinox Employee ( female) : Those shadow things....they are so creepy, pure black, moving shadows! t first you think it&#x27;s a trick of they eye but.... I can&#x27;t belive they are actually real.  thought they were rumors of people working too many overtime shifts.
+
+[[(continue)|ShionRage2]]
+
+
+
+</tw-passagedata><tw-passagedata pid="22" name="ShionsConviction" tags="" position="813,843">Shion : Ah... my head... why is it hurting?
+
+[[(End Conversation)|EquinoxNPCstalkingEnd]]</tw-passagedata><tw-passagedata pid="23" name="Eyeabilityinlobby" tags="On-spotting-footprints" position="1129,721">Shion: Footsteps...again? Where do they lead?</tw-passagedata><tw-passagedata pid="24" name="Enteringtheresearchlab" tags="" position="710,1059">Shion: ... I remember being here... but I still can&#x27;t remember what happened here... I need to look around more.
+
+</tw-passagedata><tw-passagedata pid="25" name="AfterreadingthefinalnoteIfGoodShion" tags="" position="584,1097">(Shion reads the notes scattered around the room. These notes describe experiments with giving yin emotions a physical manifestation, types of shadow beasts. All of these notes are written in Shion&#x27;s handwritting and are dated from the year before up until just last month. The most recent note reads &quot; It&#x27;s too risky, I need to stop this research before it gets out of hand! I have to destroy all of this before-&quot; the rest is illegible...)
+
+[[(continue)|AfterreadingthefinalnoteIfGoodShion2]]
+
+</tw-passagedata><tw-passagedata pid="26" name="GoodShionpostBoss" tags="" position="431,1969">
+Shion: ....ha...Is it over?
+
+(Kazkaza returns back to her original form in agony)
+
+Kazkaza: HOW?! HOW COULD YOU DEFEAT ME?!
+
+Shion: How could you even allow yourself to continue this research! You are only brining harm! Look at what&#x27;s happening to the people who work here! They are being attacked by the abominations we created!
+
+[[Continue|GoodShionpostBoss2]]
+
+
+
+
+</tw-passagedata><tw-passagedata pid="27" name="Kazkazaattempt" tags="" position="419,2551">(Shion attempts to speak to Kazkaza but she pays you no heed as she is barely concious now)
+
+Shion: I don&#x27;t have time for this, I need to get out of here!</tw-passagedata><tw-passagedata pid="28" name="Getoutofthepan" tags="" position="420,2443">Shion: I need to get out of here! Before it all burns down!
+
+</tw-passagedata><tw-passagedata pid="29" name="AfterreadingfinalnoteIfBad" tags="" position="842,1083">(Shion reads the notes scattered around the room. These notes describe experiments with giving yin emotions a physical manifestation, types of shadow beasts. All of these notes are written in Shion&#x27;s handwritting and are dated from the year before up until just last month. Notes are scribbled detailing how a to extract the energy from these creatures and put them inside someone else, transorming the recipient into a hybrid, some of these notes are in someone else&#x27;s handwritting.Black stains make most of it illegible.)
+
+[[continue|AfterreadingfinalnoteIfBad2]]
+</tw-passagedata><tw-passagedata pid="30" name="BadShionpostboss" tags="" position="970,1980">
+
+Shion: It&#x27;s finally over...
+
+(Kazkaza returns to her human form and appears bloodied and distressed)
+
+Kazkaza: HOW?! DO YOU KNOW HOW MUCH MONEY? RESEARCH WENT INTO THAT?!
+
+Shion: Do I care? Not really, especially after what YOU did to me, incase you have forgotten.
+
+Kazkaza: WHAT DO YOU KNOW?! I MADE YOU BETTER. YOU DIDN&#x27;T LISTEN TO ME! YOU WANTED TO HIDE YOUR RESEARCH FROM ME!
+
+[[continue|BadShionpostboss2]]
+
+
+
+
+
+
+</tw-passagedata><tw-passagedata pid="31" name="EpilogueGood" tags="" position="596,2618">After lighting their old lab on fire Kazkaza perishes in the fire, attempting to save information and research on the shadow beasts. A new CTO is placed into power a month after Kazkaza&#x27;s death. The new CTO demolishes the research wing, replacing it with a wing devoted to research for the holophone.
+
+Research on the shadow beasts stops as there is no one left, but there are still issues with the shadow beasts running rampant, remnants of Kazkaza&#x27;s expiriments. Shion spends the rest of their life trying to remove of traces of these shadow beasts and help those affected by the attacks. 
+
+Eventually, Shion develops a serum to turn themselves back to being mostly human, but Shion still suffers from some of the quips of being mutated, in a good way, with the enhanced vision, Shion had obtainined staying with them.
+
+[[The End|The End]]</tw-passagedata><tw-passagedata pid="32" name="EpilogueBad" tags="" position="819,2613">Shion eliminates Kazkaza following the battle with the massive shadow beast, and furthers the research of the shadow beasts themselves.
+
+Shion&#x27;s research eventually makes them the new CTO of Equinox and instilling fear on the populous, mercilessly testing and enhancing the strength of the shadows using humans, and cultivating people to express strong enough emotions to give birth to strong shadow monsters.
+
+Shion&#x27;s actions eventually spurs rebellion in the commonfolk in the city and in the employee&#x27;s of Equinox as well against Shion&#x27;s inhumane treatement of test subjects.
+
+Shion is in constant combat against those trying to destroy or steal thier research making them paranoid.
+
+Eventually Shion goes insane with stress and frustration, and vanishes from Equinox. Rumors are heard of a massive shadow beast prowling the city and night attacking the unsuspecting...
+
+[[The End|The End]]
+
+</tw-passagedata><tw-passagedata pid="33" name="Mirror" tags="" position="0,209">( Shion see&#x27;s a mirror infront of them, the mirror twinkles eerily as Shion looks into it.)
+
+[[Shion: It feels like I&#x27;m being watched...|CreepyMirror]]
+
+[[Shion spends some time looking at their face in the mirror|SmirkingMirror]] 
+</tw-passagedata><tw-passagedata pid="34" name="Holophonebatteryrecoverysecond" tags="" position="12,686">&lt;&lt;set $disposition = 0&gt;&gt;
+Shion: Here it is! Well, time to get out of here!</tw-passagedata><tw-passagedata pid="35" name="Holophonerecoverysecond" tags="" position="133,681">&lt;&lt;set $disposition = 0&gt;&gt;
+Shion: My holophone! I found the battery earlier, I just have to put it together and it should be good to go!</tw-passagedata><tw-passagedata pid="36" name="Holophonebatteryrecoveryfirst" tags="" position="130,787">&lt;&lt;set $disposition = 0&gt;&gt;
+Shion: This looks like a holophone battery. I&#x27;ll just take this with me for now.</tw-passagedata><tw-passagedata pid="37" name="Desk" tags="" position="45,450">&lt;&lt;set $disposition = 0&gt;&gt;
+
+( Shion sees a messy desk with numerous items and papers spread about. A glimmering object catches Shion&#x27;s eye and on inspection it appears to be a small jeweled cat ornament that appears to be a paper weight)
+
+[[Shion: It&#x27;s pretty, but it&#x27;s not mine. I&#x27;ll just leave it here|JeweledCat]]
+
+[[Shion: It&#x27;s pretty, looks like it&#x27;s a waste amongst this filth. I&#x27;ll take it with me.|PrettyJeweledCat]]
+</tw-passagedata><tw-passagedata pid="38" name="CreepyMirror" tags="" position="0,337">
+&lt;&lt;set disposition += 15&gt;&gt;
+
+Shion: I don&#x27;t think I should stare at this anymore...
+
+[[(End Conversation)|Level1End]]</tw-passagedata><tw-passagedata pid="39" name="SmirkingMirror" tags="" position="105,340">&lt;&lt;set disposition -= 15&gt;&gt;
+
+( Shion&#x27;s reflection in the mirror smirks at Shion)
+
+Shion: Well, maybe I haven&#x27;t recovered enough yet...
+
+[[(End Conversation)|Level1End]]</tw-passagedata><tw-passagedata pid="40" name="JeweledCat" tags="" position="13,560">&lt;&lt;set disposition += 15&gt;&gt;
+
+Shion: This place really needs to be cleaned up...
+
+[[(End Conversation)|Level1End]]</tw-passagedata><tw-passagedata pid="41" name="PrettyJeweledCat" tags="" position="116,558">&lt;&lt;set disposition -= 15&gt;&gt;
+
+Shion: It&#x27;s for the best really..
+
+[[(End Conversation)|Level1End]]</tw-passagedata><tw-passagedata pid="42" name="NegativeShionKazkaza" tags="" position="0,1111">&lt;&lt;set $disposition = 0&gt;&gt;
+&lt;&lt;set disposition += 15&gt;&gt;
+
+Kazkaza : Well, maybe you really did end up drinking too much at the company party, hmm? Well, no matter, I have quite a bit of work to do, but I&#x27;ll work on getting your phones information restored, It&#x27;ll be kinda a pain though, and it might take a while for me to bring all the data back to you, I tell ya, cloud storage is a monster to deal with! [[Well it&#x27;ll go faster if you help me out with a problem|KazkazaRequest]]</tw-passagedata><tw-passagedata pid="43" name="PositiveShionKazkaza" tags="" position="108,1117">&lt;&lt;set $disposition = 0&gt;&gt;
+&lt;&lt;set disposition -= 15&gt;&gt;
+
+Kazkaza: That&#x27;s not my issue. Everyone&#x27;s gotta take out their issues on IT.  I&#x27;ll do it, it won&#x27;t be easy since I have to pull it from the cloud and I have other work to do y&#x27;anno, it&#x27;s not like you&#x27;re the only one with holophone issues right now. [[Well it&#x27;ll go faster if you help me out with a problem|KazkazaRequest]]</tw-passagedata><tw-passagedata pid="44" name="Thearmgrows" tags="" position="281,628">(Shion suddenly collapses in pain upon entering the warehouse, the pain is originating from Shion&#x27;s arm)
+
+Shion: AHHH! What?! 
+
+(screen blacks out, when it comes back Shion&#x27;s arm has rubbery like consistancy, letting it expand and stretch to unnatural lengths.)
+
+Shion: What...what is this? What happened to me?!
+
+[[(Return)|Level2End]]</tw-passagedata><tw-passagedata pid="45" name="Obtainparts" tags="" position="285,742">Shion: Just a few more to go...</tw-passagedata><tw-passagedata pid="46" name="Lastpart" tags="" position="282,850">Shion: Finally! The last part! Time to get out of here!</tw-passagedata><tw-passagedata pid="47" name="Sealingthewarehouse" tags="" position="484,765">Shion: Yep, this feels like the way it was on the picture! Just a few more seals to go!</tw-passagedata><tw-passagedata pid="48" name="Unsleaingthewarehouse" tags="" position="277,980">Shion: I don&#x27;t think this is the right order...</tw-passagedata><tw-passagedata pid="49" name="Finishedtheseal" tags="" position="582,895">Shion: Looks like that&#x27;s the last of it!
+
+(A booming noise comes from above, for the sounds of it, it&#x27;s from a old Com system)
+
+Big Boss: AY! YOU DID IT KIDDO! LETS GET YOU OUTTA HERE!
+
+(The exit unlocks)
+
+[[(End Conversation)|Level2End]]</tw-passagedata><tw-passagedata pid="50" name="CasualShion" tags="" position="246,1501">
+&lt;&lt;set disposition += 15&gt;&gt;
+
+Kazkaza: Geeze, don&#x27;t be so polite, we work for the same company after all....but so does almost everyone who lives here so.....well no matter, thanks for the parts! Give me your holophone real quick. I have something that might interest you that I happened to find!
+
+(Kazkaza takes the phone and plugs it into one of the many cables lying around, after punching a few things into her keyboard she unplugs it and hands it back to Shion)
+
+[[Giving info|Givinginfo]]</tw-passagedata><tw-passagedata pid="51" name="AnnoyedShion" tags="" position="382,1502">
+&lt;&lt;set disposition -= 15&gt;&gt;
+
+Kazkaza: You researchers, all the same, no manners. Well whatever, I found something that probably interests you, give me your holophone for a bit.
+
+(Kazkaza takes the phone and plugs it into one of the many cables lying around, after punching a few things into her keyboard she unplugs it and hands it back to Shion)
+
+Shion: ...researcher?...
+
+[[Giving info|Givinginfo]]</tw-passagedata><tw-passagedata pid="52" name="ShionConfused2" tags="" position="636,495">Equinox Employee ( female) : Yeah, Shion here transfered to the research division a while back, you know, the wing that got shut down recently. they probably know something about it, since that&#x27;s where everyone is saying these shadows are comming from.
+
+Shion: I&#x27;m sorry, I actually got into an accident recently, I dont&#x27;...I don&#x27;t remember what I was working on much.
+
+[[(continue)|ShionConfused3]]
+</tw-passagedata><tw-passagedata pid="53" name="ShionRage2" tags="" position="810,503">Equinox Employee (male): Well, they are most certainely real. I can&#x27;t belive managment isn&#x27;t doing anything about them.They told us they are containing them and doing something about it. But people are still being attacked by them!
+
+
+Equinox Employee ( female) : We should get out of this company...I think what some of the staff are saying is true. Those...things, they came from the closed wing.
+
+Equinox Employee ( male) : I think that&#x27;s enough talk about this. Talking about wild conspiracy theories won&#x27;t get us anywhere anyways...
+
+[[(continue)|ShionRage3]]
+
+
+
+</tw-passagedata><tw-passagedata pid="54" name="ShionvsKazkazaGood" tags="" position="589,1317">Kazkaza: That&#x27;s right! Wow, you were much faster than I thought! But then again I should have expected as much from the person who discovered the shadows beasts.The person who gave them physical form, in a lot of ways, you are their parent. After all, these shadows that are roaming around are mostly yours.
+
+Shion: ...Mine?
+
+[[(continue)|ShionvsKazkazaGood2]]
+
+
+
+</tw-passagedata><tw-passagedata pid="55" name="ShionvsKazkazaGood2" tags="" position="589,1426">Kazkaza: Aparently you still don&#x27;t remember enough, interesting. Well it&#x27;s easy, the strongest of emotions, regret, despair, guilt, shadows are made of these, fueled by this. A lot of the shadows here are from yourself, but they are not all yours...
+
+Shion: Emotions...I remember, I was doing research on shadows, on utilizing negative emotional energy in a way to benifit everyone, a way to remove the negative emotions from people while making use of those emotions.
+
+[[(continue)|ShionvsKazkazaGood3]]
+
+
+
+</tw-passagedata><tw-passagedata pid="56" name="ShionvsKazkazaGood3" tags="" position="591,1533">Kazkaza: Oh good, I don&#x27;t have to explain everything it seems. Well then let&#x27;s get down to business. Work with me again. I can&#x27;t manage everything being a CTO and trying to cultivate these shadows gives me close to no free time these days.
+
+Shion: What are you planning to do with the shadows? What are you doing with them right now?
+
+[[(continue)|ShionvsKazkazaGood4]]
+
+
+
+</tw-passagedata><tw-passagedata pid="57" name="ShionvsKazkazaBad" tags="" position="855,1296">Kazkaza: That&#x27;s right! Wow, you were much faster than I thought! But then again I should have expected as much from the person who discovered the shadows beasts.The person who gave them physical form, in a lot of ways, you are their parent. After all, these shadows that are roaming around are mostly yours.
+
+Shion: Mine? Those came from me?
+
+[[(continue)|ShionvsKazkazaBad2]]</tw-passagedata><tw-passagedata pid="58" name="ShionvsKazkazaBad2" tags="" position="863,1403">Kazkaza: Aparently you still don&#x27;t remember enough, interesting. Well it&#x27;s easy, the strongest of emotions, regret, despair, guilt, shadows are made of these, fueled by this. A lot of the shadows here are from yourself, but they are not all yours...
+
+Shion: Emotions, huh? I recall it a bit now that you mention it. I was doing research on shadows, on utilizing negative emotional energy to be benificial.
+
+[[(continue)|ShionvsKazkazaBad3]]
+
+
+
+
+
+</tw-passagedata><tw-passagedata pid="59" name="ShionConfused3" tags="" position="634,597">Equinox Employee ( female) : Sorry to hear that. Well.. I guess we&#x27;ll never know. But between all of you and me, I think those shadow beasts came from that wing. Why else would we be the only place in the entire city with the most reports of them? Not to mention the wing got shut down right after they started poppingup all-
+
+Equinox Employee ( male) : I think that&#x27;s enough talk about this.Talking about some wild conspiracy theories won&#x27;t get us anywhere anyways...
+
+[[(continue)|ShionConfused4]]
+
+</tw-passagedata><tw-passagedata pid="60" name="ShionConfused4" tags="" position="644,716">( The two NPC&#x27;s go back to their chattering seemingly forgetting Shion&#x27;s prescence)
+
+[[Shion: Sounds like there really must be more to the research wing, but I need more information, if the shadow beasts are really comming from in there, then I need to be prepaired. I need more information |ShionsConviction]]
+</tw-passagedata><tw-passagedata pid="61" name="ShionRage3" tags="" position="810,607">( The two NPC&#x27;s go back to their chattering seemingly forgetting Shion&#x27;s prescence)
+
+[[Shion: I need to get into the research wing, there must be a way in, but I can&#x27;t go in there unprepaired, there must be some place that has more information... the place I woke up. there must be something there, but how do I go there? The way sealed itself when I left that place? |ShionsConviction]]</tw-passagedata><tw-passagedata pid="62" name="AfterreadingthefinalnoteIfGoodShion2" tags="" position="586,1212">Shion: I...I created these monsters. I did this, my research created these...
+
+[[(continue)|ShionvsKazkazaGood]]
+</tw-passagedata><tw-passagedata pid="63" name="AfterreadingfinalnoteIfBad2" tags="" position="852,1193">Shion: Hm. I knew I was connected to this, but I didn&#x27;t think I would be in the midst of it... yin emotions... taking the negative emotions of others and turning it into a physical manifiestation... But how are there so many shadow monsters everywhere?
+
+
+[[(continue)|ShionvsKazkazaBad]]</tw-passagedata><tw-passagedata pid="64" name="ShionvsKazkazaBad3" tags="" position="863,1514">Kazkaza: Oh good, I don&#x27;t have to explain everything it seems. Well then let&#x27;s get down to business. Work with me again. I can&#x27;t manage everything being a CTO and trying to cultivate these shadows gives me close to no free time these days.
+
+Shion: Why would I trust someone like you, clearly you did something to me to affect my memory, and you are most likely the reason why I&#x27;m suffering from my current...ailment.
+
+[[(continue)|ShionvsKazkazaBad4]]</tw-passagedata><tw-passagedata pid="65" name="ShionvsKazkazaBad4" tags="" position="864,1631">Kazkaza: You had it comming, you wouldn&#x27;t listen to me! And in the end isn&#x27;t it fine? Your research has become much more effective now that I&#x27;ve taken it over, and you are much stronger now!
+
+Shion: Fine? You think it&#x27;s fine just because I&#x27;ve aquired some new abilities? I liked how I was before much more! How dare you try to steal MY research and use it against me!
+
+[[(continue)|ShionvsKazkazaBad5]]</tw-passagedata><tw-passagedata pid="66" name="ShionvsKazkazaGood4" tags="" position="582,1641">Kazkaza: These shadows can do many things, I don&#x27;t think we&#x27;ve discovered the full extent of their abilities yet, either. But imagine, to have the control on the emotions of others, to pull the emotions out of others and utilize them, we can remove the negative emotions from people, and make them work optimally, imagine! No pain and agony! And we can use the negative energy however we want once we learn how to use it!
+
+Shion: We can&#x27;t play with people emotions like that! Emotions make a person, the expression of our emotions is how we convey ourselves to each other!To take them away turns us into monsters! Yin cannot exist without yang!
+
+[[(continue)|ShionvsKazkazaGood5]]</tw-passagedata><tw-passagedata pid="67" name="ShionvsKazkazaGood5" tags="" position="583,1753">Kazkaza: Doesn&#x27;t matter to me, the way I see it, we are all monsters, what I do removes the demons from ourselves and pulls them to the outside. But...you know are you not worse than myself? You are the one who discovered this method after all!
+
+Shion But... I?!
+
+Kazkaza: Silence dear. Like I told you before I don&#x27;t have that much free time, and I can see that you won&#x27;t work for me, so It&#x27;s time for us to end this relationship. Pity, I had hoped that when I enjected the essense of the shadows into you that you would have seen things differently. Look how strong you are now. Oh well. Pity.
+
+[[(continue)|ShionvsKazkazaGood6]]
+
+</tw-passagedata><tw-passagedata pid="68" name="ShionvsKazkazaGood6" tags="" position="656,1894">(Kazkaza pulls out a needle and injects herself with a dark liquid. As it disapears into her she lets out a murderous shriek as she turns onto a large spider-like shadow beast. She looks like she is going to attack Shion!)
+
+
+Kazkaza: NOW!! LETS SEE YOU RUN!!! HAHAHAHA
+
+[[(End Conversation)|FinaleIntroEnd]]</tw-passagedata><tw-passagedata pid="69" name="The End" tags="" position="720,2746"></tw-passagedata><tw-passagedata pid="70" name="GoodShionpostBoss2" tags="" position="431,2075">Kazkaza: WHAT DO YOU KNOW?! THOSE PEOPLE WERE GOING TO DIE AWFUL PITIFUL DEATHS ANYWAYS!
+
+Shion: We can&#x27;t judge who&#x27;s life is worth living and who&#x27;s is not. It was never our place, and it was never the intent of the research I did, you twisted it to your own ideals. I belived harnessing the power of human emotions and desires would be benificial somwhow, now I see how wrong I was...
+
+[[Continue|GoodShionpostBoss3]]</tw-passagedata><tw-passagedata pid="71" name="GoodShionpostBoss3" tags="" position="440,2211">Kazkaza: You can&#x27;t see the benifits? We rip the emotions from people, give them forms, and if we can control them, imagine how much we can be capable of!
+
+Shion: Not anymore. I won&#x27;t let this continue!
+
+( Shion takes a nearby flamable substance, (something used in the boss fight prefered) and lights the desk on fire which quickly consumes the room)
+
+Kazkaza: ARE YOU MAD! HOW CAN YOU DO THIS? THIS RESEARCH IS THE FUTURE OF EQUINOX, MY FURTURE!
+
+[[(End Conversation)|ShionpostBossEnd]]</tw-passagedata><tw-passagedata pid="72" name="BadShionpostboss2" tags="" position="974,2087">Shion: Yeah! Because you are clearly insane, that&#x27;s why! Again, I didn&#x27;t ask you to make me &quot;better&quot; and YOU stole MY research because you couldn&#x27;t get anything done otherwise! You didn&#x27;t have the ability or skills to discover what I did!
+
+Kazkaza: You say that but look at you! In the end you are a monster, you have nothing! I&#x27;m the CTO of Equinox not you! I have-
+
+Shion: Not anymore! I won&#x27;t let this continue, I&#x27;m taking back what&#x27;s mine!
+
+[[continue|BadShionpostboss3]]</tw-passagedata><tw-passagedata pid="73" name="BadShionpostboss3" tags="" position="973,2191">
+( Shion stabs Kazkaza with their arm)
+
+Kazkaza: ARE YOU MAD! HOW CAN YOU DO THIS?! I&#x27;M SUPPOSED TO LEAD EQUINOX INTO THE NEW AGE!
+
+Shion: Not anymore! I&#x27;m taking back my place!
+
+Kazkaza: AAAAAAAAAH!
+
+(Kazkaza&#x27;s form vanishes into a couple of shadow monsters, produced by her anguish and rage)
+
+[[continue|BadShionpostboss4]]
+
+
+</tw-passagedata><tw-passagedata pid="74" name="BadShionpostboss4" tags="" position="974,2298">Shion: I better get out of here, that&#x27;s one too many fights for one day!
+
+[[(End Conversation)|ShionpostBossEnd]]</tw-passagedata><tw-passagedata pid="75" name="ShionvsKazkazaBad5" tags="" position="865,1781">Kazkaza: A pity...It seems you cannot be reasoned with. So I guess I&#x27;ll just have to take you out myself... Let yourself be destroyed by me and I&#x27;ll make it easy for you, I promise...
+
+(Kazkaza pulls out a needle and injects herself with a dark liquid. As it disapears into her she lets out a murderous shriek as she turns onto a large spider-like shadow beast. She glares at Shion and starts her attack!)
+
+
+Kazkaza: NOW!! LETS SEE YOU RUN!!! HAHAHAHA
+
+[[(End Conversation)|FinaleIntroEnd]]</tw-passagedata><tw-passagedata pid="76" name="Talktobigboss2" tags="" position="343,202">Big Boss: Kazkaza, by Urgot ‘imself I knew this would happen eventually. Kazkaza&#x27;s been picking me noggin for them parts for a 4 days now now. The woman&#x27;s pretty persistent, at least she sent someone in person this time!
+
+Shion: Is there a problem with the parts she ordered?
+
+[[continue|Talktobigboss3]]
+</tw-passagedata><tw-passagedata pid="77" name="Talktobigboss3" tags="" position="345,306">Big Boss (sighs): Not really an issue with the parts ya see. The issue is the warehouse has been a complete wreck since those whacko shadow things showed up 5 days ago. None of us can do a darn tootin&#x27; thing because of those pests!
+
+[[Shion: Is there some way I can get in there and get the parts myself? I need them quite urgently.|NiceBoss]]
+
+[[Shion: Shadows? I think I can deal with those, let me in. I&#x27;ll go grab the parts myself.|SmirkingBoss]] </tw-passagedata><tw-passagedata pid="78" name="MeetingmakeupwipesEnd" tags="" position="273,1906"></tw-passagedata><tw-passagedata pid="79" name="ShionpostBossEnd" tags="" position="711,2405"></tw-passagedata><tw-passagedata pid="80" name="KazkazarequestEnd" tags="" position="51,1430"></tw-passagedata><tw-passagedata pid="81" name="FinaleIntroEnd" tags="" position="771,2063"></tw-passagedata><tw-passagedata pid="82" name="EquinoxNPCstalkingEnd" tags="" position="961,889"></tw-passagedata><tw-passagedata pid="83" name="Level1End" tags="" position="221,226"></tw-passagedata><tw-passagedata pid="84" name="Level2End" tags="" position="454,1025"></tw-passagedata><tw-passagedata pid="85" name="Obtainingtheparts" tags="" position="498,633">Shion: How am I supposed to reach those parts from here?... Maybe with my new arm I can...I should try.</tw-passagedata></tw-storydata>
+		</div>
+	</body>
+</html>
