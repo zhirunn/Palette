@@ -44,6 +44,7 @@ public class Level1 : MonoBehaviour {
     //Checks and gets level two ready
     void nextLevel()
     {
+        /*
         foreach (SpriteRenderer part in phoneParts.GetComponentsInChildren<SpriteRenderer>())
         {
             if(part.enabled)
@@ -51,11 +52,13 @@ public class Level1 : MonoBehaviour {
                 return;
             }
         }
+        */
 
         //No phoneparts are left, next level enabled
         newLevelDoor.GetComponent<BoxCollider2D>().isTrigger = true;
-        LevelChange changeLevel = newLevelDoor.AddComponent<LevelChange>();
-        changeLevel.levelName = "Level2V3";
+        Interactable interactable = newLevelDoor.AddComponent<Interactable>();
+        interactable.Passage = "Afterexiting";
+        interactable.Completed = false;
         added = true;
     }
 }
