@@ -6,6 +6,7 @@ using UnityEngine.SceneManagement;
 public class Level3IntroStoryHooks : StoryHooks
 {
     public Animator animator;
+    public AudioSource growlAudio;
 
     protected override void Start()
     {
@@ -51,6 +52,10 @@ public class Level3IntroStoryHooks : StoryHooks
         yield return SaveDispostionWaitAndThenExit(time:0f);
         yield return null;
         animator.SetTrigger("Transform");
+
+        if (growlAudio != null)
+            growlAudio.Play();
+
         yield return new WaitForSeconds(7.0f);
 
         int nextSceneIndex = SceneManager.GetActiveScene().buildIndex + 1;
