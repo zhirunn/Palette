@@ -44,7 +44,6 @@ public class Level1 : MonoBehaviour {
     //Checks and gets level two ready
     void nextLevel()
     {
-        /*
         foreach (SpriteRenderer part in phoneParts.GetComponentsInChildren<SpriteRenderer>())
         {
             if(part.enabled)
@@ -52,7 +51,6 @@ public class Level1 : MonoBehaviour {
                 return;
             }
         }
-        */
 
         //No phoneparts are left, next level enabled
         newLevelDoor.GetComponent<BoxCollider2D>().isTrigger = true;
