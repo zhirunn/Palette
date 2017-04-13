@@ -55,7 +55,7 @@ public class Level2V3StoryHooks : StoryHooks
         yield return WaitAndThenExit();
     }
 
-    IEnumerator MeetingmakeupwipesEnd_Enter()
+    IEnumerator EquinoxNPCstalkingEnd_Enter()
     {
         yield return SaveDispostionWaitAndThenExit(time: 0f);
         SceneManager.LoadScene("Level3Intro");
