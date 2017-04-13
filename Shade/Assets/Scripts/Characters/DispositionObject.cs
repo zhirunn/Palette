@@ -26,6 +26,8 @@ public class DispositionObject : MonoBehaviour
     public float rechargeSeconds = 10.0f;
     private float _rechargeSecondsInverse;
 
+    public bool HideOnEyeMechanicEnabled = false;
+
     protected virtual void OnDispositionChange() { }
 
     // Use this for initialization
@@ -50,7 +52,7 @@ public class DispositionObject : MonoBehaviour
         if (psr != null)
         {
             UpdateDispositionColor();
-            psr.enabled = false;
+            psr.enabled = HideOnEyeMechanicEnabled;
         }
 
         // Register this object with our instance of GameManager
@@ -69,6 +71,8 @@ public class DispositionObject : MonoBehaviour
             if (health <= 0)
             {
                 recharging = true;
+                if (psr != null)
+                    psr.enabled = false;
             }
 
             if (recharging)
@@ -79,6 +83,9 @@ public class DispositionObject : MonoBehaviour
                 {
                     health = initialHealth;
                     recharging = false;
+
+                    if (psr != null)
+                        psr.enabled = true;
                 }
             }
         }
