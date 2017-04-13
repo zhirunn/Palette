@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class MonsteSpawn : MonoBehaviour {
+public class MonsterSpawn2 : MonoBehaviour {
 
     public GameObject spawner;
     public GameObject enemyToSpawn;
@@ -19,7 +19,7 @@ public class MonsteSpawn : MonoBehaviour {
 
         //Defaults
         speed = (float)((Random.Range(50, 90)) / 100.0F);
-        dispo = Random.Range(0, 60);
+        dispo = Random.Range(40, 100);
 
         for (int i = 0; i < totalEnemy; i++)
         {
@@ -69,3 +69,4 @@ public class MonsteSpawn : MonoBehaviour {
         this.GetComponent<CircleCollider2D>().enabled = false;
     }
 }
+
