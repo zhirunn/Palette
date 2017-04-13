@@ -9,24 +9,6 @@ public class Level2V3StoryHooks : StoryHooks
     protected override void Start()
     {
         base.Start();
-
-        GameObject bossMonster = GameObject.Find("BossMonster");
-        if (bossMonster != null)
-        {
-            Interactable inter = bossMonster.GetComponent<Interactable>();
-            if (GameManager.Instance.playerDisposition.getColor() == Disposition.POSITIVE)
-            {
-                inter.Passage = "AfterreadingthefinalnoteIfGoodShion";
-            }
-            else
-            {
-                inter.Passage = "AfterreadingfinalnoteIfBad";
-            }
-        }
-        else
-        {
-            Debug.Log("Could not find GameObject with name BossMonster!");
-        }
     }
 
     IEnumerator Level2End_Enter()
@@ -34,7 +16,6 @@ public class Level2V3StoryHooks : StoryHooks
         yield return SaveDispostionWaitAndThenExit(time: 0f);
     }
     
-
     IEnumerator Obtainingtheparts_Enter()
     {
         yield return WaitAndThenExit();
@@ -74,4 +55,9 @@ public class Level2V3StoryHooks : StoryHooks
         yield return WaitAndThenExit();
     }
 
+    IEnumerator MeetingmakeupwipesEnd_Enter()
+    {
+        yield return SaveDispostionWaitAndThenExit(time: 0f);
+        SceneManager.LoadScene("Level3Intro");
+    }
 }
