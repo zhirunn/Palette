@@ -30,7 +30,7 @@ public class PanelManager : MonoBehaviour {
 
     public void Update()
     {
-        if (Input.GetKeyUp(KeyCode.Escape))
+        if (Input.GetKeyUp(KeyCode.Escape) && SceneManager.GetActiveScene().name.Equals("Level0") == false)
         {
             CloseMenu();
         }

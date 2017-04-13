@@ -16,6 +16,6 @@ public class box : MonoBehaviour {
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
-        Destroy(this.gameObject, 0.5f);
+        Destroy(this.gameObject, 0.7f);
     }
 }
