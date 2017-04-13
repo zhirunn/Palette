@@ -50,6 +50,7 @@ public class SnakeMovement : MovingObject
         }
     }
 
+    /*
     void OnTriggerExit2D(Collider2D coll)
     {
         if ((coll.gameObject.tag == "Window") && SnakeMode == false)
@@ -57,6 +58,7 @@ public class SnakeMovement : MovingObject
             coll.gameObject.GetComponent<BoxCollider2D>().isTrigger = false;
         }
     }
+    */
 
 
     // Update is called once per frame
@@ -99,6 +101,11 @@ public class SnakeMovement : MovingObject
         {
             distanceTravelled = 0.0f; // reset
             //GetComponent<BoxCollider2D>().enabled = true;
+            GameObject[] windows = GameObject.FindGameObjectsWithTag("Window");
+            foreach (GameObject window in windows)
+            {
+                window.GetComponent<BoxCollider2D>().isTrigger = false;
+            }
         }
 
         lastPosition = transform.position;
@@ -163,7 +170,7 @@ public class SnakeMovement : MovingObject
             {
                 GameObject footprint = footprints.footprints[footprints.footprints.Count - 1];
                 footprints.footprints.Remove(footprint);
-                Destroy(footprint);
+                Destroy(footprint);              
             }
         }
 
