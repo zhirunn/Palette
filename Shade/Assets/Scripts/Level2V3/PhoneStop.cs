@@ -21,6 +21,7 @@ public class PhoneStop : MonoBehaviour {
         {
             col.transform.parent = this.transform;
             col.GetComponent<CircleCollider2D>().isTrigger = false;
+            col.GetComponent<CircleCollider2D>().enabled = false;
             col.GetComponent<BoxCollider2D>().enabled = false;
             int numLeft = boss.PhonePartRetrieved();
 
