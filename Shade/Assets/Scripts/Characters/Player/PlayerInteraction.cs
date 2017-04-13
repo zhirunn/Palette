@@ -60,7 +60,7 @@ public class PlayerInteraction : MonoBehaviour
         bool interactPressed = Input.GetButtonDown("Interact");
 
         // TODO Change animation keyframe of the player while talking?
-        if (interactPressed && interactable != null && interactable.Completed == false)
+        if (interactPressed && interactable != null && (interactable.Completed == false || interactable.Repeats))
         {
             _showText = true;
 

@@ -54,7 +54,7 @@ public class Level1 : MonoBehaviour {
 
         //No phoneparts are left, next level enabled
         newLevelDoor.GetComponent<BoxCollider2D>().isTrigger = true;
-        Interactable interactable = newLevelDoor.AddComponent<Interactable>();
+        Interactable interactable = newLevelDoor.GetComponent<Interactable>();
         interactable.Passage = "Afterexiting";
         interactable.Completed = false;
         added = true;

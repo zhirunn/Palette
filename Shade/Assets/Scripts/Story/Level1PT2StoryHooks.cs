@@ -38,4 +38,8 @@ public class Level1PT2StoryHooks : StoryHooks
         yield return SaveDispostionWaitAndThenExit();
     }
 
+    IEnumerator DoorLocked_Enter()
+    {
+        yield return SaveDispostionWaitAndThenExit();
+    }
 }
