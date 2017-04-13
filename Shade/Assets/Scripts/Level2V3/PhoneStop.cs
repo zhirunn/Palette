@@ -58,6 +58,14 @@ public class PhoneStop : MonoBehaviour {
 
                     GameManager.Instance.PauseGame(true);
                 }
+
+                Interactable doorInteractable = GameObject.Find("Door0CloseSlanted").GetComponent<Interactable>();
+
+                if (doorInteractable != null)
+                {
+                    doorInteractable.Repeats = false;
+                    doorInteractable.Completed = true;
+                }
             }
         }
     }

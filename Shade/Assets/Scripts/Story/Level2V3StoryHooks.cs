@@ -60,4 +60,10 @@ public class Level2V3StoryHooks : StoryHooks
         yield return SaveDispostionWaitAndThenExit(time: 0f);
         SceneManager.LoadScene("Level3Intro");
     }
+
+    IEnumerator DoorLocked_Enter()
+    {
+        yield return SaveDispostionWaitAndThenExit();
+    }
+
 }

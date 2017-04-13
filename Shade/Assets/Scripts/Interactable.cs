@@ -7,4 +7,5 @@ public class Interactable : MonoBehaviour
     public string Passage;
     [HideInInspector]
     public bool Completed = false;
+    public bool Repeats = false;
 }
