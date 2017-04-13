@@ -216,7 +216,10 @@ public class GameManager : MonoBehaviour
     {
         foreach (DispositionObject e in dispositionObjects)
         {
-            e.ToggleDisposition(enable);
+            if(e.HideOnEyeMechanicEnabled)
+                e.ToggleDisposition(!enable);
+            else
+                e.ToggleDisposition(enable);
         }
     }
 

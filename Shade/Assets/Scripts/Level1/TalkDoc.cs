@@ -9,10 +9,10 @@ public class TalkDoc : MonoBehaviour
 
     void OnTriggerStay2D(Collider2D other)
     {
-        bool isLevelChangeNotAddedYet = door.GetComponent<LevelChange>() == null;
+        bool isLevelChangeNotAddedYet = door.GetComponent<Interactable>() == null;
         if(!doctor.GetComponent<SpriteRenderer>().enabled && isLevelChangeNotAddedYet)
         {
-            door.AddComponent<LevelChange>().levelName = "Level1Pt2";
+            door.AddComponent<Interactable>().Passage = "LeaveLevel1";
         }
     }
 }
