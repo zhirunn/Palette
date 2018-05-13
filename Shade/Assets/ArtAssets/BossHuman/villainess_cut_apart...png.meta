@@ -16,6 +16,7 @@ TextureImporter:
     21300018: Lfoot
     21300020: Rleg
     21300022: Rfoot
+  externalObjects: {}
   serializedVersion: 4
   mipmaps:
     mipMapMode: 0
@@ -24,6 +25,8 @@ TextureImporter:
     linearTexture: 0
     fadeOut: 0
     borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
     mipMapFadeDistanceStart: 1
     mipMapFadeDistanceEnd: 3
   bumpmap:
@@ -39,10 +42,13 @@ TextureImporter:
   textureFormat: 1
   maxTextureSize: 2048
   textureSettings:
+    serializedVersion: 2
     filterMode: -1
     aniso: -1
     mipBias: -1
-    wrapMode: 1
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
@@ -64,20 +70,24 @@ TextureImporter:
   platformSettings:
   - buildTarget: DefaultTexturePlatform
     maxTextureSize: 2048
+    resizeAlgorithm: 0
     textureFormat: -1
     textureCompression: 1
     compressionQuality: 50
     crunchedCompression: 0
     allowsAlphaSplitting: 0
     overridden: 0
+    androidETC2FallbackOverride: 0
   - buildTarget: Standalone
     maxTextureSize: 2048
+    resizeAlgorithm: 0
     textureFormat: -1
     textureCompression: 1
     compressionQuality: 50
     crunchedCompression: 0
     allowsAlphaSplitting: 0
     overridden: 0
+    androidETC2FallbackOverride: 0
   spriteSheet:
     serializedVersion: 2
     sprites:
@@ -93,6 +103,7 @@ TextureImporter:
       pivot: {x: 0.4981146, y: 0.50158024}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
+      physicsShape: []
       tessellationDetail: 0
     - serializedVersion: 2
       name: mouth
@@ -106,6 +117,7 @@ TextureImporter:
       pivot: {x: 0.5051659, y: 0.117148995}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
+      physicsShape: []
       tessellationDetail: 0
     - serializedVersion: 2
       name: hair
@@ -119,6 +131,7 @@ TextureImporter:
       pivot: {x: 0.5417917, y: 0.7445451}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
+      physicsShape: []
       tessellationDetail: 0
     - serializedVersion: 2
       name: hair1
@@ -132,6 +145,7 @@ TextureImporter:
       pivot: {x: 0.34636843, y: 0.7395234}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
+      physicsShape: []
       tessellationDetail: 0
     - serializedVersion: 2
       name: hair2
@@ -145,6 +159,7 @@ TextureImporter:
       pivot: {x: 0.6538832, y: 0.78374153}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
+      physicsShape: []
       tessellationDetail: 0
     - serializedVersion: 2
       name: body
@@ -158,6 +173,7 @@ TextureImporter:
       pivot: {x: 0.41215736, y: 0.46218827}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
+      physicsShape: []
       tessellationDetail: 0
     - serializedVersion: 2
       name: RightArm
@@ -171,6 +187,7 @@ TextureImporter:
       pivot: {x: 0.37218437, y: 0.72690773}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
+      physicsShape: []
       tessellationDetail: 0
     - serializedVersion: 2
       name: LeftArm
@@ -184,6 +201,7 @@ TextureImporter:
       pivot: {x: 0.8321739, y: 0.76228327}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
+      physicsShape: []
       tessellationDetail: 0
     - serializedVersion: 2
       name: Lleg
@@ -197,6 +215,7 @@ TextureImporter:
       pivot: {x: 0.4985065, y: 0.49854323}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
+      physicsShape: []
       tessellationDetail: 0
     - serializedVersion: 2
       name: Lfoot
@@ -210,6 +229,7 @@ TextureImporter:
       pivot: {x: 0.48807502, y: 0.49570414}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
+      physicsShape: []
       tessellationDetail: 0
     - serializedVersion: 2
       name: Rleg
@@ -223,6 +243,7 @@ TextureImporter:
       pivot: {x: 0.4924334, y: 0.49312097}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
+      physicsShape: []
       tessellationDetail: 0
     - serializedVersion: 2
       name: Rfoot
@@ -236,9 +257,11 @@ TextureImporter:
       pivot: {x: 0.49420848, y: 0.49959877}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
+      physicsShape: []
       tessellationDetail: 0
     outline: []
+    physicsShape: []
   spritePackingTag: 
-  userData: 97781561474163
+  userData: 100019048444645
   assetBundleName: 
   assetBundleVariant: 

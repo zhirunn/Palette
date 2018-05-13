@@ -14,6 +14,7 @@ TextureImporter:
     21300014: Arm Transition
     21300016: HeadFront
     21300018: Hair Front
+  externalObjects: {}
   serializedVersion: 4
   mipmaps:
     mipMapMode: 0
@@ -22,6 +23,8 @@ TextureImporter:
     linearTexture: 0
     fadeOut: 0
     borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
     mipMapFadeDistanceStart: 1
     mipMapFadeDistanceEnd: 3
   bumpmap:
@@ -37,10 +40,13 @@ TextureImporter:
   textureFormat: 1
   maxTextureSize: 2048
   textureSettings:
+    serializedVersion: 2
     filterMode: -1
     aniso: -1
     mipBias: -1
-    wrapMode: 1
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
@@ -62,20 +68,24 @@ TextureImporter:
   platformSettings:
   - buildTarget: DefaultTexturePlatform
     maxTextureSize: 2048
+    resizeAlgorithm: 0
     textureFormat: -1
     textureCompression: 1
     compressionQuality: 50
     crunchedCompression: 0
     allowsAlphaSplitting: 0
     overridden: 0
+    androidETC2FallbackOverride: 0
   - buildTarget: Standalone
     maxTextureSize: 2048
+    resizeAlgorithm: 0
     textureFormat: -1
     textureCompression: 1
     compressionQuality: 50
     crunchedCompression: 0
     allowsAlphaSplitting: 0
     overridden: 0
+    androidETC2FallbackOverride: 0
   spriteSheet:
     serializedVersion: 2
     sprites:
@@ -91,6 +101,7 @@ TextureImporter:
       pivot: {x: 0.83231884, y: 0.34410113}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
+      physicsShape: []
       tessellationDetail: 0
     - serializedVersion: 2
       name: Eye Upper
@@ -104,6 +115,7 @@ TextureImporter:
       pivot: {x: 0.49811018, y: 0.48885697}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
+      physicsShape: []
       tessellationDetail: 0
     - serializedVersion: 2
       name: Eye Lower
@@ -117,6 +129,7 @@ TextureImporter:
       pivot: {x: 0.85827965, y: 0.3341187}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
+      physicsShape: []
       tessellationDetail: 0
     - serializedVersion: 2
       name: arm body
@@ -130,6 +143,7 @@ TextureImporter:
       pivot: {x: 0.48331708, y: 0.7985104}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
+      physicsShape: []
       tessellationDetail: 0
     - serializedVersion: 2
       name: Hand Root
@@ -143,6 +157,7 @@ TextureImporter:
       pivot: {x: 0.494682, y: 0.49583602}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
+      physicsShape: []
       tessellationDetail: 0
     - serializedVersion: 2
       name: Hand Thumb
@@ -156,6 +171,7 @@ TextureImporter:
       pivot: {x: 0.51124144, y: 0.49590915}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
+      physicsShape: []
       tessellationDetail: 0
     - serializedVersion: 2
       name: Hand Finger
@@ -169,6 +185,7 @@ TextureImporter:
       pivot: {x: 0.49160525, y: 0.49831823}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
+      physicsShape: []
       tessellationDetail: 0
     - serializedVersion: 2
       name: Arm Transition
@@ -182,6 +199,7 @@ TextureImporter:
       pivot: {x: 0.4898192, y: 0.4828133}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
+      physicsShape: []
       tessellationDetail: 0
     - serializedVersion: 2
       name: HeadFront
@@ -195,6 +213,7 @@ TextureImporter:
       pivot: {x: 0.48161376, y: 0.10812571}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
+      physicsShape: []
       tessellationDetail: 0
     - serializedVersion: 2
       name: Hair Front
@@ -208,9 +227,11 @@ TextureImporter:
       pivot: {x: 0.10581016, y: 0.9018237}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
+      physicsShape: []
       tessellationDetail: 0
     outline: []
+    physicsShape: []
   spritePackingTag: 
-  userData: 97781561451466
+  userData: 100019049159262
   assetBundleName: 
   assetBundleVariant: 

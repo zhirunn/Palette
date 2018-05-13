@@ -56,8 +56,6 @@ namespace Anima2D
 
 		OnionLayerManager m_OnionLayerManager = new OnionLayerManager();
 
-		Renderer m_SelectedRenderer;
-
 		[MenuItem("Window/Anima2D/Onion Skin",false,30)]
 		static void ContextInitialize()
 		{
@@ -136,13 +134,6 @@ namespace Anima2D
 		{
 			if(m_EnableOnionSkin)
 			{
-				Renderer l_selectedRenderer = null;
-
-				if(AnimationWindowExtra.activeGameObject)
-				{
-					l_selectedRenderer = AnimationWindowExtra.activeGameObject.GetComponent<Renderer>();
-				}
-
 				if(AnimationMode.InAnimationMode() != m_OldInAnimationMode)
 				{
 					if(AnimationMode.InAnimationMode())
@@ -152,14 +143,6 @@ namespace Anima2D
 					}else{
 						DestroyPreview();
 					}
-				}
-
-				if(m_SelectedRenderer != l_selectedRenderer)
-				{
-					m_SelectedRenderer = l_selectedRenderer;
-
-					CreatePreview();
-					UpdatePreview();
 				}
 
 				if(m_OldInAnimationMode)
@@ -196,28 +179,7 @@ namespace Anima2D
 				return;
 			}
 
-			if(m_SelectedRenderer)
-			{
-				List<Renderer> l_renderers = new List<Renderer>();
-
-				AnimationWindowExtra.rootGameObject.GetComponentsInChildren<Renderer>(l_renderers);
-
-				foreach(Renderer renderer in l_renderers)
-				{
-					renderer.enabled = renderer == m_SelectedRenderer;
-				}
-
-				m_InstanceRoot = EditorExtra.InstantiateForAnimatorPreview(AnimationWindowExtra.rootGameObject) as GameObject;
-
-				foreach(Renderer renderer in l_renderers)
-				{
-					renderer.enabled = true;
-				}
-
-			}else{
-
-				m_InstanceRoot = EditorExtra.InstantiateForAnimatorPreview(AnimationWindowExtra.rootGameObject) as GameObject;
-			}
+			m_InstanceRoot = EditorExtra.InstantiateForAnimatorPreview(AnimationWindowExtra.rootGameObject) as GameObject;
 
 			EditorExtra.InitInstantiatedPreviewRecursive(m_InstanceRoot);
 

@@ -118,10 +118,7 @@ namespace Anima2D
 							}
 							else
 							{
-								if(eventType == EventType.Repaint)
-								{
-									HandlesExtra.DotCap(controlID,rectWorldPoint, Quaternion.identity, 1f);
-								}
+								HandlesExtra.DotCap(controlID,rectWorldPoint, Quaternion.identity, 1f, eventType);
 									
 								newPosition = HandlesExtra.Slider2D(controlID, currentWorldPoint,null);
 
@@ -460,7 +457,7 @@ namespace Anima2D
 			return num * (float)((Vector3.Dot(axis, Vector3.Cross(dirA, dirB)) >= 0f) ? 1 : -1);
 		}
 
-		static float RotationSlider(int controlID, Vector3 cornerPos, float rotation, Vector3 pivot, Vector3 handleDir, Vector3 outwardsDir1, Vector3 outwardsDir2, float handleSize, Handles.DrawCapFunction drawFunc, Vector2 snap)
+		static float RotationSlider(int controlID, Vector3 cornerPos, float rotation, Vector3 pivot, Vector3 handleDir, Vector3 outwardsDir1, Vector3 outwardsDir2, float handleSize, HandlesExtra.CapFunction drawFunc, Vector2 snap)
 		{
 			EventType eventType = Event.current.GetTypeForControl(controlID);
 
@@ -492,7 +489,7 @@ namespace Anima2D
 			return rotation;
 		}
 
-		static Vector3 SideSlider(int controlID, Vector3 position, Vector3 sideVector, Vector3 direction, Handles.DrawCapFunction drawFunc)
+		static Vector3 SideSlider(int controlID, Vector3 position, Vector3 sideVector, Vector3 direction, HandlesExtra.CapFunction drawFunc)
 		{
 			Vector3 vector = HandlesExtra.Slider2D(controlID, position,drawFunc);
 

@@ -103,7 +103,7 @@ namespace Anima2D
 			}
 		}
 
-		public bool recording {
+		public virtual bool recording {
 			get {
 				if(state != null && m_RecordingProperty != null)
 				{

@@ -8,6 +8,8 @@ namespace Anima2D
 {
 	public class HandlesExtra
 	{
+		public delegate void CapFunction(int controlID, Vector3 position, Quaternion rotation, float size, EventType eventType);
+
 		public class Styles
 		{
 			public readonly GUIStyle dragDot = "U2D.dragDot";
@@ -102,16 +104,17 @@ namespace Anima2D
 
 			return worldPos;
 		}
-		public static Vector2 Slider2D(int id, Vector2 position, Handles.DrawCapFunction drawCapFunction)
+
+		public static Vector2 Slider2D(int id, Vector2 position, CapFunction drawCapFunction)
 		{
 			return Slider2D(id, position, drawCapFunction, Vector3.forward, Vector3.zero);
 		}
 
-		public static Vector2 Slider2D(int id, Vector2 position, Handles.DrawCapFunction drawCapFunction, Vector3 planeNormal, Vector3 planePosition)
+		public static Vector2 Slider2D(int id, Vector2 position, CapFunction drawCapFunction, Vector3 planeNormal, Vector3 planePosition)
 		{
-			EventType type = Event.current.GetTypeForControl(id);
+			EventType eventType = Event.current.GetTypeForControl(id);
 			
-			switch(type)
+			switch(eventType)
 			{
 			case EventType.MouseDown:
 				if (Event.current.button == 0 && HandleUtility.nearestControl == id && !Event.current.alt)
@@ -157,23 +160,32 @@ namespace Anima2D
 					Event.current.Use();
 				}
 				break;
-			case EventType.Repaint:
-				if(drawCapFunction != null)
-				{
-					drawCapFunction(id,position,Quaternion.identity,1f);
-				}
-				break;
 			}
-			
+
+			if(drawCapFunction != null)
+			{
+				drawCapFunction(id,position, Quaternion.identity, 1f, eventType);
+			}
+
 			return position;
 		}
 
-		public static void PivotCap(int controlID, Vector3 position, Quaternion rotation, float size)
+		public static void RectangleHandleCap (int controlID, Vector3 position, Quaternion rotation, float size, EventType eventType)
+		{
+#if UNITY_5_6_OR_NEWER
+			Handles.RectangleHandleCap(controlID, position, rotation, size, eventType);
+#else
+			if(eventType != EventType.Repaint) return;
+			Handles.RectangleCap(controlID, position, rotation, size);
+#endif
+		}
+
+		public static void PivotCap(int controlID, Vector3 position, Quaternion rotation, float size, EventType eventType)
 		{
 			DrawImageBasedCap(controlID, position, rotation, size, styles.pivotDot, styles.pivotDotActive);
 		}
 
-		public static void DotCap(int controlID, Vector3 position, Quaternion rotation, float size)
+		public static void DotCap(int controlID, Vector3 position, Quaternion rotation, float size, EventType eventType)
 		{
 			DrawImageBasedCap(controlID, position, rotation, size, styles.dragDot, styles.dragDotActive);
 		}
@@ -240,10 +252,12 @@ namespace Anima2D
 
 		static void DrawImageBasedCap(int controlID, Vector3 position, Quaternion rotation, float size, GUIStyle normal, GUIStyle active)
 		{
-			if (Camera.current && Vector3.Dot(position - Camera.current.transform.position, Camera.current.transform.forward) < 0f)
-			{
+			if(Event.current.type != EventType.Repaint)
 				return;
-			}
+
+			if (Camera.current && Vector3.Dot(position - Camera.current.transform.position, Camera.current.transform.forward) < 0f)
+				return;
+			
 			Handles.BeginGUI();
 			if(GUIUtility.hotControl == controlID)
 			{

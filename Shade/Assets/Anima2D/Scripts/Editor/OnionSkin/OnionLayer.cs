@@ -1,4 +1,5 @@
-﻿using UnityEngine;
+﻿#if UNITY_5_0 || UNITY_5_1 || UNITY_5_2 || UNITY_5_3 || UNITY_5_4 || UNITY_5_5
+using UnityEngine;
 using UnityEditor;
 using System.Linq;
 using System.Collections;
@@ -6,6 +7,11 @@ using System.Collections.Generic;
 
 namespace Anima2D
 {
+	public class OnionLayerGameObjectCreationPolicy : PreviewGameObjectCreationPolicy
+	{
+		public OnionLayerGameObjectCreationPolicy(GameObject go) : base(go) {}
+	}
+
 	public class OnionLayer
 	{
 		GameObject m_PreviewInstance;
@@ -15,27 +21,25 @@ namespace Anima2D
 		public Renderer[] renderers { get { return m_Renderers; } private set { m_Renderers = value; } }
 		public MaterialCache[] materialCache { get { return m_MaterialCache; } private set { m_MaterialCache = value; } }
 
-		public GameObject previewInstance
+		public GameObject previewInstance {
+			get { return m_PreviewInstance; }
+		}
+
+		public void SetPreviewInstance(GameObject previewInstance, GameObject sourceGameObject)
 		{
-			get {
-				return m_PreviewInstance;
-			}
+			if(m_PreviewInstance != previewInstance)
+			{
+				Destroy();
 
-			set {
-				if(m_PreviewInstance != value)
+				m_PreviewInstance = previewInstance;
+
+				if(m_PreviewInstance)
 				{
-					Destroy();
-					
-					m_PreviewInstance = value;
-
-					if(m_PreviewInstance)
-					{
-						InitializeRenderers();
-					}
+					InitializeRenderers();
 				}
 			}
 		}
-		
+
 		public void Destroy()
 		{
 			if(m_MaterialCache != null)
@@ -115,7 +119,7 @@ namespace Anima2D
 			materialCache = l_materialCacheList.ToArray();
 		}
 		
-		public void SetOnionLayerDepth(int depth)
+		public void SetDepth(int depth)
 		{
 			int l_order = 0;
 			
@@ -133,10 +137,8 @@ namespace Anima2D
 		{
 			if(m_PreviewInstance && clip)
 			{
-				AnimationMode.BeginSampling ();
-				AnimationMode.SampleAnimationClip(m_PreviewInstance, clip, AnimationWindowExtra.FrameToTime(frame));
-				AnimationMode.EndSampling ();
-				
+				clip.SampleAnimation(m_PreviewInstance, AnimationWindowExtra.FrameToTime(frame));
+
 				IkUtils.UpdateIK(m_PreviewInstance,"",false);
 			}
 		}
@@ -193,3 +195,4 @@ namespace Anima2D
 		}
 	}
 }
+#endif

@@ -27,6 +27,7 @@ TextureImporter:
     21300040: foot2
     21300042: foot3
     21300044: foot4
+  externalObjects: {}
   serializedVersion: 4
   mipmaps:
     mipMapMode: 0
@@ -35,6 +36,8 @@ TextureImporter:
     linearTexture: 0
     fadeOut: 0
     borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
     mipMapFadeDistanceStart: 1
     mipMapFadeDistanceEnd: 3
   bumpmap:
@@ -50,10 +53,13 @@ TextureImporter:
   textureFormat: 1
   maxTextureSize: 2048
   textureSettings:
+    serializedVersion: 2
     filterMode: -1
     aniso: -1
     mipBias: -1
-    wrapMode: 1
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
@@ -75,20 +81,24 @@ TextureImporter:
   platformSettings:
   - buildTarget: DefaultTexturePlatform
     maxTextureSize: 2048
+    resizeAlgorithm: 0
     textureFormat: -1
     textureCompression: 1
     compressionQuality: 50
     crunchedCompression: 0
     allowsAlphaSplitting: 0
     overridden: 0
+    androidETC2FallbackOverride: 0
   - buildTarget: Standalone
     maxTextureSize: 2048
+    resizeAlgorithm: 0
     textureFormat: -1
     textureCompression: 1
     compressionQuality: 50
     crunchedCompression: 0
     allowsAlphaSplitting: 0
     overridden: 0
+    androidETC2FallbackOverride: 0
   spriteSheet:
     serializedVersion: 2
     sprites:
@@ -104,6 +114,7 @@ TextureImporter:
       pivot: {x: 0.2690729, y: 0.49329054}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
+      physicsShape: []
       tessellationDetail: 0
     - serializedVersion: 2
       name: Monster_Tail
@@ -117,6 +128,7 @@ TextureImporter:
       pivot: {x: 0.74208874, y: 0.30598396}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
+      physicsShape: []
       tessellationDetail: 0
     - serializedVersion: 2
       name: Monster_UpperJAW
@@ -130,6 +142,7 @@ TextureImporter:
       pivot: {x: 0.10386356, y: 0.25369245}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
+      physicsShape: []
       tessellationDetail: 0
     - serializedVersion: 2
       name: MonsterLowerJAW
@@ -143,6 +156,7 @@ TextureImporter:
       pivot: {x: 0.20975158, y: 0.74190176}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
+      physicsShape: []
       tessellationDetail: 0
     - serializedVersion: 2
       name: Mback1
@@ -156,6 +170,7 @@ TextureImporter:
       pivot: {x: 0.47945458, y: 0.29591587}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
+      physicsShape: []
       tessellationDetail: 0
     - serializedVersion: 2
       name: Mback2
@@ -169,6 +184,7 @@ TextureImporter:
       pivot: {x: 0.46819, y: 0.14004606}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
+      physicsShape: []
       tessellationDetail: 0
     - serializedVersion: 2
       name: Mback3
@@ -182,6 +198,7 @@ TextureImporter:
       pivot: {x: 0.46276417, y: 0.17927542}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
+      physicsShape: []
       tessellationDetail: 0
     - serializedVersion: 2
       name: Mback4
@@ -195,6 +212,7 @@ TextureImporter:
       pivot: {x: 0.48445374, y: 0.1734953}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
+      physicsShape: []
       tessellationDetail: 0
     - serializedVersion: 2
       name: Mback5
@@ -208,6 +226,7 @@ TextureImporter:
       pivot: {x: 0.47167996, y: 0.19001617}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
+      physicsShape: []
       tessellationDetail: 0
     - serializedVersion: 2
       name: Mback6
@@ -221,6 +240,7 @@ TextureImporter:
       pivot: {x: 0.48665714, y: 0.16575187}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
+      physicsShape: []
       tessellationDetail: 0
     - serializedVersion: 2
       name: Mback7
@@ -234,6 +254,7 @@ TextureImporter:
       pivot: {x: 0.4690878, y: 0.22787827}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
+      physicsShape: []
       tessellationDetail: 0
     - serializedVersion: 2
       name: HamLeg1
@@ -247,6 +268,7 @@ TextureImporter:
       pivot: {x: 0.28336146, y: 0.7703577}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
+      physicsShape: []
       tessellationDetail: 0
     - serializedVersion: 2
       name: HamLeg2
@@ -260,6 +282,7 @@ TextureImporter:
       pivot: {x: 0.26921505, y: 0.794857}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
+      physicsShape: []
       tessellationDetail: 0
     - serializedVersion: 2
       name: HamLeg3
@@ -273,6 +296,7 @@ TextureImporter:
       pivot: {x: 0.6150796, y: 0.7345638}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
+      physicsShape: []
       tessellationDetail: 0
     - serializedVersion: 2
       name: HamLeg4
@@ -286,6 +310,7 @@ TextureImporter:
       pivot: {x: 0.6599212, y: 0.79333943}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
+      physicsShape: []
       tessellationDetail: 0
     - serializedVersion: 2
       name: Leg1
@@ -299,6 +324,7 @@ TextureImporter:
       pivot: {x: 0.16841096, y: 0.8421651}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
+      physicsShape: []
       tessellationDetail: 0
     - serializedVersion: 2
       name: Leg2
@@ -312,6 +338,7 @@ TextureImporter:
       pivot: {x: 0.23967801, y: 0.80438316}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
+      physicsShape: []
       tessellationDetail: 0
     - serializedVersion: 2
       name: Leg3
@@ -325,6 +352,7 @@ TextureImporter:
       pivot: {x: 0.24909045, y: 0.81842434}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
+      physicsShape: []
       tessellationDetail: 0
     - serializedVersion: 2
       name: Leg4
@@ -338,6 +366,7 @@ TextureImporter:
       pivot: {x: 0.2078976, y: 0.8283334}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
+      physicsShape: []
       tessellationDetail: 0
     - serializedVersion: 2
       name: foot1
@@ -351,6 +380,7 @@ TextureImporter:
       pivot: {x: 0.2018111, y: 0.3973741}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
+      physicsShape: []
       tessellationDetail: 0
     - serializedVersion: 2
       name: foot2
@@ -364,6 +394,7 @@ TextureImporter:
       pivot: {x: 0.17919514, y: 0.4684029}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
+      physicsShape: []
       tessellationDetail: 0
     - serializedVersion: 2
       name: foot3
@@ -377,6 +408,7 @@ TextureImporter:
       pivot: {x: 0.18418524, y: 0.5610783}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
+      physicsShape: []
       tessellationDetail: 0
     - serializedVersion: 2
       name: foot4
@@ -390,9 +422,11 @@ TextureImporter:
       pivot: {x: 0.1518818, y: 0.49122104}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
+      physicsShape: []
       tessellationDetail: 0
     outline: []
+    physicsShape: []
   spritePackingTag: 
-  userData: 97781561459497
+  userData: 100019048881753
   assetBundleName: 
   assetBundleVariant: 

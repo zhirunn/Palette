@@ -6,9 +6,9 @@ using Anima2D.Pool;
 
 namespace Anima2D
 {
-	public class PreviewGameObjectInstantiateCreationPolicy : InstantiateCreationPolicy<GameObject>
+	public class PreviewGameObjectCreationPolicy : InstantiateCreationPolicy<GameObject>
 	{
-		public PreviewGameObjectInstantiateCreationPolicy(GameObject go) : base(go) { }
+		public PreviewGameObjectCreationPolicy(GameObject go) : base(go) { }
 		
 		public override GameObject Create()
 		{
@@ -37,10 +37,9 @@ namespace Anima2D
 		}
 	}
 
-	
-	public class PreviewGameObjectPool : ObjectPool< GameObject >
+	public class OnionLayerGameObjectPool : ObjectPool< GameObject >
 	{
-		public PreviewGameObjectPool(GameObject go) : base( new PreviewGameObjectInstantiateCreationPolicy(go) ) {}
+		public OnionLayerGameObjectPool(GameObject go) : base( new OnionLayerGameObjectCreationPolicy(go) ) {}
 	}
 	
 	public class OnionLayerPool : ObjectPool< OnionLayer >
@@ -52,7 +51,7 @@ namespace Anima2D
 	{
 		Dictionary<int,OnionLayer> m_OnionLayers = new Dictionary<int,OnionLayer>();
 		
-		PreviewGameObjectPool m_GameObjectPool;
+		OnionLayerGameObjectPool m_GameObjectPool;
 		OnionLayerPool m_OnionLayerPool = new OnionLayerPool();
 		
 		GameObject m_Source;
@@ -79,7 +78,7 @@ namespace Anima2D
 					
 					if(m_Source)
 					{
-						m_GameObjectPool = new PreviewGameObjectPool(m_Source);
+						m_GameObjectPool = new OnionLayerGameObjectPool(m_Source);
 					}
 				}
 			}
@@ -95,7 +94,7 @@ namespace Anima2D
 
 				if(!l_onionLayer.previewInstance)
 				{
-					l_onionLayer.previewInstance = m_GameObjectPool.Get();
+					l_onionLayer.SetPreviewInstance(m_GameObjectPool.Get(), source);
 				}
 				
 				l_onionLayer.previewInstance.transform.position = source.transform.position;
@@ -187,7 +186,7 @@ namespace Anima2D
 				onionLayer.previewInstance.SetActive(true);
 
 				float alpha = 1f - (depth - numLayersPerSide) / (float)numLayersPerSide;
-				onionLayer.SetOnionLayerDepth(depth);
+				onionLayer.SetDepth(depth);
 				onionLayer.SetAlpha(alpha  * alpha * alpha * alphaMultiplier);
 				onionLayer.SetColor(colorPrevFrames);
 				
@@ -203,7 +202,7 @@ namespace Anima2D
 				onionLayer.previewInstance.SetActive(true);
 
 				float alpha = 1 - (depth - 1) / (float)numLayersPerSide;
-				onionLayer.SetOnionLayerDepth(depth);
+				onionLayer.SetDepth(depth);
 				onionLayer.SetAlpha(alpha * alpha * alpha * alphaMultiplier);
 				onionLayer.SetColor(colorNextFrames);
 				

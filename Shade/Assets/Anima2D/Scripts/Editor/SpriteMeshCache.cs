@@ -275,12 +275,15 @@ namespace Anima2D
 				SetBlendShapesFromCache();
 
 				EditorUtility.SetDirty(spriteMeshData);
-				
+
+				string spriteAssetPath = AssetDatabase.GetAssetPath(spriteMesh.sprite);
 				SpriteMeshUtils.UpdateAssets(spriteMesh,spriteMeshData);
 				AssetDatabase.SaveAssets();
 				AssetDatabase.Refresh();
+				TextureImporter textureImporter = AssetImporter.GetAtPath(spriteAssetPath) as TextureImporter;
+				textureImporter.userData = textureImporter.assetTimeStamp.ToString();
 				AssetDatabase.StartAssetEditing();
-				AssetDatabase.ImportAsset(AssetDatabase.GetAssetPath(spriteMesh.sprite));
+				AssetDatabase.ImportAsset(spriteAssetPath);
 				AssetDatabase.StopAssetEditing();
 				isDirty = false;
 			}

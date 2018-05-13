@@ -124,12 +124,12 @@ namespace Anima2D
 				{
 					Camera.current.transform.rotation = m_Bone.transform.rotation;
 				}
-				
-				Vector3 newPosition = Handles.FreeMoveHandle(m_Bone.transform.position,
-				                                             rotation,
-				                                             size,
-				                                             Vector3.zero,
-				                                             Handles.RectangleCap);
+					
+#if UNITY_5_6_OR_NEWER
+				Vector3 newPosition = Handles.FreeMoveHandle(m_Bone.transform.position, rotation, size, Vector3.zero, Handles.RectangleHandleCap);
+#else
+				Vector3 newPosition = Handles.FreeMoveHandle(m_Bone.transform.position, rotation, size, Vector3.zero, Handles.RectangleCap);
+#endif
 				
 				if(Event.current.type == EventType.Repaint)
 				{

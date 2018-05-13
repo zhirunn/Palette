@@ -45,7 +45,11 @@ namespace Anima2D
 
 			if(Camera.current)
 			{
+#if UNITY_5_6_OR_NEWER
+				s_EndPosition = Handles.Slider2D(controlID,s_EndPosition, Vector3.forward, Vector3.right, Vector3.up, HandleUtility.GetHandleSize(s_EndPosition) / 4f, (id,pos,rot,size,evt) => {}, Vector2.zero);
+#else
 				s_EndPosition = Handles.Slider2D(controlID,s_EndPosition, Vector3.forward, Vector3.right, Vector3.up, HandleUtility.GetHandleSize(s_EndPosition) / 4f, (id,pos,rot,size) => {}, Vector2.zero);
+#endif
 			}else{
 				s_EndPosition = HandlesExtra.Slider2D(controlID, s_EndPosition, null);
 			}

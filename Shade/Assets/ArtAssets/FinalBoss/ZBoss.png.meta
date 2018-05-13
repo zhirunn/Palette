@@ -40,6 +40,7 @@ TextureImporter:
     21300066: f51
     21300068: f6
     21300070: f61
+  externalObjects: {}
   serializedVersion: 4
   mipmaps:
     mipMapMode: 0
@@ -48,6 +49,8 @@ TextureImporter:
     linearTexture: 0
     fadeOut: 0
     borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
     mipMapFadeDistanceStart: 1
     mipMapFadeDistanceEnd: 3
   bumpmap:
@@ -63,10 +66,13 @@ TextureImporter:
   textureFormat: 1
   maxTextureSize: 2048
   textureSettings:
+    serializedVersion: 2
     filterMode: -1
     aniso: -1
     mipBias: -1
-    wrapMode: 1
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
@@ -88,20 +94,24 @@ TextureImporter:
   platformSettings:
   - buildTarget: DefaultTexturePlatform
     maxTextureSize: 2048
+    resizeAlgorithm: 0
     textureFormat: -1
     textureCompression: 1
     compressionQuality: 50
     crunchedCompression: 0
     allowsAlphaSplitting: 0
     overridden: 0
+    androidETC2FallbackOverride: 0
   - buildTarget: Standalone
     maxTextureSize: 2048
+    resizeAlgorithm: 0
     textureFormat: -1
     textureCompression: 1
     compressionQuality: 50
     crunchedCompression: 0
     allowsAlphaSplitting: 0
     overridden: 0
+    androidETC2FallbackOverride: 0
   spriteSheet:
     serializedVersion: 2
     sprites:
@@ -117,6 +127,7 @@ TextureImporter:
       pivot: {x: 0.49648985, y: 0.4906077}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
+      physicsShape: []
       tessellationDetail: 0
     - serializedVersion: 2
       name: spike
@@ -130,6 +141,7 @@ TextureImporter:
       pivot: {x: 0.47995764, y: 0.84915084}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
+      physicsShape: []
       tessellationDetail: 0
     - serializedVersion: 2
       name: tail3
@@ -143,6 +155,7 @@ TextureImporter:
       pivot: {x: 0.49816594, y: 0.49706435}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
+      physicsShape: []
       tessellationDetail: 0
     - serializedVersion: 2
       name: tail2
@@ -156,6 +169,7 @@ TextureImporter:
       pivot: {x: 0.498552, y: 0.48479825}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
+      physicsShape: []
       tessellationDetail: 0
     - serializedVersion: 2
       name: tail1
@@ -169,6 +183,7 @@ TextureImporter:
       pivot: {x: 0.5079179, y: 0.7623403}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
+      physicsShape: []
       tessellationDetail: 0
     - serializedVersion: 2
       name: Face
@@ -182,6 +197,7 @@ TextureImporter:
       pivot: {x: 0.49710172, y: 0.35105908}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
+      physicsShape: []
       tessellationDetail: 0
     - serializedVersion: 2
       name: body1
@@ -195,6 +211,7 @@ TextureImporter:
       pivot: {x: 0.49769664, y: 0.49903277}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
+      physicsShape: []
       tessellationDetail: 0
     - serializedVersion: 2
       name: body2
@@ -208,6 +225,7 @@ TextureImporter:
       pivot: {x: 0.49904168, y: 0.49974453}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
+      physicsShape: []
       tessellationDetail: 0
     - serializedVersion: 2
       name: body3
@@ -221,6 +239,7 @@ TextureImporter:
       pivot: {x: 0.49954605, y: 0.49724248}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
+      physicsShape: []
       tessellationDetail: 0
     - serializedVersion: 2
       name: lowerJaw
@@ -234,6 +253,7 @@ TextureImporter:
       pivot: {x: 0.49919504, y: 0.4979708}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
+      physicsShape: []
       tessellationDetail: 0
     - serializedVersion: 2
       name: LeftLegUpper
@@ -247,6 +267,7 @@ TextureImporter:
       pivot: {x: 0.89796454, y: 0.18133008}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
+      physicsShape: []
       tessellationDetail: 0
     - serializedVersion: 2
       name: RightLegUpper
@@ -260,6 +281,7 @@ TextureImporter:
       pivot: {x: 0.12487882, y: 0.20004031}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
+      physicsShape: []
       tessellationDetail: 0
     - serializedVersion: 2
       name: LeftFoot
@@ -273,6 +295,7 @@ TextureImporter:
       pivot: {x: 0.9320319, y: 0.56683475}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
+      physicsShape: []
       tessellationDetail: 0
     - serializedVersion: 2
       name: RightFoot
@@ -286,6 +309,7 @@ TextureImporter:
       pivot: {x: 0.048490904, y: 0.5432165}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
+      physicsShape: []
       tessellationDetail: 0
     - serializedVersion: 2
       name: ArmUpperLeft
@@ -299,6 +323,7 @@ TextureImporter:
       pivot: {x: 0.09968066, y: 0.59743625}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
+      physicsShape: []
       tessellationDetail: 0
     - serializedVersion: 2
       name: ArmUpperRight
@@ -312,6 +337,7 @@ TextureImporter:
       pivot: {x: 0.89899766, y: 0.59834206}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
+      physicsShape: []
       tessellationDetail: 0
     - serializedVersion: 2
       name: HandLeft
@@ -325,6 +351,7 @@ TextureImporter:
       pivot: {x: 0.326502, y: 0.7735086}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
+      physicsShape: []
       tessellationDetail: 0
     - serializedVersion: 2
       name: HandRight
@@ -338,6 +365,7 @@ TextureImporter:
       pivot: {x: 0.66329634, y: 0.7480546}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
+      physicsShape: []
       tessellationDetail: 0
     - serializedVersion: 2
       name: ArmLowerRight
@@ -351,6 +379,7 @@ TextureImporter:
       pivot: {x: 0.8093971, y: 0.85961753}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
+      physicsShape: []
       tessellationDetail: 0
     - serializedVersion: 2
       name: ArmLowerLeft
@@ -364,6 +393,7 @@ TextureImporter:
       pivot: {x: 0.18431902, y: 0.85520667}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
+      physicsShape: []
       tessellationDetail: 0
     - serializedVersion: 2
       name: thumb11
@@ -377,6 +407,7 @@ TextureImporter:
       pivot: {x: 0.79155815, y: 0.53256863}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
+      physicsShape: []
       tessellationDetail: 0
     - serializedVersion: 2
       name: thumb12
@@ -390,6 +421,7 @@ TextureImporter:
       pivot: {x: 0.7521015, y: 0.80013365}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
+      physicsShape: []
       tessellationDetail: 0
     - serializedVersion: 2
       name: thumb21
@@ -403,6 +435,7 @@ TextureImporter:
       pivot: {x: 0.2406461, y: 0.40187445}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
+      physicsShape: []
       tessellationDetail: 0
     - serializedVersion: 2
       name: thumb22
@@ -416,6 +449,7 @@ TextureImporter:
       pivot: {x: 0.19582583, y: 0.79437244}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
+      physicsShape: []
       tessellationDetail: 0
     - serializedVersion: 2
       name: f1
@@ -429,6 +463,7 @@ TextureImporter:
       pivot: {x: 0.7854912, y: 0.75566626}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
+      physicsShape: []
       tessellationDetail: 0
     - serializedVersion: 2
       name: f11
@@ -442,6 +477,7 @@ TextureImporter:
       pivot: {x: 0.46630514, y: 0.8535346}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
+      physicsShape: []
       tessellationDetail: 0
     - serializedVersion: 2
       name: f2
@@ -455,6 +491,7 @@ TextureImporter:
       pivot: {x: 0.7072187, y: 0.79197794}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
+      physicsShape: []
       tessellationDetail: 0
     - serializedVersion: 2
       name: f22
@@ -468,6 +505,7 @@ TextureImporter:
       pivot: {x: 0.5254561, y: 0.8432761}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
+      physicsShape: []
       tessellationDetail: 0
     - serializedVersion: 2
       name: f3
@@ -481,6 +519,7 @@ TextureImporter:
       pivot: {x: 0.27977428, y: 0.7729804}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
+      physicsShape: []
       tessellationDetail: 0
     - serializedVersion: 2
       name: f31
@@ -494,6 +533,7 @@ TextureImporter:
       pivot: {x: 0.7218843, y: 0.8682636}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
+      physicsShape: []
       tessellationDetail: 0
     - serializedVersion: 2
       name: f4
@@ -507,6 +547,7 @@ TextureImporter:
       pivot: {x: 0.7691963, y: 0.74939674}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
+      physicsShape: []
       tessellationDetail: 0
     - serializedVersion: 2
       name: f41
@@ -520,6 +561,7 @@ TextureImporter:
       pivot: {x: 0.2694299, y: 0.8489285}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
+      physicsShape: []
       tessellationDetail: 0
     - serializedVersion: 2
       name: f5
@@ -533,6 +575,7 @@ TextureImporter:
       pivot: {x: 0.32846054, y: 0.7741733}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
+      physicsShape: []
       tessellationDetail: 0
     - serializedVersion: 2
       name: f51
@@ -546,6 +589,7 @@ TextureImporter:
       pivot: {x: 0.47346717, y: 0.88456106}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
+      physicsShape: []
       tessellationDetail: 0
     - serializedVersion: 2
       name: f6
@@ -559,6 +603,7 @@ TextureImporter:
       pivot: {x: 0.20342891, y: 0.73074394}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
+      physicsShape: []
       tessellationDetail: 0
     - serializedVersion: 2
       name: f61
@@ -572,9 +617,11 @@ TextureImporter:
       pivot: {x: 0.49999747, y: 0.8789497}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
+      physicsShape: []
       tessellationDetail: 0
     outline: []
+    physicsShape: []
   spritePackingTag: 
-  userData: 97781561453613
+  userData: 100019048798328
   assetBundleName: 
   assetBundleVariant: 

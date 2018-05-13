@@ -208,7 +208,11 @@ namespace Anima2D
 								bool guiEnabled = GUI.enabled;
 								GUI.enabled = !IsLocked(control.gameObject);
 
+#if UNITY_5_6_OR_NEWER
+								Vector3 newPosition = Handles.FreeMoveHandle(transform.position, transform.rotation, size, Vector3.zero, Handles.RectangleHandleCap);
+#else
 								Vector3 newPosition = Handles.FreeMoveHandle(transform.position, transform.rotation, size, Vector3.zero, Handles.RectangleCap);
+#endif
 
 								GUI.enabled = guiEnabled;
 

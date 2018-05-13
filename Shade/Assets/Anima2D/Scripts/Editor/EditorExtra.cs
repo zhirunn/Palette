@@ -6,6 +6,9 @@ using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 using System.Reflection;
+#if UNITY_5_6_OR_NEWER
+using UnityEngine.Rendering;
+#endif
 
 namespace Anima2D
 {
@@ -25,14 +28,34 @@ namespace Anima2D
 
 			GameObject result = GameObject.Instantiate(original) as GameObject;
 
-			List<Component> components = new List<Component>();
-			result.GetComponentsInChildren<Component>(false,components);
+			List<Behaviour> behaviours = new List<Behaviour>();
+			result.GetComponentsInChildren<Behaviour>(false,behaviours);
 
-			foreach(Component component in components)
+			foreach(Behaviour behaviour in behaviours)
 			{
-				if(component as Behaviour && (component as Ik2D) == null)
+				SpriteMeshInstance spriteMeshInstance = behaviour as SpriteMeshInstance;
+
+				if(spriteMeshInstance && spriteMeshInstance.spriteMesh && spriteMeshInstance.spriteMesh.sprite)
 				{
-					(component as Behaviour).enabled = false;
+					Material material = spriteMeshInstance.sharedMaterial;
+
+					if(material)
+					{
+						Material materialClone = GameObject.Instantiate(material);
+						materialClone.hideFlags = HideFlags.HideAndDontSave;
+						materialClone.mainTexture = spriteMeshInstance.spriteMesh.sprite.texture;
+
+						spriteMeshInstance.cachedRenderer.sharedMaterial = materialClone;
+					}
+				}
+
+				if(!(behaviour is Ik2D)
+#if UNITY_5_6_OR_NEWER
+					&& !(behaviour is SortingGroup)
+#endif
+				)
+				{
+					behaviour.enabled = false;
 				}
 			}
 

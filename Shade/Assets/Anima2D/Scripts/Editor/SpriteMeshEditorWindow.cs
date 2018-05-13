@@ -911,11 +911,8 @@ namespace Anima2D
 					HandleUtility.AddControl(controlID, HandleUtility.DistanceToCircle(m_SpriteMeshCache.pivotPoint,5f));
 				}
 			}
-			
-			if(eventType == EventType.Repaint)
-			{
-				HandlesExtra.PivotCap(controlID,m_SpriteMeshCache.pivotPoint,Quaternion.identity,1f);
-			}
+
+			HandlesExtra.PivotCap(controlID,m_SpriteMeshCache.pivotPoint, Quaternion.identity, 1f, eventType);
 		}
 		
 		void HandleAddHole()
